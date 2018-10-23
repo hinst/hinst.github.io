@@ -2,4 +2,5 @@
 
 Кроме того, недавно опробовал TypeScript на node.js. То есть, я уже успел попробовать TypeScript и в браузере, и в ноде.
 
+disqus
 {% include disqus.html %}
