@@ -1,3 +1,9 @@
 # Бложик
-[Про TypeScript 2018.10.23]()
 
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
