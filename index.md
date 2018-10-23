@@ -1,5 +1,5 @@
 # Бложик
-
+бложик
 <ul>
   {% for post in site.posts %}
     <li>
