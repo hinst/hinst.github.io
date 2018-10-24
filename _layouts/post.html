@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{{page.date}} • <a href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">{{page.title}}</a>
+{{page.date | date_to_string}} • <a href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">{{page.title}}</a>
 
 {{ content }}
 
