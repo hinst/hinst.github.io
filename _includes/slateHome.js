@@ -5,6 +5,6 @@ console.log("Executing slateHome");
         wrapper.appendChild(el);
     }
     var link = document.createElement("a");
-    link.setAttribute("href", "");
+    link.setAttribute("href", "{{ site.url }}{{ site.baseurl }}{{ page.url }}");
     wrap(document.getElementById("project_title"), link);
 })();
