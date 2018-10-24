@@ -1,0 +1,10 @@
+<script type="text/javascript"/>
+    (function() {
+        function wrap(el, wrapper) {
+            el.parentNode.insertBefore(wrapper, el);
+            wrapper.appendChild(el);
+        }
+        var link = document.createElement("a");
+        wrap(document.getElementById("project_title"), link);
+    })();
+</script>
