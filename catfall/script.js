@@ -90,7 +90,7 @@ function main() {
         cat.img = img;
         cat.xSpeed = windSpeed / 2;
         cat.x = Math.floor(Math.random() * (100 + windyOffset) - windyOffset);
-        cat.width = snowflakeWidth;
+        cat.width = snowflakeWidth * (Math.random() * 0.5 + 0.5);
         cats['' + globalCatId++] = cat;
         cat.img.style.transform = 'rotate(' + cat.angle + ')';
     }
