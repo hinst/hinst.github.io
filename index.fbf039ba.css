@@ -1,0 +1,2 @@
+html[data-theme=dark]{color-scheme:dark}.hover-outline{outline:2px solid #0000;transition-property:outline-color;transition-duration:.25s}.hover-outline:hover{outline:2px solid #fa4d60;transition-property:outline-color;transition-duration:.25s}hr{background-color:#7f7f7f33}.grayscale{filter:grayscale();transition-property:filter;transition-duration:.5s}.grayscale:hover{filter:grayscale(0);transition-property:filter;transition-duration:.5s}
+/*# sourceMappingURL=index.fbf039ba.css.map */
