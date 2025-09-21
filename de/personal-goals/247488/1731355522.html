@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/static/images/favicon.png" />
+    <link rel="stylesheet" href="/static/css/minstyle.css" />
+    <link rel="stylesheet" href="/static/css/index.css" />
+    <title>
+      Weekly Coding • 2024-11-11
+    </title>
+    <style>
+      html,
+      		body {
+      			height: 100%;
+      			max-height: 100%;
+      		}
+
+      		body {
+      			display: flex;
+      			flex-direction: column;
+      		}
+
+      		.content {
+      			flex-grow: 1;
+      			min-height: 0;
+      			max-width: 100%;
+      		}
+
+      		#app {
+      			display: flex;
+      			height: 100%;
+      			max-width: 100%;
+      		}
+    </style>
+  </head>
+  <body>
+    <script src="/static/js/dist/initialize.js"></script>
+    <div class="content">
+      <div id="app">
+        <div
+				style="
+					padding: 10px;
+					padding-bottom: 0;
+					display: flex;
+					flex-direction: column;
+					width: 100%;
+					max-width: 100%;
+					max-height: 100%
+				"
+			>
+          <div style="padding-bottom: 10px">
+            <div style="display: flex; align-items: center; gap: 10px; max-width: 100%;">
+              <a href="/de">
+                <img
+			src="/static/images/favicon.png"
+			width="42" height="42"
+			style="
+				width: 42px; height: 42px;
+				border-radius: 50%;
+			"
+			alt="icon"
+			class="hover-outline"
+		/>
+              </a>
+              <div
+		style="display: flex; flex-direction: column; overflow-y: clip; gap: 4px; flex-shrink: 0; flex-basis: 0; min-width: 0;">
+                <b style="text-wrap: nowrap; text-overflow: ellipsis; overflow-y: clip;">
+                  Showcase Website
+                </b>
+                <span style="text-wrap: nowrap; text-overflow: ellipsis; overflow-y: clip;">
+                  Weekly Coding • 2024-11-11
+                </span>
+              </div>
+              <div style="flex-grow: 1;"></div>
+              <div style="display: none; align-items: center; flex-shrink: 1; gap: 10px;">
+                <a href="/settings" class="ms-btn ms-rounded" style="width: 40px; height: 40px; position: relative;">
+                  <div
+				style="
+					width: 24px; height: 24px;
+					border-radius: 50%;
+					transform: translate(-8px, -0px);
+				"
+				alt="settings"
+			>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings">
+                      <circle cx="12" cy="12" r="3"></circle>
+                      <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+	class="goal-post-outer"
+	style="
+		flex-grow: 1;
+		justify-content: center;
+		display: flex;
+		min-height: 0px;
+		max-height: 100%;
+		background: repeating-linear-gradient(
+			45deg,
+			rgba(var(--main-bg), 1),
+			rgba(var(--main-bg), 1) 10px,
+			rgba(var(--light-bg-color), 1) 10px,
+			rgba(var(--light-bg-color), 1) 20px
+		);
+	"
+>
+            <div
+		class="goal-post-inner ms-bg-main"
+		style="
+			flex-grow: 1;
+			padding-left: 20px;
+			padding-right: 20px;
+			max-width: 1000px;
+			background-attachment: fixed;
+			overflow-y: auto;
+		"
+	>
+              <div class="goalPostViewText">
+                <p>
+                  Hallo zusammen. Letzte Woche habe ich Folgendes erledigt:
+                </p>
+                <ol>
+                  <li>
+                    <strong>
+                      Digitale Malerei: 12 Stunden
+                    </strong>
+                    <ol>
+                      <li>
+                        Ich färbe ein Bild aus. Als Grundlage nahm ich einen Schwarz-Weiß-Skizze, die nicht von mir war, und entschied mich nur zu kolorieren... Schattierungen, verschiedene Effekte - das hat viel mehr Zeit in Anspruch genommen, als ich ursprünglich gedacht hatte. Ich arbeite ohne KI; bin noch nicht fertig 🥵.
+                      </li>
+                    </ol>
+                  </li>
+                  <li>
+                    <strong>
+                      Rätsel auf LeetCode: 3 Stunden
+                    </strong>
+                    <ol>
+                      <li>
+                        <strong>
+                          49. Gruppierung von Anagrammen
+                        </strong>
+                        <ol>
+                          <li>
+                            Hier war es einfach: Verwendung eines HashMaps 😴 Die Lösung der Aufgabe passt in 10 Zeilen Code auf TypeScript.
+                          </li>
+                        </ol>
+                      </li>
+                      <li>
+                        <strong>
+                          51. N-Königinnen
+                        </strong>
+                        <ol>
+                          <li>
+                            Schach... Hier konnte ich eine Lösung schreiben, aber sie nicht optimieren. Daher habe ich mit einer Vorabberechnung gelöst: Auf meinem Heimcomputer berechnete ich alle neun möglichen Lösungen und schickte dann den Code mit den vorab erstellten Lösungen online.
+                          </li>
+                        </ol>
+                      </li>
+                      <li>
+                        <strong>
+                          52. N-Königinnen II
+                        </strong>
+                        <ol>
+                          <li>
+                            Diese Aufgabe ist genauso wie die vorherige. Ich würde sie sogar nicht als getrennte Aufgabe betrachten. In der vorherigen Aufgabe musste ich die Schachlösungen ausgeben, während diese Aufgabe das Ausgeben der Lösungsanzahl erfordert - im Grunde das Gleiche, nur mit
+                            <strong>
+                              return
+                            </strong>
+                            .length;
+                          </li>
+                        </ol>
+                      </li>
+                    </ol>
+                  </li>
+                </ol>
+                ...und wieder tauchen Aufgaben auf, die ich in der Schule während des Informatikunterrichts gelöst habe: Ich erinnere mich an diese Schachaufgaben 😐 und daran, wie verzweifelt ich versucht habe, sie während einer 45-minütigen Unterrichtsstunde mit Turbo Pascal zu lösen. Am vergangenen Wochenende hat es allerdings zwei Stunden gedauert, bis ich die Aufgabe gelöst hatte. Ja, eine Vorabberechnung in der Schule hätte nicht funktioniert: Die Computer waren damals in vielerlei Hinsicht langsamer als mein aktueller Heimcomputer heute, also hätte ich noch eine weitere Stunde warten müssen, bis die Vorabberechnung der Schachaufgabe abgeschlossen ist. In 45 Minuten hätte ich es auf keinen Fall geschafft 🌧️.
+              </div>
+              <div
+			style="
+				display: flex;
+				flex-wrap: wrap;
+				gap: 10px;
+			"
+		>
+                <a href="/personal-goals/image/247488/1731355522/0.jpg">
+                  <img
+						width="240"
+						height="240"
+						class="ms-card ms-border"
+						style="width: 240px; height: 240px; object-fit: cover; margin: 0; padding: 0"
+						src="/personal-goals/image/247488/1731355522/0.jpg"
+						alt="Image 0"
+					/>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/static/js/dist/main.js"></script>
+  </body>
+</html>

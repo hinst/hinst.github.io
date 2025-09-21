@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="/static/css/minstyle.css" />
     <link rel="stylesheet" href="/static/css/index.css" />
     <title>
-      My Personal Goals
+      Окупить стоимость велосипеда и самоката • 2023-08-10
     </title>
     <style>
       html,
@@ -50,7 +50,7 @@
 			>
           <div style="padding-bottom: 10px">
             <div style="display: flex; align-items: center; gap: 10px; max-width: 100%;">
-              <a href="/">
+              <a href="/ru">
                 <img
 			src="/static/images/favicon.png"
 			width="42" height="42"
@@ -68,7 +68,7 @@
                   Showcase Website
                 </b>
                 <span style="text-wrap: nowrap; text-overflow: ellipsis; overflow-y: clip;">
-                  My Personal Goals
+                  Окупить стоимость велосипеда и самоката • 2023-08-10
                 </span>
               </div>
               <div style="flex-grow: 1;"></div>
@@ -91,64 +91,71 @@
               </div>
             </div>
           </div>
-          <div style="display: flex; flex-wrap: wrap; gap: 10px; flex-direction: row">
+          <div
+	class="goal-post-outer"
+	style="
+		flex-grow: 1;
+		justify-content: center;
+		display: flex;
+		min-height: 0px;
+		max-height: 100%;
+		background: repeating-linear-gradient(
+			45deg,
+			rgba(var(--main-bg), 1),
+			rgba(var(--main-bg), 1) 10px,
+			rgba(var(--light-bg-color), 1) 10px,
+			rgba(var(--light-bg-color), 1) 20px
+		);
+	"
+>
             <div
+		class="goal-post-inner ms-bg-main"
+		style="
+			flex-grow: 1;
+			padding-left: 20px;
+			padding-right: 20px;
+			max-width: 1000px;
+			background-attachment: fixed;
+			overflow-y: auto;
+		"
+	>
+              <div class="goalPostViewText">
+                <p>
+                  Я доехал до
+                  <strong>
+                    $100
+                  </strong>
+                  из
+                  <strong>
+                    $630
+                  </strong>
+                  . Напоминаю, что считаются только поездки за покупками или по делам. Можно сделать промежуточный вывод:
+                </p>
+                <ul>
+                  <li>
+                    Цель начата 100 дней назад
+                  </li>
+                  <li>
+                    За это время удалось окупить $100
+                  </li>
+                  <li>
+                    В среднем, мне "возвращается" $1 в день
+                  </li>
+                </ul>
+                <p>
+                  Значит, в таком темпе велосипед окупается примерно за 630 дней. Если бы я, к примеру, ездил на работу на велосипеде, то ясно-понятно, что велосипед окупился бы намного быстрее. Или, вот ещё пример, если бы магазин был далеко от дома, и пришлось бы ездить на велосипеде в магазин каждый раз, тогда тоже велосипед бы окупился намного быстрее. А в ленивом темпе велосипед окупается медленно.
+                </p>
+                <p>
+                  При этом, сам подсчёт выгоды - дело непростое. Единственная "прямая" выгода - это когда я пользуюсь велосипедом вместо трамвая. А как быть со случаем, когда я еду в далёкий магазин, в который трамвай вовсе не ездит? Если не было велосипеда - я бы ещё больше сэкономил: не ехал бы, и не покупал бы барахло в магазине 😤 сложно.
+                </p>
+              </div>
+              <div
 			style="
-				width: fit-content;
-				padding: 0;
-				margin: 0;
-				overflow: hidden
+				display: flex;
+				flex-wrap: wrap;
+				gap: 10px;
 			"
-			class="ms-card ms-border grayscale"
-		>
-              <a
-				href="/personal-goals/247488.html"
-				class="ms-text-main"
-			>
-                <div
-					style="display: flex; flex-direction: column;"
-					class="ms-bg-light"
-				>
-                  <img
-						width="200"
-						height="100"
-						src="/static/images/codingWeekly.jpg"
-						alt="Weekly Coding"
-					/>
-                  <div style="padding: 8px; max-width: 200px">
-                    Weekly Coding
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div
-			style="
-				width: fit-content;
-				padding: 0;
-				margin: 0;
-				overflow: hidden
-			"
-			class="ms-card ms-border grayscale"
-		>
-              <a
-				href="/personal-goals/416007.html"
-				class="ms-text-main"
-			>
-                <div
-					style="display: flex; flex-direction: column;"
-					class="ms-bg-light"
-				>
-                  <img
-						width="200"
-						height="100"
-						src="/static/images/bicycle.jpg"
-						alt="Bicycle and E-Scooter"
-					/>
-                  <div style="padding: 8px; max-width: 200px">
-                    Bicycle and E-Scooter
-                  </div>
-                </div>
-              </a>
+		></div>
             </div>
           </div>
         </div>

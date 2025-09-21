@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="/static/css/minstyle.css" />
     <link rel="stylesheet" href="/static/css/index.css" />
     <title>
-      My Personal Goals
+      Weekly Coding • 2025-05-04
     </title>
     <style>
       html,
@@ -68,7 +68,7 @@
                   Showcase Website
                 </b>
                 <span style="text-wrap: nowrap; text-overflow: ellipsis; overflow-y: clip;">
-                  My Personal Goals
+                  Weekly Coding • 2025-05-04
                 </span>
               </div>
               <div style="flex-grow: 1;"></div>
@@ -91,64 +91,83 @@
               </div>
             </div>
           </div>
-          <div style="display: flex; flex-wrap: wrap; gap: 10px; flex-direction: row">
+          <div
+	class="goal-post-outer"
+	style="
+		flex-grow: 1;
+		justify-content: center;
+		display: flex;
+		min-height: 0px;
+		max-height: 100%;
+		background: repeating-linear-gradient(
+			45deg,
+			rgba(var(--main-bg), 1),
+			rgba(var(--main-bg), 1) 10px,
+			rgba(var(--light-bg-color), 1) 10px,
+			rgba(var(--light-bg-color), 1) 20px
+		);
+	"
+>
             <div
+		class="goal-post-inner ms-bg-main"
+		style="
+			flex-grow: 1;
+			padding-left: 20px;
+			padding-right: 20px;
+			max-width: 1000px;
+			background-attachment: fixed;
+			overflow-y: auto;
+		"
+	>
+              <div class="goalPostViewText">
+                <p>
+                  Hello everyone. It's time to write my weekly report.
+                </p>
+                <p>
+                  🗓️ Today I noticed that my goal was created over 3000 days ago. That means my goal is already quite old. I wonder how much longer it will last?
+                </p>
+                <p>
+                  💾 This week, I spent 11 hours developing a backup program for my files. The program is complete and works surprisingly well:
+                  <a href="http://smartprogress.do/site/redirect/?url=https%3A%2F%2Fgithub.com%2Fhinst%2Fhi-backup" target="_blank">
+                    https://github.com/hinst/hi-backup
+                  </a>
+                  It includes encryption, compression, and updating modified files. The main advantage of the program is that it does exactly what I want. However, its main drawback is that if I make a serious bug, there's no way to restore the data 🥵 In popular archivers, such risks are low because thousands of people use them, so most bugs have already been found and fixed. For my program, I conducted several unit tests to increase my confidence in its correct functionality.
+                </p>
+                <p>
+                  The most productive day this week was Saturday, when I spent 6 hours writing and debugging the hi-backup program.
+                </p>
+                <p>
+                  🖥️ Also, I recently bought a 4K screen for my home computer from AOC for $360. It has wide "bezel" and a refresh rate of 160 Hz. The picture quality is fantastic. My previous screen was also an AOC with the following specs: 1080p, 240 Hz. I think 4K is definitely a big plus for people who spend a lot of time in front of a computer. The difference is noticeable when reading text and in games, the graphics are beautiful.
+                </p>
+              </div>
+              <div
 			style="
-				width: fit-content;
-				padding: 0;
-				margin: 0;
-				overflow: hidden
+				display: flex;
+				flex-wrap: wrap;
+				gap: 10px;
 			"
-			class="ms-card ms-border grayscale"
 		>
-              <a
-				href="/personal-goals/247488.html"
-				class="ms-text-main"
-			>
-                <div
-					style="display: flex; flex-direction: column;"
-					class="ms-bg-light"
-				>
+                <a href="/personal-goals/image/247488/1746393141/0.jpg">
                   <img
-						width="200"
-						height="100"
-						src="/static/images/codingWeekly.jpg"
-						alt="Weekly Coding"
+						width="240"
+						height="240"
+						class="ms-card ms-border"
+						style="width: 240px; height: 240px; object-fit: cover; margin: 0; padding: 0"
+						src="/personal-goals/image/247488/1746393141/0.jpg"
+						alt="Image 0"
 					/>
-                  <div style="padding: 8px; max-width: 200px">
-                    Weekly Coding
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div
-			style="
-				width: fit-content;
-				padding: 0;
-				margin: 0;
-				overflow: hidden
-			"
-			class="ms-card ms-border grayscale"
-		>
-              <a
-				href="/personal-goals/416007.html"
-				class="ms-text-main"
-			>
-                <div
-					style="display: flex; flex-direction: column;"
-					class="ms-bg-light"
-				>
+                </a>
+                <a href="/personal-goals/image/247488/1746393141/1.jpg">
                   <img
-						width="200"
-						height="100"
-						src="/static/images/bicycle.jpg"
-						alt="Bicycle and E-Scooter"
+						width="240"
+						height="240"
+						class="ms-card ms-border"
+						style="width: 240px; height: 240px; object-fit: cover; margin: 0; padding: 0"
+						src="/personal-goals/image/247488/1746393141/1.jpg"
+						alt="Image 1"
 					/>
-                  <div style="padding: 8px; max-width: 200px">
-                    Bicycle and E-Scooter
-                  </div>
-                </div>
-              </a>
+                </a>
+              </div>
             </div>
           </div>
         </div>

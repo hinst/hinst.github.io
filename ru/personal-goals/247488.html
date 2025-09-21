@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/static/images/favicon.png" />
+    <link rel="stylesheet" href="/static/css/minstyle.css" />
+    <link rel="stylesheet" href="/static/css/index.css" />
+    <title>
+      Goal diary
+    </title>
+    <style>
+      html,
+      		body {
+      			height: 100%;
+      			max-height: 100%;
+      		}
+
+      		body {
+      			display: flex;
+      			flex-direction: column;
+      		}
+
+      		.content {
+      			flex-grow: 1;
+      			min-height: 0;
+      			max-width: 100%;
+      		}
+
+      		#app {
+      			display: flex;
+      			height: 100%;
+      			max-width: 100%;
+      		}
+    </style>
+  </head>
+  <body>
+    <script src="/static/js/dist/initialize.js"></script>
+    <div class="content">
+      <div id="app">
+        <div
+				style="
+					padding: 10px;
+					padding-bottom: 0;
+					display: flex;
+					flex-direction: column;
+					width: 100%;
+					max-width: 100%;
+					max-height: 100%
+				"
+			>
+          <div style="padding-bottom: 10px">
+            <div style="display: flex; align-items: center; gap: 10px; max-width: 100%;">
+              <a href="/ru">
+                <img
+			src="/static/images/favicon.png"
+			width="42" height="42"
+			style="
+				width: 42px; height: 42px;
+				border-radius: 50%;
+			"
+			alt="icon"
+			class="hover-outline"
+		/>
+              </a>
+              <div
+		style="display: flex; flex-direction: column; overflow-y: clip; gap: 4px; flex-shrink: 0; flex-basis: 0; min-width: 0;">
+                <b style="text-wrap: nowrap; text-overflow: ellipsis; overflow-y: clip;">
+                  Showcase Website
+                </b>
+                <span style="text-wrap: nowrap; text-overflow: ellipsis; overflow-y: clip;">
+                  Goal diary
+                </span>
+              </div>
+              <div style="flex-grow: 1;"></div>
+              <div style="display: none; align-items: center; flex-shrink: 1; gap: 10px;">
+                <a href="/settings" class="ms-btn ms-rounded" style="width: 40px; height: 40px; position: relative;">
+                  <div
+				style="
+					width: 24px; height: 24px;
+					border-radius: 50%;
+					transform: translate(-8px, -0px);
+				"
+				alt="settings"
+			>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings">
+                      <circle cx="12" cy="12" r="3"></circle>
+                      <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: 10px; flex-direction: column">
+            <div
+			class="ms-text-light"
+			style="font-family: monospace"
+		>
+              2025-09
+            </div>
+            <div>
+              <a href="/ru/personal-goals/247488/1756718428.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  1
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Борьба с Google: поисковая оптимизация, ограничения Android и не только
+                </span>
+              </a>
+            </div>
+            <div style="min-height: 10px"></div>
+            <div
+			class="ms-text-light"
+			style="font-family: monospace"
+		>
+              2025-08
+            </div>
+            <div>
+              <a href="/ru/personal-goals/247488/1754296030.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  4
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Еженедельный отчет: Успехи в LeetCode, Оптимизация Linux и Неожиданные Результаты
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/ru/personal-goals/247488/1754914604.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  11
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Оптимизация Stable Diffusion на Windows 11: Как Улучшить Производительность и Сократить Потребление Видеопамяти
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/ru/personal-goals/247488/1755505993.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  18
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Неделя цифрового творчества и алгоритмического роста: завершение рисунка и прогресс на LeetCode
+                </span>
+              </a>
+            </div>
+            <div style="min-height: 10px"></div>
+            <div
+			class="ms-text-light"
+			style="font-family: monospace"
+		>
+              2025-07
+            </div>
+            <div>
+              <a href="/ru/personal-goals/247488/1752424339.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  13
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Недельный обзор достижений: Прогресс на LeetCode и обновлённые проекты
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/ru/personal-goals/247488/1753090144.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  21
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Оптимизация памяти на Линуксе: ZSWAP, ZRAM, KSM и BTRFS — что выбрать для максимальной эффективности?
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/ru/personal-goals/247488/1753731557.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  28
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Оптимизация веб-сайта, приключения с Docker и экспериментирование с искусственным интеллектом: еженедельный мини-отчёт
+                </span>
+              </a>
+            </div>
+            <div style="min-height: 10px"></div>
+            <div
+			class="ms-text-light"
+			style="font-family: monospace"
+		>
+              2025-06
+            </div>
+            <div>
+              <a href="/ru/personal-goals/247488/1748808008.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  1
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Отказ от OpenMandriva: Переход на Kubuntu и новые вызовы в мире Linux
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/ru/personal-goals/247488/1749491906.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  9
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Цифровое искусство против SEO: баланс между творческим временем и онлайн-видимостью
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/ru/personal-goals/247488/1750097274.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  16
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Недельный отчёт: Продвижение в алгоритмах, цифровое рисование и достижения в LeetCode
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/ru/personal-goals/247488/1750784712.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  24
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Неделя между алгоритмами, искусством и веб-сайтом: балансирование времени и достижений
+                </span>
+              </a>
+            </div>
+            <div style="min-height: 10px"></div>
+            <div
+			class="ms-text-light"
+			style="font-family: monospace"
+		>
+              2025-05
+            </div>
+            <div>
+              <a href="/ru/personal-goals/247488/1746100216.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  1
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Неделя продуктивности: исправление ошибок на сайте и разработка новой утилиты для резервного копирования
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/ru/personal-goals/247488/1746393141.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  4
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Моя Цель и Новые Технологии: Обновление Программы Резервного Копирования и Преимущества 4K Экрана
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/ru/personal-goals/247488/1747300986.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  15
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Неделя настроек, кодирования и решений: от Linux до веб-сайтов и Stable Diffusion
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/ru/personal-goals/247488/1747603522.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  18
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Мои последние приключения: борьба с персональным веб-сайтом и настройка Linux
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/ru/personal-goals/247488/1748205778.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  25
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Недельный обзор: Программирование, видео и искусство, достижения и вызовы
+                </span>
+              </a>
+            </div>
+            <div style="min-height: 10px"></div>
+            <div
+			class="ms-text-light"
+			style="font-family: monospace"
+		>
+              2025-04
+            </div>
+            <div>
+              <a href="/ru/personal-goals/247488/1744054673.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  7
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Обновление веб-сайта и борьба с кластером k3s: неделя достижений и вызовов
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/ru/personal-goals/247488/1744584090.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  13
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Перенесение хранилища на SQLite: улучшение производительности и организация кода на персональном веб-сайте
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/ru/personal-goals/247488/1745173950.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  20
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Обновление персонального сайта: добавление новых функций, исправление ошибок и настройка настроек
+                </span>
+              </a>
+            </div>
+            <div style="min-height: 10px"></div>
+            <div
+			class="ms-text-light"
+			style="font-family: monospace"
+		>
+              2025-03
+            </div>
+            <div>
+              <a href="/ru/personal-goals/247488/1742212568.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  17
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Еженедельный отчет: Создание нового веб-сайта и достижение новых высот на LeetCode
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/ru/personal-goals/247488/1742849112.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  24
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Мои приключения в коде: от дыр безопасности до настройки оборудования и изучения инструментов резервного копирования
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/ru/personal-goals/247488/1743459873.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  31
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Представляю свой новый персональный веб-сайт: многоязычный блог и инновационные функции
+                </span>
+              </a>
+            </div>
+            <div style="min-height: 10px"></div>
+            <div
+			class="ms-text-light"
+			style="font-family: monospace"
+		>
+              2025-02
+            </div>
+            <div>
+              <a href="/ru/personal-goals/247488/1740769400.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  28
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Сравнение SQLite и MongoDB: Почему SQLite лучше для микро-проектов на Orange Pi
+                </span>
+              </a>
+            </div>
+            <div style="min-height: 10px"></div>
+            <div
+			class="ms-text-light"
+			style="font-family: monospace"
+		>
+              2025-01
+            </div>
+            <div>
+              <a href="/ru/personal-goals/247488/1738003128.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  27
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Неделя кодинга и языкового обучения: достижения, задачи и проблемы с хранением файлов
+                </span>
+              </a>
+            </div>
+            <div style="min-height: 10px"></div>
+            <div
+			class="ms-text-light"
+			style="font-family: monospace"
+		>
+              2024-12
+            </div>
+            <div>
+              <a href="/ru/personal-goals/247488/1733225317.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  3
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Недельный обзор: достижения в программировании, цифровом искусстве и решении технических задач
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/ru/personal-goals/247488/1734974909.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  23
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Недельный обзор: Прогресс в обучении, разработке и оптимизации
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/ru/personal-goals/247488/1735649771.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  31
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Подводя итоги 2023: Продуктивный год с разнообразными достижениями в искусстве, программировании и изучении языков
+                </span>
+              </a>
+            </div>
+            <div style="min-height: 10px"></div>
+            <div
+			class="ms-text-light"
+			style="font-family: monospace"
+		>
+              2024-11
+            </div>
+            <div>
+              <a href="/ru/personal-goals/247488/1730739956.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  4
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Мои достижения этой недели: от изучения языка до цифрового рисования и решения задач LeetCode
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/ru/personal-goals/247488/1731355522.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  11
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Путешествие программиста: от рисования к решению головоломок и воспоминаний о школьных днях
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/ru/personal-goals/247488/1732008857.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  19
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Неудачное разделение времени: рисование, кодинг и борьба с таймерами
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/static/js/dist/main.js"></script>
+  </body>
+</html>

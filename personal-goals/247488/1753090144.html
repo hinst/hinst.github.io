@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/static/images/favicon.png" />
+    <link rel="stylesheet" href="/static/css/minstyle.css" />
+    <link rel="stylesheet" href="/static/css/index.css" />
+    <title>
+      Weekly Coding • 2025-07-21
+    </title>
+    <style>
+      html,
+      		body {
+      			height: 100%;
+      			max-height: 100%;
+      		}
+
+      		body {
+      			display: flex;
+      			flex-direction: column;
+      		}
+
+      		.content {
+      			flex-grow: 1;
+      			min-height: 0;
+      			max-width: 100%;
+      		}
+
+      		#app {
+      			display: flex;
+      			height: 100%;
+      			max-width: 100%;
+      		}
+    </style>
+  </head>
+  <body>
+    <script src="/static/js/dist/initialize.js"></script>
+    <div class="content">
+      <div id="app">
+        <div
+				style="
+					padding: 10px;
+					padding-bottom: 0;
+					display: flex;
+					flex-direction: column;
+					width: 100%;
+					max-width: 100%;
+					max-height: 100%
+				"
+			>
+          <div style="padding-bottom: 10px">
+            <div style="display: flex; align-items: center; gap: 10px; max-width: 100%;">
+              <a href="/">
+                <img
+			src="/static/images/favicon.png"
+			width="42" height="42"
+			style="
+				width: 42px; height: 42px;
+				border-radius: 50%;
+			"
+			alt="icon"
+			class="hover-outline"
+		/>
+              </a>
+              <div
+		style="display: flex; flex-direction: column; overflow-y: clip; gap: 4px; flex-shrink: 0; flex-basis: 0; min-width: 0;">
+                <b style="text-wrap: nowrap; text-overflow: ellipsis; overflow-y: clip;">
+                  Showcase Website
+                </b>
+                <span style="text-wrap: nowrap; text-overflow: ellipsis; overflow-y: clip;">
+                  Weekly Coding • 2025-07-21
+                </span>
+              </div>
+              <div style="flex-grow: 1;"></div>
+              <div style="display: none; align-items: center; flex-shrink: 1; gap: 10px;">
+                <a href="/settings" class="ms-btn ms-rounded" style="width: 40px; height: 40px; position: relative;">
+                  <div
+				style="
+					width: 24px; height: 24px;
+					border-radius: 50%;
+					transform: translate(-8px, -0px);
+				"
+				alt="settings"
+			>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings">
+                      <circle cx="12" cy="12" r="3"></circle>
+                      <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+	class="goal-post-outer"
+	style="
+		flex-grow: 1;
+		justify-content: center;
+		display: flex;
+		min-height: 0px;
+		max-height: 100%;
+		background: repeating-linear-gradient(
+			45deg,
+			rgba(var(--main-bg), 1),
+			rgba(var(--main-bg), 1) 10px,
+			rgba(var(--light-bg-color), 1) 10px,
+			rgba(var(--light-bg-color), 1) 20px
+		);
+	"
+>
+            <div
+		class="goal-post-inner ms-bg-main"
+		style="
+			flex-grow: 1;
+			padding-left: 20px;
+			padding-right: 20px;
+			max-width: 1000px;
+			background-attachment: fixed;
+			overflow-y: auto;
+		"
+	>
+              <div class="goalPostViewText">
+                <p>
+                  Hello everyone. Last week I didn't code during my free time, but I tinkered with various optimizations on my computers, so let's talk about those.
+                </p>
+                <p>
+                  My work laptop currently has 16GB of RAM onboard. As it turns out, 16GB in 2025 is already considered low. Docker, Electron, and IntelliJ ate up all the memory. So I thought about how to maximize memory optimization on Linux.
+                </p>
+                <p>
+                  <strong>
+                    ZSWAP
+                  </strong>
+                </p>
+                <p>
+                  I believe this is the most useful optimization, and I keep it enabled all the time. The idea behind it is that the swap file is stored on the disk in compressed format. It would be convenient if Linux automatically enabled this optimization for all computers meeting minimum system requirements, but that's not the case.
+                </p>
+                <p>
+                  <strong>
+                    ZRAM
+                  </strong>
+                </p>
+                <p>
+                  I found this optimization questionable and didn't like it. There are two reasons:
+                </p>
+                <ul>
+                  <li>
+                    First, you have to allocate a fixed amount of memory for ZRAM. How much? No one knows. It could be 30%, 50%, or 70%. But giving up some of my total RAM reduces the effectiveness of ZSWAP.
+                  </li>
+                  <li>
+                    Second, if ZSWAP is already enabled, then why use ZRAM as well? They conflict, and the statistics show incorrect values when both are active.
+                  </li>
+                </ul>
+                <p>
+                  <strong>
+                    Kernel Same Page Merging (KSM)
+                  </strong>
+                </p>
+                <p>
+                  A very clever optimization that's hard to configure. Pages of memory with identical content are merged into one. I thought this should be incredibly useful since programs on Electron and browser tabs all run on Webkit, so combining them would make sense... But in practice, I only get about 500MB compression out of 20GB of RAM, which is only 2.5%. While that's not much, it's nice to have extra free memory.
+                </p>
+                <p>
+                  I'm keeping this optimization enabled for now but if my laptop runs on battery power, it doesn't make sense as it loads the CPU in the background.
+                </p>
+                <p>
+                  <strong>
+                    BTRFS
+                  </strong>
+                </p>
+                <p>
+                  There's automatic compression for the file system. Unfortunately, there's no simple way to enable it through the GUI; you have to use the terminal (which is easy in Windows where you can do this with a single click in disk properties). I enabled compression on my entire disk and saw a significant gain.
+                </p>
+                <p>
+                  <strong>
+                    Conclusion:
+                  </strong>
+                </p>
+                <ul>
+                  <li>
+                    ZSWAP ✅ Always enable, except for very old and underpowered computers
+                  </li>
+                  <li>
+                    ZRAM 🚫  Maybe, but is it really needed?
+                  </li>
+                  <li>
+                    KSM 🚫 Only if you're not using a laptop on battery power
+                  </li>
+                  <li>
+                    BTRFS ✅ Always enable compression, again except for very old and underpowered computers
+                  </li>
+                </ul>
+                <p>
+                  That's all for now. This week I plan to focus on LeetCode 🥵💻 and aim to reach problem number 200.
+                </p>
+              </div>
+              <div
+			style="
+				display: flex;
+				flex-wrap: wrap;
+				gap: 10px;
+			"
+		>
+                <a href="/personal-goals/image/247488/1753090144/0.jpg">
+                  <img
+						width="240"
+						height="240"
+						class="ms-card ms-border"
+						style="width: 240px; height: 240px; object-fit: cover; margin: 0; padding: 0"
+						src="/personal-goals/image/247488/1753090144/0.jpg"
+						alt="Image 0"
+					/>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/static/js/dist/main.js"></script>
+  </body>
+</html>

@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="/static/css/minstyle.css" />
     <link rel="stylesheet" href="/static/css/index.css" />
     <title>
-      My Personal Goals
+      Weekly Coding • 2025-06-09
     </title>
     <style>
       html,
@@ -68,7 +68,7 @@
                   Showcase Website
                 </b>
                 <span style="text-wrap: nowrap; text-overflow: ellipsis; overflow-y: clip;">
-                  My Personal Goals
+                  Weekly Coding • 2025-06-09
                 </span>
               </div>
               <div style="flex-grow: 1;"></div>
@@ -91,64 +91,73 @@
               </div>
             </div>
           </div>
-          <div style="display: flex; flex-wrap: wrap; gap: 10px; flex-direction: row">
+          <div
+	class="goal-post-outer"
+	style="
+		flex-grow: 1;
+		justify-content: center;
+		display: flex;
+		min-height: 0px;
+		max-height: 100%;
+		background: repeating-linear-gradient(
+			45deg,
+			rgba(var(--main-bg), 1),
+			rgba(var(--main-bg), 1) 10px,
+			rgba(var(--light-bg-color), 1) 10px,
+			rgba(var(--light-bg-color), 1) 20px
+		);
+	"
+>
             <div
+		class="goal-post-inner ms-bg-main"
+		style="
+			flex-grow: 1;
+			padding-left: 20px;
+			padding-right: 20px;
+			max-width: 1000px;
+			background-attachment: fixed;
+			overflow-y: auto;
+		"
+	>
+              <div class="goalPostViewText">
+                <p>
+                  Hello everyone. Last week, I spent all my free time on digital painting, so there was no time left for programming.
+                </p>
+                <p>
+                  <strong>
+                    Digital Painting: 14 hours 🖼️
+                  </strong>
+                </p>
+                <p>
+                  To finish the drawing by the end of the weekend, I had to push myself and paint from dawn until dusk on Sunday. I uploaded my finished drawing online. Let's see how many stars I can collect this time. My previous drawing in a similar "hand-drawn" style collected 69 stars in half a year 😴
+                </p>
+                <p>
+                  <strong>
+                    Personal Website 🌐
+                  </strong>
+                </p>
+                <p>
+                  I've been thinking about Search Engine Optimization (SEO) for my personal website. They say that websites built like Single Page Applications (SPAs) are poorly indexed, and mine is just such a type. I added my website to Google Search Console, but I have zero indexed pages. I can't quite understand the specific reason why the pages aren't being indexed yet. I've read that search engines execute JavaScript, but they do so reluctantly, giving these pages a lower ranking in searches than pre-prepared HTML. Whether I'll continue to delve into SEO is still undecided, and whether or not my blog needs to be searchable - that's another question 🤔.
+                </p>
+              </div>
+              <div
 			style="
-				width: fit-content;
-				padding: 0;
-				margin: 0;
-				overflow: hidden
+				display: flex;
+				flex-wrap: wrap;
+				gap: 10px;
 			"
-			class="ms-card ms-border grayscale"
 		>
-              <a
-				href="/personal-goals/247488.html"
-				class="ms-text-main"
-			>
-                <div
-					style="display: flex; flex-direction: column;"
-					class="ms-bg-light"
-				>
+                <a href="/personal-goals/image/247488/1749491906/0.jpg">
                   <img
-						width="200"
-						height="100"
-						src="/static/images/codingWeekly.jpg"
-						alt="Weekly Coding"
+						width="240"
+						height="240"
+						class="ms-card ms-border"
+						style="width: 240px; height: 240px; object-fit: cover; margin: 0; padding: 0"
+						src="/personal-goals/image/247488/1749491906/0.jpg"
+						alt="Image 0"
 					/>
-                  <div style="padding: 8px; max-width: 200px">
-                    Weekly Coding
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div
-			style="
-				width: fit-content;
-				padding: 0;
-				margin: 0;
-				overflow: hidden
-			"
-			class="ms-card ms-border grayscale"
-		>
-              <a
-				href="/personal-goals/416007.html"
-				class="ms-text-main"
-			>
-                <div
-					style="display: flex; flex-direction: column;"
-					class="ms-bg-light"
-				>
-                  <img
-						width="200"
-						height="100"
-						src="/static/images/bicycle.jpg"
-						alt="Bicycle and E-Scooter"
-					/>
-                  <div style="padding: 8px; max-width: 200px">
-                    Bicycle and E-Scooter
-                  </div>
-                </div>
-              </a>
+                </a>
+              </div>
             </div>
           </div>
         </div>

@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="/static/css/minstyle.css" />
     <link rel="stylesheet" href="/static/css/index.css" />
     <title>
-      My Personal Goals
+      Bicycle and E-Scooter • 2023-08-10
     </title>
     <style>
       html,
@@ -68,7 +68,7 @@
                   Showcase Website
                 </b>
                 <span style="text-wrap: nowrap; text-overflow: ellipsis; overflow-y: clip;">
-                  My Personal Goals
+                  Bicycle and E-Scooter • 2023-08-10
                 </span>
               </div>
               <div style="flex-grow: 1;"></div>
@@ -91,64 +91,71 @@
               </div>
             </div>
           </div>
-          <div style="display: flex; flex-wrap: wrap; gap: 10px; flex-direction: row">
+          <div
+	class="goal-post-outer"
+	style="
+		flex-grow: 1;
+		justify-content: center;
+		display: flex;
+		min-height: 0px;
+		max-height: 100%;
+		background: repeating-linear-gradient(
+			45deg,
+			rgba(var(--main-bg), 1),
+			rgba(var(--main-bg), 1) 10px,
+			rgba(var(--light-bg-color), 1) 10px,
+			rgba(var(--light-bg-color), 1) 20px
+		);
+	"
+>
             <div
+		class="goal-post-inner ms-bg-main"
+		style="
+			flex-grow: 1;
+			padding-left: 20px;
+			padding-right: 20px;
+			max-width: 1000px;
+			background-attachment: fixed;
+			overflow-y: auto;
+		"
+	>
+              <div class="goalPostViewText">
+                <p>
+                  I've reached
+                  <strong>
+                    $100
+                  </strong>
+                  out of
+                  <strong>
+                    $630
+                  </strong>
+                  . Remember, only shopping or errand trips are considered. Here's a rough conclusion:
+                </p>
+                <ul>
+                  <li>
+                    The goal was set 100 days ago.
+                  </li>
+                  <li>
+                    In that time, I've recouped $100.
+                  </li>
+                  <li>
+                    On average, I'm "getting back" $1 per day.
+                  </li>
+                </ul>
+                <p>
+                  So at this rate, the bicycle would be paid off in approximately 630 days. If, for instance, I used the bicycle for commuting to work, it would clearly pay for itself much faster. Or if the store was far from home and I had to ride to it every time, that would also speed up repayment. Conversely, at a leisurely pace, the bicycle pays for itself slowly.
+                </p>
+                <p>
+                  However, calculating the benefits is not straightforward. The only "direct" benefit is when I use the bicycle instead of the tram. But what about cases where I need to go to a distant store that the tram doesn't serve? If I didn't have the bicycle - I would save even more: not taking unnecessary trips and not buying impulse items at the store 😤 it's hard.
+                </p>
+              </div>
+              <div
 			style="
-				width: fit-content;
-				padding: 0;
-				margin: 0;
-				overflow: hidden
+				display: flex;
+				flex-wrap: wrap;
+				gap: 10px;
 			"
-			class="ms-card ms-border grayscale"
-		>
-              <a
-				href="/personal-goals/247488.html"
-				class="ms-text-main"
-			>
-                <div
-					style="display: flex; flex-direction: column;"
-					class="ms-bg-light"
-				>
-                  <img
-						width="200"
-						height="100"
-						src="/static/images/codingWeekly.jpg"
-						alt="Weekly Coding"
-					/>
-                  <div style="padding: 8px; max-width: 200px">
-                    Weekly Coding
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div
-			style="
-				width: fit-content;
-				padding: 0;
-				margin: 0;
-				overflow: hidden
-			"
-			class="ms-card ms-border grayscale"
-		>
-              <a
-				href="/personal-goals/416007.html"
-				class="ms-text-main"
-			>
-                <div
-					style="display: flex; flex-direction: column;"
-					class="ms-bg-light"
-				>
-                  <img
-						width="200"
-						height="100"
-						src="/static/images/bicycle.jpg"
-						alt="Bicycle and E-Scooter"
-					/>
-                  <div style="padding: 8px; max-width: 200px">
-                    Bicycle and E-Scooter
-                  </div>
-                </div>
-              </a>
+		></div>
             </div>
           </div>
         </div>

@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/static/images/favicon.png" />
+    <link rel="stylesheet" href="/static/css/minstyle.css" />
+    <link rel="stylesheet" href="/static/css/index.css" />
+    <title>
+      Goal diary
+    </title>
+    <style>
+      html,
+      		body {
+      			height: 100%;
+      			max-height: 100%;
+      		}
+
+      		body {
+      			display: flex;
+      			flex-direction: column;
+      		}
+
+      		.content {
+      			flex-grow: 1;
+      			min-height: 0;
+      			max-width: 100%;
+      		}
+
+      		#app {
+      			display: flex;
+      			height: 100%;
+      			max-width: 100%;
+      		}
+    </style>
+  </head>
+  <body>
+    <script src="/static/js/dist/initialize.js"></script>
+    <div class="content">
+      <div id="app">
+        <div
+				style="
+					padding: 10px;
+					padding-bottom: 0;
+					display: flex;
+					flex-direction: column;
+					width: 100%;
+					max-width: 100%;
+					max-height: 100%
+				"
+			>
+          <div style="padding-bottom: 10px">
+            <div style="display: flex; align-items: center; gap: 10px; max-width: 100%;">
+              <a href="/">
+                <img
+			src="/static/images/favicon.png"
+			width="42" height="42"
+			style="
+				width: 42px; height: 42px;
+				border-radius: 50%;
+			"
+			alt="icon"
+			class="hover-outline"
+		/>
+              </a>
+              <div
+		style="display: flex; flex-direction: column; overflow-y: clip; gap: 4px; flex-shrink: 0; flex-basis: 0; min-width: 0;">
+                <b style="text-wrap: nowrap; text-overflow: ellipsis; overflow-y: clip;">
+                  Showcase Website
+                </b>
+                <span style="text-wrap: nowrap; text-overflow: ellipsis; overflow-y: clip;">
+                  Goal diary
+                </span>
+              </div>
+              <div style="flex-grow: 1;"></div>
+              <div style="display: none; align-items: center; flex-shrink: 1; gap: 10px;">
+                <a href="/settings" class="ms-btn ms-rounded" style="width: 40px; height: 40px; position: relative;">
+                  <div
+				style="
+					width: 24px; height: 24px;
+					border-radius: 50%;
+					transform: translate(-8px, -0px);
+				"
+				alt="settings"
+			>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings">
+                      <circle cx="12" cy="12" r="3"></circle>
+                      <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: 10px; flex-direction: column">
+            <div
+			class="ms-text-light"
+			style="font-family: monospace"
+		>
+              2025-08
+            </div>
+            <div>
+              <a href="/personal-goals/416007/1754396842.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  5
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Revolutionizing Commutes: My Journey with Cycling and Electric Kick Scooters
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/personal-goals/416007/1754904672.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  11
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Weekly Transport Report: Cycling Success and Kickboard Growth
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/personal-goals/416007/1756676719.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  31
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Two-Wheeled Adventures: E-Scooter Trips, Forgetting, and Knee Pain
+                </span>
+              </a>
+            </div>
+            <div style="min-height: 10px"></div>
+            <div
+			class="ms-text-light"
+			style="font-family: monospace"
+		>
+              2025-07
+            </div>
+            <div>
+              <a href="/personal-goals/416007/1751889610.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  7
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Revolutionizing Urban Mobility: A Comprehensive Comparison of Electric Scooters and Bikes
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/personal-goals/416007/1752491483.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  14
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Two-Wheeled Adventures: Overcoming Challenges, Exploring Possibilities
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/personal-goals/416007/1753040793.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  20
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  From Scooters to Security: A Journey of Theft, Success, and New Challenges
+                </span>
+              </a>
+            </div>
+            <div style="min-height: 10px"></div>
+            <div
+			class="ms-text-light"
+			style="font-family: monospace"
+		>
+              2025-06
+            </div>
+            <div>
+              <a href="/personal-goals/416007/1748890135.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  2
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Dominating Two-Wheeled Transport: Sweaty Bike Rides and Electric Scooter Adventures
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/personal-goals/416007/1749490288.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  9
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Two-Wheeled Success: Cycling and Scooter Profits, and the Road Ahead
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/personal-goals/416007/1750023082.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  15
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Two-Wheeled Adventures and Lessons from Historical Perspective
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/personal-goals/416007/1750616089.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  22
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  A Rough Ride and a Fall: Reflecting on Scooter Safety After 1450 km
+                </span>
+              </a>
+            </div>
+            <div style="min-height: 10px"></div>
+            <div
+			class="ms-text-light"
+			style="font-family: monospace"
+		>
+              2025-05
+            </div>
+            <div>
+              <a href="/personal-goals/416007/1746562900.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  6
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Celebrating 800km on My Electric Scooter: Maintenance Concerns and Adventure Updates
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/personal-goals/416007/1747075929.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  12
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Riding in Style: My Electric Scooter Adventure with Wear and Tear
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/personal-goals/416007/1747600872.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  18
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Reaching Milestones: My Week on Bike and Scooter, Plus Tips for Optimal Tire Pressure
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/personal-goals/416007/1748186780.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  25
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Sustainable Transport: My Week on Bicycle and Electric Scooter
+                </span>
+              </a>
+            </div>
+            <div style="min-height: 10px"></div>
+            <div
+			class="ms-text-light"
+			style="font-family: monospace"
+		>
+              2025-04
+            </div>
+            <div>
+              <a href="/personal-goals/416007/1743977230.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  6
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Wheeling into the Future: A Costly Journey Towards Mobility
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/personal-goals/416007/1744573261.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  13
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Weekly Transport Summary: E-Scooter and Bicycle Adventures
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/personal-goals/416007/1745256565.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  21
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  A Week of Wins and Woes: Cycling, Scooting, and Overcoming Minor Setbacks
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/personal-goals/416007/1745788871.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  27
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Wheeled Transportation: Balancing Performance and Nostalgia in My Weekly Report
+                </span>
+              </a>
+            </div>
+            <div style="min-height: 10px"></div>
+            <div
+			class="ms-text-light"
+			style="font-family: monospace"
+		>
+              2025-03
+            </div>
+            <div>
+              <a href="/personal-goals/416007/1740929884.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  2
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Biking Beyond Boundaries: New Apps, Old Creaks, and Stunning Elevations
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/personal-goals/416007/1742064785.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  15
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Scooting Ahead: Tracking Progress, Weighing New Scooters, and Celebrating Speed Gains
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/personal-goals/416007/1742776184.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  24
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Tracking My Journey: Skateboard and Bike Adventures with Mi Fitness App
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/personal-goals/416007/1743375478.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  30
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Biking and Scooting: Tracking Trips, Income, and Sunday&#39;s Adventure
+                </span>
+              </a>
+            </div>
+            <div style="min-height: 10px"></div>
+            <div
+			class="ms-text-light"
+			style="font-family: monospace"
+		>
+              2025-02
+            </div>
+            <div>
+              <a href="/personal-goals/416007/1738534519.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  2
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Week in Review: Biking Challenges and Scooter Success
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/personal-goals/416007/1739188155.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  10
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  420 Kilometers and Counting: Winter Bike and Scooter Adventures
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/personal-goals/416007/1739882379.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  18
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Navigating Winter&#39;s Challenge: A Week of Skateboarding Adventures on Snow, Puddles, and Ice
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/personal-goals/416007/1740350604.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  23
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Balancing Act: Exploring the Pros and Cons of Scooter vs. Bicycle Commuting
+                </span>
+              </a>
+            </div>
+            <div style="min-height: 10px"></div>
+            <div
+			class="ms-text-light"
+			style="font-family: monospace"
+		>
+              2025-01
+            </div>
+            <div>
+              <a href="/personal-goals/416007/1736120316.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  5
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Navigating Urban Commutes: Scooter Adventures, Train Challenges, and the Perils of Online Delivery Tracking
+                </span>
+              </a>
+            </div>
+            <div style="min-height: 10px"></div>
+            <div
+			class="ms-text-light"
+			style="font-family: monospace"
+		>
+              2024-12
+            </div>
+            <div>
+              <a href="/personal-goals/416007/1733219018.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  3
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Comparing Transportation Costs: Bikes vs. Scooters and the Surprising Numbers Behind Them
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/personal-goals/416007/1734022869.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  12
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Scooter Stats and Snow-Mixed Weather: A Ride Report
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/personal-goals/416007/1734883932.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  22
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Analyzing Scooter Performance: Navigating Urban Challenges and Weather Impact
+                </span>
+              </a>
+            </div>
+            <div style="min-height: 10px"></div>
+            <div
+			class="ms-text-light"
+			style="font-family: monospace"
+		>
+              2024-10
+            </div>
+            <div>
+              <a href="/personal-goals/416007/1728818929.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  13
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Tackling the Trails: Backpacking Adventures and Summer&#39;s Final Ride
+                </span>
+              </a>
+            </div>
+            <div style="min-height: 10px"></div>
+            <div
+			class="ms-text-light"
+			style="font-family: monospace"
+		>
+              2024-09
+            </div>
+            <div>
+              <a href="/personal-goals/416007/1725617772.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  6
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Cycling Towards New Milestones: Tracking Trips, Tire Wear, and Saving Money
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/personal-goals/416007/1727545139.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  28
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Transforming My Cycling Experience: A New Backpack, Savings, and Miles Traveled
+                </span>
+              </a>
+            </div>
+            <div style="min-height: 10px"></div>
+            <div
+			class="ms-text-light"
+			style="font-family: monospace"
+		>
+              2024-08
+            </div>
+            <div>
+              <a href="/personal-goals/416007/1724058377.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  19
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Achieving Savings Goals: Cycling Towards Financial Freedom
+                </span>
+              </a>
+            </div>
+            <div style="min-height: 10px"></div>
+            <div
+			class="ms-text-light"
+			style="font-family: monospace"
+		>
+              2024-07
+            </div>
+            <div>
+              <a href="/personal-goals/416007/1721143697.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  16
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Biking Savings, Flat Tires, and Unlikely Discoveries: My Journey Towards Healthier Habits
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/personal-goals/416007/1722276303.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  29
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Reach Your Cycling Goals: Bike Maintenance and Cost Savings Journey
+                </span>
+              </a>
+            </div>
+            <div style="min-height: 10px"></div>
+            <div
+			class="ms-text-light"
+			style="font-family: monospace"
+		>
+              2024-05
+            </div>
+            <div>
+              <a href="/personal-goals/416007/1714767502.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  3
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Cycling Towards Savings: $355 and 105 Trips Strong!
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/personal-goals/416007/1715524961.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  12
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Bacon Hunt: Calculating Health Benefits, Savings, and Bike Miles After a Triple-Bacon Burger Venture
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/personal-goals/416007/1716301793.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  21
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Cycling Through Data: My Journey, Savings, and a Deluge of Bike Videos
+                </span>
+              </a>
+            </div>
+            <div style="min-height: 10px"></div>
+            <div
+			class="ms-text-light"
+			style="font-family: monospace"
+		>
+              2024-04
+            </div>
+            <div>
+              <a href="/personal-goals/416007/1712162416.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  3
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Biking Ahead: Sweating, Saving, and Overcoming Bike Light Theft
+                </span>
+              </a>
+            </div>
+            <div style="min-height: 10px"></div>
+            <div
+			class="ms-text-light"
+			style="font-family: monospace"
+		>
+              2024-03
+            </div>
+            <div>
+              <a href="/personal-goals/416007/1710690845.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  17
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  One Year of Pedaling to Savings: 88 Trips, $303 Saved, and No Breakdowns!
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/personal-goals/416007/1711889828.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  31
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Biking to Work and Lunch: Saving Money, Staying Fit, and Celebrating 339 Days with My Bike
+                </span>
+              </a>
+            </div>
+            <div style="min-height: 10px"></div>
+            <div
+			class="ms-text-light"
+			style="font-family: monospace"
+		>
+              2024-02
+            </div>
+            <div>
+              <a href="/personal-goals/416007/1706790211.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  1
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Achieving 47% Progress: 80 Trips and 280 Days Since Buying My Bike
+                </span>
+              </a>
+            </div>
+            <div style="min-height: 10px"></div>
+            <div
+			class="ms-text-light"
+			style="font-family: monospace"
+		>
+              2023-12
+            </div>
+            <div>
+              <a href="/personal-goals/416007/1703422605.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  24
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Striving for Financial Goals: Saving for a Bicycle vs. Tram Ticket
+                </span>
+              </a>
+            </div>
+            <div style="min-height: 10px"></div>
+            <div
+			class="ms-text-light"
+			style="font-family: monospace"
+		>
+              2023-10
+            </div>
+            <div>
+              <a href="/personal-goals/416007/1697741266.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  19
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Reaching $172: Adjusting Travel Cost Criteria to Stay on Track
+                </span>
+              </a>
+            </div>
+            <div style="min-height: 10px"></div>
+            <div
+			class="ms-text-light"
+			style="font-family: monospace"
+		>
+              2023-08
+            </div>
+            <div>
+              <a href="/personal-goals/416007/1691699350.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  10
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Calculating the True Cost-Benefit of My New Bicycle: A Journey Towards Financial Savings
+                </span>
+              </a>
+            </div>
+            <div style="min-height: 10px"></div>
+            <div
+			class="ms-text-light"
+			style="font-family: monospace"
+		>
+              2023-06
+            </div>
+            <div>
+              <a href="/personal-goals/416007/1687849496.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  27
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  My Travel Expenses: Totaling €65 for Meaningful Trips
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/static/js/dist/main.js"></script>
+  </body>
+</html>

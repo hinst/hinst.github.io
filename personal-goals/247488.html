@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/static/images/favicon.png" />
+    <link rel="stylesheet" href="/static/css/minstyle.css" />
+    <link rel="stylesheet" href="/static/css/index.css" />
+    <title>
+      Goal diary
+    </title>
+    <style>
+      html,
+      		body {
+      			height: 100%;
+      			max-height: 100%;
+      		}
+
+      		body {
+      			display: flex;
+      			flex-direction: column;
+      		}
+
+      		.content {
+      			flex-grow: 1;
+      			min-height: 0;
+      			max-width: 100%;
+      		}
+
+      		#app {
+      			display: flex;
+      			height: 100%;
+      			max-width: 100%;
+      		}
+    </style>
+  </head>
+  <body>
+    <script src="/static/js/dist/initialize.js"></script>
+    <div class="content">
+      <div id="app">
+        <div
+				style="
+					padding: 10px;
+					padding-bottom: 0;
+					display: flex;
+					flex-direction: column;
+					width: 100%;
+					max-width: 100%;
+					max-height: 100%
+				"
+			>
+          <div style="padding-bottom: 10px">
+            <div style="display: flex; align-items: center; gap: 10px; max-width: 100%;">
+              <a href="/">
+                <img
+			src="/static/images/favicon.png"
+			width="42" height="42"
+			style="
+				width: 42px; height: 42px;
+				border-radius: 50%;
+			"
+			alt="icon"
+			class="hover-outline"
+		/>
+              </a>
+              <div
+		style="display: flex; flex-direction: column; overflow-y: clip; gap: 4px; flex-shrink: 0; flex-basis: 0; min-width: 0;">
+                <b style="text-wrap: nowrap; text-overflow: ellipsis; overflow-y: clip;">
+                  Showcase Website
+                </b>
+                <span style="text-wrap: nowrap; text-overflow: ellipsis; overflow-y: clip;">
+                  Goal diary
+                </span>
+              </div>
+              <div style="flex-grow: 1;"></div>
+              <div style="display: none; align-items: center; flex-shrink: 1; gap: 10px;">
+                <a href="/settings" class="ms-btn ms-rounded" style="width: 40px; height: 40px; position: relative;">
+                  <div
+				style="
+					width: 24px; height: 24px;
+					border-radius: 50%;
+					transform: translate(-8px, -0px);
+				"
+				alt="settings"
+			>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings">
+                      <circle cx="12" cy="12" r="3"></circle>
+                      <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: 10px; flex-direction: column">
+            <div
+			class="ms-text-light"
+			style="font-family: monospace"
+		>
+              2025-09
+            </div>
+            <div>
+              <a href="/personal-goals/247488/1756718428.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  1
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Navigating Google&#39;s Challenges: SEO Woes and Android Restrictions
+                </span>
+              </a>
+            </div>
+            <div style="min-height: 10px"></div>
+            <div
+			class="ms-text-light"
+			style="font-family: monospace"
+		>
+              2025-08
+            </div>
+            <div>
+              <a href="/personal-goals/247488/1754296030.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  4
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Optimizing Linux: Disk Space Savings and Memory Management
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/personal-goals/247488/1754914604.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  11
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Optimizing Stable Diffusion on Windows: Mastering Image Generation Performance
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/personal-goals/247488/1755505993.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  18
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  A Week of Coding Challenges, Digital Art, and Progress Tracking
+                </span>
+              </a>
+            </div>
+            <div style="min-height: 10px"></div>
+            <div
+			class="ms-text-light"
+			style="font-family: monospace"
+		>
+              2025-07
+            </div>
+            <div>
+              <a href="/personal-goals/247488/1752424339.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  13
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Revitalizing Past Projects: A Week of Code Refinement and Future Ideas
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/personal-goals/247488/1753090144.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  21
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Maximizing Memory Optimization on Linux: A Comprehensive Guide
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/personal-goals/247488/1753731557.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  28
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Website Updates, Docker Troubles, and AI Art Adventures: A Mini Report
+                </span>
+              </a>
+            </div>
+            <div style="min-height: 10px"></div>
+            <div
+			class="ms-text-light"
+			style="font-family: monospace"
+		>
+              2025-06
+            </div>
+            <div>
+              <a href="/personal-goals/247488/1748808008.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  1
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Linux Adventures: From OpenMandriva to Kubuntu, With Digital Painting on the Side
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/personal-goals/247488/1749491906.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  9
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Balancing Art and Code: A Weekend of Digital Painting and Website Optimization
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/personal-goals/247488/1750097274.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  16
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Weekly Progress Report: Coding Challenges, Tree Traversals, and Digital Art
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/personal-goals/247488/1750784712.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  24
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  A Week of Balancing Coding Challenges, Creative Expressions, and Personal Growth
+                </span>
+              </a>
+            </div>
+            <div style="min-height: 10px"></div>
+            <div
+			class="ms-text-light"
+			style="font-family: monospace"
+		>
+              2025-05
+            </div>
+            <div>
+              <a href="/personal-goals/247488/1746100216.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  1
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Optimizing Backups: Creating a Customized, Efficient Program for USB Flash Drives
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/personal-goals/247488/1746393141.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  4
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Transforming Data Security with Custom Backup Program and Immersive 4K Display
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/personal-goals/247488/1747300986.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  15
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  A Week of Tech Trials: Linux, Websites, and Stable Diffusion Setup
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/personal-goals/247488/1747603522.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  18
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Balancing Passion Projects: Is It Time to Pivot from Personal Website to Linux Setup?
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/personal-goals/247488/1748205778.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  25
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Weekly Creative Update: Coding, Content Creation, and Art Progress
+                </span>
+              </a>
+            </div>
+            <div style="min-height: 10px"></div>
+            <div
+			class="ms-text-light"
+			style="font-family: monospace"
+		>
+              2025-04
+            </div>
+            <div>
+              <a href="/personal-goals/247488/1744054673.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  7
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Website Updates and Navigating K3s Certificate Rotation on Orange Pi
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/personal-goals/247488/1744584090.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  13
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Transforming Website Speed and Structure: A Week of Personal Project Updates
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/personal-goals/247488/1745173950.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  20
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Transforming Websites: A Week of Intensive Coding and New Features
+                </span>
+              </a>
+            </div>
+            <div style="min-height: 10px"></div>
+            <div
+			class="ms-text-light"
+			style="font-family: monospace"
+		>
+              2025-03
+            </div>
+            <div>
+              <a href="/personal-goals/247488/1742212568.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  17
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  My Weekly Update: New Website Launch &amp; LeetCode Achievements
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/personal-goals/247488/1742849112.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  24
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Code Adventures and a Critical Security Alert: Next.js Update Urgent for Skip Authentication Vulnerability
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/personal-goals/247488/1743459873.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  31
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Unveiling My Multilingual, Responsive Personal Website: A Journey of 50 Hours
+                </span>
+              </a>
+            </div>
+            <div style="min-height: 10px"></div>
+            <div
+			class="ms-text-light"
+			style="font-family: monospace"
+		>
+              2025-02
+            </div>
+            <div>
+              <a href="/personal-goals/247488/1740769400.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  28
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  SQLite vs MongoDB: Speed, Space, and Compatibility for Micro-Projects on Orange Pi
+                </span>
+              </a>
+            </div>
+            <div style="min-height: 10px"></div>
+            <div
+			class="ms-text-light"
+			style="font-family: monospace"
+		>
+              2025-01
+            </div>
+            <div>
+              <a href="/personal-goals/247488/1738003128.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  27
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  A Week of Coding Challenges, Language Learning, and Storage Solutions
+                </span>
+              </a>
+            </div>
+            <div style="min-height: 10px"></div>
+            <div
+			class="ms-text-light"
+			style="font-family: monospace"
+		>
+              2024-12
+            </div>
+            <div>
+              <a href="/personal-goals/247488/1733225317.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  3
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Productive Week: Coding, Drawing, and Debugging with OrangePi
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/personal-goals/247488/1734974909.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  23
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  A Week of Progress: LeetCode Challenges, Image Compression, Container Optimization, and Creative Pursuits
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/personal-goals/247488/1735649771.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  31
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  A Year of Creative Coding and Artistic Achievements: 2024 Report
+                </span>
+              </a>
+            </div>
+            <div style="min-height: 10px"></div>
+            <div
+			class="ms-text-light"
+			style="font-family: monospace"
+		>
+              2024-11
+            </div>
+            <div>
+              <a href="/personal-goals/247488/1730739956.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  4
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  My Productive Week: From Language Learning to Drawing and LeetCode Challenges
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/personal-goals/247488/1731355522.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  11
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Recollections of Computer Science: From Chess Problems to Modern Optimization
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="/personal-goals/247488/1732008857.html">
+                <button type="button" class="ms-btn ms-primary ms-outline" style="font-family: monospace; min-width: 50px; padding: 8px">
+                  19
+                </button>
+                &nbsp;
+                <span class="ms-text-main">
+                  Balancing Creativity and Code: My Struggle for Time Management
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/static/js/dist/main.js"></script>
+  </body>
+</html>

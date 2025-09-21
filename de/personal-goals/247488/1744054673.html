@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="/static/css/minstyle.css" />
     <link rel="stylesheet" href="/static/css/index.css" />
     <title>
-      My Personal Goals
+      Weekly Coding • 2025-04-07
     </title>
     <style>
       html,
@@ -50,7 +50,7 @@
 			>
           <div style="padding-bottom: 10px">
             <div style="display: flex; align-items: center; gap: 10px; max-width: 100%;">
-              <a href="/">
+              <a href="/de">
                 <img
 			src="/static/images/favicon.png"
 			width="42" height="42"
@@ -68,7 +68,7 @@
                   Showcase Website
                 </b>
                 <span style="text-wrap: nowrap; text-overflow: ellipsis; overflow-y: clip;">
-                  My Personal Goals
+                  Weekly Coding • 2025-04-07
                 </span>
               </div>
               <div style="flex-grow: 1;"></div>
@@ -91,64 +91,109 @@
               </div>
             </div>
           </div>
-          <div style="display: flex; flex-wrap: wrap; gap: 10px; flex-direction: row">
+          <div
+	class="goal-post-outer"
+	style="
+		flex-grow: 1;
+		justify-content: center;
+		display: flex;
+		min-height: 0px;
+		max-height: 100%;
+		background: repeating-linear-gradient(
+			45deg,
+			rgba(var(--main-bg), 1),
+			rgba(var(--main-bg), 1) 10px,
+			rgba(var(--light-bg-color), 1) 10px,
+			rgba(var(--light-bg-color), 1) 20px
+		);
+	"
+>
             <div
+		class="goal-post-inner ms-bg-main"
+		style="
+			flex-grow: 1;
+			padding-left: 20px;
+			padding-right: 20px;
+			max-width: 1000px;
+			background-attachment: fixed;
+			overflow-y: auto;
+		"
+	>
+              <div class="goalPostViewText">
+                <p>
+                  Hallo alle zusammen. Es ist Zeit für einen kleinen Bericht über mein Ziel.
+                </p>
+                <ul>
+                  <li>
+                    <h3>
+                      Persönliche Webseite 🌐 (1 Stunde 44 Minuten)
+                    </h3>
+                    <ul>
+                      <li>
+                        Ich habe das Aussehen aktualisiert. Nun verschwinden die diagonalen Streifen, wenn sie zu schmal werden.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h3>
+                      Orange Pi 🍊 (1 Stunde 37 Minuten)
+                    </h3>
+                    <ul>
+                      <li>
+                        Ich habe k3s konfiguriert. Es stellte sich heraus, dass die Zugangs-Keys für k3s eine Standardgültigkeitsdauer von 1 Jahr haben, und dieses Jahr ist gerade abgelaufen...
+                      </li>
+                      <li>
+                        Dafür muss man den folgenden Befehl ausführen:
+                        <ul>
+                          <li>
+                            <strong>
+                              sudo k3s certificate rotate
+                            </strong>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        Dann müssen die neuen Keys in
+                        <strong>
+                          kube/config
+                        </strong>
+                        kopiert werden.
+                      </li>
+                      <li>
+                        Es dauerte über eine Stunde, bis ich das verstand. Es gab keine klare Fehlermeldung, sondern nur etwas wie "Verbindung nicht möglich", und warum, musste ich raten und online nach Tipps suchen.
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div
 			style="
-				width: fit-content;
-				padding: 0;
-				margin: 0;
-				overflow: hidden
+				display: flex;
+				flex-wrap: wrap;
+				gap: 10px;
 			"
-			class="ms-card ms-border grayscale"
 		>
-              <a
-				href="/personal-goals/247488.html"
-				class="ms-text-main"
-			>
-                <div
-					style="display: flex; flex-direction: column;"
-					class="ms-bg-light"
-				>
+                <a href="/personal-goals/image/247488/1744054673/0.jpg">
                   <img
-						width="200"
-						height="100"
-						src="/static/images/codingWeekly.jpg"
-						alt="Weekly Coding"
+						width="240"
+						height="240"
+						class="ms-card ms-border"
+						style="width: 240px; height: 240px; object-fit: cover; margin: 0; padding: 0"
+						src="/personal-goals/image/247488/1744054673/0.jpg"
+						alt="Image 0"
 					/>
-                  <div style="padding: 8px; max-width: 200px">
-                    Weekly Coding
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div
-			style="
-				width: fit-content;
-				padding: 0;
-				margin: 0;
-				overflow: hidden
-			"
-			class="ms-card ms-border grayscale"
-		>
-              <a
-				href="/personal-goals/416007.html"
-				class="ms-text-main"
-			>
-                <div
-					style="display: flex; flex-direction: column;"
-					class="ms-bg-light"
-				>
+                </a>
+                <a href="/personal-goals/image/247488/1744054673/1.jpg">
                   <img
-						width="200"
-						height="100"
-						src="/static/images/bicycle.jpg"
-						alt="Bicycle and E-Scooter"
+						width="240"
+						height="240"
+						class="ms-card ms-border"
+						style="width: 240px; height: 240px; object-fit: cover; margin: 0; padding: 0"
+						src="/personal-goals/image/247488/1744054673/1.jpg"
+						alt="Image 1"
 					/>
-                  <div style="padding: 8px; max-width: 200px">
-                    Bicycle and E-Scooter
-                  </div>
-                </div>
-              </a>
+                </a>
+              </div>
             </div>
           </div>
         </div>

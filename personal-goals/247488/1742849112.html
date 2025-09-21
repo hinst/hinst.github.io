@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/static/images/favicon.png" />
+    <link rel="stylesheet" href="/static/css/minstyle.css" />
+    <link rel="stylesheet" href="/static/css/index.css" />
+    <title>
+      Weekly Coding • 2025-03-24
+    </title>
+    <style>
+      html,
+      		body {
+      			height: 100%;
+      			max-height: 100%;
+      		}
+
+      		body {
+      			display: flex;
+      			flex-direction: column;
+      		}
+
+      		.content {
+      			flex-grow: 1;
+      			min-height: 0;
+      			max-width: 100%;
+      		}
+
+      		#app {
+      			display: flex;
+      			height: 100%;
+      			max-width: 100%;
+      		}
+    </style>
+  </head>
+  <body>
+    <script src="/static/js/dist/initialize.js"></script>
+    <div class="content">
+      <div id="app">
+        <div
+				style="
+					padding: 10px;
+					padding-bottom: 0;
+					display: flex;
+					flex-direction: column;
+					width: 100%;
+					max-width: 100%;
+					max-height: 100%
+				"
+			>
+          <div style="padding-bottom: 10px">
+            <div style="display: flex; align-items: center; gap: 10px; max-width: 100%;">
+              <a href="/">
+                <img
+			src="/static/images/favicon.png"
+			width="42" height="42"
+			style="
+				width: 42px; height: 42px;
+				border-radius: 50%;
+			"
+			alt="icon"
+			class="hover-outline"
+		/>
+              </a>
+              <div
+		style="display: flex; flex-direction: column; overflow-y: clip; gap: 4px; flex-shrink: 0; flex-basis: 0; min-width: 0;">
+                <b style="text-wrap: nowrap; text-overflow: ellipsis; overflow-y: clip;">
+                  Showcase Website
+                </b>
+                <span style="text-wrap: nowrap; text-overflow: ellipsis; overflow-y: clip;">
+                  Weekly Coding • 2025-03-24
+                </span>
+              </div>
+              <div style="flex-grow: 1;"></div>
+              <div style="display: none; align-items: center; flex-shrink: 1; gap: 10px;">
+                <a href="/settings" class="ms-btn ms-rounded" style="width: 40px; height: 40px; position: relative;">
+                  <div
+				style="
+					width: 24px; height: 24px;
+					border-radius: 50%;
+					transform: translate(-8px, -0px);
+				"
+				alt="settings"
+			>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings">
+                      <circle cx="12" cy="12" r="3"></circle>
+                      <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+	class="goal-post-outer"
+	style="
+		flex-grow: 1;
+		justify-content: center;
+		display: flex;
+		min-height: 0px;
+		max-height: 100%;
+		background: repeating-linear-gradient(
+			45deg,
+			rgba(var(--main-bg), 1),
+			rgba(var(--main-bg), 1) 10px,
+			rgba(var(--light-bg-color), 1) 10px,
+			rgba(var(--light-bg-color), 1) 20px
+		);
+	"
+>
+            <div
+		class="goal-post-inner ms-bg-main"
+		style="
+			flex-grow: 1;
+			padding-left: 20px;
+			padding-right: 20px;
+			max-width: 1000px;
+			background-attachment: fixed;
+			overflow-y: auto;
+		"
+	>
+              <div class="goalPostViewText">
+                <p>
+                  Hello everyone. It's time to write a report on my adventures in code.
+                </p>
+                <p>
+                  ⚠️ But first: a significant security vulnerability has been discovered in
+                  <strong>
+                    Next.js
+                  </strong>
+                  . Unlike most vulnerabilities I read about but don't understand how they can be exploited 🤔💭... this one is straightforward: by setting "Skip Authentication" in the Header, it skips authentication 🫡👌. Next.js is a popular library, and many use it. The stats are on the screenshot below. Those using Next.js urgently need to update.
+                </p>
+                <p>
+                  Last week, I spent 18 hours on various software projects during my free time
+                </p>
+                <ul>
+                  <li>
+                    <strong>
+                      14 hours 🌐
+                    </strong>
+                    on my personal website, which I wrote about in a previous post. Development took longer than I initially anticipated. I'm trying to take it slow. In my personal website, I'm currently setting up SQLite for data storage. It's progressing slowly. To be honest, I'm not sure if SQLite is truly necessary here. But since I've set my mind on it, I need to finish it 🐞.
+                  </li>
+                  <li>
+                    <strong>
+                      2 hours 🍊
+                    </strong>
+                    setting up an Orange Pi. Again, the ext4 file system broke down after a power outage in my apartment. I need to get the system to automatically repair files after such incidents, but I'm unsure how to do that. Previous attempts at auto-correction didn't work out. This time, I tried a different approach and hope it's successful - we'll see after the next power outage 💭
+                  </li>
+                  <li>
+                    <strong>
+                      2 hours 🔙
+                    </strong>
+                    studying backup tools. The ones I explored are called
+                    <strong>
+                      rclone
+                    </strong>
+                    and
+                    <strong>
+                      rustic
+                    </strong>
+                    . Both are written in Go and seemed complex and strange to me.
+                    <strong>
+                      Rclone
+                    </strong>
+                    struggles with proper synchronization between NTFS and exFAT, while
+                    <strong>
+                      rustic
+                    </strong>
+                    saves the full file path each time. What if I move my files to another folder? 🤔💭😔 It's unclear.
+                  </li>
+                </ul>
+              </div>
+              <div
+			style="
+				display: flex;
+				flex-wrap: wrap;
+				gap: 10px;
+			"
+		>
+                <a href="/personal-goals/image/247488/1742849112/0.jpg">
+                  <img
+						width="240"
+						height="240"
+						class="ms-card ms-border"
+						style="width: 240px; height: 240px; object-fit: cover; margin: 0; padding: 0"
+						src="/personal-goals/image/247488/1742849112/0.jpg"
+						alt="Image 0"
+					/>
+                </a>
+                <a href="/personal-goals/image/247488/1742849112/1.jpg">
+                  <img
+						width="240"
+						height="240"
+						class="ms-card ms-border"
+						style="width: 240px; height: 240px; object-fit: cover; margin: 0; padding: 0"
+						src="/personal-goals/image/247488/1742849112/1.jpg"
+						alt="Image 1"
+					/>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/static/js/dist/main.js"></script>
+  </body>
+</html>
