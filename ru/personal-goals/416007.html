@@ -89,6 +89,46 @@
                   </div>
                 </a>
               </div>
+              <div>
+                <button id="header-language-button" type="button" class="ms-btn ms-rounded" style="width: 40px; height: 40px">
+                  <div
+				style="
+					width: 24px; height: 24px;
+					border-radius: 50%;
+					transform: translate(-8px, -0px);
+				"
+				alt="settings"
+			>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <line x1="2" y1="12" x2="22" y2="12"></line>
+                      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                    </svg>
+                  </div>
+                </button>
+                <div
+			id="header-language-popup"
+			style="
+				right: 0px;
+				left: auto;
+				position: absolute;
+				padding: 10px;
+				display: none;
+				flex-direction: column;
+				gap: 4px
+			"
+		>
+                  <a class="ms-btn ms-outline ms-rounded ms-primary" href="/">
+                    English
+                  </a>
+                  <a class="ms-btn ms-outline ms-rounded ms-primary" href="/de">
+                    German
+                  </a>
+                  <a class="ms-btn ms-outline ms-rounded ms-primary" href="/ru">
+                    Russian
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
           <div style="display: flex; flex-wrap: wrap; gap: 10px; flex-direction: column">
