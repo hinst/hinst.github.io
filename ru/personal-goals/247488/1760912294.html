@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/static/images/favicon.png" />
+    <link rel="stylesheet" href="/static/css/minstyle.css" />
+    <link rel="stylesheet" href="/static/css/index.css" />
+    <meta name="description" content="Кодить каждую неделю 8 часов - 2025-10-19 - Моя неделя: Индексация сайта, завершение курса Duolingo и выбор новых вызовов" />
+    <meta http-equiv="content-language" content="ru">
+    <title>
+      Кодить каждую неделю 8 часов • 2025-10-19
+    </title>
+    <style>
+      html,
+      		body {
+      			height: 100%;
+      			max-height: 100%;
+      		}
+
+      		body {
+      			display: flex;
+      			flex-direction: column;
+      		}
+
+      		.content {
+      			flex-grow: 1;
+      			min-height: 0;
+      			max-width: 100%;
+      		}
+
+      		#app {
+      			display: flex;
+      			height: 100%;
+      			max-width: 100%;
+      		}
+    </style>
+  </head>
+  <body>
+    <script src="/static/js/dist/initialize.js"></script>
+    <div class="content">
+      <div id="app">
+        <div
+				style="
+					padding: 10px;
+					padding-bottom: 0;
+					display: flex;
+					flex-direction: column;
+					width: 100%;
+					max-width: 100%;
+					max-height: 100%
+				"
+			>
+          <div style="padding-bottom: 10px">
+            <div style="display: flex; align-items: center; gap: 10px; max-width: 100%;">
+              <a href="/ru">
+                <img
+			src="/static/images/favicon.png"
+			width="42" height="42"
+			style="
+				width: 42px; height: 42px;
+				border-radius: 50%;
+			"
+			alt="icon"
+			class="hover-outline"
+		/>
+              </a>
+              <div
+		style="display: flex; flex-direction: column; overflow-y: clip; gap: 4px; flex-shrink: 0; flex-basis: 0; min-width: 0;">
+                <b style="text-wrap: nowrap; text-overflow: ellipsis; overflow-y: clip;">
+                  Personal Website
+                </b>
+                <h1 style="text-wrap: nowrap; text-overflow: ellipsis; overflow-y: clip; font-size: 1rem; margin: 0; font-weight: normal">
+                  Кодить каждую неделю 8 часов • 2025-10-19
+                </h1>
+              </div>
+              <div style="flex-grow: 1;"></div>
+              <div style="display: none; align-items: center; flex-shrink: 1; gap: 10px;">
+                <a href="/settings" class="ms-btn ms-rounded" style="width: 40px; height: 40px; position: relative;">
+                  <div
+				style="
+					width: 24px; height: 24px;
+					border-radius: 50%;
+					transform: translate(-8px, -0px);
+				"
+				alt="settings"
+			>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings">
+                      <circle cx="12" cy="12" r="3"></circle>
+                      <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <div>
+                <button id="header-language-button" type="button" class="ms-btn ms-rounded" style="width: 40px; height: 40px">
+                  <div
+				style="
+					width: 24px; height: 24px;
+					border-radius: 50%;
+					transform: translate(-8px, -0px);
+				"
+				alt="settings"
+			>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <line x1="2" y1="12" x2="22" y2="12"></line>
+                      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                    </svg>
+                  </div>
+                </button>
+                <div
+			id="header-language-popup"
+			class="ms-bg-light"
+			style="
+				right: 0px;
+				left: auto;
+				position: absolute;
+				padding: 10px;
+				display: none;
+				flex-direction: column;
+				gap: 4px;
+				border-radius: 15px;
+				margin-top: 5px;
+				margin-right: 10px;
+			"
+		>
+                  <a
+				class="ms-btn ms-outline ms-rounded ms-primary"
+				href="/"
+			>
+                    English
+                  </a>
+                  <a
+				class="ms-btn ms-outline ms-rounded ms-primary"
+				href="/de"
+			>
+                    German
+                  </a>
+                  <a
+				class="ms-btn ms-outline ms-rounded ms-primary"
+				href="/ru"
+			>
+                    Russian
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+	class="goal-post-outer"
+	style="
+		flex-grow: 1;
+		justify-content: center;
+		display: flex;
+		min-height: 0px;
+		max-height: 100%;
+		background: repeating-linear-gradient(
+			45deg,
+			rgba(var(--main-bg), 1),
+			rgba(var(--main-bg), 1) 10px,
+			rgba(var(--light-bg-color), 1) 10px,
+			rgba(var(--light-bg-color), 1) 20px
+		);
+	"
+>
+            <div
+		class="goal-post-inner ms-bg-main"
+		style="
+			flex-grow: 1;
+			padding-left: 20px;
+			padding-right: 20px;
+			max-width: 1000px;
+			background-attachment: fixed;
+			overflow-y: auto;
+		"
+	>
+              <div class="goalPostViewText">
+                <p>
+                  Доброго времени суток. Настало время сделать запись в моём еженедельном дневнике
+                </p>
+                <p>
+                  <strong>
+                    :: Google Search Console ::
+                  </strong>
+                  <br />
+                  Продолжаю делать Search Engine Indexing для моего персонального веб-сайта
+                  <a href="http://smartprogress.do/site/redirect/?url=https%3A%2F%2Fhinst.github.io%2F" target="_blank">
+                    https://hinst.github.io/
+                  </a>
+                  🌐
+                  <br />
+                  В предыдущую неделю я писал, что столкнулся с проблемами в Google Search Notification API. А на этой неделе я решил опробовать иной подход: теперь вместо API я добавляю мои страницы в "ручном" режиме. Чтобы было удобнее это делать, я создал специальную страницу, на которой я могу отслеживать, какие страницы из списка я уже обработал. Фича называется
+                  <em>
+                    Manual Ping Tracker
+                  </em>
+                  . Работает это так:
+                </p>
+                <ol>
+                  <li>
+                    Я нажимаю
+                    <em>
+                      [Copy URL]
+                    </em>
+                  </li>
+                  <li>
+                    Перехожу на вкладку Google Search Console
+                  </li>
+                  <li>
+                    Вставляю Ctrl+V и нажимаю Enter
+                  </li>
+                  <li>
+                    Нажимаю
+                    <em>
+                      [Request Indexing]
+                    </em>
+                  </li>
+                  <li>
+                    Жду
+                  </li>
+                  <li>
+                    Если результат зелёный, то перехожу обратно на мою страницу админа и нажимаю
+                    <em>
+                      [Confirm pinged]
+                    </em>
+                  </li>
+                  <li>
+                    А если результат красный "
+                    <em>
+                      Quota limit reached
+                    </em>
+                    ," то жду следующего дня, и продолжаю вновь с пункта 1
+                  </li>
+                </ol>
+                <p>
+                  И тут было бы логично автоматизировать весь процесс от начала до конца, а не копировать-вставлять URL. Но есть одна проблема: разработчики Google Search Console постарались усложнить программный доступ. Я посмотрел через консоль браузера, какие данные отправляются в HTTP-запросе, и легко разобраться там не получится. В итоге, я решил сделать такой полу-автоматический подход. К тому же, в день можно отправить лишь
+                  <strong>
+                    12
+                  </strong>
+                  штук URL адресов. Честно говоря, я ожидал большего. Но что поделать - серверы Google могут обработать лишь 12 страниц в день, наверное 🥴 Таким образом, на добавление всех страниц уйдёт около месяца
+                </p>
+                <p>
+                  <strong>
+                    :: Duolingo ::
+                  </strong>
+                </p>
+                <p>
+                  Наконец-то я дошёл до конца курса Duolingo: Английский-Немецкий. Это мой второй курс из Duolingo. В итоге, у меня теперь пройдены до конца два курса:
+                </p>
+                <ol>
+                  <li>
+                    Русский -&gt; Немецкий
+                  </li>
+                  <li>
+                    Английский -&gt; Немецкий
+                  </li>
+                </ol>
+                <p>
+                  Буду ли я ещё проходить курсы Duolingo - пока не решил. Есть такие курсы-кандидаты:
+                </p>
+                <ol>
+                  <li>
+                    Математика 🧮
+                  </li>
+                  <li>
+                    Музыка 🎵
+                  </li>
+                  <li>
+                    Шахматы ♟️
+                  </li>
+                  <li>
+                    Продолжать проходить немецкий в режиме "повторение" 🔄️
+                  </li>
+                </ol>
+                <p>
+                  Математику я уже пытался проходить, и она показалась мне странной. Там нужно считать количество маленьких зелёных кружочков 🤔💭
+                </p>
+              </div>
+              <div
+			style="
+				display: flex;
+				flex-wrap: wrap;
+				gap: 10px;
+			"
+		>
+                <a href="/personal-goals/image/247488/1760912294/0.jpg">
+                  <img
+						width="240"
+						height="240"
+						class="ms-card ms-border"
+						style="width: 240px; height: 240px; object-fit: cover; margin: 0; padding: 0"
+						src="/personal-goals/image/247488/1760912294/0.jpg"
+						alt="Image 0"
+					/>
+                </a>
+                <a href="/personal-goals/image/247488/1760912294/1.jpg">
+                  <img
+						width="240"
+						height="240"
+						class="ms-card ms-border"
+						style="width: 240px; height: 240px; object-fit: cover; margin: 0; padding: 0"
+						src="/personal-goals/image/247488/1760912294/1.jpg"
+						alt="Image 1"
+					/>
+                </a>
+                <a href="/personal-goals/image/247488/1760912294/2.jpg">
+                  <img
+						width="240"
+						height="240"
+						class="ms-card ms-border"
+						style="width: 240px; height: 240px; object-fit: cover; margin: 0; padding: 0"
+						src="/personal-goals/image/247488/1760912294/2.jpg"
+						alt="Image 2"
+					/>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/static/js/dist/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/static/images/favicon.png" />
+    <link rel="stylesheet" href="/static/css/minstyle.css" />
+    <link rel="stylesheet" href="/static/css/index.css" />
+    <meta name="description" content="Weekly Coding - 2025-11-02 - A Week of Coding Challenges: From Easy Wins to Hard Dungeons" />
+    <meta http-equiv="content-language" content="en">
+    <title>
+      Weekly Coding • 2025-11-02
+    </title>
+    <style>
+      html,
+      		body {
+      			height: 100%;
+      			max-height: 100%;
+      		}
+
+      		body {
+      			display: flex;
+      			flex-direction: column;
+      		}
+
+      		.content {
+      			flex-grow: 1;
+      			min-height: 0;
+      			max-width: 100%;
+      		}
+
+      		#app {
+      			display: flex;
+      			height: 100%;
+      			max-width: 100%;
+      		}
+    </style>
+  </head>
+  <body>
+    <script src="/static/js/dist/initialize.js"></script>
+    <div class="content">
+      <div id="app">
+        <div
+				style="
+					padding: 10px;
+					padding-bottom: 0;
+					display: flex;
+					flex-direction: column;
+					width: 100%;
+					max-width: 100%;
+					max-height: 100%
+				"
+			>
+          <div style="padding-bottom: 10px">
+            <div style="display: flex; align-items: center; gap: 10px; max-width: 100%;">
+              <a href="/">
+                <img
+			src="/static/images/favicon.png"
+			width="42" height="42"
+			style="
+				width: 42px; height: 42px;
+				border-radius: 50%;
+			"
+			alt="icon"
+			class="hover-outline"
+		/>
+              </a>
+              <div
+		style="display: flex; flex-direction: column; overflow-y: clip; gap: 4px; flex-shrink: 0; flex-basis: 0; min-width: 0;">
+                <b style="text-wrap: nowrap; text-overflow: ellipsis; overflow-y: clip;">
+                  Personal Website
+                </b>
+                <h1 style="text-wrap: nowrap; text-overflow: ellipsis; overflow-y: clip; font-size: 1rem; margin: 0; font-weight: normal">
+                  Weekly Coding • 2025-11-02
+                </h1>
+              </div>
+              <div style="flex-grow: 1;"></div>
+              <div style="display: none; align-items: center; flex-shrink: 1; gap: 10px;">
+                <a href="/settings" class="ms-btn ms-rounded" style="width: 40px; height: 40px; position: relative;">
+                  <div
+				style="
+					width: 24px; height: 24px;
+					border-radius: 50%;
+					transform: translate(-8px, -0px);
+				"
+				alt="settings"
+			>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings">
+                      <circle cx="12" cy="12" r="3"></circle>
+                      <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <div>
+                <button id="header-language-button" type="button" class="ms-btn ms-rounded" style="width: 40px; height: 40px">
+                  <div
+				style="
+					width: 24px; height: 24px;
+					border-radius: 50%;
+					transform: translate(-8px, -0px);
+				"
+				alt="settings"
+			>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <line x1="2" y1="12" x2="22" y2="12"></line>
+                      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                    </svg>
+                  </div>
+                </button>
+                <div
+			id="header-language-popup"
+			class="ms-bg-light"
+			style="
+				right: 0px;
+				left: auto;
+				position: absolute;
+				padding: 10px;
+				display: none;
+				flex-direction: column;
+				gap: 4px;
+				border-radius: 15px;
+				margin-top: 5px;
+				margin-right: 10px;
+			"
+		>
+                  <a
+				class="ms-btn ms-outline ms-rounded ms-primary"
+				href="/"
+			>
+                    English
+                  </a>
+                  <a
+				class="ms-btn ms-outline ms-rounded ms-primary"
+				href="/de"
+			>
+                    German
+                  </a>
+                  <a
+				class="ms-btn ms-outline ms-rounded ms-primary"
+				href="/ru"
+			>
+                    Russian
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+	class="goal-post-outer"
+	style="
+		flex-grow: 1;
+		justify-content: center;
+		display: flex;
+		min-height: 0px;
+		max-height: 100%;
+		background: repeating-linear-gradient(
+			45deg,
+			rgba(var(--main-bg), 1),
+			rgba(var(--main-bg), 1) 10px,
+			rgba(var(--light-bg-color), 1) 10px,
+			rgba(var(--light-bg-color), 1) 20px
+		);
+	"
+>
+            <div
+		class="goal-post-inner ms-bg-main"
+		style="
+			flex-grow: 1;
+			padding-left: 20px;
+			padding-right: 20px;
+			max-width: 1000px;
+			background-attachment: fixed;
+			overflow-y: auto;
+		"
+	>
+              <div class="goalPostViewText">
+                <p>
+                  Good evening, this week I spent 7 hours on LeetCode. Completed the following problems:
+                </p>
+                <p>
+                  <strong>
+                    :: LeetCode ::
+                  </strong>
+                </p>
+                <ul>
+                  <li>
+                    <strong>
+                      168. Excel Sheet Column Title 🟢 Easy
+                    </strong>
+                    <ul>
+                      <li>
+                        The task seemed more Medium than Easy to me. It required handling a number system without the digit "zero"
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <strong>
+                      169. Majority Element 🟢 Easy
+                    </strong>
+                    <ul>
+                      <li>
+                        The prompt also suggested programming the same thing but "without using extra space." How to do that... I didn't see much point in looking for an answer, as I don't think there's a practical solution.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <strong>
+                      171. Excel Sheet Column Number 🟢 Easy
+                    </strong>
+                  </li>
+                  <li>
+                    <strong>
+                      172. Factorial Trailing Zeroes 🟡 Medium
+                    </strong>
+                    <ul>
+                      <li>
+                        I struggled for a while trying to solve this without a hint... And I succeeded. Later, I looked at the solution and it turned out there's a clever approach: every fifth element adds a zero 🥴 You don't even need to multiply the factorial here.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <strong>
+                      173. Binary Search Tree Iterator 🟡 Medium
+                    </strong>
+                    <ul>
+                      <li>
+                        You can pre-build a list and then just iterate through it, which I did, making it Easy. But the list consumes memory. There might be a solution without the list, but I didn't delve into it as I didn't see much point.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <strong>
+                      174. Dungeon Game 🔴 Hard
+                    </strong>
+                    <ul>
+                      <li>
+                        This one was stressful and frustrating. Initially, I had written appropriate code, but it turned out to be too slow: Time Limit Exceeded: 41/45. After that, I spent a long time trying to rewrite the code to find a faster way. Two hours later, I didn't manage it ❌ It seems I can't save the princess from the dungeon alone.
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <p>
+                  <strong>
+                    :: Personal Website ::
+                  </strong>
+                  I'm still uploading my pages to Google Search Console. There are 171 out of 270 pages left to process. Next week, I plan to do something new on my personal website and put LeetCode on hold 🤔
+                </p>
+              </div>
+              <div
+			style="
+				display: flex;
+				flex-wrap: wrap;
+				gap: 10px;
+			"
+		>
+                <a href="/personal-goals/image/247488/1762117131/0.jpg">
+                  <img
+						width="240"
+						height="240"
+						class="ms-card ms-border"
+						style="width: 240px; height: 240px; object-fit: cover; margin: 0; padding: 0"
+						src="/personal-goals/image/247488/1762117131/0.jpg"
+						alt="Image 0"
+					/>
+                </a>
+                <a href="/personal-goals/image/247488/1762117131/1.jpg">
+                  <img
+						width="240"
+						height="240"
+						class="ms-card ms-border"
+						style="width: 240px; height: 240px; object-fit: cover; margin: 0; padding: 0"
+						src="/personal-goals/image/247488/1762117131/1.jpg"
+						alt="Image 1"
+					/>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/static/js/dist/main.js"></script>
+  </body>
+</html>
