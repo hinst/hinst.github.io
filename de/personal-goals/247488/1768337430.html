@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/static/images/favicon.png" />
+    <link rel="stylesheet" href="/static/css/minstyle.css" />
+    <link rel="stylesheet" href="/static/css/index.css" />
+    <meta name="description" content="Weekly Coding - 2026-01-13 - Mein wöchentliches Update: Codierung, Webentwicklung und ein sauberes Windows 11" />
+    <meta http-equiv="content-language" content="de">
+    <title>
+      Weekly Coding • 2026-01-13
+    </title>
+    <style>
+      html,
+      		body {
+      			height: 100%;
+      			max-height: 100%;
+      		}
+
+      		body {
+      			display: flex;
+      			flex-direction: column;
+      		}
+
+      		.content {
+      			flex-grow: 1;
+      			min-height: 0;
+      			max-width: 100%;
+      		}
+
+      		#app {
+      			display: flex;
+      			height: 100%;
+      			max-width: 100%;
+      		}
+    </style>
+  </head>
+  <body>
+    <script src="/static/js/dist/initialize.js"></script>
+    <div class="content">
+      <div id="app">
+        <div
+				style="
+					padding: 10px;
+					padding-bottom: 0;
+					display: flex;
+					flex-direction: column;
+					width: 100%;
+					max-width: 100%;
+					max-height: 100%
+				"
+			>
+          <div style="padding-bottom: 10px">
+            <div style="display: flex; align-items: center; gap: 10px; max-width: 100%;">
+              <a href="/de">
+                <img
+			src="/static/images/favicon.png"
+			width="42" height="42"
+			style="
+				width: 42px; height: 42px;
+				border-radius: 50%;
+			"
+			alt="icon"
+			class="hover-outline"
+		/>
+              </a>
+              <div
+		style="display: flex; flex-direction: column; overflow-y: clip; gap: 4px; flex-shrink: 0; flex-basis: 0; min-width: 0;">
+                <b style="text-wrap: nowrap; text-overflow: ellipsis; overflow-y: clip;">
+                  Personal Website
+                </b>
+                <h1 style="text-wrap: nowrap; text-overflow: ellipsis; overflow-y: clip; font-size: 1rem; margin: 0; font-weight: normal">
+                  Weekly Coding • 2026-01-13
+                </h1>
+              </div>
+              <div style="flex-grow: 1;"></div>
+              <div style="display: none; align-items: center; flex-shrink: 1; gap: 10px;">
+                <a href="/settings" class="ms-btn ms-rounded" style="width: 40px; height: 40px; position: relative;">
+                  <div
+				style="
+					width: 24px; height: 24px;
+					border-radius: 50%;
+					transform: translate(-8px, -0px);
+				"
+				alt="settings"
+			>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings">
+                      <circle cx="12" cy="12" r="3"></circle>
+                      <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <div>
+                <button id="header-language-button" type="button" class="ms-btn ms-rounded" style="width: 40px; height: 40px">
+                  <div
+				style="
+					width: 24px; height: 24px;
+					border-radius: 50%;
+					transform: translate(-8px, -0px);
+				"
+				alt="settings"
+			>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <line x1="2" y1="12" x2="22" y2="12"></line>
+                      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                    </svg>
+                  </div>
+                </button>
+                <div
+			id="header-language-popup"
+			class="ms-bg-light"
+			style="
+				right: 0px;
+				left: auto;
+				position: absolute;
+				padding: 10px;
+				display: none;
+				flex-direction: column;
+				gap: 4px;
+				border-radius: 15px;
+				margin-top: 5px;
+				margin-right: 10px;
+			"
+		>
+                  <a
+				class="ms-btn ms-outline ms-rounded ms-primary"
+				href="/"
+			>
+                    English
+                  </a>
+                  <a
+				class="ms-btn ms-outline ms-rounded ms-primary"
+				href="/de"
+			>
+                    German
+                  </a>
+                  <a
+				class="ms-btn ms-outline ms-rounded ms-primary"
+				href="/ru"
+			>
+                    Russian
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+	class="goal-post-outer"
+	style="
+		flex-grow: 1;
+		justify-content: center;
+		display: flex;
+		min-height: 0px;
+		max-height: 100%;
+		background: repeating-linear-gradient(
+			45deg,
+			rgba(var(--main-bg), 1),
+			rgba(var(--main-bg), 1) 10px,
+			rgba(var(--light-bg-color), 1) 10px,
+			rgba(var(--light-bg-color), 1) 20px
+		);
+	"
+>
+            <div
+		class="goal-post-inner ms-bg-main"
+		style="
+			flex-grow: 1;
+			padding-left: 20px;
+			padding-right: 20px;
+			max-width: 1000px;
+			background-attachment: fixed;
+			overflow-y: auto;
+		"
+	>
+              <div class="goalPostViewText">
+                <p>
+                  Guten Tag allen. Es ist Zeit für mein wöchentliches Tagebuch.
+                </p>
+                <ul>
+                  <li>
+                    <strong>
+                      LeetCode 💻
+                    </strong>
+                    6 Stunden 55 Minuten
+                    <ul>
+                      <li>
+                        Fünf Aufgaben gelöst
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <strong>
+                      Persönliche Website 🌐
+                    </strong>
+                    1 Stunde 13 Minuten
+                    <ul>
+                      <li>
+                        Search Indexing etwas weiter vorangebracht und mein Zähler für Besucheransichten getestet.
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <h3>
+                  <strong>
+                    LeetCode
+                  </strong>
+                </h3>
+                <p>
+                  Ich habe fünf Aufgaben gelöst und bin bei Aufgabe Nr.
+                  <em>
+                    188
+                  </em>
+                  angekommen... Diese Aufgabe hat mich wirklich herausgefordert 🥴 Schwierigkeitsgrad: Hard. Drei Stunden habe ich versucht, den Code dafür zu schreiben. Aber es war nicht möglich, das Programm bis zur gewünschten Geschwindigkeit zu optimieren: Mein Programm schaffte
+                  <strong>
+                    207
+                  </strong>
+                  von
+                  <strong>
+                    211
+                  </strong>
+                  Online-Tests. Die 208. Testfall konnte ich jedoch nicht bestehen – ich erhielt eine „Time Limit Exceeded“-Meldung ⌛ Später werde ich mir die Erklärung zu dieser Aufgabe auf der Seite
+                  <a href="http://smartprogress.do/site/redirect/?url=https%3A%2F%2Falgo.monster%2Fliteproblems%2F188" target="_blank">
+                    AlgoMonster
+                  </a>
+                  ansehen.
+                </p>
+                <h3>
+                  <strong>
+                    WebCounter
+                  </strong>
+                </h3>
+                <p>
+                  Der Zähler für Besucheransichten funktioniert, aber es sind nur wenige Besuche verzeichnet. Die Startseite hat im vergangenen Monat 8 Besuche gezählt. Weitere Seiten erhielten 5 bis 4 Besuche, und ich selbst besuche die Seite ebenfalls, was die Zahl noch weiter reduziert. In Zukunft möchte ich eine Benutzeroberfläche für die Anzeige der Besucherstatistik erstellen, aber das wird noch einige Zeit dauern. Derzeit kann man die Statistiken nur über Adminer einsehen, wie im Screenshot blau zu sehen ist.
+                </p>
+                <h3>
+                  <strong>
+                    Windows 11 von Grund auf neu
+                  </strong>
+                </h3>
+                <p>
+                  Die größte und zeitaufwendigste Aufgabe, die ich Anfang 2026 in Angriff genommen habe. Nach meiner Schätzung sind 25+ Stunden dabei gewesen, wenn man die Installation aller benötigten Programme mit einbezieht. Ich entschied mich für eine saubere Installation von Windows 11, um den Speicher und meinen Verstand zu entlasten. In den letzten fünf Jahren hatte sich auf meinem Computer viel Unnötiges angesammelt, das ich gerne entfernen würde – alles auf einmal. Mit Hilfe des
+                  <a href="http://smartprogress.do/site/redirect/?url=https%3A%2F%2Fschneegans.de%2Fwindows%2Funattend-generator%2F" target="_blank">
+                    Konfigurationsgenerators
+                  </a>
+                  für Autoattend XML habe ich einen sauberen Windows 11-Bild mit der Version 25H2 erstellt. Ich habe viele unnötige Komponenten entfernt:
+                </p>
+                <ul>
+                  <li>
+                    Copilot AI, Recall, Bing
+                  </li>
+                  <li>
+                    Windows Defender, SmartScreen, Automatische Systemaktualisierung
+                  </li>
+                  <li>
+                    Edge, Paint, Modern Notepad, XBox, OneDrive und alle Standardprogramme
+                  </li>
+                  <li>
+                    Online-Konto
+                  </li>
+                  <li>
+                    Telemetrie
+                  </li>
+                </ul>
+                <p>
+                  Mit dem Autoattend-Konfigurator hatte ich etwas zu kämpfen, da ich ihn zuvor noch nie verwendet hatte. Abgesehen von den Terminal, den Uhr und dem Taschenrechner habe ich nur noch wenige Standardprogramme installiert. Jetzt habe ich ein extrem sauberes Windows 11 mit nur den für mich relevanten Programmen 🧐 Die Arbeit, meine Dateien zu ordnen, ist allerdings noch nicht vorbei. Ich möchte später meine zahlreichen Cloud-Dateien und Backups sortieren: Fotos, Dokumente, Archivmaterial. Wie lange das dauern wird, traue ich mich kaum zu schätzen. Denn die Sammlung habe ich über fast mein ganzes Leben hinweg aufgebaut, seit 2005. Und bisher habe ich sie nie richtig sortiert 🤣😭♻️ Alte Dateien müssen weg, und die Wichtigen müssen in Ordner unterteilt werden 📂📂📂
+                </p>
+                <h3>
+                  <strong>
+                    Ziele für Januar:
+                  </strong>
+                </h3>
+                <ol>
+                  <li>
+                    Mindestens Aufgabe Nr. 200 auf LeetCode lösen
+                  </li>
+                  <li>
+                    Eine neue Mini-Funktion für meine persönliche Website entwickeln: 🔎 Textsuche in allen Blogbeiträgen
+                  </li>
+                  <li>
+                    Alle Cloud-Dateien und Backups sortieren
+                  </li>
+                </ol>
+              </div>
+              <div
+			style="
+				display: flex;
+				flex-wrap: wrap;
+				gap: 10px;
+			"
+		>
+                <a href="/personal-goals/image/247488/1768337430/0.jpg">
+                  <img
+						width="240"
+						height="240"
+						class="ms-card ms-border"
+						style="width: 240px; height: 240px; object-fit: cover; margin: 0; padding: 0"
+						src="/personal-goals/image/247488/1768337430/0.jpg"
+						alt="Image 0"
+					/>
+                </a>
+                <a href="/personal-goals/image/247488/1768337430/1.jpg">
+                  <img
+						width="240"
+						height="240"
+						class="ms-card ms-border"
+						style="width: 240px; height: 240px; object-fit: cover; margin: 0; padding: 0"
+						src="/personal-goals/image/247488/1768337430/1.jpg"
+						alt="Image 1"
+					/>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/static/js/dist/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/static/images/favicon.png" />
+    <link rel="stylesheet" href="/static/css/minstyle.css" />
+    <link rel="stylesheet" href="/static/css/index.css" />
+    <meta name="description" content="Weekly Coding - 2026-01-13 - A Week of Coding, Website Work, and Digital Detox: My Latest Progress Report" />
+    <meta http-equiv="content-language" content="en">
+    <title>
+      Weekly Coding • 2026-01-13
+    </title>
+    <style>
+      html,
+      		body {
+      			height: 100%;
+      			max-height: 100%;
+      		}
+
+      		body {
+      			display: flex;
+      			flex-direction: column;
+      		}
+
+      		.content {
+      			flex-grow: 1;
+      			min-height: 0;
+      			max-width: 100%;
+      		}
+
+      		#app {
+      			display: flex;
+      			height: 100%;
+      			max-width: 100%;
+      		}
+    </style>
+  </head>
+  <body>
+    <script src="/static/js/dist/initialize.js"></script>
+    <div class="content">
+      <div id="app">
+        <div
+				style="
+					padding: 10px;
+					padding-bottom: 0;
+					display: flex;
+					flex-direction: column;
+					width: 100%;
+					max-width: 100%;
+					max-height: 100%
+				"
+			>
+          <div style="padding-bottom: 10px">
+            <div style="display: flex; align-items: center; gap: 10px; max-width: 100%;">
+              <a href="/">
+                <img
+			src="/static/images/favicon.png"
+			width="42" height="42"
+			style="
+				width: 42px; height: 42px;
+				border-radius: 50%;
+			"
+			alt="icon"
+			class="hover-outline"
+		/>
+              </a>
+              <div
+		style="display: flex; flex-direction: column; overflow-y: clip; gap: 4px; flex-shrink: 0; flex-basis: 0; min-width: 0;">
+                <b style="text-wrap: nowrap; text-overflow: ellipsis; overflow-y: clip;">
+                  Personal Website
+                </b>
+                <h1 style="text-wrap: nowrap; text-overflow: ellipsis; overflow-y: clip; font-size: 1rem; margin: 0; font-weight: normal">
+                  Weekly Coding • 2026-01-13
+                </h1>
+              </div>
+              <div style="flex-grow: 1;"></div>
+              <div style="display: none; align-items: center; flex-shrink: 1; gap: 10px;">
+                <a href="/settings" class="ms-btn ms-rounded" style="width: 40px; height: 40px; position: relative;">
+                  <div
+				style="
+					width: 24px; height: 24px;
+					border-radius: 50%;
+					transform: translate(-8px, -0px);
+				"
+				alt="settings"
+			>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings">
+                      <circle cx="12" cy="12" r="3"></circle>
+                      <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <div>
+                <button id="header-language-button" type="button" class="ms-btn ms-rounded" style="width: 40px; height: 40px">
+                  <div
+				style="
+					width: 24px; height: 24px;
+					border-radius: 50%;
+					transform: translate(-8px, -0px);
+				"
+				alt="settings"
+			>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <line x1="2" y1="12" x2="22" y2="12"></line>
+                      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                    </svg>
+                  </div>
+                </button>
+                <div
+			id="header-language-popup"
+			class="ms-bg-light"
+			style="
+				right: 0px;
+				left: auto;
+				position: absolute;
+				padding: 10px;
+				display: none;
+				flex-direction: column;
+				gap: 4px;
+				border-radius: 15px;
+				margin-top: 5px;
+				margin-right: 10px;
+			"
+		>
+                  <a
+				class="ms-btn ms-outline ms-rounded ms-primary"
+				href="/"
+			>
+                    English
+                  </a>
+                  <a
+				class="ms-btn ms-outline ms-rounded ms-primary"
+				href="/de"
+			>
+                    German
+                  </a>
+                  <a
+				class="ms-btn ms-outline ms-rounded ms-primary"
+				href="/ru"
+			>
+                    Russian
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+	class="goal-post-outer"
+	style="
+		flex-grow: 1;
+		justify-content: center;
+		display: flex;
+		min-height: 0px;
+		max-height: 100%;
+		background: repeating-linear-gradient(
+			45deg,
+			rgba(var(--main-bg), 1),
+			rgba(var(--main-bg), 1) 10px,
+			rgba(var(--light-bg-color), 1) 10px,
+			rgba(var(--light-bg-color), 1) 20px
+		);
+	"
+>
+            <div
+		class="goal-post-inner ms-bg-main"
+		style="
+			flex-grow: 1;
+			padding-left: 20px;
+			padding-right: 20px;
+			max-width: 1000px;
+			background-attachment: fixed;
+			overflow-y: auto;
+		"
+	>
+              <div class="goalPostViewText">
+                <p>
+                  Good day everyone. It's time for my weekly diary.
+                </p>
+                <ul>
+                  <li>
+                    <strong>
+                      LeetCode 💻
+                    </strong>
+                    6 hours 55 minutes
+                    <ul>
+                      <li>
+                        Completed five problems
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <strong>
+                      Personal Website 🌐
+                    </strong>
+                    1 hour 13 minutes
+                    <ul>
+                      <li>
+                        Made some progress with Search Indexing and checked my visitor counter.
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <h3>
+                  <strong>
+                    LeetCode
+                  </strong>
+                </h3>
+                <p>
+                  I solved five problems, reaching task number
+                  <em>
+                    188
+                  </em>
+                  ... This one was a killer 🥴 Complexity: Hard. I spent three hours trying to write the code for it, but I couldn't optimize it to meet the required speed: my program passed
+                  <strong>
+                    207
+                  </strong>
+                  out of
+                  <strong>
+                    211
+                  </strong>
+                  online tests. However, I failed to pass the 208th test: Time Limit Exceeded ⌛ Later, I decided to read the explanation for this task on
+                  <a href="http://smartprogress.do/site/redirect/?url=https%3A%2F%2Falgo.monster%2Fliteproblems%2F188" target="_blank">
+                    this online page
+                  </a>
+                  .
+                </p>
+                <h3>
+                  <strong>
+                    WebCounter
+                  </strong>
+                </h3>
+                <p>
+                  The visitor counter is working, but I have few visitors. The homepage received 8 visits last month. Some other pages got 5, 4, or 3 visits. Even my own visits are being counted. So, "real" visits are even fewer. In the future, I plan to create a UI for viewing the visit table, but that's not happening soon. Currently, you can only view visits through Adminer, as shown in the blue screenshot.
+                </p>
+                <h3>
+                  <strong>
+                    Windows 11 Fresh Install
+                  </strong>
+                </h3>
+                <p>
+                  The most significant and time-consuming task I've done since early 2026. It felt like 25+ hours, including setting up all the software I needed. I decided to nuke and reinstall Windows to clear my computer's memory and my mind. Over the past five years, a lot of bloatware accumulated on my machine that I wanted to delete everything at once. I created a clean Windows 11 image using
+                  <a href="http://smartprogress.do/site/redirect/?url=https%3A%2F%2Fschneegans.de%2Fwindows%2Funattend-generator%2F" target="_blank">
+                    the autoattend xml configurator
+                  </a>
+                  . I removed many junk components:
+                </p>
+                <ul>
+                  <li>
+                    Copilot AI, Recall, Bing
+                  </li>
+                  <li>
+                    Windows Defender, SmartScreen, Automatic Updates
+                  </li>
+                  <li>
+                    Edge, Paint, Modern Notepad, XBox, OneDrive, and all standard apps
+                  </li>
+                  <li>
+                    Online account
+                  </li>
+                  <li>
+                    Telemetry
+                  </li>
+                </ul>
+                <p>
+                  Using the autoattend configurator was a bit of a hassle because I'd never used it before. I only kept Terminal, Clock, and Calculator as standard apps. Now, I have the cleanest Windows 11 version 25H2 with only the essential programs 🧐 However, organizing my files will take time. Later, I plan to sort through my numerous cloud-stored files: photos, documents, archives. I'm afraid of how long it might take. After all, I've been collecting these files since 2005 and have never sorted them before 🤣😭♻️ Old stuff needs to go, while useful files should be categorized.
+                </p>
+                <h3>
+                  <strong>
+                    Goals for January:
+                  </strong>
+                </h3>
+                <ol>
+                  <li>
+                    Reach task number 200 on LeetCode at a minimum
+                  </li>
+                  <li>
+                    Develop a new mini-feature for my personal website: 🔎 Text search across all blog posts
+                  </li>
+                  <li>
+                    Sort through all my cloud files and backups
+                  </li>
+                </ol>
+              </div>
+              <div
+			style="
+				display: flex;
+				flex-wrap: wrap;
+				gap: 10px;
+			"
+		>
+                <a href="/personal-goals/image/247488/1768337430/0.jpg">
+                  <img
+						width="240"
+						height="240"
+						class="ms-card ms-border"
+						style="width: 240px; height: 240px; object-fit: cover; margin: 0; padding: 0"
+						src="/personal-goals/image/247488/1768337430/0.jpg"
+						alt="Image 0"
+					/>
+                </a>
+                <a href="/personal-goals/image/247488/1768337430/1.jpg">
+                  <img
+						width="240"
+						height="240"
+						class="ms-card ms-border"
+						style="width: 240px; height: 240px; object-fit: cover; margin: 0; padding: 0"
+						src="/personal-goals/image/247488/1768337430/1.jpg"
+						alt="Image 1"
+					/>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/static/js/dist/main.js"></script>
+  </body>
+</html>
