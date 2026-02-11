@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/static/images/favicon.png" />
+    <link rel="stylesheet" href="/static/css/minstyle.css" />
+    <link rel="stylesheet" href="/static/css/index.css" />
+    <meta name="description" content="Кодить каждую неделю 8 часов - 2026-01-04 - Подведение итогов 2025 года: Успехи в кодировании, рисовании и изучении языков" />
+    <meta http-equiv="content-language" content="ru">
+    <title>
+      Кодить каждую неделю 8 часов • 2026-01-04
+    </title>
+    <style>
+      html,
+      		body {
+      			height: 100%;
+      			max-height: 100%;
+      		}
+
+      		body {
+      			display: flex;
+      			flex-direction: column;
+      		}
+
+      		.content {
+      			flex-grow: 1;
+      			min-height: 0;
+      			max-width: 100%;
+      		}
+
+      		#app {
+      			display: flex;
+      			height: 100%;
+      			max-width: 100%;
+      		}
+    </style>
+  </head>
+  <body>
+    <script src="/static/js/dist/initialize.js"></script>
+    <div class="content">
+      <div id="app">
+        <div
+				style="
+					padding: 10px;
+					padding-bottom: 0;
+					display: flex;
+					flex-direction: column;
+					width: 100%;
+					max-width: 100%;
+					max-height: 100%
+				"
+			>
+          <div style="padding-bottom: 10px">
+            <div style="display: flex; align-items: center; gap: 10px; max-width: 100%;">
+              <a href="/ru">
+                <img
+			src="/static/images/favicon.png"
+			width="42" height="42"
+			style="
+				width: 42px; height: 42px;
+				border-radius: 50%;
+			"
+			alt="icon"
+			class="hover-outline"
+		/>
+              </a>
+              <div
+		style="display: flex; flex-direction: column; overflow-y: clip; gap: 4px; flex-shrink: 0; flex-basis: 0; min-width: 0;">
+                <b style="text-wrap: nowrap; text-overflow: ellipsis; overflow-y: clip;">
+                  Personal Website
+                </b>
+                <h1 style="text-wrap: nowrap; text-overflow: ellipsis; overflow-y: clip; font-size: 1rem; margin: 0; font-weight: normal">
+                  Кодить каждую неделю 8 часов • 2026-01-04
+                </h1>
+              </div>
+              <div style="flex-grow: 1;"></div>
+              <div style="display: none; align-items: center; flex-shrink: 1; gap: 10px;">
+                <a href="/settings" class="ms-btn ms-rounded" style="width: 40px; height: 40px; position: relative;">
+                  <div
+				style="
+					width: 24px; height: 24px;
+					border-radius: 50%;
+					transform: translate(-8px, -0px);
+				"
+				alt="settings"
+			>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings">
+                      <circle cx="12" cy="12" r="3"></circle>
+                      <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <div>
+                <button id="header-language-button" type="button" class="ms-btn ms-rounded" style="width: 40px; height: 40px">
+                  <div
+				style="
+					width: 24px; height: 24px;
+					border-radius: 50%;
+					transform: translate(-8px, -0px);
+				"
+				alt="settings"
+			>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <line x1="2" y1="12" x2="22" y2="12"></line>
+                      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                    </svg>
+                  </div>
+                </button>
+                <div
+			id="header-language-popup"
+			class="ms-bg-light"
+			style="
+				right: 0px;
+				left: auto;
+				position: absolute;
+				padding: 10px;
+				display: none;
+				flex-direction: column;
+				gap: 4px;
+				border-radius: 15px;
+				margin-top: 5px;
+				margin-right: 10px;
+			"
+		>
+                  <a
+				class="ms-btn ms-outline ms-rounded ms-primary"
+				href="/"
+			>
+                    English
+                  </a>
+                  <a
+				class="ms-btn ms-outline ms-rounded ms-primary"
+				href="/de"
+			>
+                    German
+                  </a>
+                  <a
+				class="ms-btn ms-outline ms-rounded ms-primary"
+				href="/ru"
+			>
+                    Russian
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+	class="goal-post-outer"
+	style="
+		flex-grow: 1;
+		justify-content: center;
+		display: flex;
+		min-height: 0px;
+		max-height: 100%;
+		background: repeating-linear-gradient(
+			45deg,
+			rgba(var(--main-bg), 1),
+			rgba(var(--main-bg), 1) 10px,
+			rgba(var(--light-bg-color), 1) 10px,
+			rgba(var(--light-bg-color), 1) 20px
+		);
+	"
+>
+            <div
+		class="goal-post-inner ms-bg-main"
+		style="
+			flex-grow: 1;
+			padding-left: 20px;
+			padding-right: 20px;
+			max-width: 1000px;
+			background-attachment: fixed;
+			overflow-y: auto;
+		"
+	>
+              <div class="goalPostViewText">
+                <h2>
+                  Итоги 2025 года
+                </h2>
+                <p>
+                  Общее время в Clockify на все проекты: 433 часа, см. скриншот
+                </p>
+                <h3>
+                  Код
+                </h3>
+                <ol>
+                  <li>
+                    Персональный вебсайт 🖥️🌐 155 часов
+                    <ol>
+                      <li>
+                        Самый большой из моих проектов в 2025 году, на который я потратил много часов 😤
+                      </li>
+                      <li>
+                        Сделал две версии сайта: вначале React.js, а затем статический.
+                      </li>
+                      <li>
+                        Для статического сайта был вариант использовать React Server Components, но мне эта технология показалась неоправдано сложной... А спустя пару месяцев обнаружилась огромная дыра в безопасности React Server Components. Совпадение? 🤔💭
+                      </li>
+                    </ol>
+                  </li>
+                </ol>
+                <ol>
+                  <li>
+                    LeetCode 💻🎓 70 часов
+                    <ol>
+                      <li>
+                        Прошёл 87 задач
+                      </li>
+                      <li>
+                        Под конец начал проходить задачки на SQL
+                        <ol>
+                          <li>
+                            SQL - это такой язык запросов к базе данных, изорбетённый 50+ лет назад, но всё ещё используемый сегодня 🧐
+                          </li>
+                        </ol>
+                      </li>
+                    </ol>
+                  </li>
+                  <li>
+                    Ранзые проекты 🧺 62 часа
+                    <ol>
+                      <li>
+                        mongodb-sqlite-versus ⌚ 20 часов
+                      </li>
+                      <li>
+                        настройка линукса и OrangePi 🐧 19 часов
+                        <ol>
+                          <li>
+                            На настройку линукса позже ушло ещё намного больше часов, но эти часы я не трекал в Clockify
+                          </li>
+                        </ol>
+                      </li>
+                      <li>
+                        hi-backup 🫙 13 часов
+                      </li>
+                      <li>
+                        изучение Spring Boot 🍃 10 часов
+                      </li>
+                    </ol>
+                  </li>
+                </ol>
+                <h3>
+                  Остальное
+                </h3>
+                <ol>
+                  <li>
+                    Цифровое рисование 🖼️✍️ 84 часов
+                    <ol>
+                      <li>
+                        Сделал три рисунка за 2025 год
+                      </li>
+                      <li>
+                        На один рисунок тратил в среднем 28 часов
+                      </li>
+                      <li>
+                        Собирал звёзды на мои рисунки в соц.сети онлайн ⭐
+                        <ol>
+                          <li>
+                            Первый рисунок: 131 звезда
+                          </li>
+                          <li>
+                            Второй рисунок: 43 звезды
+                          </li>
+                          <li>
+                            Третий рисунок: 162 звезды
+                          </li>
+                        </ol>
+                      </li>
+                    </ol>
+                  </li>
+                  <li>
+                    Немецкий язык
+                    <ol>
+                      <li>
+                        Прошёл курс Duolingo 🦉 English-&gt;Deutsch до конца
+                      </li>
+                      <li>
+                        Смотрел разные видео онлайн
+                      </li>
+                    </ol>
+                  </li>
+                </ol>
+                <h3>
+                  Планы на 2026 год
+                </h3>
+                <ol>
+                  <li>
+                    Продолжать кодить разные проекты, изучать иностранный яызк, делать рисунки
+                  </li>
+                  <li>
+                    Распределять моё свободное время сбалансированно между основной работой, отдыхом и проектами, чтобы сохранить и улучшить здоровье
+                  </li>
+                </ol>
+              </div>
+              <div
+			style="
+				display: flex;
+				flex-wrap: wrap;
+				gap: 10px;
+			"
+		>
+                <a href="/personal-goals/image/247488/1767526795/0.jpg">
+                  <img
+						width="240"
+						height="240"
+						class="ms-card ms-border"
+						style="width: 240px; height: 240px; object-fit: cover; margin: 0; padding: 0"
+						src="/personal-goals/image/247488/1767526795/0.jpg"
+						alt="Image 0"
+					/>
+                </a>
+                <a href="/personal-goals/image/247488/1767526795/1.jpg">
+                  <img
+						width="240"
+						height="240"
+						class="ms-card ms-border"
+						style="width: 240px; height: 240px; object-fit: cover; margin: 0; padding: 0"
+						src="/personal-goals/image/247488/1767526795/1.jpg"
+						alt="Image 1"
+					/>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/static/js/dist/main.js"></script>
+  </body>
+</html>
