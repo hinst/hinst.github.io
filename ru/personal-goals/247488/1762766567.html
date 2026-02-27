@@ -1,307 +1,339 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="/static/images/favicon.png" />
     <link rel="stylesheet" href="/static/css/minstyle.css" />
     <link rel="stylesheet" href="/static/css/index.css" />
-    <meta name="description" content="Кодить каждую неделю 8 часов - 2025-11-10 - Разнообразие задач: от LeetCode до настройки Orange Pi и изучение Spring Boot" />
-    <meta http-equiv="content-language" content="ru">
-    <title>
-      Кодить каждую неделю 8 часов • 2025-11-10
-    </title>
+    <meta
+      name="description"
+      content="Кодить каждую неделю 8 часов - 2025-11-10 - Разнообразие задач: от LeetCode до настройки Orange Pi и изучение Spring Boot"
+    />
+    <meta http-equiv="content-language" content="ru" />
+    <title>Кодить каждую неделю 8 часов • 2025-11-10</title>
     <style>
       html,
-      		body {
-      			height: 100%;
-      			max-height: 100%;
-      		}
+      body {
+        height: 100%;
+        max-height: 100%;
+      }
 
-      		body {
-      			display: flex;
-      			flex-direction: column;
-      		}
+      body {
+        display: flex;
+        flex-direction: column;
+      }
 
-      		.content {
-      			flex-grow: 1;
-      			min-height: 0;
-      			max-width: 100%;
-      		}
+      .content {
+        flex-grow: 1;
+        min-height: 0;
+        max-width: 100%;
+      }
 
-      		#app {
-      			display: flex;
-      			height: 100%;
-      			max-width: 100%;
-      		}
+      #app {
+        display: flex;
+        height: 100%;
+        max-width: 100%;
+      }
     </style>
   </head>
+
   <body>
     <script src="/static/js/dist/initialize.js"></script>
     <div class="content">
       <div id="app">
         <div
-				style="
-					padding: 10px;
-					padding-bottom: 0;
-					display: flex;
-					flex-direction: column;
-					width: 100%;
-					max-width: 100%;
-					max-height: 100%
-				"
-			>
+          style="
+            padding: 10px;
+            padding-bottom: 0;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 100%;
+            max-height: 100%;
+          "
+        >
           <div style="padding-bottom: 10px">
             <div style="display: flex; align-items: center; max-width: 100%">
               <div
-		id="hamburger-menu-popup"
-		class="ms-bg-light ms-border-main"
-		style="
-			opacity: 0;
-			position: absolute;
-			z-index: 1;
-			top: 10px;
-			left: 10px;
-			overflow-y: auto;
-			max-height: 100%;
-			height: 100%;
-			margin: -10px;
-			padding-left: 9px;
-			padding-top: 12px;
-			padding-right: 9px;
-			padding-bottom: 12px;
-			border-width: 1px;
-			border-style: solid;
-			transform: translate(-100%, 0);
-			transition:
-				transform 0.3s,
-				opacity 0.3s;
-		"
-	>
+                id="hamburger-menu-popup"
+                class="ms-bg-light ms-border-main"
+                style="
+                  opacity: 0;
+                  position: absolute;
+                  z-index: 1;
+                  top: 10px;
+                  left: 10px;
+                  overflow-y: auto;
+                  max-height: 100%;
+                  height: 100%;
+                  margin: -10px;
+                  padding-left: 9px;
+                  padding-top: 12px;
+                  padding-right: 9px;
+                  padding-bottom: 12px;
+                  border-width: 1px;
+                  border-style: solid;
+                  transform: translate(-100%, 0);
+                  transition:
+                    transform 0.3s,
+                    opacity 0.3s;
+                "
+              >
                 <div>
                   <div style="display: flex; align-items: center">
                     <button
-					id="hamburger-menu-button-inner"
-					type="button"
-					class="ms-btn ms-rounded ms-primary ms-outline hover-outline"
-					style="width: 40px; height: 40px"
-				>
+                      id="hamburger-menu-button-inner"
+                      type="button"
+                      class="ms-btn ms-rounded ms-primary ms-outline hover-outline"
+                      style="width: 40px; height: 40px"
+                    >
                       <div
-						style="
-							width: 24px;
-							height: 24px;
-							border-radius: 50%;
-							transform: translate(-10px, 0px);
-						"
-						alt="settings"
-					>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+                        style="
+                          width: 24px;
+                          height: 24px;
+                          border-radius: 50%;
+                          transform: translate(-10px, 0px);
+                        "
+                        alt="settings"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="feather feather-menu"
+                        >
                           <line x1="3" y1="12" x2="21" y2="12"></line>
                           <line x1="3" y1="6" x2="21" y2="6"></line>
                           <line x1="3" y1="18" x2="21" y2="18"></line>
                         </svg>
                       </div>
                     </button>
+
                     <a href="/ru">
                       <img
-						src="/static/images/favicon.png"
-						width="42"
-						height="42"
-						style="width: 42px; height: 42px; border-radius: 50%; margin-left: 5px"
-						alt="icon"
-						class="hover-outline"
-					/>
+                        src="/static/images/favicon.png"
+                        width="42"
+                        height="42"
+                        style="
+                          width: 42px;
+                          height: 42px;
+                          border-radius: 50%;
+                          margin-left: 5px;
+                        "
+                        alt="icon"
+                        class="hover-outline"
+                      />
                     </a>
                   </div>
                   <div
-				style="
-					margin-top: 10px;
-					display: flex;
-					flex-direction: column;
-					gap: 5px;
-					width: 160px;
-				"
-			>
-                    <a
-					class="ms-btn ms-outline"
-					href="/"
-				>
-                      English
-                    </a>
-                    <a class="ms-btn ms-outline" href="/de">
-                      German
-                    </a>
-                    <a class="ms-btn ms-outline" href="/ru">
-                      Russian
-                    </a>
+                    style="
+                      margin-top: 10px;
+                      display: flex;
+                      flex-direction: column;
+                      gap: 5px;
+                      width: 160px;
+                    "
+                  >
+                    <a class="ms-btn ms-outline" href="/"> English </a>
+                    <a class="ms-btn ms-outline" href="/de"> German </a>
+                    <a class="ms-btn ms-outline" href="/ru"> Russian </a>
                   </div>
                 </div>
               </div>
-              <div>
-                <button
-			id="hamburger-menu-button"
-			type="button"
-			class="ms-btn ms-rounded ms-primary ms-outline hover-outline"
-			style="width: 40px; height: 40px"
-		>
-                  <div
-				style="
-					width: 24px;
-					height: 24px;
-					border-radius: 50%;
-					transform: translate(-10px, 0px);
-				"
-				alt="settings"
-			>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
-                      <line x1="3" y1="12" x2="21" y2="12"></line>
-                      <line x1="3" y1="6" x2="21" y2="6"></line>
-                      <line x1="3" y1="18" x2="21" y2="18"></line>
-                    </svg>
-                  </div>
-                </button>
+
+              <button
+                id="hamburger-menu-button"
+                type="button"
+                class="ms-btn ms-rounded ms-primary ms-outline hover-outline"
+                style="width: 40px; height: 40px"
+              >
                 <div
-			id="hamburger-menu-popup-old"
-			class="ms-bg-light"
-			style="
-				left: auto;
-				position: absolute;
-				padding: 10px;
-				display: none;
-				flex-direction: column;
-				gap: 4px;
-				border-radius: 15px;
-				margin-top: 5px;
-				margin-right: 10px;
-				z-index: 1;
-			"
-		></div>
-              </div>
+                  style="
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 50%;
+                    transform: translate(-10px, 0px);
+                  "
+                  alt="settings"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-menu"
+                  >
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                  </svg>
+                </div>
+              </button>
+
               <a href="/ru">
                 <img
-			src="/static/images/favicon.png"
-			width="42"
-			height="42"
-			style="width: 42px; height: 42px; border-radius: 50%; margin-left: 5px"
-			alt="icon"
-			class="hover-outline"
-		/>
+                  src="/static/images/favicon.png"
+                  width="42"
+                  height="42"
+                  style="
+                    width: 42px;
+                    height: 42px;
+                    border-radius: 50%;
+                    margin-left: 5px;
+                  "
+                  alt="icon"
+                  class="hover-outline"
+                />
               </a>
+
               <div
-		style="
-			margin-left: 10px;
-			display: flex;
-			flex-direction: column;
-			overflow-y: clip;
-			gap: 4px;
-			flex-shrink: 0;
-			flex-basis: 0;
-			min-width: 0;
-		"
-	>
-                <b style="text-wrap: nowrap; text-overflow: ellipsis; overflow-y: clip">
+                style="
+                  margin-left: 10px;
+                  display: flex;
+                  flex-direction: column;
+                  overflow-y: clip;
+                  gap: 4px;
+                  flex-shrink: 0;
+                  flex-basis: 0;
+                  min-width: 0;
+                "
+              >
+                <b
+                  style="
+                    text-wrap: nowrap;
+                    text-overflow: ellipsis;
+                    overflow-y: clip;
+                  "
+                >
                   Personal Website
                 </b>
                 <h1
-			style="
-				text-wrap: nowrap;
-				text-overflow: ellipsis;
-				overflow-y: clip;
-				font-size: 1rem;
-				margin: 0;
-				font-weight: normal;
-			"
-		>
+                  style="
+                    text-wrap: nowrap;
+                    text-overflow: ellipsis;
+                    overflow-y: clip;
+                    font-size: 1rem;
+                    margin: 0;
+                    font-weight: normal;
+                  "
+                >
                   Кодить каждую неделю 8 часов • 2025-11-10
                 </h1>
               </div>
             </div>
           </div>
           <div
-	class="goal-post-outer"
-	style="
-		flex-grow: 1;
-		justify-content: center;
-		display: flex;
-		min-height: 0px;
-		max-height: 100%;
-		background: repeating-linear-gradient(
-			45deg,
-			rgba(var(--main-bg), 1),
-			rgba(var(--main-bg), 1) 10px,
-			rgba(var(--light-bg-color), 1) 10px,
-			rgba(var(--light-bg-color), 1) 20px
-		);
-	"
->
+            class="goal-post-outer"
+            style="
+              flex-grow: 1;
+              justify-content: center;
+              display: flex;
+              min-height: 0px;
+              max-height: 100%;
+              background: repeating-linear-gradient(
+                45deg,
+                rgba(var(--main-bg), 1),
+                rgba(var(--main-bg), 1) 10px,
+                rgba(var(--light-bg-color), 1) 10px,
+                rgba(var(--light-bg-color), 1) 20px
+              );
+            "
+          >
             <div
-		class="goal-post-inner ms-bg-main"
-		style="
-			flex-grow: 1;
-			padding-left: 20px;
-			padding-right: 20px;
-			max-width: 1000px;
-			background-attachment: fixed;
-			overflow-y: auto;
-		"
-	>
+              class="goal-post-inner ms-bg-main"
+              style="
+                flex-grow: 1;
+                padding-left: 20px;
+                padding-right: 20px;
+                max-width: 1000px;
+                background-attachment: fixed;
+                overflow-y: auto;
+              "
+            >
               <div class="goalPostViewText">
+                <p><strong>LeetCode: 3 часа </strong>🖥️</p>
                 <p>
-                  <strong>
-                    LeetCode: 3 часа
-                  </strong>
-                  🖥️
+                  Пытался пройти задачу 174. Dungeon Game. Самостоятельно
+                  написать быстрый код не получилось. Прочитал статью с
+                  объяснением онлайн, и доделал задачу с помощью этого
+                  объяснения. Уже посмотрел следующую задачу номер 175, и здесь
+                  меня ждал сюрприз: оказывается, на LeetCode есть задачи на
+                  SQL. Мои познания SQL очень ограниченные, задачу пока не
+                  прошёл.
+                </p>
+                <p><strong>Orange Pi: 6 часов </strong>🍊</p>
+                <p>
+                  Одно из обновлений APT сбило мне настройки Ethernet-адаптера,
+                  а найти лёгкое решение не получилось. Поэтому, я решил снести
+                  систему, и установить с чистого листа. Раньше там был Debian
+                  12, а сейчас я накатил Ubuntu 24. Думаю, в будущем нужно
+                  воздержаться от установки обновлений APT, ибо есть риск что-то
+                  сломать.
                 </p>
                 <p>
-                  Пытался пройти задачу 174. Dungeon Game. Самостоятельно написать быстрый код не получилось. Прочитал статью с объяснением онлайн, и доделал задачу с помощью этого объяснения. Уже посмотрел следующую задачу номер 175, и здесь меня ждал сюрприз: оказывается, на LeetCode есть задачи на SQL. Мои познания SQL очень ограниченные, задачу пока не прошёл.
+                  Здесь потратил три часа на попытки починить старую систему, и
+                  ещё три часа на настройку новой системы. Настройку новой
+                  системы я не трекал в Clockify, потому что делал это в
+                  перерывах на обед между работой. Если я что-то делаю в
+                  перерыве между работой, то я обычно это НЕ трекаю, ибо времени
+                  на обед и так очень мало, и в такие моменты не хочется тратить
+                  время на тайм-букинг.
                 </p>
+                <p><strong>Spring Boot: 30 минут </strong>🍏</p>
                 <p>
-                  <strong>
-                    Orange Pi: 6 часов
-                  </strong>
-                  🍊
-                </p>
-                <p>
-                  Одно из обновлений APT сбило мне настройки Ethernet-адаптера, а найти лёгкое решение не получилось. Поэтому, я решил снести систему, и установить с чистого листа. Раньше там был Debian 12, а сейчас я накатил Ubuntu 24. Думаю, в будущем нужно воздержаться от установки обновлений APT, ибо есть риск что-то сломать.
-                </p>
-                <p>
-                  Здесь потратил три часа на попытки починить старую систему, и ещё три часа на настройку новой системы. Настройку новой системы я не трекал в Clockify, потому что делал это в перерывах на обед между работой. Если я что-то делаю в перерыве между работой, то я обычно это НЕ трекаю, ибо времени на обед и так очень мало, и в такие моменты не хочется тратить время на тайм-букинг.
-                </p>
-                <p>
-                  <strong>
-                    Spring Boot: 30 минут
-                  </strong>
-                  🍏
-                </p>
-                <p>
-                  Я почитал введение в Spring Boot. Думаю, было бы полезно изучить Spring Boot потому, что многие работодатели на Java его любят. ☕ Собираюсь написать какой-нибудь модуль для моего персонального веб-сайта с использованием Spring Boot. Сейчас моё мнение насчёт Spring Boot негативное. Может быть, моё мнение насчёт Spring Boot изменится после того, как я пройду обучение, но это не точно.
+                  Я почитал введение в Spring Boot. Думаю, было бы полезно
+                  изучить Spring Boot потому, что многие работодатели на Java
+                  его любят. ☕ Собираюсь написать какой-нибудь модуль для моего
+                  персонального веб-сайта с использованием Spring Boot. Сейчас
+                  моё мнение насчёт Spring Boot негативное. Может быть, моё
+                  мнение насчёт Spring Boot изменится после того, как я пройду
+                  обучение, но это не точно.
                 </p>
               </div>
-              <div
-			style="
-				display: flex;
-				flex-wrap: wrap;
-				gap: 10px;
-			"
-		>
+              <div style="display: flex; flex-wrap: wrap; gap: 10px">
                 <a href="/personal-goals/image/247488/1762766567/0.jpg">
                   <img
-						width="240"
-						height="240"
-						class="ms-card ms-border"
-						style="width: 240px; height: 240px; object-fit: cover; margin: 0; padding: 0"
-						src="/personal-goals/image/247488/1762766567/0.jpg"
-						alt="Image 0"
-					/>
+                    width="240"
+                    height="240"
+                    class="ms-card ms-border"
+                    style="
+                      width: 240px;
+                      height: 240px;
+                      object-fit: cover;
+                      margin: 0;
+                      padding: 0;
+                    "
+                    src="/personal-goals/image/247488/1762766567/0.jpg"
+                    alt="Image 0"
+                  />
                 </a>
+
                 <a href="/personal-goals/image/247488/1762766567/1.jpg">
                   <img
-						width="240"
-						height="240"
-						class="ms-card ms-border"
-						style="width: 240px; height: 240px; object-fit: cover; margin: 0; padding: 0"
-						src="/personal-goals/image/247488/1762766567/1.jpg"
-						alt="Image 1"
-					/>
+                    width="240"
+                    height="240"
+                    class="ms-card ms-border"
+                    style="
+                      width: 240px;
+                      height: 240px;
+                      object-fit: cover;
+                      margin: 0;
+                      padding: 0;
+                    "
+                    src="/personal-goals/image/247488/1762766567/1.jpg"
+                    alt="Image 1"
+                  />
                 </a>
               </div>
             </div>

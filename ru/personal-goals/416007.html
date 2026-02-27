@@ -1,1741 +1,2130 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="/static/images/favicon.png" />
     <link rel="stylesheet" href="/static/css/minstyle.css" />
     <link rel="stylesheet" href="/static/css/index.css" />
-    <meta name="description" content="Goal diary: Окупить стоимость велосипеда и самоката" />
-    <meta http-equiv="content-language" content="ru">
-    <title>
-      Goal diary: Окупить стоимость велосипеда и самоката
-    </title>
+    <meta
+      name="description"
+      content="Goal diary: Окупить стоимость велосипеда и самоката"
+    />
+    <meta http-equiv="content-language" content="ru" />
+    <title>Goal diary: Окупить стоимость велосипеда и самоката</title>
     <style>
       html,
-      		body {
-      			height: 100%;
-      			max-height: 100%;
-      		}
+      body {
+        height: 100%;
+        max-height: 100%;
+      }
 
-      		body {
-      			display: flex;
-      			flex-direction: column;
-      		}
+      body {
+        display: flex;
+        flex-direction: column;
+      }
 
-      		.content {
-      			flex-grow: 1;
-      			min-height: 0;
-      			max-width: 100%;
-      		}
+      .content {
+        flex-grow: 1;
+        min-height: 0;
+        max-width: 100%;
+      }
 
-      		#app {
-      			display: flex;
-      			height: 100%;
-      			max-width: 100%;
-      		}
+      #app {
+        display: flex;
+        height: 100%;
+        max-width: 100%;
+      }
     </style>
   </head>
+
   <body>
     <script src="/static/js/dist/initialize.js"></script>
     <div class="content">
       <div id="app">
         <div
-				style="
-					padding: 10px;
-					padding-bottom: 0;
-					display: flex;
-					flex-direction: column;
-					width: 100%;
-					max-width: 100%;
-					max-height: 100%
-				"
-			>
+          style="
+            padding: 10px;
+            padding-bottom: 0;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 100%;
+            max-height: 100%;
+          "
+        >
           <div style="padding-bottom: 10px">
             <div style="display: flex; align-items: center; max-width: 100%">
               <div
-		id="hamburger-menu-popup"
-		class="ms-bg-light ms-border-main"
-		style="
-			opacity: 0;
-			position: absolute;
-			z-index: 1;
-			top: 10px;
-			left: 10px;
-			overflow-y: auto;
-			max-height: 100%;
-			height: 100%;
-			margin: -10px;
-			padding-left: 9px;
-			padding-top: 12px;
-			padding-right: 9px;
-			padding-bottom: 12px;
-			border-width: 1px;
-			border-style: solid;
-			transform: translate(-100%, 0);
-			transition:
-				transform 0.3s,
-				opacity 0.3s;
-		"
-	>
+                id="hamburger-menu-popup"
+                class="ms-bg-light ms-border-main"
+                style="
+                  opacity: 0;
+                  position: absolute;
+                  z-index: 1;
+                  top: 10px;
+                  left: 10px;
+                  overflow-y: auto;
+                  max-height: 100%;
+                  height: 100%;
+                  margin: -10px;
+                  padding-left: 9px;
+                  padding-top: 12px;
+                  padding-right: 9px;
+                  padding-bottom: 12px;
+                  border-width: 1px;
+                  border-style: solid;
+                  transform: translate(-100%, 0);
+                  transition:
+                    transform 0.3s,
+                    opacity 0.3s;
+                "
+              >
                 <div>
                   <div style="display: flex; align-items: center">
                     <button
-					id="hamburger-menu-button-inner"
-					type="button"
-					class="ms-btn ms-rounded ms-primary ms-outline hover-outline"
-					style="width: 40px; height: 40px"
-				>
+                      id="hamburger-menu-button-inner"
+                      type="button"
+                      class="ms-btn ms-rounded ms-primary ms-outline hover-outline"
+                      style="width: 40px; height: 40px"
+                    >
                       <div
-						style="
-							width: 24px;
-							height: 24px;
-							border-radius: 50%;
-							transform: translate(-10px, 0px);
-						"
-						alt="settings"
-					>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+                        style="
+                          width: 24px;
+                          height: 24px;
+                          border-radius: 50%;
+                          transform: translate(-10px, 0px);
+                        "
+                        alt="settings"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="feather feather-menu"
+                        >
                           <line x1="3" y1="12" x2="21" y2="12"></line>
                           <line x1="3" y1="6" x2="21" y2="6"></line>
                           <line x1="3" y1="18" x2="21" y2="18"></line>
                         </svg>
                       </div>
                     </button>
+
                     <a href="/ru">
                       <img
-						src="/static/images/favicon.png"
-						width="42"
-						height="42"
-						style="width: 42px; height: 42px; border-radius: 50%; margin-left: 5px"
-						alt="icon"
-						class="hover-outline"
-					/>
+                        src="/static/images/favicon.png"
+                        width="42"
+                        height="42"
+                        style="
+                          width: 42px;
+                          height: 42px;
+                          border-radius: 50%;
+                          margin-left: 5px;
+                        "
+                        alt="icon"
+                        class="hover-outline"
+                      />
                     </a>
                   </div>
                   <div
-				style="
-					margin-top: 10px;
-					display: flex;
-					flex-direction: column;
-					gap: 5px;
-					width: 160px;
-				"
-			>
-                    <a
-					class="ms-btn ms-outline"
-					href="/"
-				>
-                      English
-                    </a>
-                    <a class="ms-btn ms-outline" href="/de">
-                      German
-                    </a>
-                    <a class="ms-btn ms-outline" href="/ru">
-                      Russian
-                    </a>
+                    style="
+                      margin-top: 10px;
+                      display: flex;
+                      flex-direction: column;
+                      gap: 5px;
+                      width: 160px;
+                    "
+                  >
+                    <a class="ms-btn ms-outline" href="/"> English </a>
+                    <a class="ms-btn ms-outline" href="/de"> German </a>
+                    <a class="ms-btn ms-outline" href="/ru"> Russian </a>
                   </div>
                 </div>
               </div>
-              <div>
-                <button
-			id="hamburger-menu-button"
-			type="button"
-			class="ms-btn ms-rounded ms-primary ms-outline hover-outline"
-			style="width: 40px; height: 40px"
-		>
-                  <div
-				style="
-					width: 24px;
-					height: 24px;
-					border-radius: 50%;
-					transform: translate(-10px, 0px);
-				"
-				alt="settings"
-			>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
-                      <line x1="3" y1="12" x2="21" y2="12"></line>
-                      <line x1="3" y1="6" x2="21" y2="6"></line>
-                      <line x1="3" y1="18" x2="21" y2="18"></line>
-                    </svg>
-                  </div>
-                </button>
+
+              <button
+                id="hamburger-menu-button"
+                type="button"
+                class="ms-btn ms-rounded ms-primary ms-outline hover-outline"
+                style="width: 40px; height: 40px"
+              >
                 <div
-			id="hamburger-menu-popup-old"
-			class="ms-bg-light"
-			style="
-				left: auto;
-				position: absolute;
-				padding: 10px;
-				display: none;
-				flex-direction: column;
-				gap: 4px;
-				border-radius: 15px;
-				margin-top: 5px;
-				margin-right: 10px;
-				z-index: 1;
-			"
-		></div>
-              </div>
+                  style="
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 50%;
+                    transform: translate(-10px, 0px);
+                  "
+                  alt="settings"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-menu"
+                  >
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                  </svg>
+                </div>
+              </button>
+
               <a href="/ru">
                 <img
-			src="/static/images/favicon.png"
-			width="42"
-			height="42"
-			style="width: 42px; height: 42px; border-radius: 50%; margin-left: 5px"
-			alt="icon"
-			class="hover-outline"
-		/>
+                  src="/static/images/favicon.png"
+                  width="42"
+                  height="42"
+                  style="
+                    width: 42px;
+                    height: 42px;
+                    border-radius: 50%;
+                    margin-left: 5px;
+                  "
+                  alt="icon"
+                  class="hover-outline"
+                />
               </a>
+
               <div
-		style="
-			margin-left: 10px;
-			display: flex;
-			flex-direction: column;
-			overflow-y: clip;
-			gap: 4px;
-			flex-shrink: 0;
-			flex-basis: 0;
-			min-width: 0;
-		"
-	>
-                <b style="text-wrap: nowrap; text-overflow: ellipsis; overflow-y: clip">
+                style="
+                  margin-left: 10px;
+                  display: flex;
+                  flex-direction: column;
+                  overflow-y: clip;
+                  gap: 4px;
+                  flex-shrink: 0;
+                  flex-basis: 0;
+                  min-width: 0;
+                "
+              >
+                <b
+                  style="
+                    text-wrap: nowrap;
+                    text-overflow: ellipsis;
+                    overflow-y: clip;
+                  "
+                >
                   Personal Website
                 </b>
                 <h1
-			style="
-				text-wrap: nowrap;
-				text-overflow: ellipsis;
-				overflow-y: clip;
-				font-size: 1rem;
-				margin: 0;
-				font-weight: normal;
-			"
-		>
+                  style="
+                    text-wrap: nowrap;
+                    text-overflow: ellipsis;
+                    overflow-y: clip;
+                    font-size: 1rem;
+                    margin: 0;
+                    font-weight: normal;
+                  "
+                >
                   Goal diary: Окупить стоимость велосипеда и самоката
                 </h1>
               </div>
             </div>
           </div>
-          <div style="display: flex; flex-wrap: wrap; gap: 10px; flex-direction: column">
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+          <div
+            style="
+              display: flex;
+              flex-wrap: wrap;
+              gap: 10px;
+              flex-direction: column;
+            "
+          >
+            <div class="ms-text-light" style="font-family: monospace">
+              2026-02
+            </div>
+
+            <div>
+              <a
+                href="/ru/personal-goals/416007/1771180531.html"
+                style="display: inline-flex; gap: 10px"
+              >
+                <button
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>15</span>
+                </button>
+                <div
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Двухколёсные приключения: обновления страховки, боль в колене
+                  и рост прибыли
+                </div>
+              </a>
+            </div>
+
+            <div style="min-height: 10px"></div>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2026-01
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1769437072.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1769437072.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    26
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>26</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Отчет о неделе на самокате: холодные поездки и ожидание Xiaomi 6 серии
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Отчет о неделе на самокате: холодные поездки и ожидание Xiaomi
+                  6 серии
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1768940180.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1768940180.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    20
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>20</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Ремонт и приключения: Замена шины на моём самокате после 3000 километров
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Ремонт и приключения: Замена шины на моём самокате после 3000
+                  километров
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1768222833.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1768222833.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    12
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>12</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
                   Выбор электрического самоката: легкость или безопасность?
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1767619573.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1767619573.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    5
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>5</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Зимние приключения на электросамокате: вызовы и радости холодных поездок
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Зимние приключения на электросамокате: вызовы и радости
+                  холодных поездок
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2025-12
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1765290147.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1765290147.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    9
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>9</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Подготовка к экзамену по вождению: преодоление трудностей и повышение внимательности на дороге
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Подготовка к экзамену по вождению: преодоление трудностей и
+                  повышение внимательности на дороге
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2025-11
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1762114994.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1763928190.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    2
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>23</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Один год на самокате: радости и вызовы ежедневных поездок
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Неделя двухколёсных приключений, уроки вождения и размышления
+                  о будущем транспорта
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1763331043.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1763331043.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    16
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>16</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
                   Отчеты о поездках: статистика, цены и растущие расходы
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1763928190.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1762114994.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    23
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>2</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Неделя двухколёсных приключений, уроки вождения и размышления о будущем транспорта
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Один год на самокате: радости и вызовы ежедневных поездок
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2025-10
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1761497222.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1761497222.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    26
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>26</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Неделя на двух колесах: новые достижения и неожиданное скольжение
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Неделя на двух колесах: новые достижения и неожиданное
+                  скольжение
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1759683398.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1761041359.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    5
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>21</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Таємная сторона доставки еды: почему работа на электро-велосипеде может быть не такой простой, как кажется
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Отчёт о путешествиях на самокате и велосипеде: статистика,
+                  наблюдения и празднование &#34;дня рождения&#34; самоката
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1761041359.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1759683398.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    21
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>5</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Отчёт о путешествиях на самокате и велосипеде: статистика, наблюдения и празднование &#34;дня рождения&#34; самоката
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Таємная сторона доставки еды: почему работа на
+                  электро-велосипеде может быть не такой простой, как кажется
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2025-09
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1759090615.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1759090615.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    28
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>28</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Анализ поездок: сравнение велосипеда, самоката и уроков вождения с финансовыми и физическими последствиями
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Анализ поездок: сравнение велосипеда, самоката и уроков
+                  вождения с финансовыми и физическими последствиями
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1758031352.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1758483074.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    16
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>21</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  &#34;Неделя с самокатом: достижения и препятствия на двухколёсном пути&#34;.
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Еженедельный обзор двухколёсных приключений: рост поездок и
+                  звуковые загадки велосипеда
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1758483074.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1758031352.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    21
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>16</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Еженедельный обзор двухколёсных приключений: рост поездок и звуковые загадки велосипеда
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  &#34;Неделя с самокатом: достижения и препятствия на
+                  двухколёсном пути&#34;.
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2025-08
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1756676719.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1756676719.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    31
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>31</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Путешествия на двух колёсах: Статистика поездок и размышления о здоровье
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Путешествия на двух колёсах: Статистика поездок и размышления
+                  о здоровье
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1754904672.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1754904672.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    11
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>11</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Еженедельный отчёт по активному образу жизни: рост поездок и доходов на велосипеде и самокате
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Еженедельный отчёт по активному образу жизни: рост поездок и
+                  доходов на велосипеде и самокате
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1754396842.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1754396842.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    5
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>5</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Отчет о путешествиях: Велосипед против Самоката - Кто заработал больше?
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Отчет о путешествиях: Велосипед против Самоката - Кто
+                  заработал больше?
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2025-07
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1752491483.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1753040793.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    14
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>20</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Отчёт о двухколёсных приключениях: от скрипучих тормозов к плавным поездкам
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Кража электросамоката: Страх и надежда после успешного
+                  экзамена по вождению
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1751889610.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1752491483.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    7
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>14</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Отчёт о поездках: Самокат против Велосипеда – Плюсы и Минусы для Разных Типов Путешественников
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Отчёт о двухколёсных приключениях: от скрипучих тормозов к
+                  плавным поездкам
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1753040793.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1751889610.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    20
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>7</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Кража электросамоката: Страх и надежда после успешного экзамена по вождению
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Отчёт о поездках: Самокат против Велосипеда – Плюсы и Минусы
+                  для Разных Типов Путешественников
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2025-06
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1750023082.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1750616089.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    15
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>22</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Путешествия на двух колесах: от велосипедов до самокатов, эволюция транспорта и наши меняющиеся убеждения
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Отчёт о неделе на велосипеде и самокате: падения, уроки и
+                  анализ
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1750616089.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1750023082.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    22
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>15</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Отчёт о неделе на велосипеде и самокате: падения, уроки и анализ
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Путешествия на двух колесах: от велосипедов до самокатов,
+                  эволюция транспорта и наши меняющиеся убеждения
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1748890135.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1749490288.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    2
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>9</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Впечатляющие двухколёсные достижения: еженедельный отчёт о велосипедных и электросамокатных поездках
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Отчёт о двухколёсных приключениях: Экономия от велосипеда и
+                  перспективы электрического самоката
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1749490288.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1748890135.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    9
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>2</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Отчёт о двухколёсных приключениях: Экономия от велосипеда и перспективы электрического самоката
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Впечатляющие двухколёсные достижения: еженедельный отчёт о
+                  велосипедных и электросамокатных поездках
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2025-05
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1747075929.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1748186780.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    12
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>25</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Увеличение поездок и обновление видео: неделя активного
+                  перемещения и технического творчества
+                </div>
+              </a>
+            </div>
+
+            <div>
+              <a
+                href="/ru/personal-goals/416007/1747600872.html"
+                style="display: inline-flex; gap: 10px"
+              >
+                <button
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>18</span>
+                </button>
+                <div
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Моя неделя на электросамокате: Достижение 1000&#43; км и
+                  важные уроки по обслуживанию
+                </div>
+              </a>
+            </div>
+
+            <div>
+              <a
+                href="/ru/personal-goals/416007/1747075929.html"
+                style="display: inline-flex; gap: 10px"
+              >
+                <button
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>12</span>
+                </button>
+                <div
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
                   Путешествия на электросамокате: музыка, мили и размышления
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1748186780.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1746562900.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    25
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>6</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Увеличение поездок и обновление видео: неделя активного перемещения и технического творчества
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Путешествие на электро-самокате: достижение 800 километров и
+                  вызовы, которые ждут впереди
                 </div>
               </a>
             </div>
-            <div>
-              <a
-					href="/ru/personal-goals/416007/1746562900.html"
-					style="display: inline-flex; gap: 10px"
-				>
-                <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    6
-                  </span>
-                </button>
-                <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Путешествие на электро-самокате: достижение 800 километров и вызовы, которые ждут впереди
-                </div>
-              </a>
-            </div>
-            <div>
-              <a
-					href="/ru/personal-goals/416007/1747600872.html"
-					style="display: inline-flex; gap: 10px"
-				>
-                <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    18
-                  </span>
-                </button>
-                <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Моя неделя на электросамокате: Достижение 1000&#43; км и важные уроки по обслуживанию
-                </div>
-              </a>
-            </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2025-04
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1745788871.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1745788871.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    27
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>27</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Мой транспортный выбор: от велосипеда до самоката и стикеров для безопасности
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Мой транспортный выбор: от велосипеда до самоката и стикеров
+                  для безопасности
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1745256565.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1745256565.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    21
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>21</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Неделя на велосипеде и самокате: приключения, блокировки и уроки
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Неделя на велосипеде и самокате: приключения, блокировки и
+                  уроки
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1744573261.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1744573261.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    13
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>13</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Еженедельный обзор активного образа жизни: Самокат и Велосипед в цифрах
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Еженедельный обзор активного образа жизни: Самокат и Велосипед
+                  в цифрах
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1743977230.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1743977230.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    6
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>6</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Сравнение стоимости и эффективности: Колесные поездки на самокате и велосипеде против обучения вождения автомобиля
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Сравнение стоимости и эффективности: Колесные поездки на
+                  самокате и велосипеде против обучения вождения автомобиля
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2025-03
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1742776184.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1743375478.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    24
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>30</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Анализ еженедельных поездок на самокате и велосипеде: рост числа поездок и новый инструмент для отслеживания фитнеса
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Анализ использования самоката и велосипеда: баланс между
+                  передвижением и доходом
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1740929884.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1742776184.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    2
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>24</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Мои велосипедные приключения: статистика, новые приложения и надежда на прочность
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Анализ еженедельных поездок на самокате и велосипеде: рост
+                  числа поездок и новый инструмент для отслеживания фитнеса
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1743375478.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1742064785.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    30
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>15</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Анализ использования самоката и велосипеда: баланс между передвижением и доходом
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Мой прогресс на самокате: новые достижения, страховка и
+                  сравнение скорости
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1742064785.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1740929884.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    15
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>2</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Мой прогресс на самокате: новые достижения, страховка и сравнение скорости
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Мои велосипедные приключения: статистика, новые приложения и
+                  надежда на прочность
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2025-02
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1739188155.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1740350604.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    10
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>23</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Зимние приключения: 420 километров на самокате и велосипедные поездки в экстремальных условиях
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Сравнение Самоката и Велосипеда: Как Оптимизировать Твои
+                  Путешествии и Предотвратить Боль в Шее
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1740350604.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1739882379.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    23
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>18</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Сравнение Самоката и Велосипеда: Как Оптимизировать Твои Путешествии и Предотвратить Боль в Шее
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Отчёт о неделе активного передвижения: приключения на самокате
+                  в зимние дни
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1739882379.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1739188155.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    18
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>10</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Отчёт о неделе активного передвижения: приключения на самокате в зимние дни
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Зимние приключения: 420 километров на самокате и велосипедные
+                  поездки в экстремальных условиях
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1738534519.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1738534519.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    2
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>2</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Еженедельный отчет о поездках на велосипеде и самокате: физические вызовы и достижения
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Еженедельный отчет о поездках на велосипеде и самокате:
+                  физические вызовы и достижения
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2025-01
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1736120316.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1736120316.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    5
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>5</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Приключения с самокатом: битва с поездами и непредсказуемый зимний климат
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Приключения с самокатом: битва с поездами и непредсказуемый
+                  зимний климат
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2024-12
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1734883932.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1734883932.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    22
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>22</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Вызовы самоката: как погода и условия дороги влияют на дальность поездок
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Вызовы самоката: как погода и условия дороги влияют на
+                  дальность поездок
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1733219018.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1734022869.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    3
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>12</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Анализ транспорта: Рост поездок на велосипеде и самокате с финансовыми последствиями
-                </div>
-              </a>
-            </div>
-            <div>
-              <a
-					href="/ru/personal-goals/416007/1734022869.html"
-					style="display: inline-flex; gap: 10px"
-				>
-                <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    12
-                  </span>
-                </button>
-                <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
                   Отчет о путешествии: Самокат против велосипеда в зимнем городе
                 </div>
               </a>
             </div>
+
+            <div>
+              <a
+                href="/ru/personal-goals/416007/1733219018.html"
+                style="display: inline-flex; gap: 10px"
+              >
+                <button
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>3</span>
+                </button>
+                <div
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Анализ транспорта: Рост поездок на велосипеде и самокате с
+                  финансовыми последствиями
+                </div>
+              </a>
+            </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2024-10
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1728818929.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1728818929.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    13
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>13</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Выдержка на пути к цели: преодоление трудностей с рюкзаком и достижения в велопоходах
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Выдержка на пути к цели: преодоление трудностей с рюкзаком и
+                  достижения в велопоходах
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2024-09
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1727545139.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1727545139.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    28
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>28</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Новый рюкзак для велосипедиста: Увеличение вместимости и экономия средств
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Новый рюкзак для велосипедиста: Увеличение вместимости и
+                  экономия средств
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1725617772.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1725617772.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    6
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>6</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Отчет о путешествии: Достижение финансовой цели и обслуживание велосипеда
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Отчет о путешествии: Достижение финансовой цели и обслуживание
+                  велосипеда
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2024-08
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1724058377.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1724058377.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    19
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>19</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Достигнув цели: Сэкономленные деньги и доступные электрические велосипеды
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Достигнув цели: Сэкономленные деньги и доступные электрические
+                  велосипеды
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2024-07
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1721143697.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1722276303.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    16
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>29</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Велосипедные достижения и приключения: экономия денег, проколы и странные открытия
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Достигая своей цели: достижения точки безубыточности в
+                  велопохождении и возникающие проблемы
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1722276303.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1721143697.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    29
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>16</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Достигая своей цели: достижения точки безубыточности в велопохождении и возникающие проблемы
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Велосипедные достижения и приключения: экономия денег, проколы
+                  и странные открытия
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2024-05
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1715524961.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1716301793.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    12
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>21</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Как бекон и велосипед изменили мою жизнь: путешествие к здоровью и экономии
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Моя велопуть: статистика, открытия и выбор идеального
+                  велосипеда
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1716301793.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1715524961.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    21
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>12</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Моя велопуть: статистика, открытия и выбор идеального велосипеда
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Как бекон и велосипед изменили мою жизнь: путешествие к
+                  здоровью и экономии
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1714767502.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1714767502.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    3
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>3</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Экономия на велосипедных поездках: $355 и 105 километров без ремонтов
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Экономия на велосипедных поездках: $355 и 105 километров без
+                  ремонтов
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2024-04
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1712162416.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1712162416.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    3
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>3</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
                   Мои приключения на велосипеде: достижения и разочарования
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2024-03
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1710690845.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1711889828.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    17
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>31</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Один год на велосипеде: экономия и удовольствие от ежедневных поездок
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Мои велосипедные поездки: экономия денег и полезная физическая
+                  активность за 339 дней
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1711889828.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1710690845.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    31
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>17</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Мои велосипедные поездки: экономия денег и полезная физическая активность за 339 дней
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Один год на велосипеде: экономия и удовольствие от ежедневных
+                  поездок
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2024-02
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1706790211.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1706790211.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    1
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>1</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Опыт использования велосипеда: Экономия и количество поездок за 280 дней
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Опыт использования велосипеда: Экономия и количество поездок
+                  за 280 дней
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2023-12
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1703422605.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1703422605.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    24
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>24</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Как я достиг $250 за 241 день и почему ожидание повышения цены трамвая ускорит окупаемость велосипеда
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Как я достиг $250 за 241 день и почему ожидание повышения цены
+                  трамвая ускорит окупаемость велосипеда
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2023-10
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1697741266.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1697741266.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    19
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>19</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Как изменить критерии подсчёта поездок для достижения финансовой цели
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Как изменить критерии подсчёта поездок для достижения
+                  финансовой цели
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2023-08
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1691699350.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1691699350.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    10
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>10</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Как велосипед окупает себя: анализ экономии и преимуществ ежедневных поездок
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Как велосипед окупает себя: анализ экономии и преимуществ
+                  ежедневных поездок
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2023-06
             </div>
+
             <div>
               <a
-					href="/ru/personal-goals/416007/1687849496.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/ru/personal-goals/416007/1687849496.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    27
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>27</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
                   Мой бюджет на поездки: €65 и принципы его распределения
                 </div>
               </a>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -6,1345 +6,1687 @@
     <link rel="stylesheet" href="/static/css/minstyle.css" />
     <link rel="stylesheet" href="/static/css/index.css" />
     <meta name="description" content="Goal diary: Weekly Coding" />
-    <meta http-equiv="content-language" content="en">
-    <title>
-      Goal diary: Weekly Coding
-    </title>
+    <meta http-equiv="content-language" content="en" />
+    <title>Goal diary: Weekly Coding</title>
     <style>
       html,
-      		body {
-      			height: 100%;
-      			max-height: 100%;
-      		}
+      body {
+        height: 100%;
+        max-height: 100%;
+      }
 
-      		body {
-      			display: flex;
-      			flex-direction: column;
-      		}
+      body {
+        display: flex;
+        flex-direction: column;
+      }
 
-      		.content {
-      			flex-grow: 1;
-      			min-height: 0;
-      			max-width: 100%;
-      		}
+      .content {
+        flex-grow: 1;
+        min-height: 0;
+        max-width: 100%;
+      }
 
-      		#app {
-      			display: flex;
-      			height: 100%;
-      			max-width: 100%;
-      		}
+      #app {
+        display: flex;
+        height: 100%;
+        max-width: 100%;
+      }
     </style>
   </head>
+
   <body>
     <script src="/static/js/dist/initialize.js"></script>
     <div class="content">
       <div id="app">
         <div
-				style="
-					padding: 10px;
-					padding-bottom: 0;
-					display: flex;
-					flex-direction: column;
-					width: 100%;
-					max-width: 100%;
-					max-height: 100%
-				"
-			>
+          style="
+            padding: 10px;
+            padding-bottom: 0;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 100%;
+            max-height: 100%;
+          "
+        >
           <div style="padding-bottom: 10px">
             <div style="display: flex; align-items: center; max-width: 100%">
               <div
-		id="hamburger-menu-popup"
-		class="ms-bg-light ms-border-main"
-		style="
-			opacity: 0;
-			position: absolute;
-			z-index: 1;
-			top: 10px;
-			left: 10px;
-			overflow-y: auto;
-			max-height: 100%;
-			height: 100%;
-			margin: -10px;
-			padding-left: 9px;
-			padding-top: 12px;
-			padding-right: 9px;
-			padding-bottom: 12px;
-			border-width: 1px;
-			border-style: solid;
-			transform: translate(-100%, 0);
-			transition:
-				transform 0.3s,
-				opacity 0.3s;
-		"
-	>
+                id="hamburger-menu-popup"
+                class="ms-bg-light ms-border-main"
+                style="
+                  opacity: 0;
+                  position: absolute;
+                  z-index: 1;
+                  top: 10px;
+                  left: 10px;
+                  overflow-y: auto;
+                  max-height: 100%;
+                  height: 100%;
+                  margin: -10px;
+                  padding-left: 9px;
+                  padding-top: 12px;
+                  padding-right: 9px;
+                  padding-bottom: 12px;
+                  border-width: 1px;
+                  border-style: solid;
+                  transform: translate(-100%, 0);
+                  transition:
+                    transform 0.3s,
+                    opacity 0.3s;
+                "
+              >
                 <div>
                   <div style="display: flex; align-items: center">
                     <button
-					id="hamburger-menu-button-inner"
-					type="button"
-					class="ms-btn ms-rounded ms-primary ms-outline hover-outline"
-					style="width: 40px; height: 40px"
-				>
+                      id="hamburger-menu-button-inner"
+                      type="button"
+                      class="ms-btn ms-rounded ms-primary ms-outline hover-outline"
+                      style="width: 40px; height: 40px"
+                    >
                       <div
-						style="
-							width: 24px;
-							height: 24px;
-							border-radius: 50%;
-							transform: translate(-10px, 0px);
-						"
-						alt="settings"
-					>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+                        style="
+                          width: 24px;
+                          height: 24px;
+                          border-radius: 50%;
+                          transform: translate(-10px, 0px);
+                        "
+                        alt="settings"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="feather feather-menu"
+                        >
                           <line x1="3" y1="12" x2="21" y2="12"></line>
                           <line x1="3" y1="6" x2="21" y2="6"></line>
                           <line x1="3" y1="18" x2="21" y2="18"></line>
                         </svg>
                       </div>
                     </button>
+
                     <a href="/">
                       <img
-						src="/static/images/favicon.png"
-						width="42"
-						height="42"
-						style="width: 42px; height: 42px; border-radius: 50%; margin-left: 5px"
-						alt="icon"
-						class="hover-outline"
-					/>
+                        src="/static/images/favicon.png"
+                        width="42"
+                        height="42"
+                        style="
+                          width: 42px;
+                          height: 42px;
+                          border-radius: 50%;
+                          margin-left: 5px;
+                        "
+                        alt="icon"
+                        class="hover-outline"
+                      />
                     </a>
                   </div>
                   <div
-				style="
-					margin-top: 10px;
-					display: flex;
-					flex-direction: column;
-					gap: 5px;
-					width: 160px;
-				"
-			>
-                    <a
-					class="ms-btn ms-outline"
-					href="/"
-				>
-                      English
-                    </a>
-                    <a class="ms-btn ms-outline" href="/de">
-                      German
-                    </a>
-                    <a class="ms-btn ms-outline" href="/ru">
-                      Russian
-                    </a>
+                    style="
+                      margin-top: 10px;
+                      display: flex;
+                      flex-direction: column;
+                      gap: 5px;
+                      width: 160px;
+                    "
+                  >
+                    <a class="ms-btn ms-outline" href="/"> English </a>
+                    <a class="ms-btn ms-outline" href="/de"> German </a>
+                    <a class="ms-btn ms-outline" href="/ru"> Russian </a>
                   </div>
                 </div>
               </div>
-              <div>
-                <button
-			id="hamburger-menu-button"
-			type="button"
-			class="ms-btn ms-rounded ms-primary ms-outline hover-outline"
-			style="width: 40px; height: 40px"
-		>
-                  <div
-				style="
-					width: 24px;
-					height: 24px;
-					border-radius: 50%;
-					transform: translate(-10px, 0px);
-				"
-				alt="settings"
-			>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
-                      <line x1="3" y1="12" x2="21" y2="12"></line>
-                      <line x1="3" y1="6" x2="21" y2="6"></line>
-                      <line x1="3" y1="18" x2="21" y2="18"></line>
-                    </svg>
-                  </div>
-                </button>
+
+              <button
+                id="hamburger-menu-button"
+                type="button"
+                class="ms-btn ms-rounded ms-primary ms-outline hover-outline"
+                style="width: 40px; height: 40px"
+              >
                 <div
-			id="hamburger-menu-popup-old"
-			class="ms-bg-light"
-			style="
-				left: auto;
-				position: absolute;
-				padding: 10px;
-				display: none;
-				flex-direction: column;
-				gap: 4px;
-				border-radius: 15px;
-				margin-top: 5px;
-				margin-right: 10px;
-				z-index: 1;
-			"
-		></div>
-              </div>
+                  style="
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 50%;
+                    transform: translate(-10px, 0px);
+                  "
+                  alt="settings"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-menu"
+                  >
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                  </svg>
+                </div>
+              </button>
+
               <a href="/">
                 <img
-			src="/static/images/favicon.png"
-			width="42"
-			height="42"
-			style="width: 42px; height: 42px; border-radius: 50%; margin-left: 5px"
-			alt="icon"
-			class="hover-outline"
-		/>
+                  src="/static/images/favicon.png"
+                  width="42"
+                  height="42"
+                  style="
+                    width: 42px;
+                    height: 42px;
+                    border-radius: 50%;
+                    margin-left: 5px;
+                  "
+                  alt="icon"
+                  class="hover-outline"
+                />
               </a>
+
               <div
-		style="
-			margin-left: 10px;
-			display: flex;
-			flex-direction: column;
-			overflow-y: clip;
-			gap: 4px;
-			flex-shrink: 0;
-			flex-basis: 0;
-			min-width: 0;
-		"
-	>
-                <b style="text-wrap: nowrap; text-overflow: ellipsis; overflow-y: clip">
+                style="
+                  margin-left: 10px;
+                  display: flex;
+                  flex-direction: column;
+                  overflow-y: clip;
+                  gap: 4px;
+                  flex-shrink: 0;
+                  flex-basis: 0;
+                  min-width: 0;
+                "
+              >
+                <b
+                  style="
+                    text-wrap: nowrap;
+                    text-overflow: ellipsis;
+                    overflow-y: clip;
+                  "
+                >
                   Personal Website
                 </b>
                 <h1
-			style="
-				text-wrap: nowrap;
-				text-overflow: ellipsis;
-				overflow-y: clip;
-				font-size: 1rem;
-				margin: 0;
-				font-weight: normal;
-			"
-		>
+                  style="
+                    text-wrap: nowrap;
+                    text-overflow: ellipsis;
+                    overflow-y: clip;
+                    font-size: 1rem;
+                    margin: 0;
+                    font-weight: normal;
+                  "
+                >
                   Goal diary: Weekly Coding
                 </h1>
               </div>
             </div>
           </div>
-          <div style="display: flex; flex-wrap: wrap; gap: 10px; flex-direction: column">
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+          <div
+            style="
+              display: flex;
+              flex-wrap: wrap;
+              gap: 10px;
+              flex-direction: column;
+            "
+          >
+            <div class="ms-text-light" style="font-family: monospace">
+              2026-02
+            </div>
+
+            <div>
+              <a
+                href="/personal-goals/247488/1771190807.html"
+                style="display: inline-flex; gap: 10px"
+              >
+                <button
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>15</span>
+                </button>
+                <div
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Database Delays, UI Updates, and Star Rail Reflections: My
+                  Weekly Development Diary
+                </div>
+              </a>
+            </div>
+
+            <div>
+              <a
+                href="/personal-goals/247488/1770572475.html"
+                style="display: inline-flex; gap: 10px"
+              >
+                <button
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>8</span>
+                </button>
+                <div
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Transforming My Website: From SQLite to PostgreSQL for Faster
+                  Search and Desk Comfort
+                </div>
+              </a>
+            </div>
+
+            <div style="min-height: 10px"></div>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2026-01
             </div>
+
             <div>
               <a
-					href="/personal-goals/247488/1768337430.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/personal-goals/247488/1769453739.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    13
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>26</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  A Week of Coding, Website Work, and Digital Detox: My Latest Progress Report
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Overcoming SQLite&#39;s Unicode Challenge: Search Optimization
+                  on a Microcomputer
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/personal-goals/247488/1768764494.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/personal-goals/247488/1768764494.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    18
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>18</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Weekly Review: Coding Challenges, AI Quantization, and January Goals
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Weekly Review: Coding Challenges, AI Quantization, and January
+                  Goals
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/personal-goals/247488/1769453739.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/personal-goals/247488/1768337430.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    26
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>13</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Overcoming SQLite&#39;s Unicode Challenge: Search Optimization on a Microcomputer
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  A Week of Coding, Website Work, and Digital Detox: My Latest
+                  Progress Report
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/personal-goals/247488/1767526795.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/personal-goals/247488/1767526795.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    4
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>4</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  A Year of Code, Art, and Growth: Reflecting on 2025 and Setting Goals for 2026
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  A Year of Code, Art, and Growth: Reflecting on 2025 and
+                  Setting Goals for 2026
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2025-11
             </div>
+
             <div>
               <a
-					href="/personal-goals/247488/1763414946.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/personal-goals/247488/1764529964.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    17
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>30</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  My Coding Week: Spring Boot, AI Video Generator, and Overcoming Speed Humps
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Building Security and Scalability: Spring Boot, Kubernetes,
+                  and My Personal Website Journey
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/personal-goals/247488/1764075130.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/personal-goals/247488/1764075130.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    25
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>25</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
                   A Week of Tech Advancements, Backups, and Internet Worries
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/personal-goals/247488/1762766567.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/personal-goals/247488/1763414946.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    10
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>17</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Coding Adventures: LeetCode Challenges, Ethernet Troubles, and Spring Boot Exploration
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  My Coding Week: Spring Boot, AI Video Generator, and
+                  Overcoming Speed Humps
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/personal-goals/247488/1762117131.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/personal-goals/247488/1762766567.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    2
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>10</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Coding Adventures: LeetCode Challenges, Ethernet Troubles, and
+                  Spring Boot Exploration
+                </div>
+              </a>
+            </div>
+
+            <div>
+              <a
+                href="/personal-goals/247488/1762117131.html"
+                style="display: inline-flex; gap: 10px"
+              >
+                <button
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>2</span>
+                </button>
+                <div
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
                   A Week of Coding Challenges: From Easy Wins to Hard Dungeons
                 </div>
               </a>
             </div>
-            <div>
-              <a
-					href="/personal-goals/247488/1764529964.html"
-					style="display: inline-flex; gap: 10px"
-				>
-                <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    30
-                  </span>
-                </button>
-                <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Building Security and Scalability: Spring Boot, Kubernetes, and My Personal Website Journey
-                </div>
-              </a>
-            </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2025-10
             </div>
+
             <div>
               <a
-					href="/personal-goals/247488/1760381226.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/personal-goals/247488/1761503313.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    13
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>26</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  A Week of Mixed Results: SEO Struggles, Vacation Bliss, and PC Upgrades
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Overcoming Challenges: Achieving Google Search Indexing
+                  Success and Navigating Smart Progress Obstacles
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/personal-goals/247488/1760912294.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/personal-goals/247488/1760912294.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    19
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>19</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
                   This Week: Search Console, Duolingo, and Manual Indexing
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/personal-goals/247488/1761503313.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/personal-goals/247488/1760381226.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    26
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>13</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Overcoming Challenges: Achieving Google Search Indexing Success and Navigating Smart Progress Obstacles
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  A Week of Mixed Results: SEO Struggles, Vacation Bliss, and PC
+                  Upgrades
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/personal-goals/247488/1759684942.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/personal-goals/247488/1759684942.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    5
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>5</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Optimizing SEO: A Journey with Google and Bing (and Some Coding Along the Way)
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Optimizing SEO: A Journey with Google and Bing (and Some
+                  Coding Along the Way)
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2025-09
             </div>
+
             <div>
               <a
-					href="/personal-goals/247488/1759137575.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/personal-goals/247488/1759137575.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    29
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>29</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Automating Updates and GPU Upgrades: A Week of Technical Progress and Lessons Learned
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Automating Updates and GPU Upgrades: A Week of Technical
+                  Progress and Lessons Learned
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/personal-goals/247488/1756718428.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/personal-goals/247488/1758491974.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    1
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>21</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Navigating Google&#39;s Challenges: SEO Woes and Android Restrictions
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Revamping My Blog: A Static Website Journey with Language
+                  Switcher and AI-Powered Titles
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/personal-goals/247488/1758491974.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/personal-goals/247488/1757923769.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    21
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>15</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Revamping My Blog: A Static Website Journey with Language Switcher and AI-Powered Titles
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Coding Challenges, Website Makeovers, and Local Language
+                  Models: My Weekly Tech Journey
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/personal-goals/247488/1757350994.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/personal-goals/247488/1757350994.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    8
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>8</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  LeetCode Surprises and Linux Setup Challenges: A Week in Review
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  LeetCode Surprises and Linux Setup Challenges: A Week in
+                  Review
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/personal-goals/247488/1757923769.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/personal-goals/247488/1756718428.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    15
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>1</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Coding Challenges, Website Makeovers, and Local Language Models: My Weekly Tech Journey
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Navigating Google&#39;s Challenges: SEO Woes and Android
+                  Restrictions
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2025-08
             </div>
+
             <div>
               <a
-					href="/personal-goals/247488/1754914604.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/personal-goals/247488/1755505993.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    11
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>18</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Optimizing Stable Diffusion on Windows: Mastering Image Generation Performance
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  A Week of Coding Challenges, Digital Art, and Progress
+                  Tracking
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/personal-goals/247488/1755505993.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/personal-goals/247488/1754914604.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    18
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>11</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  A Week of Coding Challenges, Digital Art, and Progress Tracking
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Optimizing Stable Diffusion on Windows: Mastering Image
+                  Generation Performance
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/personal-goals/247488/1754296030.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/personal-goals/247488/1754296030.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    4
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>4</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
                   Optimizing Linux: Disk Space Savings and Memory Management
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2025-07
             </div>
+
             <div>
               <a
-					href="/personal-goals/247488/1753731557.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/personal-goals/247488/1753731557.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    28
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>28</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Website Updates, Docker Troubles, and AI Art Adventures: A Mini Report
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Website Updates, Docker Troubles, and AI Art Adventures: A
+                  Mini Report
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/personal-goals/247488/1753090144.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/personal-goals/247488/1753090144.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    21
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>21</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
                   Maximizing Memory Optimization on Linux: A Comprehensive Guide
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/personal-goals/247488/1752424339.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/personal-goals/247488/1752424339.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    13
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>13</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Revitalizing Past Projects: A Week of Code Refinement and Future Ideas
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Revitalizing Past Projects: A Week of Code Refinement and
+                  Future Ideas
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2025-06
             </div>
+
             <div>
               <a
-					href="/personal-goals/247488/1749491906.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/personal-goals/247488/1750784712.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    9
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>24</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Balancing Art and Code: A Weekend of Digital Painting and Website Optimization
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  A Week of Balancing Coding Challenges, Creative Expressions,
+                  and Personal Growth
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/personal-goals/247488/1750097274.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/personal-goals/247488/1750097274.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    16
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>16</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Weekly Progress Report: Coding Challenges, Tree Traversals, and Digital Art
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Weekly Progress Report: Coding Challenges, Tree Traversals,
+                  and Digital Art
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/personal-goals/247488/1748808008.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/personal-goals/247488/1749491906.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    1
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>9</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Linux Adventures: From OpenMandriva to Kubuntu, With Digital Painting on the Side
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Balancing Art and Code: A Weekend of Digital Painting and
+                  Website Optimization
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/personal-goals/247488/1750784712.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/personal-goals/247488/1748808008.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    24
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>1</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  A Week of Balancing Coding Challenges, Creative Expressions, and Personal Growth
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Linux Adventures: From OpenMandriva to Kubuntu, With Digital
+                  Painting on the Side
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2025-05
             </div>
+
             <div>
               <a
-					href="/personal-goals/247488/1747603522.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/personal-goals/247488/1748205778.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    18
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>25</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Balancing Passion Projects: Is It Time to Pivot from Personal Website to Linux Setup?
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Weekly Creative Update: Coding, Content Creation, and Art
+                  Progress
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/personal-goals/247488/1747300986.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/personal-goals/247488/1747603522.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    15
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>18</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  A Week of Tech Trials: Linux, Websites, and Stable Diffusion Setup
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Balancing Passion Projects: Is It Time to Pivot from Personal
+                  Website to Linux Setup?
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/personal-goals/247488/1746100216.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/personal-goals/247488/1747300986.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    1
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>15</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Optimizing Backups: Creating a Customized, Efficient Program for USB Flash Drives
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  A Week of Tech Trials: Linux, Websites, and Stable Diffusion
+                  Setup
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/personal-goals/247488/1746393141.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/personal-goals/247488/1746393141.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    4
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>4</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Transforming Data Security with Custom Backup Program and Immersive 4K Display
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Transforming Data Security with Custom Backup Program and
+                  Immersive 4K Display
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/personal-goals/247488/1748205778.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/personal-goals/247488/1746100216.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    25
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>1</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Weekly Creative Update: Coding, Content Creation, and Art Progress
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Optimizing Backups: Creating a Customized, Efficient Program
+                  for USB Flash Drives
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2025-04
             </div>
+
             <div>
               <a
-					href="/personal-goals/247488/1744054673.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/personal-goals/247488/1745173950.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    7
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>20</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Website Updates and Navigating K3s Certificate Rotation on Orange Pi
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Transforming Websites: A Week of Intensive Coding and New
+                  Features
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/personal-goals/247488/1745173950.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/personal-goals/247488/1744584090.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    20
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>13</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Transforming Websites: A Week of Intensive Coding and New Features
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Transforming Website Speed and Structure: A Week of Personal
+                  Project Updates
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/personal-goals/247488/1744584090.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/personal-goals/247488/1744054673.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    13
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>7</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Transforming Website Speed and Structure: A Week of Personal Project Updates
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Website Updates and Navigating K3s Certificate Rotation on
+                  Orange Pi
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2025-03
             </div>
+
             <div>
               <a
-					href="/personal-goals/247488/1742849112.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/personal-goals/247488/1743459873.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    24
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>31</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Code Adventures and a Critical Security Alert: Next.js Update Urgent for Skip Authentication Vulnerability
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Unveiling My Multilingual, Responsive Personal Website: A
+                  Journey of 50 Hours
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/personal-goals/247488/1743459873.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/personal-goals/247488/1742849112.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    31
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>24</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Unveiling My Multilingual, Responsive Personal Website: A Journey of 50 Hours
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Code Adventures and a Critical Security Alert: Next.js Update
+                  Urgent for Skip Authentication Vulnerability
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/personal-goals/247488/1742212568.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/personal-goals/247488/1742212568.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    17
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>17</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  My Weekly Update: New Website Launch &amp; LeetCode Achievements
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  My Weekly Update: New Website Launch &amp; LeetCode
+                  Achievements
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2025-02
             </div>
+
             <div>
               <a
-					href="/personal-goals/247488/1740769400.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/personal-goals/247488/1740769400.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    28
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>28</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  SQLite vs MongoDB: Speed, Space, and Compatibility for Micro-Projects on Orange Pi
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  SQLite vs MongoDB: Speed, Space, and Compatibility for
+                  Micro-Projects on Orange Pi
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2025-01
             </div>
+
             <div>
               <a
-					href="/personal-goals/247488/1738003128.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/personal-goals/247488/1738003128.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    27
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>27</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  A Week of Coding Challenges, Language Learning, and Storage Solutions
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  A Week of Coding Challenges, Language Learning, and Storage
+                  Solutions
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2024-12
             </div>
+
             <div>
               <a
-					href="/personal-goals/247488/1735649771.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/personal-goals/247488/1735649771.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    31
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>31</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  A Year of Creative Coding and Artistic Achievements: 2024 Report
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  A Year of Creative Coding and Artistic Achievements: 2024
+                  Report
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/personal-goals/247488/1734974909.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/personal-goals/247488/1734974909.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    23
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>23</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  A Week of Progress: LeetCode Challenges, Image Compression, Container Optimization, and Creative Pursuits
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  A Week of Progress: LeetCode Challenges, Image Compression,
+                  Container Optimization, and Creative Pursuits
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/personal-goals/247488/1733225317.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/personal-goals/247488/1733225317.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    3
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>3</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
                   Productive Week: Coding, Drawing, and Debugging with OrangePi
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2024-11
             </div>
+
             <div>
               <a
-					href="/personal-goals/247488/1730739956.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/personal-goals/247488/1732008857.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    4
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>19</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  My Productive Week: From Language Learning to Drawing and LeetCode Challenges
-                </div>
-              </a>
-            </div>
-            <div>
-              <a
-					href="/personal-goals/247488/1731355522.html"
-					style="display: inline-flex; gap: 10px"
-				>
-                <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    11
-                  </span>
-                </button>
-                <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Recollections of Computer Science: From Chess Problems to Modern Optimization
-                </div>
-              </a>
-            </div>
-            <div>
-              <a
-					href="/personal-goals/247488/1732008857.html"
-					style="display: inline-flex; gap: 10px"
-				>
-                <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    19
-                  </span>
-                </button>
-                <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
                   Balancing Creativity and Code: My Struggle for Time Management
+                </div>
+              </a>
+            </div>
+
+            <div>
+              <a
+                href="/personal-goals/247488/1731355522.html"
+                style="display: inline-flex; gap: 10px"
+              >
+                <button
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>11</span>
+                </button>
+                <div
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Recollections of Computer Science: From Chess Problems to
+                  Modern Optimization
+                </div>
+              </a>
+            </div>
+
+            <div>
+              <a
+                href="/personal-goals/247488/1730739956.html"
+                style="display: inline-flex; gap: 10px"
+              >
+                <button
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>4</span>
+                </button>
+                <div
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  My Productive Week: From Language Learning to Drawing and
+                  LeetCode Challenges
                 </div>
               </a>
             </div>

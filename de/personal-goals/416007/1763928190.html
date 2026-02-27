@@ -1,333 +1,379 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="/static/images/favicon.png" />
     <link rel="stylesheet" href="/static/css/minstyle.css" />
     <link rel="stylesheet" href="/static/css/index.css" />
-    <meta name="description" content="Bicycle and E-Scooter - 2025-11-23 - Wöchentliche Reflexionen: Abenteuer auf zwei Rädern und der Weg zum Führerschein in einer sich verändernden Welt" />
-    <meta http-equiv="content-language" content="de">
-    <title>
-      Bicycle and E-Scooter • 2025-11-23
-    </title>
+    <meta
+      name="description"
+      content="Bicycle and E-Scooter - 2025-11-23 - Wöchentliche Reflexionen: Abenteuer auf zwei Rädern und der Weg zum Führerschein in einer sich verändernden Welt"
+    />
+    <meta http-equiv="content-language" content="de" />
+    <title>Bicycle and E-Scooter • 2025-11-23</title>
     <style>
       html,
-      		body {
-      			height: 100%;
-      			max-height: 100%;
-      		}
+      body {
+        height: 100%;
+        max-height: 100%;
+      }
 
-      		body {
-      			display: flex;
-      			flex-direction: column;
-      		}
+      body {
+        display: flex;
+        flex-direction: column;
+      }
 
-      		.content {
-      			flex-grow: 1;
-      			min-height: 0;
-      			max-width: 100%;
-      		}
+      .content {
+        flex-grow: 1;
+        min-height: 0;
+        max-width: 100%;
+      }
 
-      		#app {
-      			display: flex;
-      			height: 100%;
-      			max-width: 100%;
-      		}
+      #app {
+        display: flex;
+        height: 100%;
+        max-width: 100%;
+      }
     </style>
   </head>
+
   <body>
     <script src="/static/js/dist/initialize.js"></script>
     <div class="content">
       <div id="app">
         <div
-				style="
-					padding: 10px;
-					padding-bottom: 0;
-					display: flex;
-					flex-direction: column;
-					width: 100%;
-					max-width: 100%;
-					max-height: 100%
-				"
-			>
+          style="
+            padding: 10px;
+            padding-bottom: 0;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 100%;
+            max-height: 100%;
+          "
+        >
           <div style="padding-bottom: 10px">
             <div style="display: flex; align-items: center; max-width: 100%">
               <div
-		id="hamburger-menu-popup"
-		class="ms-bg-light ms-border-main"
-		style="
-			opacity: 0;
-			position: absolute;
-			z-index: 1;
-			top: 10px;
-			left: 10px;
-			overflow-y: auto;
-			max-height: 100%;
-			height: 100%;
-			margin: -10px;
-			padding-left: 9px;
-			padding-top: 12px;
-			padding-right: 9px;
-			padding-bottom: 12px;
-			border-width: 1px;
-			border-style: solid;
-			transform: translate(-100%, 0);
-			transition:
-				transform 0.3s,
-				opacity 0.3s;
-		"
-	>
+                id="hamburger-menu-popup"
+                class="ms-bg-light ms-border-main"
+                style="
+                  opacity: 0;
+                  position: absolute;
+                  z-index: 1;
+                  top: 10px;
+                  left: 10px;
+                  overflow-y: auto;
+                  max-height: 100%;
+                  height: 100%;
+                  margin: -10px;
+                  padding-left: 9px;
+                  padding-top: 12px;
+                  padding-right: 9px;
+                  padding-bottom: 12px;
+                  border-width: 1px;
+                  border-style: solid;
+                  transform: translate(-100%, 0);
+                  transition:
+                    transform 0.3s,
+                    opacity 0.3s;
+                "
+              >
                 <div>
                   <div style="display: flex; align-items: center">
                     <button
-					id="hamburger-menu-button-inner"
-					type="button"
-					class="ms-btn ms-rounded ms-primary ms-outline hover-outline"
-					style="width: 40px; height: 40px"
-				>
+                      id="hamburger-menu-button-inner"
+                      type="button"
+                      class="ms-btn ms-rounded ms-primary ms-outline hover-outline"
+                      style="width: 40px; height: 40px"
+                    >
                       <div
-						style="
-							width: 24px;
-							height: 24px;
-							border-radius: 50%;
-							transform: translate(-10px, 0px);
-						"
-						alt="settings"
-					>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+                        style="
+                          width: 24px;
+                          height: 24px;
+                          border-radius: 50%;
+                          transform: translate(-10px, 0px);
+                        "
+                        alt="settings"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="feather feather-menu"
+                        >
                           <line x1="3" y1="12" x2="21" y2="12"></line>
                           <line x1="3" y1="6" x2="21" y2="6"></line>
                           <line x1="3" y1="18" x2="21" y2="18"></line>
                         </svg>
                       </div>
                     </button>
+
                     <a href="/de">
                       <img
-						src="/static/images/favicon.png"
-						width="42"
-						height="42"
-						style="width: 42px; height: 42px; border-radius: 50%; margin-left: 5px"
-						alt="icon"
-						class="hover-outline"
-					/>
+                        src="/static/images/favicon.png"
+                        width="42"
+                        height="42"
+                        style="
+                          width: 42px;
+                          height: 42px;
+                          border-radius: 50%;
+                          margin-left: 5px;
+                        "
+                        alt="icon"
+                        class="hover-outline"
+                      />
                     </a>
                   </div>
                   <div
-				style="
-					margin-top: 10px;
-					display: flex;
-					flex-direction: column;
-					gap: 5px;
-					width: 160px;
-				"
-			>
-                    <a
-					class="ms-btn ms-outline"
-					href="/"
-				>
-                      English
-                    </a>
-                    <a class="ms-btn ms-outline" href="/de">
-                      German
-                    </a>
-                    <a class="ms-btn ms-outline" href="/ru">
-                      Russian
-                    </a>
+                    style="
+                      margin-top: 10px;
+                      display: flex;
+                      flex-direction: column;
+                      gap: 5px;
+                      width: 160px;
+                    "
+                  >
+                    <a class="ms-btn ms-outline" href="/"> English </a>
+                    <a class="ms-btn ms-outline" href="/de"> German </a>
+                    <a class="ms-btn ms-outline" href="/ru"> Russian </a>
                   </div>
                 </div>
               </div>
-              <div>
-                <button
-			id="hamburger-menu-button"
-			type="button"
-			class="ms-btn ms-rounded ms-primary ms-outline hover-outline"
-			style="width: 40px; height: 40px"
-		>
-                  <div
-				style="
-					width: 24px;
-					height: 24px;
-					border-radius: 50%;
-					transform: translate(-10px, 0px);
-				"
-				alt="settings"
-			>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
-                      <line x1="3" y1="12" x2="21" y2="12"></line>
-                      <line x1="3" y1="6" x2="21" y2="6"></line>
-                      <line x1="3" y1="18" x2="21" y2="18"></line>
-                    </svg>
-                  </div>
-                </button>
+
+              <button
+                id="hamburger-menu-button"
+                type="button"
+                class="ms-btn ms-rounded ms-primary ms-outline hover-outline"
+                style="width: 40px; height: 40px"
+              >
                 <div
-			id="hamburger-menu-popup-old"
-			class="ms-bg-light"
-			style="
-				left: auto;
-				position: absolute;
-				padding: 10px;
-				display: none;
-				flex-direction: column;
-				gap: 4px;
-				border-radius: 15px;
-				margin-top: 5px;
-				margin-right: 10px;
-				z-index: 1;
-			"
-		></div>
-              </div>
+                  style="
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 50%;
+                    transform: translate(-10px, 0px);
+                  "
+                  alt="settings"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-menu"
+                  >
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                  </svg>
+                </div>
+              </button>
+
               <a href="/de">
                 <img
-			src="/static/images/favicon.png"
-			width="42"
-			height="42"
-			style="width: 42px; height: 42px; border-radius: 50%; margin-left: 5px"
-			alt="icon"
-			class="hover-outline"
-		/>
+                  src="/static/images/favicon.png"
+                  width="42"
+                  height="42"
+                  style="
+                    width: 42px;
+                    height: 42px;
+                    border-radius: 50%;
+                    margin-left: 5px;
+                  "
+                  alt="icon"
+                  class="hover-outline"
+                />
               </a>
+
               <div
-		style="
-			margin-left: 10px;
-			display: flex;
-			flex-direction: column;
-			overflow-y: clip;
-			gap: 4px;
-			flex-shrink: 0;
-			flex-basis: 0;
-			min-width: 0;
-		"
-	>
-                <b style="text-wrap: nowrap; text-overflow: ellipsis; overflow-y: clip">
+                style="
+                  margin-left: 10px;
+                  display: flex;
+                  flex-direction: column;
+                  overflow-y: clip;
+                  gap: 4px;
+                  flex-shrink: 0;
+                  flex-basis: 0;
+                  min-width: 0;
+                "
+              >
+                <b
+                  style="
+                    text-wrap: nowrap;
+                    text-overflow: ellipsis;
+                    overflow-y: clip;
+                  "
+                >
                   Personal Website
                 </b>
                 <h1
-			style="
-				text-wrap: nowrap;
-				text-overflow: ellipsis;
-				overflow-y: clip;
-				font-size: 1rem;
-				margin: 0;
-				font-weight: normal;
-			"
-		>
+                  style="
+                    text-wrap: nowrap;
+                    text-overflow: ellipsis;
+                    overflow-y: clip;
+                    font-size: 1rem;
+                    margin: 0;
+                    font-weight: normal;
+                  "
+                >
                   Bicycle and E-Scooter • 2025-11-23
                 </h1>
               </div>
             </div>
           </div>
           <div
-	class="goal-post-outer"
-	style="
-		flex-grow: 1;
-		justify-content: center;
-		display: flex;
-		min-height: 0px;
-		max-height: 100%;
-		background: repeating-linear-gradient(
-			45deg,
-			rgba(var(--main-bg), 1),
-			rgba(var(--main-bg), 1) 10px,
-			rgba(var(--light-bg-color), 1) 10px,
-			rgba(var(--light-bg-color), 1) 20px
-		);
-	"
->
+            class="goal-post-outer"
+            style="
+              flex-grow: 1;
+              justify-content: center;
+              display: flex;
+              min-height: 0px;
+              max-height: 100%;
+              background: repeating-linear-gradient(
+                45deg,
+                rgba(var(--main-bg), 1),
+                rgba(var(--main-bg), 1) 10px,
+                rgba(var(--light-bg-color), 1) 10px,
+                rgba(var(--light-bg-color), 1) 20px
+              );
+            "
+          >
             <div
-		class="goal-post-inner ms-bg-main"
-		style="
-			flex-grow: 1;
-			padding-left: 20px;
-			padding-right: 20px;
-			max-width: 1000px;
-			background-attachment: fixed;
-			overflow-y: auto;
-		"
-	>
+              class="goal-post-inner ms-bg-main"
+              style="
+                flex-grow: 1;
+                padding-left: 20px;
+                padding-right: 20px;
+                max-width: 1000px;
+                background-attachment: fixed;
+                overflow-y: auto;
+              "
+            >
               <div class="goalPostViewText">
+                <p>Zeit für meine wöchentliche Eintragung in mein Tagebuch</p>
+
                 <p>
-                  Zeit für meine wöchentliche Eintragung in mein Tagebuch
-                </p>
-                <p>
-                  <strong>
-                    -= Statistik der Zweiradfahrten in dieser Woche =-
-                  </strong>
+                  <strong
+                    >-= Statistik der Zweiradfahrten in dieser Woche =-</strong
+                  >
                 </p>
                 <ul>
                   <li>
                     Roller 🚵‍♀️ Fahrten in dieser Woche: +8
                     <ul>
-                      <li>
-                        Gesamte Fahrten: 269
-                      </li>
-                      <li>
-                        Erzeugter fiktiver Verdienst: $588
-                      </li>
+                      <li>Gesamte Fahrten: 269</li>
+                      <li>Erzeugter fiktiver Verdienst: $588</li>
                     </ul>
                   </li>
                   <li>
                     Fahrrad 🚲 Fahrten in dieser Woche: +1
                     <ul>
-                      <li>
-                        Gesamte Fahrten: 292
-                      </li>
-                      <li>
-                        Erzeugter fiktiver Verdienst: $781
-                      </li>
+                      <li>Gesamte Fahrten: 292</li>
+                      <li>Erzeugter fiktiver Verdienst: $781</li>
                     </ul>
                   </li>
                 </ul>
+
                 <p>
-                  An einem Tag habe ich vergessen, meinen Roller über Nacht aufzuladen, sodass ich am nächsten Tag sechs Kilometer ins Stadtzentrum und zurück mit meinem mechanischen Fahrrad fahren musste – ein mühsamer Ausflug aufgrund der kalten Witterung. 🥴
+                  An einem Tag habe ich vergessen, meinen Roller über Nacht
+                  aufzuladen, sodass ich am nächsten Tag sechs Kilometer ins
+                  Stadtzentrum und zurück mit meinem mechanischen Fahrrad fahren
+                  musste – ein mühsamer Ausflug aufgrund der kalten Witterung.
+                  🥴
                 </p>
+
+                <p><strong>-= Fahrunterricht =-</strong></p>
+
                 <p>
-                  <strong>
-                    -= Fahrunterricht =-
-                  </strong>
+                  Ich bemühe mich, den Führerschein für ein Auto zu bekommen.
+                  Mir wurde ein praktischer Test für den 16. Dezember angesetzt.
+                  Bis zum Test sind es weniger als vier Wochen. Es wird eine
+                  intensive Zeit, da ich jeden Tag eine Stunde länger auf der
+                  Arbeit bleiben muss, um Zeit für meinen Fahrunterricht
+                  freizuschaufeln. Mein Hauptjob bietet flexible Arbeitszeiten,
+                  sodass ich wöchentlich 40 Stunden einteilen kann: 8 + 8 + 8 +
+                  8 + 8 = 40 oder ungleichmäßig: 9 + 9 + 9 + 9 + 4 = 40. Ich
+                  muss diese Optionen nutzen, sonst komme ich nicht zum
+                  Fahrunterricht. Nach dem Unterricht fühle ich mich erschöpft.
                 </p>
+
                 <p>
-                  Ich bemühe mich, den Führerschein für ein Auto zu bekommen. Mir wurde ein praktischer Test für den 16. Dezember angesetzt. Bis zum Test sind es weniger als vier Wochen. Es wird eine intensive Zeit, da ich jeden Tag eine Stunde länger auf der Arbeit bleiben muss, um Zeit für meinen Fahrunterricht freizuschaufeln. Mein Hauptjob bietet flexible Arbeitszeiten, sodass ich wöchentlich 40 Stunden einteilen kann: 8 + 8 + 8 + 8 + 8 = 40 oder ungleichmäßig: 9 + 9 + 9 + 9 + 4 = 40. Ich muss diese Optionen nutzen, sonst komme ich nicht zum Fahrunterricht. Nach dem Unterricht fühle ich mich erschöpft.
-                </p>
-                <p>
-                  Außerdem habe ich eine Neuigkeit erfahren: Zwei Lehrer meiner Fahrschule verlassen die Schule. Von den drei Lehrern bleiben dann nur noch zwei übrig. Wird die Schule vielleicht geschlossen? In letzter Zeit werden Autos und deren Reparatur immer teurer. Es scheint, als würde das Thema Auto in der Gesellschaft momentan allmählich (obwohl langsam) an Bedeutung verlieren, und ich springe auf den letzten Zug auf. Den Führerschein zu machen und ein Auto zu erwerben ist derzeit schwierig und teuer, und die Zukunft wird diese Situation wahrscheinlich noch verschlechtern. Nur umfassende Reformen können diese Lage verbessern. Diese Versprechen werden gemacht, aber nicht eingelöst. 🧐
+                  Außerdem habe ich eine Neuigkeit erfahren: Zwei Lehrer meiner
+                  Fahrschule verlassen die Schule. Von den drei Lehrern bleiben
+                  dann nur noch zwei übrig. Wird die Schule vielleicht
+                  geschlossen? In letzter Zeit werden Autos und deren Reparatur
+                  immer teurer. Es scheint, als würde das Thema Auto in der
+                  Gesellschaft momentan allmählich (obwohl langsam) an Bedeutung
+                  verlieren, und ich springe auf den letzten Zug auf. Den
+                  Führerschein zu machen und ein Auto zu erwerben ist derzeit
+                  schwierig und teuer, und die Zukunft wird diese Situation
+                  wahrscheinlich noch verschlechtern. Nur umfassende Reformen
+                  können diese Lage verbessern. Diese Versprechen werden
+                  gemacht, aber nicht eingelöst. 🧐
                 </p>
               </div>
-              <div
-			style="
-				display: flex;
-				flex-wrap: wrap;
-				gap: 10px;
-			"
-		>
+              <div style="display: flex; flex-wrap: wrap; gap: 10px">
                 <a href="/personal-goals/image/416007/1763928190/0.jpg">
                   <img
-						width="240"
-						height="240"
-						class="ms-card ms-border"
-						style="width: 240px; height: 240px; object-fit: cover; margin: 0; padding: 0"
-						src="/personal-goals/image/416007/1763928190/0.jpg"
-						alt="Image 0"
-					/>
+                    width="240"
+                    height="240"
+                    class="ms-card ms-border"
+                    style="
+                      width: 240px;
+                      height: 240px;
+                      object-fit: cover;
+                      margin: 0;
+                      padding: 0;
+                    "
+                    src="/personal-goals/image/416007/1763928190/0.jpg"
+                    alt="Image 0"
+                  />
                 </a>
+
                 <a href="/personal-goals/image/416007/1763928190/1.jpg">
                   <img
-						width="240"
-						height="240"
-						class="ms-card ms-border"
-						style="width: 240px; height: 240px; object-fit: cover; margin: 0; padding: 0"
-						src="/personal-goals/image/416007/1763928190/1.jpg"
-						alt="Image 1"
-					/>
+                    width="240"
+                    height="240"
+                    class="ms-card ms-border"
+                    style="
+                      width: 240px;
+                      height: 240px;
+                      object-fit: cover;
+                      margin: 0;
+                      padding: 0;
+                    "
+                    src="/personal-goals/image/416007/1763928190/1.jpg"
+                    alt="Image 1"
+                  />
                 </a>
+
                 <a href="/personal-goals/image/416007/1763928190/2.jpg">
                   <img
-						width="240"
-						height="240"
-						class="ms-card ms-border"
-						style="width: 240px; height: 240px; object-fit: cover; margin: 0; padding: 0"
-						src="/personal-goals/image/416007/1763928190/2.jpg"
-						alt="Image 2"
-					/>
+                    width="240"
+                    height="240"
+                    class="ms-card ms-border"
+                    style="
+                      width: 240px;
+                      height: 240px;
+                      object-fit: cover;
+                      margin: 0;
+                      padding: 0;
+                    "
+                    src="/personal-goals/image/416007/1763928190/2.jpg"
+                    alt="Image 2"
+                  />
                 </a>
               </div>
             </div>

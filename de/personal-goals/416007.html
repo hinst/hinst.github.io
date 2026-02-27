@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -6,1737 +6,2129 @@
     <link rel="stylesheet" href="/static/css/minstyle.css" />
     <link rel="stylesheet" href="/static/css/index.css" />
     <meta name="description" content="Goal diary: Bicycle and E-Scooter" />
-    <meta http-equiv="content-language" content="de">
-    <title>
-      Goal diary: Bicycle and E-Scooter
-    </title>
+    <meta http-equiv="content-language" content="de" />
+    <title>Goal diary: Bicycle and E-Scooter</title>
     <style>
       html,
-      		body {
-      			height: 100%;
-      			max-height: 100%;
-      		}
+      body {
+        height: 100%;
+        max-height: 100%;
+      }
 
-      		body {
-      			display: flex;
-      			flex-direction: column;
-      		}
+      body {
+        display: flex;
+        flex-direction: column;
+      }
 
-      		.content {
-      			flex-grow: 1;
-      			min-height: 0;
-      			max-width: 100%;
-      		}
+      .content {
+        flex-grow: 1;
+        min-height: 0;
+        max-width: 100%;
+      }
 
-      		#app {
-      			display: flex;
-      			height: 100%;
-      			max-width: 100%;
-      		}
+      #app {
+        display: flex;
+        height: 100%;
+        max-width: 100%;
+      }
     </style>
   </head>
+
   <body>
     <script src="/static/js/dist/initialize.js"></script>
     <div class="content">
       <div id="app">
         <div
-				style="
-					padding: 10px;
-					padding-bottom: 0;
-					display: flex;
-					flex-direction: column;
-					width: 100%;
-					max-width: 100%;
-					max-height: 100%
-				"
-			>
+          style="
+            padding: 10px;
+            padding-bottom: 0;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 100%;
+            max-height: 100%;
+          "
+        >
           <div style="padding-bottom: 10px">
             <div style="display: flex; align-items: center; max-width: 100%">
               <div
-		id="hamburger-menu-popup"
-		class="ms-bg-light ms-border-main"
-		style="
-			opacity: 0;
-			position: absolute;
-			z-index: 1;
-			top: 10px;
-			left: 10px;
-			overflow-y: auto;
-			max-height: 100%;
-			height: 100%;
-			margin: -10px;
-			padding-left: 9px;
-			padding-top: 12px;
-			padding-right: 9px;
-			padding-bottom: 12px;
-			border-width: 1px;
-			border-style: solid;
-			transform: translate(-100%, 0);
-			transition:
-				transform 0.3s,
-				opacity 0.3s;
-		"
-	>
+                id="hamburger-menu-popup"
+                class="ms-bg-light ms-border-main"
+                style="
+                  opacity: 0;
+                  position: absolute;
+                  z-index: 1;
+                  top: 10px;
+                  left: 10px;
+                  overflow-y: auto;
+                  max-height: 100%;
+                  height: 100%;
+                  margin: -10px;
+                  padding-left: 9px;
+                  padding-top: 12px;
+                  padding-right: 9px;
+                  padding-bottom: 12px;
+                  border-width: 1px;
+                  border-style: solid;
+                  transform: translate(-100%, 0);
+                  transition:
+                    transform 0.3s,
+                    opacity 0.3s;
+                "
+              >
                 <div>
                   <div style="display: flex; align-items: center">
                     <button
-					id="hamburger-menu-button-inner"
-					type="button"
-					class="ms-btn ms-rounded ms-primary ms-outline hover-outline"
-					style="width: 40px; height: 40px"
-				>
+                      id="hamburger-menu-button-inner"
+                      type="button"
+                      class="ms-btn ms-rounded ms-primary ms-outline hover-outline"
+                      style="width: 40px; height: 40px"
+                    >
                       <div
-						style="
-							width: 24px;
-							height: 24px;
-							border-radius: 50%;
-							transform: translate(-10px, 0px);
-						"
-						alt="settings"
-					>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+                        style="
+                          width: 24px;
+                          height: 24px;
+                          border-radius: 50%;
+                          transform: translate(-10px, 0px);
+                        "
+                        alt="settings"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="feather feather-menu"
+                        >
                           <line x1="3" y1="12" x2="21" y2="12"></line>
                           <line x1="3" y1="6" x2="21" y2="6"></line>
                           <line x1="3" y1="18" x2="21" y2="18"></line>
                         </svg>
                       </div>
                     </button>
+
                     <a href="/de">
                       <img
-						src="/static/images/favicon.png"
-						width="42"
-						height="42"
-						style="width: 42px; height: 42px; border-radius: 50%; margin-left: 5px"
-						alt="icon"
-						class="hover-outline"
-					/>
+                        src="/static/images/favicon.png"
+                        width="42"
+                        height="42"
+                        style="
+                          width: 42px;
+                          height: 42px;
+                          border-radius: 50%;
+                          margin-left: 5px;
+                        "
+                        alt="icon"
+                        class="hover-outline"
+                      />
                     </a>
                   </div>
                   <div
-				style="
-					margin-top: 10px;
-					display: flex;
-					flex-direction: column;
-					gap: 5px;
-					width: 160px;
-				"
-			>
-                    <a
-					class="ms-btn ms-outline"
-					href="/"
-				>
-                      English
-                    </a>
-                    <a class="ms-btn ms-outline" href="/de">
-                      German
-                    </a>
-                    <a class="ms-btn ms-outline" href="/ru">
-                      Russian
-                    </a>
+                    style="
+                      margin-top: 10px;
+                      display: flex;
+                      flex-direction: column;
+                      gap: 5px;
+                      width: 160px;
+                    "
+                  >
+                    <a class="ms-btn ms-outline" href="/"> English </a>
+                    <a class="ms-btn ms-outline" href="/de"> German </a>
+                    <a class="ms-btn ms-outline" href="/ru"> Russian </a>
                   </div>
                 </div>
               </div>
-              <div>
-                <button
-			id="hamburger-menu-button"
-			type="button"
-			class="ms-btn ms-rounded ms-primary ms-outline hover-outline"
-			style="width: 40px; height: 40px"
-		>
-                  <div
-				style="
-					width: 24px;
-					height: 24px;
-					border-radius: 50%;
-					transform: translate(-10px, 0px);
-				"
-				alt="settings"
-			>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
-                      <line x1="3" y1="12" x2="21" y2="12"></line>
-                      <line x1="3" y1="6" x2="21" y2="6"></line>
-                      <line x1="3" y1="18" x2="21" y2="18"></line>
-                    </svg>
-                  </div>
-                </button>
+
+              <button
+                id="hamburger-menu-button"
+                type="button"
+                class="ms-btn ms-rounded ms-primary ms-outline hover-outline"
+                style="width: 40px; height: 40px"
+              >
                 <div
-			id="hamburger-menu-popup-old"
-			class="ms-bg-light"
-			style="
-				left: auto;
-				position: absolute;
-				padding: 10px;
-				display: none;
-				flex-direction: column;
-				gap: 4px;
-				border-radius: 15px;
-				margin-top: 5px;
-				margin-right: 10px;
-				z-index: 1;
-			"
-		></div>
-              </div>
+                  style="
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 50%;
+                    transform: translate(-10px, 0px);
+                  "
+                  alt="settings"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-menu"
+                  >
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                  </svg>
+                </div>
+              </button>
+
               <a href="/de">
                 <img
-			src="/static/images/favicon.png"
-			width="42"
-			height="42"
-			style="width: 42px; height: 42px; border-radius: 50%; margin-left: 5px"
-			alt="icon"
-			class="hover-outline"
-		/>
+                  src="/static/images/favicon.png"
+                  width="42"
+                  height="42"
+                  style="
+                    width: 42px;
+                    height: 42px;
+                    border-radius: 50%;
+                    margin-left: 5px;
+                  "
+                  alt="icon"
+                  class="hover-outline"
+                />
               </a>
+
               <div
-		style="
-			margin-left: 10px;
-			display: flex;
-			flex-direction: column;
-			overflow-y: clip;
-			gap: 4px;
-			flex-shrink: 0;
-			flex-basis: 0;
-			min-width: 0;
-		"
-	>
-                <b style="text-wrap: nowrap; text-overflow: ellipsis; overflow-y: clip">
+                style="
+                  margin-left: 10px;
+                  display: flex;
+                  flex-direction: column;
+                  overflow-y: clip;
+                  gap: 4px;
+                  flex-shrink: 0;
+                  flex-basis: 0;
+                  min-width: 0;
+                "
+              >
+                <b
+                  style="
+                    text-wrap: nowrap;
+                    text-overflow: ellipsis;
+                    overflow-y: clip;
+                  "
+                >
                   Personal Website
                 </b>
                 <h1
-			style="
-				text-wrap: nowrap;
-				text-overflow: ellipsis;
-				overflow-y: clip;
-				font-size: 1rem;
-				margin: 0;
-				font-weight: normal;
-			"
-		>
+                  style="
+                    text-wrap: nowrap;
+                    text-overflow: ellipsis;
+                    overflow-y: clip;
+                    font-size: 1rem;
+                    margin: 0;
+                    font-weight: normal;
+                  "
+                >
                   Goal diary: Bicycle and E-Scooter
                 </h1>
               </div>
             </div>
           </div>
-          <div style="display: flex; flex-wrap: wrap; gap: 10px; flex-direction: column">
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+          <div
+            style="
+              display: flex;
+              flex-wrap: wrap;
+              gap: 10px;
+              flex-direction: column;
+            "
+          >
+            <div class="ms-text-light" style="font-family: monospace">
+              2026-02
+            </div>
+
+            <div>
+              <a
+                href="/de/personal-goals/416007/1771180531.html"
+                style="display: inline-flex; gap: 10px"
+              >
+                <button
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>15</span>
+                </button>
+                <div
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Mein Zweirad-Abenteuer: Schnee, Schmerzen und steigende Kosten
+                </div>
+              </a>
+            </div>
+
+            <div style="min-height: 10px"></div>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2026-01
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1769437072.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1769437072.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    26
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>26</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  E-Scooter-Erfahrungen bei kalten Temperaturen und ein Blick auf Xiaomi Serie 6
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  E-Scooter-Erfahrungen bei kalten Temperaturen und ein Blick
+                  auf Xiaomi Serie 6
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1768940180.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1768940180.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    20
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>20</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Platten-Abenteuer: Mein E-Scooter und der unwillige Reifenwechsel
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Platten-Abenteuer: Mein E-Scooter und der unwillige
+                  Reifenwechsel
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1768222833.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1768222833.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    12
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>12</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  3000 Kilometer auf zwei Rädern: Die Debatte zwischen Leichtgewicht und Sicherheit auf dem E-Roller
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  3000 Kilometer auf zwei Rädern: Die Debatte zwischen
+                  Leichtgewicht und Sicherheit auf dem E-Roller
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1767619573.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1767619573.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    5
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>5</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Winterfahrten mit dem E-Scooter: Herausforderungen und Freuden auf schneebedeckten Straßen
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Winterfahrten mit dem E-Scooter: Herausforderungen und Freuden
+                  auf schneebedeckten Straßen
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2025-12
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1765290147.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1765290147.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    9
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>9</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Wöchentliche Fahrten, Prüfungsangst: Mein Reise- und Lernlogbuch
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Wöchentliche Fahrten, Prüfungsangst: Mein Reise- und
+                  Lernlogbuch
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2025-11
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1762114994.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1763928190.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    2
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>23</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Ein Jahr mit meinem E-Scooter: Erfolgreiche Fahrten und Herausforderungen
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Wöchentliche Reflexionen: Abenteuer auf zwei Rädern und der
+                  Weg zum Führerschein in einer sich verändernden Welt
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1763331043.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1763331043.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    16
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>16</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Reisetagebuch: Statistiken, Fahrpreise und steigende Kosten - Eine Woche voller Zahlen und Überlegungen
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Reisetagebuch: Statistiken, Fahrpreise und steigende Kosten -
+                  Eine Woche voller Zahlen und Überlegungen
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1763928190.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1762114994.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    23
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>2</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Wöchentliche Reflexionen: Abenteuer auf zwei Rädern und der Weg zum Führerschein in einer sich verändernden Welt
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Ein Jahr mit meinem E-Scooter: Erfolgreiche Fahrten und
+                  Herausforderungen
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2025-10
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1761497222.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1761497222.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    26
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>26</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Eine Mischung aus Geschwindigkeit und Vorsicht: Mein wöchentliches Update zu Fahrten, Fahrradabenteuern und einem unvorhergesehenen Drift
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Eine Mischung aus Geschwindigkeit und Vorsicht: Mein
+                  wöchentliches Update zu Fahrten, Fahrradabenteuern und einem
+                  unvorhergesehenen Drift
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1759683398.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1761041359.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    5
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>21</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Die dunkle Seite der Essenslieferung: Betrug und Ausbeutung hinter dem Lenkrad
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  E-Scooter &amp; Fahrrad: Meine Reise durch Stadt und
+                  Saisonwechsel – Statistiken, Beobachtungen und Erkenntnisse
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1761041359.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1759683398.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    21
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>5</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  E-Scooter &amp; Fahrrad: Meine Reise durch Stadt und Saisonwechsel – Statistiken, Beobachtungen und Erkenntnisse
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Die dunkle Seite der Essenslieferung: Betrug und Ausbeutung
+                  hinter dem Lenkrad
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2025-09
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1759090615.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1759090615.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    28
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>28</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Abenteuerliche Transportmittel: Meine Reiseerfahrungen mit Rad, Roller und Führerschein
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Abenteuerliche Transportmittel: Meine Reiseerfahrungen mit
+                  Rad, Roller und Führerschein
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1758031352.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1758483074.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    16
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>21</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Wöchentlicher Zweirad-Bericht: Erfolge und Herausforderungen beim E-Roller-Fahren
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Wöchentliche Zweirad-Zusammenfassung: Wachsender
+                  Kilometerstand und Einnahmen, aber ein quietschendes Fahrrad
+                  rätselt
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1758483074.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1758031352.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    21
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>16</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Wöchentliche Zweirad-Zusammenfassung: Wachsender Kilometerstand und Einnahmen, aber ein quietschendes Fahrrad rätselt
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Wöchentlicher Zweirad-Bericht: Erfolge und Herausforderungen
+                  beim E-Roller-Fahren
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2025-08
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1756676719.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1756676719.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    31
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>31</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Zweirad-Abenteuer: Erfolgreiche Fahrten, Vergesslichkeit und knifflige Fragen zum Knie
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Zweirad-Abenteuer: Erfolgreiche Fahrten, Vergesslichkeit und
+                  knifflige Fragen zum Knie
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1754904672.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1754904672.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    11
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>11</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Erfolgreiche Woche auf zwei Rädern: Wachsender Fahrdienst-Umsatz und ein neuer Trainingsrekord
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Erfolgreiche Woche auf zwei Rädern: Wachsender
+                  Fahrdienst-Umsatz und ein neuer Trainingsrekord
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1754396842.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1754396842.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    5
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>5</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Abenteuer auf zwei Rädern: Meine Reiseerfahrungen und Statistiken
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Abenteuer auf zwei Rädern: Meine Reiseerfahrungen und
+                  Statistiken
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2025-07
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1752491483.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1753040793.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    14
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>20</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Von Quietschenden Bremsen und wackligen Rollern: Eine Woche im Zeichen der Zweirad-Abenteuer
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Von Diebstahl und Erfolg: Eine Woche voller Kontraste bei
+                  meinen Transportmitteln
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1751889610.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1752491483.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    7
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>14</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  E-Scooter vs. Fahrrad: Eine Vergleichsstudie zu Mobilität und Verdienstmöglichkeiten
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Von Quietschenden Bremsen und wackligen Rollern: Eine Woche im
+                  Zeichen der Zweirad-Abenteuer
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1753040793.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1751889610.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    20
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>7</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Von Diebstahl und Erfolg: Eine Woche voller Kontraste bei meinen Transportmitteln
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  E-Scooter vs. Fahrrad: Eine Vergleichsstudie zu Mobilität und
+                  Verdienstmöglichkeiten
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2025-06
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1750023082.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1750616089.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    15
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>22</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Von Zweirädern bis zur Gesellschaftsgeschichte: Eine Woche voller Lektionen und Meilen
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Wöchentlicher Bericht: Erfolgreiche Fahrten, ein Sturz und
+                  Lehren aus dem Unerwarteten
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1750616089.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1750023082.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    22
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>15</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Wöchentlicher Bericht: Erfolgreiche Fahrten, ein Sturz und Lehren aus dem Unerwarteten
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Von Zweirädern bis zur Gesellschaftsgeschichte: Eine Woche
+                  voller Lektionen und Meilen
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1748890135.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1749490288.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    2
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>9</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Erfolgreiche Wochenende auf zwei Rädern: Rekorde, Schweiß und hypothetische Einnahmen
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Meine Zwei-Räder-Abenteuer: Fahrrad vs. Elektroscooter – Wer
+                  verdient mehr?
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1749490288.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1748890135.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    9
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>2</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Meine Zwei-Räder-Abenteuer: Fahrrad vs. Elektroscooter – Wer verdient mehr?
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Erfolgreiche Wochenende auf zwei Rädern: Rekorde, Schweiß und
+                  hypothetische Einnahmen
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2025-05
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1747075929.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1748186780.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    12
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>25</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Abenteuer auf zwei Rädern: Rollende Meilen und musikalische Begleitung
-                </div>
-              </a>
-            </div>
-            <div>
-              <a
-					href="/de/personal-goals/416007/1748186780.html"
-					style="display: inline-flex; gap: 10px"
-				>
-                <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    25
-                  </span>
-                </button>
-                <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
                   Erfolgreiche Reisen: Fahrrad und E-Scooter im Wochenbericht
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1746562900.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1747600872.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    6
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>18</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  1000 Kilometer und darüber hinaus: Mein Elektro-Roller-Abenteuer und die Herausforderungen der Wartung
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Mein wöchentlicher Bericht: Fortschritte beim
+                  Elektro-Scooter-Fahren und Wartungstipps
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1747600872.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1747075929.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    18
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>12</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Mein wöchentlicher Bericht: Fortschritte beim Elektro-Scooter-Fahren und Wartungstipps
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Abenteuer auf zwei Rädern: Rollende Meilen und musikalische
+                  Begleitung
                 </div>
               </a>
             </div>
+
+            <div>
+              <a
+                href="/de/personal-goals/416007/1746562900.html"
+                style="display: inline-flex; gap: 10px"
+              >
+                <button
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>6</span>
+                </button>
+                <div
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  1000 Kilometer und darüber hinaus: Mein
+                  Elektro-Roller-Abenteuer und die Herausforderungen der Wartung
+                </div>
+              </a>
+            </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2025-04
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1745788871.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1745788871.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    27
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>27</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Von Fahrrädern und E-Rollern: Eine Woche mobil und die Suche nach dem perfekten Transportmittel
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Von Fahrrädern und E-Rollern: Eine Woche mobil und die Suche
+                  nach dem perfekten Transportmittel
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1745256565.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1745256565.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    21
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>21</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Wöchentlicher Bericht: Herausforderungen und Lektionen aus zwei ungewöhnlichen Vorfällen
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Wöchentlicher Bericht: Herausforderungen und Lektionen aus
+                  zwei ungewöhnlichen Vorfällen
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1744573261.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1744573261.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    13
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>13</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Erfolgreiche Transportmittel-Zusammenfassung: Roller und Fahrrad im Vergleich
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Erfolgreiche Transportmittel-Zusammenfassung: Roller und
+                  Fahrrad im Vergleich
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1743977230.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1743977230.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    6
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>6</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Fahrrad oder Roller? Eine Finanzanalyse meiner Transportmittel und der nächste Schritt: Fahrschule
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Fahrrad oder Roller? Eine Finanzanalyse meiner Transportmittel
+                  und der nächste Schritt: Fahrschule
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2025-03
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1742776184.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1743375478.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    24
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>30</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Mein wöchentlicher Reisebericht: Auf zwei Rädern und elektrisch unterwegs
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Erfolgreiche Woche auf zwei Rädern: Roller- und
+                  Fahrrad-Einnahmen im Vergleich
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1740929884.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1742776184.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    2
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>24</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Fahrrad-Statistiken und ein knarrendes Getriebe: Meine zweirädrige Reise
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Mein wöchentlicher Reisebericht: Auf zwei Rädern und
+                  elektrisch unterwegs
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1743375478.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1742064785.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    30
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>15</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Erfolgreiche Woche auf zwei Rädern: Roller- und Fahrrad-Einnahmen im Vergleich
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Mein Fortschritt bei den Fortbewegungsmitteln: Roller vs.
+                  Fahrrad
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1742064785.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1740929884.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    15
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>2</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Mein Fortschritt bei den Fortbewegungsmitteln: Roller vs. Fahrrad
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Fahrrad-Statistiken und ein knarrendes Getriebe: Meine
+                  zweirädrige Reise
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2025-02
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1739188155.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1740350604.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    10
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>23</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  420 Kilometer auf zwei Rädern: Meine Wintersport-Abenteuer zwischen Frost und App-Daten
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Mein Nacken, der Tretroller und ich: Wie ich meine Fahrten
+                  optimiere und Schmerzen vermeide
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1740350604.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1739882379.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    23
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>18</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Mein Nacken, der Tretroller und ich: Wie ich meine Fahrten optimiere und Schmerzen vermeide
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Eine Woche voller Rollerabenteuer: Überwindung von Schnee und
+                  Pfützen
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1739882379.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1739188155.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    18
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>10</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Eine Woche voller Rollerabenteuer: Überwindung von Schnee und Pfützen
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  420 Kilometer auf zwei Rädern: Meine Wintersport-Abenteuer
+                  zwischen Frost und App-Daten
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1738534519.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1738534519.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    2
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>2</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Meine wöchentliche Transport-Bilanz: Radfahren vs. Roller und die Herausforderungen der Steigungen
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Meine wöchentliche Transport-Bilanz: Radfahren vs. Roller und
+                  die Herausforderungen der Steigungen
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2025-01
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1736120316.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1736120316.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    5
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>5</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Abenteuer mit dem Roller: Eine riskante Zugfahrt und die Herausforderungen des Wetters
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Abenteuer mit dem Roller: Eine riskante Zugfahrt und die
+                  Herausforderungen des Wetters
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2024-12
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1734883932.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1734883932.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    22
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>22</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Roller-Probleme: Distanzziele nicht erreichbar – Wie Wetter und Stadtplanung meine Fahrten beeinflussen
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Roller-Probleme: Distanzziele nicht erreichbar – Wie Wetter
+                  und Stadtplanung meine Fahrten beeinflussen
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1733219018.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1734022869.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    3
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>12</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Fahrrad vs. E-Scooter: Eine Analyse der Transportkosten und -gewohnheiten
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Statistik und Wetterbericht: Roller-Abenteuer in kalten,
+                  schneebedeckten Tagen
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1734022869.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1733219018.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    12
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>3</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Statistik und Wetterbericht: Roller-Abenteuer in kalten, schneebedeckten Tagen
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Fahrrad vs. E-Scooter: Eine Analyse der Transportkosten und
+                  -gewohnheiten
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2024-10
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1728818929.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1728818929.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    13
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>13</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Erlebe Abenteuer, trotz anstrengender Wanderungen: Statistiken und Reflexionen nach 218 Fahrten
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Erlebe Abenteuer, trotz anstrengender Wanderungen: Statistiken
+                  und Reflexionen nach 218 Fahrten
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2024-09
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1727545139.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1727545139.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    28
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>28</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Von Klein auf Groß: Wie mein neuer Fahrradrucksack meine Abenteuer erweitert
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Von Klein auf Groß: Wie mein neuer Fahrradrucksack meine
+                  Abenteuer erweitert
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1725617772.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1725617772.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    6
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>6</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Mein Fahrradabenteuer: Erreichte Ziele, Verschleißbeobachtungen und der Weg nach oben
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Mein Fahrradabenteuer: Erreichte Ziele,
+                  Verschleißbeobachtungen und der Weg nach oben
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2024-08
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1724058377.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1724058377.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    19
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>19</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Auf dem Weg zur Ersparnis: Fortschrittsbericht und Reflexionen über sinkende Fahrradpreise
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Auf dem Weg zur Ersparnis: Fortschrittsbericht und Reflexionen
+                  über sinkende Fahrradpreise
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2024-07
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1721143697.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1722276303.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    16
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>29</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Fahrrad-Statistiken, ein platter Reifen und ein ungewöhnlicher Verdacht
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  175 Fahrten, 559 gesparte Dollar: Mein Durchhaltevermögen und
+                  die langsam zerfallende Magie meines Fahrrads
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1722276303.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1721143697.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    29
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>16</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  175 Fahrten, 559 gesparte Dollar: Mein Durchhaltevermögen und die langsam zerfallende Magie meines Fahrrads
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Fahrrad-Statistiken, ein platter Reifen und ein ungewöhnlicher
+                  Verdacht
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2024-05
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1715524961.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1716301793.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    12
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>21</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Fahrradfahrt für den gesunden Burger: Die überraschende Reise zu mehr Fitness und Finanzerfolg
-                </div>
-              </a>
-            </div>
-            <div>
-              <a
-					href="/de/personal-goals/416007/1716301793.html"
-					style="display: inline-flex; gap: 10px"
-				>
-                <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    21
-                  </span>
-                </button>
-                <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
                   Meine Fahrradreise: Von der Entdeckung bis zur Optimierung
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1714767502.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1715524961.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    3
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>12</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Meine Fahrradreise: Sparen, Ersparnisse und ein Rekord von 105 Fahrten
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Fahrradfahrt für den gesunden Burger: Die überraschende Reise
+                  zu mehr Fitness und Finanzerfolg
                 </div>
               </a>
             </div>
+
+            <div>
+              <a
+                href="/de/personal-goals/416007/1714767502.html"
+                style="display: inline-flex; gap: 10px"
+              >
+                <button
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>3</span>
+                </button>
+                <div
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Meine Fahrradreise: Sparen, Ersparnisse und ein Rekord von 105
+                  Fahrten
+                </div>
+              </a>
+            </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2024-04
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1712162416.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1712162416.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    3
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>3</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Fahrradfahren und die Herausforderungen: Ein teurer Diebstahl und meine fortwährende Leidenschaft
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Fahrradfahren und die Herausforderungen: Ein teurer Diebstahl
+                  und meine fortwährende Leidenschaft
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2024-03
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1710690845.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1711889828.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    17
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>31</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Ein Jahr mit dem Fahrrad: Sparen, Spaß und kein Defekt in Sicht
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Meine Radfahr-Abenteuer und die beeindruckenden Statistiken:
+                  Sparen, Schwitzen und Kilometer
                 </div>
               </a>
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1711889828.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1710690845.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    31
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>17</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Meine Radfahr-Abenteuer und die beeindruckenden Statistiken: Sparen, Schwitzen und Kilometer
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Ein Jahr mit dem Fahrrad: Sparen, Spaß und kein Defekt in
+                  Sicht
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2024-02
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1706790211.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1706790211.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    1
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>1</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Meine Fahrradbilanz nach 280 Tagen: Von $600 auf $280 gesunken, 80 Fahrten und eine lohnende Reise
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Meine Fahrradbilanz nach 280 Tagen: Von $600 auf $280
+                  gesunken, 80 Fahrten und eine lohnende Reise
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2023-12
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1703422605.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1703422605.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    24
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>24</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  In nur 241 Tagen 250 $ verdient: Auf dem Weg zur Rentabilität mit dem Fahrrad
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  In nur 241 Tagen 250 $ verdient: Auf dem Weg zur Rentabilität
+                  mit dem Fahrrad
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2023-10
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1697741266.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1697741266.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    19
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>19</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Auf dem Weg zur magischen Zielmarke: Neue Berechnungsmethode für meine Fahrtkosten
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Auf dem Weg zur magischen Zielmarke: Neue Berechnungsmethode
+                  für meine Fahrtkosten
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2023-08
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1691699350.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1691699350.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    10
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>10</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Wie lange dauert die Amortisierung eines Fahrradkaufs bei unterschiedlichen Nutzungsintensitäten?
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Wie lange dauert die Amortisierung eines Fahrradkaufs bei
+                  unterschiedlichen Nutzungsintensitäten?
                 </div>
               </a>
             </div>
+
             <div style="min-height: 10px"></div>
-            <div
-			class="ms-text-light"
-			style="font-family: monospace"
-		>
+
+            <div class="ms-text-light" style="font-family: monospace">
               2023-06
             </div>
+
             <div>
               <a
-					href="/de/personal-goals/416007/1687849496.html"
-					style="display: inline-flex; gap: 10px"
-				>
+                href="/de/personal-goals/416007/1687849496.html"
+                style="display: inline-flex; gap: 10px"
+              >
                 <button
-						type="button"
-						class="ms-btn ms-primary ms-outline"
-						style="font-family: monospace; min-width: 50px; padding: 8px; display: flex; justify-content: center;"
-					>
-                  <span>
-                    27
-                  </span>
+                  type="button"
+                  class="ms-btn ms-primary ms-outline"
+                  style="
+                    font-family: monospace;
+                    min-width: 50px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <span>27</span>
                 </button>
                 <div
-						class="ms-text-main"
-						style="display: flex; align-items: center"
-					>
-                  Meine Reisekosten betragen 65 €: Nur zielgerichtete Reisen wurden berücksichtigt
+                  class="ms-text-main"
+                  style="display: flex; align-items: center"
+                >
+                  Meine Reisekosten betragen 65 €: Nur zielgerichtete Reisen
+                  wurden berücksichtigt
                 </div>
               </a>
             </div>
