@@ -1,0 +1,440 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/static/images/favicon.png" />
+    <link rel="stylesheet" href="/static/css/minstyle.css" />
+    <link rel="stylesheet" href="/static/css/index.css" />
+    <meta
+      name="description"
+      content="Weekly Coding - 2026-02-25 - Webentwicklungswoche: Website-Optimierungen, Ziele und Cloud-Speicherprobleme"
+    />
+    <meta http-equiv="content-language" content="de" />
+    <title>Weekly Coding • 2026-02-25</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        max-height: 100%;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .content {
+        flex-grow: 1;
+        min-height: 0;
+        max-width: 100%;
+      }
+
+      #app {
+        display: flex;
+        height: 100%;
+        max-width: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <script src="/static/js/dist/initialize.js"></script>
+    <div class="content">
+      <div id="app">
+        <div
+          style="
+            padding: 10px;
+            padding-bottom: 0;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 100%;
+            max-height: 100%;
+          "
+        >
+          <div style="padding-bottom: 10px">
+            <div style="display: flex; align-items: center; max-width: 100%">
+              <div
+                id="hamburger-menu-popup"
+                class="ms-bg-light ms-border-main"
+                style="
+                  opacity: 0;
+                  position: absolute;
+                  z-index: 1;
+                  top: 10px;
+                  left: 10px;
+                  overflow-y: auto;
+                  max-height: 100%;
+                  height: 100%;
+                  margin: -10px;
+                  padding-left: 9px;
+                  padding-top: 12px;
+                  padding-right: 9px;
+                  padding-bottom: 12px;
+                  border-width: 1px;
+                  border-style: solid;
+                  transform: translate(-100%, 0);
+                  transition:
+                    transform 0.3s,
+                    opacity 0.3s;
+                "
+              >
+                <div>
+                  <div style="display: flex; align-items: center">
+                    <button
+                      id="hamburger-menu-button-inner"
+                      type="button"
+                      class="ms-btn ms-rounded ms-primary ms-outline hover-outline"
+                      style="width: 40px; height: 40px"
+                    >
+                      <div
+                        style="
+                          width: 24px;
+                          height: 24px;
+                          border-radius: 50%;
+                          transform: translate(-10px, 0px);
+                        "
+                        alt="settings"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="feather feather-menu"
+                        >
+                          <line x1="3" y1="12" x2="21" y2="12"></line>
+                          <line x1="3" y1="6" x2="21" y2="6"></line>
+                          <line x1="3" y1="18" x2="21" y2="18"></line>
+                        </svg>
+                      </div>
+                    </button>
+
+                    <a href="/de">
+                      <img
+                        src="/static/images/favicon.png"
+                        width="42"
+                        height="42"
+                        style="
+                          width: 42px;
+                          height: 42px;
+                          border-radius: 50%;
+                          margin-left: 5px;
+                        "
+                        alt="icon"
+                        class="hover-outline"
+                      />
+                    </a>
+                  </div>
+                  <div
+                    style="
+                      margin-top: 10px;
+                      display: flex;
+                      flex-direction: column;
+                      gap: 5px;
+                      width: 160px;
+                    "
+                  >
+                    <a class="ms-btn ms-outline" href="/"> English </a>
+                    <a class="ms-btn ms-outline" href="/de"> German </a>
+                    <a class="ms-btn ms-outline" href="/ru"> Russian </a>
+                  </div>
+                </div>
+              </div>
+
+              <button
+                id="hamburger-menu-button"
+                type="button"
+                class="ms-btn ms-rounded ms-primary ms-outline hover-outline"
+                style="width: 40px; height: 40px"
+              >
+                <div
+                  style="
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 50%;
+                    transform: translate(-10px, 0px);
+                  "
+                  alt="settings"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-menu"
+                  >
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                  </svg>
+                </div>
+              </button>
+
+              <a href="/de">
+                <img
+                  src="/static/images/favicon.png"
+                  width="42"
+                  height="42"
+                  style="
+                    width: 42px;
+                    height: 42px;
+                    border-radius: 50%;
+                    margin-left: 5px;
+                  "
+                  alt="icon"
+                  class="hover-outline"
+                />
+              </a>
+
+              <div
+                style="
+                  margin-left: 10px;
+                  display: flex;
+                  flex-direction: column;
+                  overflow-y: clip;
+                  gap: 4px;
+                  flex-shrink: 0;
+                  flex-basis: 0;
+                  min-width: 0;
+                "
+              >
+                <b
+                  style="
+                    text-wrap: nowrap;
+                    text-overflow: ellipsis;
+                    overflow-y: clip;
+                  "
+                >
+                  Personal Website
+                </b>
+                <h1
+                  style="
+                    text-wrap: nowrap;
+                    text-overflow: ellipsis;
+                    overflow-y: clip;
+                    font-size: 1rem;
+                    margin: 0;
+                    font-weight: normal;
+                  "
+                >
+                  Weekly Coding • 2026-02-25
+                </h1>
+              </div>
+            </div>
+          </div>
+          <div
+            class="goal-post-outer"
+            style="
+              flex-grow: 1;
+              justify-content: center;
+              display: flex;
+              min-height: 0px;
+              max-height: 100%;
+              background: repeating-linear-gradient(
+                45deg,
+                rgba(var(--main-bg), 1),
+                rgba(var(--main-bg), 1) 10px,
+                rgba(var(--light-bg-color), 1) 10px,
+                rgba(var(--light-bg-color), 1) 20px
+              );
+            "
+          >
+            <div
+              class="goal-post-inner ms-bg-main"
+              style="
+                flex-grow: 1;
+                padding-left: 20px;
+                padding-right: 20px;
+                max-width: 1000px;
+                background-attachment: fixed;
+                overflow-y: auto;
+              "
+            >
+              <div class="goalPostViewText">
+                <p>
+                  Zeit, den wöchentlichen Bericht im Tagebuch zu schreiben 🗓️
+                </p>
+
+                <h3>-= Persönliche Website =-</h3>
+                <p>
+                  Ich habe Verbesserungen am Formatieren meiner HTML-Seiten
+                  vorgenommen, die mein Programm für die statische Version der
+                  Website generiert:
+                </p>
+                <ul>
+                  <li>
+                    <b>Früher:</b> Formatierung mit dem Paket
+                    <strong>yosssi/gohtml</strong>.
+                    <ul>
+                      <li>
+                        Schlecht mit gemischten Abständen zwischen Leeren und
+                        Tabulatoren umgegangen.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <b>Jetzt:</b> Formatierung mit Prettier.
+                    <ul>
+                      <li>
+                        Prettier läuft in einem separaten Docker-Container. Es
+                        stehen nur 16 MB Arbeitsspeicher zur Verfügung, wenn er
+                        gerade nicht aktiv ist.
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <p>
+                  Ich plane weiterhin kleinere Updates für meine persönliche
+                  Website vorzunehmen. Derzeit fühle ich, dass das Projekt
+                  abgeschlossen ist, und größere Änderungen sind nicht geplant.
+                  Ich habe bereits alle interessanten Aspekte dieses Projekts
+                  ausprobiert:
+                </p>
+                <ul>
+                  <li>
+                    LLM-API für automatische Übersetzungen in andere Sprachen
+                  </li>
+                  <li>
+                    Dynamisches Rendering mit React.js vs. Server-Side Rendering
+                    mit HTML
+                  </li>
+                  <li>SQLite vs. PostgreSQL</li>
+                  <li>Suchmaschinen-Indexierung</li>
+                </ul>
+                <p>
+                  Man könnte tiefer in verschiedene Themen eintauchen und
+                  Features entwickeln, aber die Motivation dafür wird schwinden,
+                  da das Projekt nicht mehr neu ist 😔🚿. Zukünftige Updates
+                  werden wahrscheinlich eher kleingehänselt sein.
+                </p>
+
+                <h3>-= Ziele für Februar -</h3>
+                <ol>
+                  <li>
+                    <b>Meine Website auf PostgreSQL migrieren:</b>
+                    <i>(Erledigt)</i>
+                  </li>
+                  <li>
+                    <b
+                      >Geschwindigkeitsvergleich der Postsuche: SQLite vs.
+                      PostgreSQL:</b
+                    >
+                    <i>(Erledigt)</i>
+                  </li>
+                  <li>
+                    <b>Sortierung und Aufräumen meiner Cloud-Dateien:</b>
+                    <ol>
+                      <li>
+                        Geführt. Ich habe mehrere große Dateien und viele
+                        unnötige Fotos aus meinem Yandex Disk gelöscht.
+                      </li>
+                    </ol>
+                  </li>
+                </ol>
+
+                <h3>-= Probleme bei Yandex Disk -</h3>
+                <p>
+                  Aktuell verwende ich 40 von 53 GB Speicherplatz auf meiner
+                  Yandex Disk. Insgesamt ist Yandex Disk ein bequemer
+                  Cloud-Speicher. Für heute sind 50 GB kostenloser Speicherplatz
+                  eine schöne Sache. Es gibt jedoch einige Probleme:
+                </p>
+                <ol>
+                  <li>
+                    <s
+                      >Der unbegrenzte Fotostorage wurde abgeschafft. Früher gab
+                      es das.</s
+                    >
+                  </li>
+                  <li>
+                    <s
+                      >Der WebDav-Protokoll-Zugang ist ebenfalls nicht mehr
+                      verfügbar. Es war früher vorhanden.</s
+                    >
+                  </li>
+                  <li>
+                    Die Version 4.0 von Disk wurde auf ein neues,
+                    komplizierteres Windows 11 API für die Dateisynchronisierung
+                    umgestellt, das mir gar nicht gefällt, da die
+                    Synchronisierung dort selektiv ist. Daher bleibe ich bei
+                    Version 3.0.
+                  </li>
+                </ol>
+                <p>
+                  Früher oder später werden die kostenlosen Gigabyte wegfallen
+                  und Disk 3.0 vom API abgeschnitten sein. Dann muss ich nach
+                  einer neuen Cloud-Speicherlösung suchen, aber das ist für die
+                  Zukunft. Für den Moment nutze ich weiterhin Yandex Disk.
+                </p>
+              </div>
+              <div style="display: flex; flex-wrap: wrap; gap: 10px">
+                <a href="/personal-goals/image/247488/1772052432/0.jpg">
+                  <img
+                    width="240"
+                    height="240"
+                    class="ms-card ms-border"
+                    style="
+                      width: 240px;
+                      height: 240px;
+                      object-fit: cover;
+                      margin: 0;
+                      padding: 0;
+                    "
+                    src="/personal-goals/image/247488/1772052432/0.jpg"
+                    alt="Image 0"
+                  />
+                </a>
+
+                <a href="/personal-goals/image/247488/1772052432/1.jpg">
+                  <img
+                    width="240"
+                    height="240"
+                    class="ms-card ms-border"
+                    style="
+                      width: 240px;
+                      height: 240px;
+                      object-fit: cover;
+                      margin: 0;
+                      padding: 0;
+                    "
+                    src="/personal-goals/image/247488/1772052432/1.jpg"
+                    alt="Image 1"
+                  />
+                </a>
+
+                <a href="/personal-goals/image/247488/1772052432/2.jpg">
+                  <img
+                    width="240"
+                    height="240"
+                    class="ms-card ms-border"
+                    style="
+                      width: 240px;
+                      height: 240px;
+                      object-fit: cover;
+                      margin: 0;
+                      padding: 0;
+                    "
+                    src="/personal-goals/image/247488/1772052432/2.jpg"
+                    alt="Image 2"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/static/js/dist/main.js"></script>
+  </body>
+</html>
