@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/static/css/index.css" />
     <meta
       name="description"
-      content="Weekly Coding - 2026-03-03 - Unlocking the Power of Storytelling: How Narratives Shape Our World"
+      content="Weekly Coding - 2026-03-03 - Navigating HTML Challenges, Setting March Goals for My Personal Website"
     />
     <meta http-equiv="content-language" content="en" />
     <title>Weekly Coding • 2026-03-03</title>
@@ -261,7 +261,75 @@
                 overflow-y: auto;
               "
             >
-              <div class="goalPostViewText"></div>
+              <div class="goalPostViewText">
+                <p>It's time for a new weekly report 📖✒️</p>
+                <h3>Prettier vs LLM 🌐</h3>
+                <p>
+                  Last week, I wrote that I had set up Prettier to format static
+                  web pages on my personal website. At the time, I thought the
+                  feature was complete. But I was wrong. Later, I discovered
+                  that Prettier refuses to format HTML files if there are
+                  errors: improperly closed tags. It turned out that LLM has
+                  some issues correctly handling HTML tags. I used the
+                  <strong>aya-expanse-8b</strong> model with this request:
+                </p>
+                <ul>
+                  <li>
+                    You are a professional Russian-to-{English} translator
+                    specializing in diary blog posts. Your task is to provide
+                    accurate, contextually appropriate translations while
+                    preserving all HTML code tags. Do not provide any
+                    explanations or commentary - just the direct translation
+                  </li>
+                </ul>
+                <p>
+                  In the original text, I had correct HTML, but after processing
+                  through LLM, some tags disappeared. I resolved the issue by
+                  forcing LLM to reprocess until Prettier gives the OK, with a
+                  limit of 30 attempts.
+                </p>
+                <p>I also made various minor corrections and refactoring.</p>
+                <p>
+                  <strong>Search Engine Indexing:</strong> For some reason, the
+                  number of indexed pages has dropped. The cause is unknown to
+                  me. 📉🥴
+                </p>
+                <h3>March Goals 🌼</h3>
+                <p>Improvements for my personal website:</p>
+                <ol>
+                  <li>
+                    Move my blog post formatting from HTML to Markdown
+                    <ol>
+                      <li>All posts, old and new, should move</li>
+                    </ol>
+                  </li>
+                  <li>
+                    Move texts on other languages into a separate table
+                    <ol>
+                      <li>
+                        Currently, texts are in one big table with three fields:
+                        text, textEnglish, textGerman
+                      </li>
+                    </ol>
+                  </li>
+                  <li>
+                    Use SQL features
+                    <ol>
+                      <li>Foreign key</li>
+                      <li>Explain</li>
+                    </ol>
+                  </li>
+                  <li>
+                    Comments
+                    <ol>
+                      <li>Display comments on my posts with Smart Progress</li>
+                      <li>
+                        Enable posting new comments through my personal website
+                      </li>
+                    </ol>
+                  </li>
+                </ol>
+              </div>
               <div style="display: flex; flex-wrap: wrap; gap: 10px">
                 <a href="/personal-goals/image/247488/1772535011/0.jpg">
                   <img

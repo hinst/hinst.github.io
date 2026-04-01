@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/static/css/index.css" />
     <meta
       name="description"
-      content="Weekly Coding - 2026-03-03 - Unleash Creativity: How to Spark Innovative Ideas and Solve Complex Problems"
+      content="Weekly Coding - 2026-03-03 - Optimierung und Herausforderungen: Vergleich von Prettier vs LLM, Suchmaschinenindizierung und Ziele für eine verbesserte persönliche Website im März"
     />
     <meta http-equiv="content-language" content="de" />
     <title>Weekly Coding • 2026-03-03</title>
@@ -261,7 +261,94 @@
                 overflow-y: auto;
               "
             >
-              <div class="goalPostViewText"></div>
+              <div class="goalPostViewText">
+                <p>Es ist Zeit für einen neuen wöchentlichen Bericht 📖✒️</p>
+
+                <h3>Prettier vs LLM 🌐</h3>
+                <p>
+                  Letzte Woche habe ich geschrieben, dass ich Prettier
+                  eingerichtet habe, um statische Webseiten auf meiner
+                  persönlichen Website zu formatieren. Damals dachte ich, die
+                  Funktion wäre fertig. Aber ich irrte mich. Später stellte ich
+                  fest, dass Prettier HTML-Dateien nicht formatiert, wenn sie
+                  Fehler enthalten - geschlossene Tags fehlen. Es scheint, als
+                  hätte LLM Schwierigkeiten bei der korrekten Verarbeitung von
+                  HTML-Tags. Ich verwende das Modell **aya-expanse-8b** mit
+                  folgendem Befehl:
+                </p>
+                <ul>
+                  <li>
+                    Du bist ein professioneller Russisch-zu-{Zielsprache}
+                    Übersetzer, spezialisiert auf Tagebucheinträge. Deine
+                    Aufgabe ist es, genaue und kontextbezogene Übersetzungen
+                    bereitzustellen und dabei alle HTML-Code-Tags zu bewahren.
+                    Keine Erklärungen oder Kommentare - nur die direkte
+                    Übersetzung
+                  </li>
+                </ul>
+                <p>
+                  Im Originaltext ist das HTML korrekt, aber nach der
+                  Verarbeitung durch LLM verschwinden einige Tags. Ich habe das
+                  Problem so gelöst: Ich zwinge LLM, die Verarbeitung zu
+                  wiederholen, bis Prettier "OK" sagt, mit einer Begrenzung von
+                  30 Versuchen.
+                </p>
+                <p>
+                  Ich machte auch weitere kleinere Korrekturen und
+                  Refactoring-Arbeiten.
+                </p>
+
+                <h3>Suchmaschinenindizierung: 🕵️‍♂️</h3>
+                <p>
+                  Aus unerklärlichen Gründen ist die Anzahl der indizierten
+                  Seiten auf meiner Website zurückgegangen. 📉🥴
+                </p>
+
+                <h3>Ziele für März 🌼</h3>
+
+                <p>Verbesserungen für meine Website:</p>
+                <ol>
+                  <li>
+                    Umstellung meiner Blogbeiträge von HTML auf Markdown
+                    <ol>
+                      <li>
+                        Alle Beiträge - alten und neuen - müssen umgestellt
+                        werden.
+                      </li>
+                    </ol>
+                  </li>
+                  <li>
+                    Verlegung der Texte in eine separate Tabelle für
+                    mehrsprachige Inhalte
+                    <ol>
+                      <li>
+                        Derzeit sind die Texte in einer großen Tabelle mit drei
+                        Spalten: text, textEnglish, textGerman enthalten.
+                      </li>
+                    </ol>
+                  </li>
+                  <li>
+                    Nutzung von SQL-Funktionen
+                    <ol>
+                      <li>Fremdschlüssel</li>
+                      <li>EXPLAIN</li>
+                    </ol>
+                  </li>
+                  <li>
+                    Kommentare
+                    <ol>
+                      <li>
+                        Anzeige der Kommentare zu meinen Beiträgen mit Smart
+                        Progress.
+                      </li>
+                      <li>
+                        Möglichkeit, neue Kommentare über meine Website zu
+                        posten.
+                      </li>
+                    </ol>
+                  </li>
+                </ol>
+              </div>
               <div style="display: flex; flex-wrap: wrap; gap: 10px">
                 <a href="/personal-goals/image/247488/1772535011/0.jpg">
                   <img
