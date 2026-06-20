@@ -1,0 +1,437 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/static/images/favicon.png" />
+    <link rel="stylesheet" href="/static/css/minstyle.css" />
+    <link rel="stylesheet" href="/static/css/index.css" />
+    <meta
+      name="description"
+      content="Weekly Coding - 2026-04-11 - Wochenzusammenfassung: Website-Updates, Terminal-Suche und die Herausforderungen moderner Entwicklungsumgebungen"
+    />
+    <meta http-equiv="content-language" content="de" />
+    <title>Weekly Coding • 2026-04-11</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        max-height: 100%;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .content {
+        flex-grow: 1;
+        min-height: 0;
+        max-width: 100%;
+      }
+
+      #app {
+        display: flex;
+        height: 100%;
+        max-width: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <script src="/static/js/dist/initialize.js"></script>
+    <div class="content">
+      <div id="app">
+        <div
+          style="
+            padding: 10px;
+            padding-bottom: 0;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 100%;
+            max-height: 100%;
+          "
+        >
+          <div style="padding-bottom: 10px">
+            <div style="display: flex; align-items: center; max-width: 100%">
+              <div
+                id="hamburger-menu-popup"
+                class="ms-bg-light ms-border-main"
+                style="
+                  opacity: 0;
+                  position: absolute;
+                  z-index: 1;
+                  top: 10px;
+                  left: 10px;
+                  overflow-y: auto;
+                  max-height: 100%;
+                  height: 100%;
+                  margin: -10px;
+                  padding-left: 9px;
+                  padding-top: 12px;
+                  padding-right: 9px;
+                  padding-bottom: 12px;
+                  border-width: 1px;
+                  border-style: solid;
+                  transform: translate(-100%, 0);
+                  transition:
+                    transform 0.3s,
+                    opacity 0.3s;
+                "
+              >
+                <div>
+                  <div style="display: flex; align-items: center">
+                    <button
+                      id="hamburger-menu-button-inner"
+                      type="button"
+                      class="ms-btn ms-rounded ms-primary ms-outline hover-outline"
+                      style="width: 40px; height: 40px"
+                    >
+                      <div
+                        style="
+                          width: 24px;
+                          height: 24px;
+                          border-radius: 50%;
+                          transform: translate(-10px, 0px);
+                        "
+                        alt="settings"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="feather feather-menu"
+                        >
+                          <line x1="3" y1="12" x2="21" y2="12"></line>
+                          <line x1="3" y1="6" x2="21" y2="6"></line>
+                          <line x1="3" y1="18" x2="21" y2="18"></line>
+                        </svg>
+                      </div>
+                    </button>
+
+                    <a href="/de">
+                      <img
+                        src="/static/images/favicon.png"
+                        width="42"
+                        height="42"
+                        style="
+                          width: 42px;
+                          height: 42px;
+                          border-radius: 50%;
+                          margin-left: 5px;
+                        "
+                        alt="icon"
+                        class="hover-outline"
+                      />
+                    </a>
+                  </div>
+                  <div
+                    style="
+                      margin-top: 10px;
+                      display: flex;
+                      flex-direction: column;
+                      gap: 5px;
+                      width: 160px;
+                    "
+                  >
+                    <a class="ms-btn ms-outline" href="/"> English </a>
+                    <a class="ms-btn ms-outline" href="/de"> German </a>
+                    <a class="ms-btn ms-outline" href="/ru"> Russian </a>
+                  </div>
+                </div>
+              </div>
+
+              <button
+                id="hamburger-menu-button"
+                type="button"
+                class="ms-btn ms-rounded ms-primary ms-outline hover-outline"
+                style="width: 40px; height: 40px"
+              >
+                <div
+                  style="
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 50%;
+                    transform: translate(-10px, 0px);
+                  "
+                  alt="settings"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-menu"
+                  >
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                  </svg>
+                </div>
+              </button>
+
+              <a href="/de">
+                <img
+                  src="/static/images/favicon.png"
+                  width="42"
+                  height="42"
+                  style="
+                    width: 42px;
+                    height: 42px;
+                    border-radius: 50%;
+                    margin-left: 5px;
+                  "
+                  alt="icon"
+                  class="hover-outline"
+                />
+              </a>
+
+              <div
+                style="
+                  margin-left: 10px;
+                  display: flex;
+                  flex-direction: column;
+                  overflow-y: clip;
+                  gap: 4px;
+                  flex-shrink: 0;
+                  flex-basis: 0;
+                  min-width: 0;
+                "
+              >
+                <b
+                  style="
+                    text-wrap: nowrap;
+                    text-overflow: ellipsis;
+                    overflow-y: clip;
+                  "
+                >
+                  Personal Website
+                </b>
+                <h1
+                  style="
+                    text-wrap: nowrap;
+                    text-overflow: ellipsis;
+                    overflow-y: clip;
+                    font-size: 1rem;
+                    margin: 0;
+                    font-weight: normal;
+                  "
+                >
+                  Weekly Coding • 2026-04-11
+                </h1>
+              </div>
+            </div>
+          </div>
+          <div
+            class="goal-post-outer"
+            style="
+              flex-grow: 1;
+              justify-content: center;
+              display: flex;
+              min-height: 0px;
+              max-height: 100%;
+              background: repeating-linear-gradient(
+                45deg,
+                rgba(var(--main-bg), 1),
+                rgba(var(--main-bg), 1) 10px,
+                rgba(var(--light-bg-color), 1) 10px,
+                rgba(var(--light-bg-color), 1) 20px
+              );
+            "
+          >
+            <div
+              class="goal-post-inner ms-bg-main"
+              style="
+                flex-grow: 1;
+                padding-left: 20px;
+                padding-right: 20px;
+                max-width: 1000px;
+                background-attachment: fixed;
+                overflow-y: auto;
+              "
+            >
+              <div class="goalPostViewText">
+                <p>
+                  Wochbericht für die vorherige Woche 🗓️ 30.03.2026 - 05.04.2026
+                </p>
+                <h3>Persönliche Website</h3>
+                <p>
+                  <a
+                    href="http://smartprogress.do/site/redirect/?url=https%3A%2F%2Fhinst.github.io%2F"
+                    target="_blank"
+                    >https://hinst.github.io/</a
+                  >
+                </p>
+                <ul>
+                  <li>
+                    Behebung von Übersetzungsfehlern in Blogs mit Hilfe eines
+                    LLM
+                    <ul>
+                      <li>
+                        Ich habe einen Anfängerfehler gemacht: Ich schrieb
+                        `<strong>var text</strong>` und dann nochmal `<strong
+                          >var text</strong
+                        >`, sodass der Text nicht aus dem
+                        `<strong>if</strong>`-Block herausgekommen ist. Dies
+                        wurde auf einem Screenshot veranschaulicht.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    Aktualisierung des JS-Paketmanagers
+                    <strong>Parcel</strong> auf die neueste Version
+                    <ul>
+                      <li>
+                        Ich musste das Bildimportformat ändern:
+                        <a
+                          href="http://smartprogress.do/site/redirect/?url=https%3A%2F%2Fgithub.com%2Fparcel-bundler%2Fparcel%2Fissues%2F10249%23issuecomment-3818003774"
+                          target="_blank"
+                          >https://github.com/parcel-bundler/parcel/issues/10...</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    Aktualisierung von Node.js von Version 22 auf 24
+                    <ul>
+                      <li>Es sind keine Probleme aufgetreten.</li>
+                    </ul>
+                  </li>
+                  <li>
+                    Aktualisierung von TypeScript von Version 5.9 auf 6.0
+                    <ul>
+                      <li>
+                        Ich musste die Datei `<strong>tsconfig.json</strong>`
+                        ändern. Am Ende waren nur 7 Zeilen Änderungen nötig,
+                        aber es dauerte viel Zeit und Mühe, um zu verstehen,
+                        welche Anpassungen der TypeScript-Compiler 6.0 braucht,
+                        um meinen Code richtig zusammenzusetzen.
+                        <br />
+                        Beachten Sie, dass meine persönliche Website ein
+                        einfaches und kleines Projekt ist. Ich kann mir nur
+                        vorstellen, welche Probleme große Projekte mit dem
+                        Übergang haben könnten. 🥵
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <h3>Windows-Terminal</h3>
+                <p>
+                  Ich habe versucht, das Problem mit der Anwendung
+                  <strong>Windows Terminal</strong> aus dem Microsoft Store
+                  nachzustellen und festgestellt, dass die Verzögerungen aus dem
+                  <strong>WARP</strong>-Modus stammen, der den Text ohne
+                  GPU-Unterstützung rendert. Zusätzlich zu den Verzögerungen
+                  gibt es noch ein unangenehmes Merkmal: Die CPU wird ständig
+                  belastet, auch wenn das Windows-Terminal-Fenster versteckt
+                  oder zugeklappt ist. Ich habe beschlossen,
+                  <strong>Windows Terminal</strong> aufzugeben und einige
+                  alternative Anwendungen auszuprobieren. Hier ist meine
+                  Zusammenfassung:
+                </p>
+                <ul>
+                  <li>
+                    <strong>Windows Terminal</strong> ⛔ Verzögerungen im
+                    Hintergrund
+                  </li>
+                  <li><strong>Wezterm</strong> ⛔ 500 MB VRAM</li>
+                  <li><strong>Tabby</strong> ⛔ 500 MB VRAM</li>
+                  <li>
+                    <strong>Terminus</strong> ⛔ Erfordert eine
+                    Online-Registrierung bei der Installation
+                  </li>
+                  <li><strong>Alacritty</strong> ⛔ 200 MB VRAM, keine Tabs</li>
+                  <li>
+                    <strong>ConEmu</strong> ⛔ 0 MB VRAM, gut 🐞 Aber es gibt
+                    Probleme mit dem Text-Rendering
+                  </li>
+                  <li>
+                    <strong>VSCode</strong> ✅ 0 MB VRAM 🐞 Manchmal treten
+                    seltene, aber wilde Fehler beim Wiederherstellen der
+                    vorherigen Sitzung auf
+                  </li>
+                </ul>
+                <p>
+                  Letztendlich habe ich mich für
+                  <strong>VSCode</strong> entschieden. Es scheint praktisch zu
+                  sein. Anwendungen, die viel VRAM verbrauchen, fallen sofort
+                  weg, da ich VRAM so gut wie möglich für KI-Aufgaben sparen
+                  möchte. Interessant ist, dass ich ausgerechnet VSCode gewählt
+                  habe - eine ziemlich schwere Anwendung, die auf Electron
+                  läuft. Andere Terminals bieten keinen Modus ohne
+                  GPU-Unterstützung. Wie man sieht, gibt es überall Bugs und
+                  Fehler. Die Frage ist, wo sie weniger sind und welche Fehler
+                  man einfach ignorieren kann. 🪲🤔💭
+                </p>
+              </div>
+              <div style="display: flex; flex-wrap: wrap; gap: 10px">
+                <a href="/personal-goals/image/247488/1775906331/0.jpg">
+                  <img
+                    width="240"
+                    height="240"
+                    class="ms-card ms-border"
+                    style="
+                      width: 240px;
+                      height: 240px;
+                      object-fit: cover;
+                      margin: 0;
+                      padding: 0;
+                    "
+                    src="/personal-goals/image/247488/1775906331/0.jpg"
+                    alt="Image 0"
+                  />
+                </a>
+
+                <a href="/personal-goals/image/247488/1775906331/1.jpg">
+                  <img
+                    width="240"
+                    height="240"
+                    class="ms-card ms-border"
+                    style="
+                      width: 240px;
+                      height: 240px;
+                      object-fit: cover;
+                      margin: 0;
+                      padding: 0;
+                    "
+                    src="/personal-goals/image/247488/1775906331/1.jpg"
+                    alt="Image 1"
+                  />
+                </a>
+
+                <a href="/personal-goals/image/247488/1775906331/2.jpg">
+                  <img
+                    width="240"
+                    height="240"
+                    class="ms-card ms-border"
+                    style="
+                      width: 240px;
+                      height: 240px;
+                      object-fit: cover;
+                      margin: 0;
+                      padding: 0;
+                    "
+                    src="/personal-goals/image/247488/1775906331/2.jpg"
+                    alt="Image 2"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/static/js/dist/main.js"></script>
+  </body>
+</html>

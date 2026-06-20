@@ -1,0 +1,421 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/static/images/favicon.png" />
+    <link rel="stylesheet" href="/static/css/minstyle.css" />
+    <link rel="stylesheet" href="/static/css/index.css" />
+    <meta
+      name="description"
+      content="Кодить каждую неделю 8 часов - 2026-04-11 - Неделя обновлений и поиск идеального терминала: от персонального вебсайта до VSCode"
+    />
+    <meta http-equiv="content-language" content="ru" />
+    <title>Кодить каждую неделю 8 часов • 2026-04-11</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        max-height: 100%;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .content {
+        flex-grow: 1;
+        min-height: 0;
+        max-width: 100%;
+      }
+
+      #app {
+        display: flex;
+        height: 100%;
+        max-width: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <script src="/static/js/dist/initialize.js"></script>
+    <div class="content">
+      <div id="app">
+        <div
+          style="
+            padding: 10px;
+            padding-bottom: 0;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 100%;
+            max-height: 100%;
+          "
+        >
+          <div style="padding-bottom: 10px">
+            <div style="display: flex; align-items: center; max-width: 100%">
+              <div
+                id="hamburger-menu-popup"
+                class="ms-bg-light ms-border-main"
+                style="
+                  opacity: 0;
+                  position: absolute;
+                  z-index: 1;
+                  top: 10px;
+                  left: 10px;
+                  overflow-y: auto;
+                  max-height: 100%;
+                  height: 100%;
+                  margin: -10px;
+                  padding-left: 9px;
+                  padding-top: 12px;
+                  padding-right: 9px;
+                  padding-bottom: 12px;
+                  border-width: 1px;
+                  border-style: solid;
+                  transform: translate(-100%, 0);
+                  transition:
+                    transform 0.3s,
+                    opacity 0.3s;
+                "
+              >
+                <div>
+                  <div style="display: flex; align-items: center">
+                    <button
+                      id="hamburger-menu-button-inner"
+                      type="button"
+                      class="ms-btn ms-rounded ms-primary ms-outline hover-outline"
+                      style="width: 40px; height: 40px"
+                    >
+                      <div
+                        style="
+                          width: 24px;
+                          height: 24px;
+                          border-radius: 50%;
+                          transform: translate(-10px, 0px);
+                        "
+                        alt="settings"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="feather feather-menu"
+                        >
+                          <line x1="3" y1="12" x2="21" y2="12"></line>
+                          <line x1="3" y1="6" x2="21" y2="6"></line>
+                          <line x1="3" y1="18" x2="21" y2="18"></line>
+                        </svg>
+                      </div>
+                    </button>
+
+                    <a href="/ru">
+                      <img
+                        src="/static/images/favicon.png"
+                        width="42"
+                        height="42"
+                        style="
+                          width: 42px;
+                          height: 42px;
+                          border-radius: 50%;
+                          margin-left: 5px;
+                        "
+                        alt="icon"
+                        class="hover-outline"
+                      />
+                    </a>
+                  </div>
+                  <div
+                    style="
+                      margin-top: 10px;
+                      display: flex;
+                      flex-direction: column;
+                      gap: 5px;
+                      width: 160px;
+                    "
+                  >
+                    <a class="ms-btn ms-outline" href="/"> English </a>
+                    <a class="ms-btn ms-outline" href="/de"> German </a>
+                    <a class="ms-btn ms-outline" href="/ru"> Russian </a>
+                  </div>
+                </div>
+              </div>
+
+              <button
+                id="hamburger-menu-button"
+                type="button"
+                class="ms-btn ms-rounded ms-primary ms-outline hover-outline"
+                style="width: 40px; height: 40px"
+              >
+                <div
+                  style="
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 50%;
+                    transform: translate(-10px, 0px);
+                  "
+                  alt="settings"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-menu"
+                  >
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                  </svg>
+                </div>
+              </button>
+
+              <a href="/ru">
+                <img
+                  src="/static/images/favicon.png"
+                  width="42"
+                  height="42"
+                  style="
+                    width: 42px;
+                    height: 42px;
+                    border-radius: 50%;
+                    margin-left: 5px;
+                  "
+                  alt="icon"
+                  class="hover-outline"
+                />
+              </a>
+
+              <div
+                style="
+                  margin-left: 10px;
+                  display: flex;
+                  flex-direction: column;
+                  overflow-y: clip;
+                  gap: 4px;
+                  flex-shrink: 0;
+                  flex-basis: 0;
+                  min-width: 0;
+                "
+              >
+                <b
+                  style="
+                    text-wrap: nowrap;
+                    text-overflow: ellipsis;
+                    overflow-y: clip;
+                  "
+                >
+                  Personal Website
+                </b>
+                <h1
+                  style="
+                    text-wrap: nowrap;
+                    text-overflow: ellipsis;
+                    overflow-y: clip;
+                    font-size: 1rem;
+                    margin: 0;
+                    font-weight: normal;
+                  "
+                >
+                  Кодить каждую неделю 8 часов • 2026-04-11
+                </h1>
+              </div>
+            </div>
+          </div>
+          <div
+            class="goal-post-outer"
+            style="
+              flex-grow: 1;
+              justify-content: center;
+              display: flex;
+              min-height: 0px;
+              max-height: 100%;
+              background: repeating-linear-gradient(
+                45deg,
+                rgba(var(--main-bg), 1),
+                rgba(var(--main-bg), 1) 10px,
+                rgba(var(--light-bg-color), 1) 10px,
+                rgba(var(--light-bg-color), 1) 20px
+              );
+            "
+          >
+            <div
+              class="goal-post-inner ms-bg-main"
+              style="
+                flex-grow: 1;
+                padding-left: 20px;
+                padding-right: 20px;
+                max-width: 1000px;
+                background-attachment: fixed;
+                overflow-y: auto;
+              "
+            >
+              <div class="goalPostViewText">
+                <p>Отчёт за предыдущую неделю 🗓️ 2026.03.30 ... 2026.04.05</p>
+                <h3>Персональный вебсайт</h3>
+                <p>
+                  <a
+                    href="http://smartprogress.do/site/redirect/?url=https%3A%2F%2Fhinst.github.io%2F"
+                    target="_blank"
+                    >https://hinst.github.io/</a
+                  >
+                </p>
+                <ul>
+                  <li>
+                    Починил переводы блогов на другой язык с помощью LLM
+                    <ul>
+                      <li>
+                        Оказалось, я совершил ошибку дилетанта: написал
+                        <strong>var text</strong>, а затем ещё раз
+                        <strong>var text,</strong> поэтому текст не мог выйти за
+                        пределы <strong>if</strong>. Показано на скриншоте
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    Обновил JS сборщик <strong>Parcel</strong> до свежей версии
+                    <ul>
+                      <li>
+                        Пришлось поменять формат импорта картинок:
+                        <a
+                          href="http://smartprogress.do/site/redirect/?url=https%3A%2F%2Fgithub.com%2Fparcel-bundler%2Fparcel%2Fissues%2F10249%23issuecomment-3818003774"
+                          target="_blank"
+                          >https://github.com/parcel-bundler/parcel/issues/10...</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    Обновил версию <strong>Node.js</strong> с 22 до 24
+                    <ul>
+                      <li>Никаких проблем не возникло</li>
+                    </ul>
+                  </li>
+                  <li>
+                    Обновил версию <strong>TypeScript</strong> с 5.9 до 6.0
+                    <ul>
+                      <li>
+                        Пришлось переделать файл <strong>tsconfig.json</strong>.
+                        По итогу, изменения оказались довольно таки маленькими:
+                        7 строк. Но ушло много времени и возни на то, чтобы
+                        понять, какие именно изменения нужны, чтобы компилятор
+                        TypeScript 6.0 наконец-то понял, как собирать мой код.
+                        Замечу, что мой персональный вебсайт - проект простой и
+                        маленький. Какие сложности с переходом будут у больших
+                        проектов - страшно представить 🥵
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <h3>Терминал для Windows</h3>
+                <p>
+                  Пытался воспроизвести проблему с прогой
+                  <strong>Windows Terminal</strong> из Microsoft Store, и
+                  обнаружил, что тормоза исходят из режима
+                  <strong>WARP</strong>, который отрисовывает текст без помощи
+                  GPU. В добавок к тормозам, есть ещё такая неприятная
+                  особенность: нагрузка на процессор идёт постоянно, даже если
+                  окно терминала скрыто или свёрнуто. Решил отказаться от
+                  Windows Terminal, и попробовал ещё несколько разных прог. Вот
+                  итог:
+                </p>
+                <ul>
+                  <li>Windows Terminal ⛔ Тормоза в фоне</li>
+                  <li>Wezterm ⛔ 500 MB VRAM</li>
+                  <li>Tabby ⛔500 MB VRAM</li>
+                  <li>
+                    Terminus ⛔ Требует регистрацию онлайн аккаунта при
+                    установке
+                  </li>
+                  <li>Alacritty ⛔ 200 MB VRAM, нету табов</li>
+                  <li>
+                    ConEmu ⛔ <em>0 </em>MB VRAM, это хорошо 🐞 Но есть баги с
+                    отображением текста
+                  </li>
+                  <li>
+                    VSCode ✅ 0 MB VRAM 🐞 Есть редкие, но дикие баги с
+                    восстановлением предыдущей сессии
+                  </li>
+                </ul>
+                <p>
+                  В итоге, я решил использовать <strong>VSCode🖥️</strong>. Вроде
+                  бы, удобно. Проги, которые используют много VRAM - сразу
+                  отпадают, ибо я максимально экономлю VRAM для AI. Занятно, что
+                  пришлось выбрать именно VSCode - довольно таки тяжёлая прога,
+                  которая едет на ⚛️ Электроне. Но в другие терминалы нормальный
+                  режим без GPU не завезли. Как говорится, баги есть везде.
+                  Программ без багов не существует. Вопрос в том, где их меньше,
+                  и какие баги можно спокойно пережить. 🪲🤔💭
+                </p>
+              </div>
+              <div style="display: flex; flex-wrap: wrap; gap: 10px">
+                <a href="/personal-goals/image/247488/1775906331/0.jpg">
+                  <img
+                    width="240"
+                    height="240"
+                    class="ms-card ms-border"
+                    style="
+                      width: 240px;
+                      height: 240px;
+                      object-fit: cover;
+                      margin: 0;
+                      padding: 0;
+                    "
+                    src="/personal-goals/image/247488/1775906331/0.jpg"
+                    alt="Image 0"
+                  />
+                </a>
+
+                <a href="/personal-goals/image/247488/1775906331/1.jpg">
+                  <img
+                    width="240"
+                    height="240"
+                    class="ms-card ms-border"
+                    style="
+                      width: 240px;
+                      height: 240px;
+                      object-fit: cover;
+                      margin: 0;
+                      padding: 0;
+                    "
+                    src="/personal-goals/image/247488/1775906331/1.jpg"
+                    alt="Image 1"
+                  />
+                </a>
+
+                <a href="/personal-goals/image/247488/1775906331/2.jpg">
+                  <img
+                    width="240"
+                    height="240"
+                    class="ms-card ms-border"
+                    style="
+                      width: 240px;
+                      height: 240px;
+                      object-fit: cover;
+                      margin: 0;
+                      padding: 0;
+                    "
+                    src="/personal-goals/image/247488/1775906331/2.jpg"
+                    alt="Image 2"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/static/js/dist/main.js"></script>
+  </body>
+</html>
