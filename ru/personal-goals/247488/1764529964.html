@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/static/css/index.css" />
     <meta
       name="description"
-      content="Кодить каждую неделю 8 часов - 2025-11-30 - Разработка Веб-Счётчика и Оптимизация Kubernetes на Orange Pi"
+      content="Кодить каждую неделю 8 часов - 2025-11-30 - Разработка умного веб-счетчика на Spring Boot и разбор нюансов работы Kubernetes на Orange Pi"
     />
     <meta http-equiv="content-language" content="ru" />
     <title>Кодить каждую неделю 8 часов • 2025-11-30</title>
@@ -263,13 +263,12 @@
             >
               <div class="goalPostViewText">
                 <h3>Персональный вебсайт и Spring Boot 🍃☕</h3>
+
                 <p>
                   На этой неделе я довёл мой проект web-counter до рабочего
                   состояния. Теперь он считает количество посещений страниц на
                   моём персональном веб-сайте
-                  <a
-                    href="http://smartprogress.do/site/redirect/?url=https%3A%2F%2Fhinst.github.io%2F"
-                    target="_blank"
+                  <a href="https://hinst.github.io/" target="_blank"
                     >https://hinst.github.io/</a
                   >
                   Для того, чтобы счётчик сработал, у пользователя должен быть
@@ -277,6 +276,7 @@
                   лишь скачивают HTML-страницу - не засчитываются. Данные
                   хранятся в базе SQLite. Ещё сделал такую защиту от спама:
                 </p>
+
                 <ul>
                   <li>сервер перемножает два простых числа</li>
                   <li>
@@ -284,6 +284,7 @@
                     это были
                   </li>
                 </ul>
+
                 <p>
                   Таким образом, бесконечно дёргать API не получится. Чтобы
                   подсчитать ответ на загадку от сервера, нужно потрудиться.
@@ -293,27 +294,29 @@
                   в моём маленьком проекте - это, конечно вопрос 🤔💭 По крайней
                   мере, я получил дополнительный опыт в Spring Boot, пока писал
                   эту фичу.
-                  <a
-                    href="http://smartprogress.do/site/redirect/?url=https%3A%2F%2Fgithub.com%2Fhinst%2Fweb-counter"
-                    target="_blank"
+                  <a href="https://github.com/hinst/web-counter" target="_blank"
                     >https://github.com/hinst/web-counter</a
                   >
                 </p>
+
                 <h3>Kubernetes и Orange Pi 🐋🍊</h3>
+
                 <p>Здесь устранил две проблемки.</p>
+
                 <p>
                   Во-первых, у меня был включён RAM-лог на Orange Pi. Эта фича
                   включена по умолчанию, и из-за неё у меня пропадали логи в
                   Kubernetes. Пришлось отключать. Логи исчезать больше не будут,
                   но нагрузка на карту памяти увеличится.
                 </p>
+
                 <p>
                   А ещё я узнал, что мои Persistent Volume Claims были
                   неправильно настроены. Оказывается, каждая пара PV &amp; PVC
                   должна быть связана через совпадающий storageClassName. Раньше
                   я этого не замечал, ибо у меня было меньше PV, и они по
-                  "счастливой случайности" распределялись на нужные PVC 🤔🚿
-                  Слегка запутанная фича, на мой взгляд
+                  &ldquo;счастливой случайности&rdquo; распределялись на нужные
+                  PVC 🤔🚿 Слегка запутанная фича, на мой взгляд
                 </p>
               </div>
               <div style="display: flex; flex-wrap: wrap; gap: 10px">

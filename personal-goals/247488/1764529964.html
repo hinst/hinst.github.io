@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/static/css/index.css" />
     <meta
       name="description"
-      content="Weekly Coding - 2025-11-30 - Building Security and Scalability: Spring Boot, Kubernetes, and My Personal Website Journey"
+      content="Weekly Coding - 2025-11-30 - From Prime Factor Puzzles to Kubernetes Troubleshooting: My Latest Engineering Journey"
     />
     <meta http-equiv="content-language" content="en" />
     <title>Weekly Coding • 2025-11-30</title>
@@ -263,56 +263,58 @@
             >
               <div class="goalPostViewText">
                 <h3>Personal Website and Spring Boot 🍃☕</h3>
+
                 <p>
-                  This week I completed my web-counter project and made it fully
-                  functional. Now, it tracks page views on my personal website:
-                  <a
-                    href="http://smartprogress.do/site/redirect/?url=https%3A%2F%2Fhinst.github.io%2F"
-                    target="_blank"
+                  This week, I got my web-counter project up and running. It now
+                  counts page views on my personal website
+                  <a href="https://hinst.github.io/" target="_blank"
                     >https://hinst.github.io/</a
-                  >
-                  For the counter to work, JavaScript must be enabled in the
-                  user's browser. Bot visits that only download the HTML page
-                  are not counted. The data is stored in an SQLite database. I
-                  also implemented a spam protection mechanism:
+                  >. For the counter to work, users must have JavaScript enabled
+                  in their browser. Visits from bots that only download the HTML
+                  page are not counted. The data is stored in an SQLite
+                  database. I also implemented a spam protection mechanism like
+                  this:
                 </p>
+
                 <ul>
-                  <li>The server multiplies two random prime numbers</li>
+                  <li>the server multiplies two prime numbers</li>
                   <li>
-                    JavaScript on the client side must determine which two
-                    numbers were used
+                    client-side JavaScript must find which two numbers they were
                   </li>
                 </ul>
+
                 <p>
-                  Thus, API abuse is prevented. Deciphering the puzzle from the
-                  server's response requires some effort. The protection can be
-                  adjusted; increasing the number of factors will make the
-                  client-side decryption process much more time-consuming.
-                  Whether this level of protection is necessary for my small
-                  project is debatable 🤔💭 Nevertheless, I gained additional
-                  experience with Spring Boot while implementing this feature.
-                  <a
-                    href="http://smartprogress.do/site/redirect/?url=https%3A%2F%2Fgithub.com%2Fhinst%2Fweb-counter"
-                    target="_blank"
+                  This way, it&rsquo;s impossible to infinitely spam the API.
+                  Solving the puzzle sent by the server requires some effort.
+                  The protection can be flexibly configured: if you slightly
+                  increase the number of factors, decoding the puzzle on the
+                  client side will take a significant amount of time. How
+                  necessary such protection is for my small project is, of
+                  course, a question 🤔💭 At least I gained some extra
+                  experience with Spring Boot while writing this feature.
+                  <a href="https://github.com/hinst/web-counter" target="_blank"
                     >https://github.com/hinst/web-counter</a
                   >
                 </p>
 
                 <h3>Kubernetes and Orange Pi 🐋🍊</h3>
-                <p>I resolved two issues here.</p>
+
+                <p>I fixed two issues here.</p>
+
                 <p>
                   First, I had the RAM log enabled on my Orange Pi. This feature
-                  is turned on by default, causing log loss in Kubernetes. I had
-                  to disable it. Logs will no longer be lost, but the memory
-                  card's load will increase.
+                  is enabled by default, and because of it, I was losing logs in
+                  Kubernetes. I had to turn it off. Logs will no longer
+                  disappear, but the load on the memory card will increase.
                 </p>
+
                 <p>
-                  Additionally, I learned that my Persistent Volume Claims
-                  (PVCs) were incorrectly configured. It seems each pair of PV
-                  and PVC must have a matching storageClassName. I previously
-                  overlooked this because, due to good fortune, my fewer PVs
-                  were automatically distributed to the correct PVCs 🤔🚿 A
-                  slightly confusing feature in my opinion.
+                  Also, I found out that my Persistent Volume Claims were
+                  misconfigured. It turns out that each pair of PV &amp; PVC
+                  must be linked via a matching storageClassName. I hadn&rsquo;t
+                  noticed this before because I had fewer PVs, and they were
+                  assigned to the correct PVCs by &ldquo;happy accident&rdquo;
+                  🤔🚿 A slightly confusing feature, in my opinion.
                 </p>
               </div>
               <div style="display: flex; flex-wrap: wrap; gap: 10px">

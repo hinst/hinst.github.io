@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/static/css/index.css" />
     <meta
       name="description"
-      content="Weekly Coding - 2025-03-31 - Meine neue Website: Multisprachige Blogs, anpassbare Anzeige und Sicherheitsverbesserungen"
+      content="Weekly Coding - 2025-03-31 - Meine neue persönliche Webseite ist online – ein Einblick in die Technik hinter automatisierten Übersetzungen."
     />
     <meta http-equiv="content-language" content="de" />
     <title>Weekly Coding • 2025-03-31</title>
@@ -263,84 +263,88 @@
             >
               <div class="goalPostViewText">
                 <p>
-                  Hallo alle zusammen. Es ist Zeit, meinen neuen persönlichen
-                  Website zu präsentieren:
-                  <a
-                    href="http://smartprogress.do/site/redirect/?url=https%3A%2F%2Fhinst.github.io"
-                    target="_blank"
+                  Hallo zusammen. Es ist an der Zeit, meine neue persönliche
+                  Webseite vorzustellen:
+                  <a href="https://hinst.github.io" target="_blank"
                     >https://hinst.github.io</a
                   >
-                  Letzte Woche habe ich 8 Stunden damit verbracht, die Website
-                  zu erstellen und insgesamt bereits 50 Stunden investiert.
+                  Letzte Woche habe ich 8 Stunden in die Erstellung der Webseite
+                  investiert, insgesamt sind es jedoch bereits 50 Stunden.
                 </p>
 
-                <p>Hier sind die Inhalte meiner Website:</p>
+                <p>Das bietet meine Webseite:</p>
 
                 <ul>
                   <li>
-                    Meine Blogbeiträge in drei Sprachen: Russisch (Original),
-                    Deutsch und Englisch (mit Hilfe eines LLM übersetzt) 🇷🇺 🇩🇪
-                    🇬🇧
+                    Meine Blogposts in drei Sprachen: Russisch (Original),
+                    Deutsch und Englisch – übersetzt mittels LLM 🇷🇺 🇩🇪 🇬🇧
+
                     <ul>
                       <li>
-                        Die Übersetzung erfolgt automatisch über das Programm
-                        <strong>LM Studio</strong> und das Modell
+                        Die Übersetzung erfolgt automatisch mit dem Programm
+                        <strong>LM Studio</strong> und dem Modell
                         <strong>Aya Expanse 8B</strong>.
                       </li>
                       <li>
-                        Mein Orange Pi-Gerät sendet täglich um Mitternacht eine
-                        Anfrage an meinen Desktop-Computer, um den Text zu
-                        übersetzen. Dies war notwendig, da das Orange Pi nur
-                        über 4 GB RAM verfügt, während für die Ausführung des
-                        LLM 8 GB erforderlich sind. Wenn mein Desktop-Computer
-                        ausgeschaltet war, wurde der Übersetzungsvorgang auf den
-                        nächsten Tag verschoben.
+                        Jeden Tag um Mitternacht sendet mein Programm auf dem
+                        Orange Pi eine Anfrage an meinen Desktop-PC mit der
+                        Bitte, den Text zu übersetzen. Dies war notwendig, da
+                        das Orange Pi nicht über genug Arbeitsspeicher verfügt,
+                        um ein LLM auszuführen. Es werden 8 GB benötigt, das
+                        Orange Pi hat jedoch nur 4 Gigabyte. Wenn mein
+                        Desktop-PC zum gewünschten Zeitpunkt ausgeschaltet war,
+                        wird die Übersetzung gemäß dem Zeitplan auf den nächsten
+                        Tag verschoben.
                       </li>
                       <li>
-                        Ursprünglich hatte ich vor, den Textübersetzungsservice
-                        von Google Translate zu nutzen, aber es stellte sich
+                        Ursprünglich hatte ich geplant, die Texte mit dem Google
+                        Translate-Dienst zu übersetzen, aber es stellte sich
                         heraus, dass deren API kostenpflichtig ist und es keine
-                        offizielle kostenlose Version gibt... Ich hätte
-                        versuchen können, das Protokoll nachzuahmen, das der
-                        Browser-Webübersetzer verwendet, aber am Ende habe ich
-                        es sein gelassen.
+                        offizielle kostenlose Version gibt&hellip; Man hätte
+                        vielleicht versuchen können, die Anfragen über das
+                        Protokoll des Browser-Webübersetzers zu senden, aber
+                        letztendlich habe ich mich entschieden, mich nicht damit
+                        herumzuschlagen.
                       </li>
                     </ul>
                   </li>
                   <li>
-                    Zwei Möglichkeiten, den Blog anzuzeigen: eine für breite
-                    Bildschirme und eine andere für enge Smartphones 💻📱
+                    Zwei Darstellungsoptionen für den Blog mit Kalender: eine
+                    für breite Bildschirme und eine für schmale Smartphones 💻📱
                   </li>
                 </ul>
 
-                <p>Geplant ist Folgendes:</p>
+                <p>Was für die Zukunft geplant ist:</p>
 
                 <ul>
-                  <li>Kommentare hinzuzufügen</li>
+                  <li>Kommentare</li>
                   <li>
-                    Den vollständigen Umstieg auf SQLite
+                    Vollständiger Umstieg auf SQLite
+
                     <ul>
                       <li>
-                        Derzeit werden die meisten Informationen in Textdateien
-                        gespeichert, während einige Daten in SQLite abgelegt
-                        sind.
+                        Derzeit wird der Großteil der Informationen in
+                        Textdateien gespeichert, nur ein Teil davon befindet
+                        sich in SQLite.
                       </li>
                     </ul>
                   </li>
                 </ul>
 
                 <p>
-                  Während ich an der neuen Website gearbeitet habe, bin ich auf
-                  eine Sicherheitslücke meiner alten Website gestoßen 🤔. Es war
-                  möglich, über das URL-Parameter <strong>../</strong> in jede
-                  andere Ordnerstruktur auf dem Server zu gelangen. Da die
-                  Website jedoch in Docker gehostet wurde, konnte man dort
-                  nichts Interessantes finden 😴. Oder doch? Die Lücke habe ich
-                  bereits behoben:
+                  Während ich an der neuen Website arbeitete, habe ich eine
+                  Sicherheitslücke in meiner alten Seite bemerkt 🤔 Dort konnte
+                  man <code>../</code> in die URL-Parameter eingeben, und ich
+                  hatte keine entsprechende Prüfung dafür&hellip; Theoretisch
+                  hätte man also aus dem Ordner mit den Blogposts in jeden
+                  anderen Ordner auf dem Server gelangen können. Da die Seite
+                  jedoch in Docker lief, war dort wahrscheinlich nichts
+                  besonders Interessantes zu finden 😴 Oder vielleicht doch? Die
+                  Lücke habe ich bereits behoben
                   <a
-                    href="http://smartprogress.do/site/redirect/?url=https%3A%2F%2Fgithub.com%2Fhinst%2FSmartProgress-or%2Fcommit%2Fbf199ff49425419829aa353aa5358ebd2742321b"
+                    href="https://github.com/hinst/SmartProgress-or/commit/bf199ff49425419829aa353ea0e2742321b"
                     target="_blank"
-                    >https://github.com/hinst/SmartProgress-or/commit/...</a
+                    >https://github.com/hinst/SmartProgress-or/commit/bf199ff49425419829aa353ea0e2742321b</a
                   >
                   👌.
                 </p>

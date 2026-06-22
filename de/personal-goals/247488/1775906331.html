@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/static/css/index.css" />
     <meta
       name="description"
-      content="Weekly Coding - 2026-04-11 - Wochenzusammenfassung: Website-Updates, Terminal-Suche und die Herausforderungen moderner Entwicklungsumgebungen"
+      content="Weekly Coding - 2026-04-11 - Software-Updates, VRAM-Optimierung und die Suche nach dem perfekten Terminal: Ein wöchentlicher Rückblick."
     />
     <meta http-equiv="content-language" content="de" />
     <title>Weekly Coding • 2026-04-11</title>
@@ -263,116 +263,122 @@
             >
               <div class="goalPostViewText">
                 <p>
-                  Wochbericht für die vorherige Woche 🗓️ 30.03.2026 - 05.04.2026
+                  Bericht für die letzte Woche 🗓️ 30.03.2026 &hellip; 05.04.2026
                 </p>
+
                 <h3>Persönliche Website</h3>
+
                 <p>
-                  <a
-                    href="http://smartprogress.do/site/redirect/?url=https%3A%2F%2Fhinst.github.io%2F"
-                    target="_blank"
+                  <a href="https://hinst.github.io/" target="_blank"
                     >https://hinst.github.io/</a
                   >
                 </p>
+
                 <ul>
                   <li>
-                    Behebung von Übersetzungsfehlern in Blogs mit Hilfe eines
-                    LLM
+                    Blogübersetzungen in andere Sprachen mit Hilfe von LLMs
+                    repariert
+
                     <ul>
                       <li>
-                        Ich habe einen Anfängerfehler gemacht: Ich schrieb
-                        `<strong>var text</strong>` und dann nochmal `<strong
-                          >var text</strong
-                        >`, sodass der Text nicht aus dem
-                        `<strong>if</strong>`-Block herausgekommen ist. Dies
-                        wurde auf einem Screenshot veranschaulicht.
+                        Es stellte sich heraus, dass ich einen Anfängerfehler
+                        gemacht hatte: Ich habe
+                        <strong>var text</strong> geschrieben und dann erneut
+                        <strong>var text,</strong> weshalb der Text nicht über
+                        das <strong>if</strong> hinausgehen konnte. (Siehe
+                        Screenshot)
                       </li>
                     </ul>
                   </li>
                   <li>
-                    Aktualisierung des JS-Paketmanagers
-                    <strong>Parcel</strong> auf die neueste Version
+                    JS-Bundler <strong>Parcel</strong> auf die neueste Version
+                    aktualisiert
+
                     <ul>
                       <li>
                         Ich musste das Bildimportformat ändern:
                         <a
-                          href="http://smartprogress.do/site/redirect/?url=https%3A%2F%2Fgithub.com%2Fparcel-bundler%2Fparcel%2Fissues%2F10249%23issuecomment-3818003774"
+                          href="https://github.com/parcel-bundler/parcel/issues/10249#issuecomment-3818003774"
                           target="_blank"
-                          >https://github.com/parcel-bundler/parcel/issues/10...</a
+                          >https://github.com/parcel-bundler/parcel/issues/10249#issuecomment-3818003774</a
                         >
                       </li>
                     </ul>
                   </li>
                   <li>
-                    Aktualisierung von Node.js von Version 22 auf 24
+                    <strong>Node.js</strong>-Version von 22 auf 24 aktualisiert
+
                     <ul>
-                      <li>Es sind keine Probleme aufgetreten.</li>
+                      <li>Es traten keine Probleme auf</li>
                     </ul>
                   </li>
                   <li>
-                    Aktualisierung von TypeScript von Version 5.9 auf 6.0
+                    <strong>TypeScript</strong>-Version von 5.9 auf 6.0
+                    aktualisiert
+
                     <ul>
                       <li>
-                        Ich musste die Datei `<strong>tsconfig.json</strong>`
-                        ändern. Am Ende waren nur 7 Zeilen Änderungen nötig,
-                        aber es dauerte viel Zeit und Mühe, um zu verstehen,
-                        welche Anpassungen der TypeScript-Compiler 6.0 braucht,
-                        um meinen Code richtig zusammenzusetzen.
-                        <br />
-                        Beachten Sie, dass meine persönliche Website ein
-                        einfaches und kleines Projekt ist. Ich kann mir nur
-                        vorstellen, welche Probleme große Projekte mit dem
-                        Übergang haben könnten. 🥵
+                        Ich musste die Datei
+                        <strong>tsconfig.json</strong> überarbeiten.
+                        Letztendlich waren die Änderungen ziemlich gering: 7
+                        Zeilen. Aber es dauerte viel Zeit und Mühe
+                        herauszufinden, welche genau notwendigen Änderungen
+                        erforderlich sind, damit der TypeScript 6.0-Compiler
+                        endlich versteht, wie mein Code kompiliert werden soll.
+                        Ich stelle fest, dass meine persönliche Website ein
+                        einfaches und kleines Projekt ist. Es ist beängstigend
+                        vorstellbar zu denken, welche Schwierigkeiten es bei
+                        großen Projekten beim Upgrade geben wird 🥵
                       </li>
                     </ul>
                   </li>
                 </ul>
-                <h3>Windows-Terminal</h3>
+
+                <h3>Terminal für Windows</h3>
+
                 <p>
                   Ich habe versucht, das Problem mit der Anwendung
-                  <strong>Windows Terminal</strong> aus dem Microsoft Store
-                  nachzustellen und festgestellt, dass die Verzögerungen aus dem
+                  <strong>Windows Terminal</strong> aus dem Microsoft Store zu
+                  reproduzieren und festgestellt, dass die Verzögerungen vom
                   <strong>WARP</strong>-Modus stammen, der den Text ohne
                   GPU-Unterstützung rendert. Zusätzlich zu den Verzögerungen
-                  gibt es noch ein unangenehmes Merkmal: Die CPU wird ständig
-                  belastet, auch wenn das Windows-Terminal-Fenster versteckt
-                  oder zugeklappt ist. Ich habe beschlossen,
-                  <strong>Windows Terminal</strong> aufzugeben und einige
-                  alternative Anwendungen auszuprobieren. Hier ist meine
-                  Zusammenfassung:
+                  gibt es noch diese unangenehme Besonderheit: Die
+                  CPU-Auslastung ist konstant hoch, selbst wenn das
+                  Terminalfenster versteckt oder minimiert ist. Ich habe mich
+                  entschieden, Windows Terminal aufzugeben und einige andere
+                  Programme ausprobiert. Hier ist das Ergebnis:
                 </p>
+
                 <ul>
+                  <li>Windows Terminal ⛔ Hintergrundverzögerungen</li>
+                  <li>Wezterm ⛔ 500 MB VRAM</li>
+                  <li>Tabby ⛔ 500 MB VRAM</li>
                   <li>
-                    <strong>Windows Terminal</strong> ⛔ Verzögerungen im
-                    Hintergrund
+                    Terminus ⛔ Erfordert Online-Registrierung bei der Anmeldung
                   </li>
-                  <li><strong>Wezterm</strong> ⛔ 500 MB VRAM</li>
-                  <li><strong>Tabby</strong> ⛔ 500 MB VRAM</li>
+                  <li>Alacritty ⛔ 200 MB VRAM, keine Tabs</li>
                   <li>
-                    <strong>Terminus</strong> ⛔ Erfordert eine
-                    Online-Registrierung bei der Installation
-                  </li>
-                  <li><strong>Alacritty</strong> ⛔ 200 MB VRAM, keine Tabs</li>
-                  <li>
-                    <strong>ConEmu</strong> ⛔ 0 MB VRAM, gut 🐞 Aber es gibt
-                    Probleme mit dem Text-Rendering
+                    ConEmu ⛔ <em>0</em> MB VRAM, das ist gut 🐞 Aber es gibt
+                    Bugs bei der Textdarstellung
                   </li>
                   <li>
-                    <strong>VSCode</strong> ✅ 0 MB VRAM 🐞 Manchmal treten
-                    seltene, aber wilde Fehler beim Wiederherstellen der
-                    vorherigen Sitzung auf
+                    VSCode ✅ 0 MB VRAM 🐞 Es gibt seltene, aber wilde Bugs beim
+                    Wiederherstellen der vorherigen Sitzung
                   </li>
                 </ul>
+
                 <p>
-                  Letztendlich habe ich mich für
-                  <strong>VSCode</strong> entschieden. Es scheint praktisch zu
-                  sein. Anwendungen, die viel VRAM verbrauchen, fallen sofort
-                  weg, da ich VRAM so gut wie möglich für KI-Aufgaben sparen
-                  möchte. Interessant ist, dass ich ausgerechnet VSCode gewählt
-                  habe - eine ziemlich schwere Anwendung, die auf Electron
-                  läuft. Andere Terminals bieten keinen Modus ohne
-                  GPU-Unterstützung. Wie man sieht, gibt es überall Bugs und
-                  Fehler. Die Frage ist, wo sie weniger sind und welche Fehler
-                  man einfach ignorieren kann. 🪲🤔💭
+                  Letztendlich habe ich mich entschieden,
+                  <strong>VSCode🖥️</strong> zu verwenden. Es scheint eigentlich
+                  praktisch zu sein. Programme, die viel VRAM verbrauchen,
+                  fallen sofort aus dem Rennen, da ich den VRAM maximal für KI
+                  spare. Interessant ist, dass ich mich gerade für VSCode
+                  entscheiden musste – eine ziemlich schwere Anwendung, die auf
+                  ⚛️ Electron basiert. Aber in anderen Terminals wurde kein
+                  ordentlicher Modus ohne GPU implementiert. Wie man so sagt:
+                  Bugs gibt es überall. Es existieren keine fehlerfreien
+                  Programme. Die Frage ist nur, wo sie weniger sind und welche
+                  Bugs man entspannt ignorieren kann. 🪲🤔💭
                 </p>
               </div>
               <div style="display: flex; flex-wrap: wrap; gap: 10px">

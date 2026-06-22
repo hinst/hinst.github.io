@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/static/css/index.css" />
     <meta
       name="description"
-      content="Weekly Coding - 2025-04-13 - Transforming Website Speed and Structure: A Week of Personal Project Updates"
+      content="Weekly Coding - 2025-04-13 - Refactoring My Personal Website: From JSON Files to a Structured SQLite Database"
     />
     <meta http-equiv="content-language" content="en" />
     <title>Weekly Coding • 2025-04-13</title>
@@ -265,56 +265,57 @@
                 <p>Good evening 🌙</p>
 
                 <p>
-                  This week I have been working hard on my personal website,
-                  spending 15 hours on it.
+                  This week I’ve been working hard on my personal website and
+                  spent 15 hours on it.
                 </p>
 
                 <ul>
                   <li>
                     Code:
                     <a
-                      href="http://smartprogress.do/site/redirect/?url=https%3A%2F%2Fgithub.com%2Fhinst%2Fhinst-website"
+                      href="https://github.com/hinst/hinst-website"
                       target="_blank"
                       >https://github.com/hinst/hinst-website</a
                     >
                   </li>
                   <li>
                     Site:
-                    <a
-                      href="http://smartprogress.do/site/redirect/?url=https%3A%2F%2Fhinst.github.io"
-                      target="_blank"
+                    <a href="https://hinst.github.io" target="_blank"
                       >https://hinst.github.io</a
                     >
                   </li>
                 </ul>
 
-                <p>Here's what I accomplished:</p>
+                <p>Here are the things I managed to do:</p>
 
                 <ul>
                   <li>
-                    I migrated the storage from JSON files to SQLite:
+                    I migrated the storage from JSON files to SQLite
+
                     <ul>
                       <li>
-                        As a result, my website's loading speed improved from 52
-                        milliseconds to 32 milliseconds... This is in a local
-                        network. However, accessing it through TailScale adds an
-                        additional 200 milliseconds, so you won't actually feel
-                        the difference ⌚🤔💭
+                        As a result, my website&rsquo;s loading speed improved:
+                        it went from 52 milliseconds to 32 milliseconds&hellip;
+                        This is on the local network; however, access via
+                        TailScale adds another 200 milliseconds, so it
+                        won&rsquo;t be possible to &ldquo;feel&rdquo; the
+                        improvement in practice ⌚🤔💭
                       </li>
                       <li>
-                        Overall, there's a sense that my code is more organized
-                        after switching to SQLite.
+                        Overall, I feel like there&rsquo;s a bit more order in
+                        the code after switching to SQLite.
                       </li>
                     </ul>
                   </li>
                   <li>Month names are now always in English 📅</li>
                   <li>
-                    The goal title is less likely to be in a non-appropriate
-                    language 🇬🇧
+                    The goal header is now less likely to be in another
+                    (unsuitable) language 🇬🇧
                   </li>
                   <li>
-                    Project files with code are now better organized into four
-                    folders:
+                    Code project files are now more clearly organized into four
+                    folders 📂
+
                     <ul>
                       <li><strong>src/typescript</strong></li>
                       <li><strong>src/tsx</strong></li>
@@ -323,25 +324,28 @@
                     </ul>
                   </li>
                   <li>
-                    I enabled code auto-formatting in the frontend with Prettier
+                    Enabled auto-formatting for the frontend code using
+                    <strong>Prettier</strong>
                   </li>
-                  <li>Other minor improvements and fixes</li>
+                  <li>Plus various other small improvements and fixes</li>
                 </ul>
 
                 <p>
-                  The biggest and most complex change was: migrating the entire
-                  storage to SQLite, which took a lot of time. I had to update
-                  not only hinst-website but also the old Smart-Progress-or
-                  downloader, as it handles copying information from
-                  SmartProgress to my database. I wanted to make sure the
-                  transition to SQLite was complete by the end of the week, so I
-                  coded almost all day on Sunday until midnight 🥵. In the end,
-                  I finished the transition to SQLite, but there will likely be
-                  other minor bugs that I don't know about yet. One bug I
-                  already found is with time zones. My website shows post dates
-                  3 hours earlier than they should. I'll figure it out sometime
-                  later. I'll need to look into handling time zones in the luxon
-                  library.
+                  The biggest and most complex change was completely migrating
+                  the storage to SQLite, which took a ton of time. I had to
+                  update not only &ldquo;hinst-website&rdquo; but also the old
+                  project &ldquo;Smart-Progress-or downloader&rdquo; because it
+                  is responsible for copying information from SmartProgress into
+                  my database. I really wanted to finish the transition to
+                  SQLite by the end of the week, so I was coding almost all day
+                  Sunday until midnight 🥵 As a result, I managed to finish the
+                  migration, but there will surely be other minor bugs later
+                  that I don&rsquo;t know about yet. I’ve already found one bug:
+                  something isn&rsquo;t right with the time zones. On my little
+                  website, the post date shows up three hours earlier than it
+                  should. I&rsquo;ll figure out why eventually. I&rsquo;ll need
+                  to try and sort out the time zones in the
+                  <strong>luxon</strong> library.
                 </p>
               </div>
               <div style="display: flex; flex-wrap: wrap; gap: 10px">

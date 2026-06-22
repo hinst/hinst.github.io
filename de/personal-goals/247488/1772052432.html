@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/static/css/index.css" />
     <meta
       name="description"
-      content="Weekly Coding - 2026-02-25 - Webentwicklungswoche: Website-Optimierungen, Ziele und Cloud-Speicherprobleme"
+      content="Weekly Coding - 2026-02-25 - Zwischen Prettier, PostgreSQL und Cloud-Hürden: Mein persönlicher Wochenrückblick."
     />
     <meta http-equiv="content-language" content="de" />
     <title>Weekly Coding • 2026-02-25</title>
@@ -263,119 +263,131 @@
             >
               <div class="goalPostViewText">
                 <p>
-                  Zeit, den wöchentlichen Bericht im Tagebuch zu schreiben 🗓️
+                  Es ist an der Zeit, einen Bericht über die letzte Woche zu
+                  verfassen 🗓️
                 </p>
 
-                <h3>-= Persönliche Website =-</h3>
+                <p><strong>-= Persönliche Webseite =-</strong></p>
+
                 <p>
-                  Ich habe Verbesserungen am Formatieren meiner HTML-Seiten
-                  vorgenommen, die mein Programm für die statische Version der
-                  Website generiert:
+                  Ich habe eine Verbesserung für die Formatierung meiner
+                  HTML-Seiten vorgenommen, die mein Programm für die statische
+                  Version der Website generiert.
                 </p>
+
                 <ul>
                   <li>
-                    <b>Früher:</b> Formatierung mit dem Paket
-                    <strong>yosssi/gohtml</strong>.
+                    Bisher: Formatierung mit dem Paket
+                    <strong>yosssi/gohtml</strong>
+
                     <ul>
                       <li>
-                        Schlecht mit gemischten Abständen zwischen Leeren und
-                        Tabulatoren umgegangen.
+                        Kam schlecht mit einer Mischung aus Leerzeichen und Tabs
+                        zurecht
                       </li>
                     </ul>
                   </li>
                   <li>
-                    <b>Jetzt:</b> Formatierung mit Prettier.
+                    Jetzt: Formatierung mit dem Paket <strong>Prettier</strong>
+
                     <ul>
                       <li>
-                        Prettier läuft in einem separaten Docker-Container. Es
-                        stehen nur 16 MB Arbeitsspeicher zur Verfügung, wenn er
-                        gerade nicht aktiv ist.
+                        Prettier läuft in einem eigenen Docker-Container. Er
+                        verbraucht wenig Arbeitsspeicher – nur 16 MB im Leerlauf
                       </li>
                     </ul>
                   </li>
                 </ul>
+
                 <p>
-                  Ich plane weiterhin kleinere Updates für meine persönliche
-                  Website vorzunehmen. Derzeit fühle ich, dass das Projekt
-                  abgeschlossen ist, und größere Änderungen sind nicht geplant.
-                  Ich habe bereits alle interessanten Aspekte dieses Projekts
-                  ausprobiert:
+                  Ich plane, weiterhin verschiedene kleine Updates für meine
+                  persönliche Website vorzunehmen. Insgesamt fühlt sich das
+                  Projekt momentan abgeschlossen an, und ich habe keine Absicht,
+                  große Updates durchzuführen. Alle interessanten Funktionen in
+                  diesem Projekt habe ich bereits ausprobiert:
                 </p>
+
                 <ul>
                   <li>
                     LLM-API für automatische Übersetzungen in andere Sprachen
                   </li>
-                  <li>
-                    Dynamisches Rendering mit React.js vs. Server-Side Rendering
-                    mit HTML
-                  </li>
+                  <li>Dynamisches React.js vs. HTML Server-Side Rendering</li>
                   <li>SQLite vs. PostgreSQL</li>
-                  <li>Suchmaschinen-Indexierung</li>
+                  <li>Suchmaschinenindizierung (Search Engine Indexing)</li>
                 </ul>
+
                 <p>
-                  Man könnte tiefer in verschiedene Themen eintauchen und
-                  Features entwickeln, aber die Motivation dafür wird schwinden,
-                  da das Projekt nicht mehr neu ist 😔🚿. Zukünftige Updates
-                  werden wahrscheinlich eher kleingehänselt sein.
+                  Man könnte zwar verschiedene Themen vertiefen und Features
+                  weiterentwickeln, aber es wird schwierig sein, dafür die
+                  Motivation zu finden, da das Gefühl der Neuheit des Projekts
+                  verloren gegangen ist 😔🚿 Zukünftige Updates werden also eher
+                  &ldquo;faul&rdquo; ausfallen.
                 </p>
 
-                <h3>-= Ziele für Februar -</h3>
+                <p><strong>-= Ziele für Februar =-</strong></p>
+
                 <ol>
                   <li>
-                    <b>Meine Website auf PostgreSQL migrieren:</b>
-                    <i>(Erledigt)</i>
+                    Migration der persönlichen Website auf PostgreSQL
+
+                    <ol>
+                      <li>✅ Erledigt</li>
+                    </ol>
                   </li>
                   <li>
-                    <b
-                      >Geschwindigkeitsvergleich der Postsuche: SQLite vs.
-                      PostgreSQL:</b
-                    >
-                    <i>(Erledigt)</i>
+                    Vergleich der Suchgeschwindigkeit bei Beiträgen: SQLite vs.
+                    PostgreSQL
+
+                    <ol>
+                      <li>✅ Erledigt</li>
+                    </ol>
                   </li>
                   <li>
-                    <b>Sortierung und Aufräumen meiner Cloud-Dateien:</b>
+                    Sortierung persönlicher Dateien in der Cloud: Notwendiges
+                    ordnen, Unnötiges löschen
+
                     <ol>
                       <li>
-                        Geführt. Ich habe mehrere große Dateien und viele
-                        unnötige Fotos aus meinem Yandex Disk gelöscht.
+                        ⏯️ Es gibt Fortschritte. Ich habe einige große Dateien
+                        und eine Menge unnötiger Fotos von Yandex Disk gelöscht
                       </li>
                     </ol>
                   </li>
                 </ol>
 
-                <h3>-= Probleme bei Yandex Disk -</h3>
+                <p><strong>-= Probleme mit Yandex Disk =-</strong></p>
+
                 <p>
-                  Aktuell verwende ich 40 von 53 GB Speicherplatz auf meiner
-                  Yandex Disk. Insgesamt ist Yandex Disk ein bequemer
-                  Cloud-Speicher. Für heute sind 50 GB kostenloser Speicherplatz
-                  eine schöne Sache. Es gibt jedoch einige Probleme:
+                  Aktuell belege ich 40 von 53 GB in der Cloud von Yandex Disk.
+                  Insgesamt ist Yandex Disk ein praktischer Speicher. Nach
+                  heutigen Maßstäben sind 50 GB kostenloser Speicher eine tolle
+                  Sache. Aber es gibt auch einige Probleme:
                 </p>
+
                 <ol>
                   <li>
-                    <s
-                      >Der unbegrenzte Fotostorage wurde abgeschafft. Früher gab
-                      es das.</s
-                    >
+                    🚫 Das unbegrenzte Kontingent für Fotos wurde gestrichen.
+                    Früher gab es das aber noch 🤔💭
                   </li>
                   <li>
-                    <s
-                      >Der WebDav-Protokoll-Zugang ist ebenfalls nicht mehr
-                      verfügbar. Es war früher vorhanden.</s
-                    >
+                    🚫 Das WebDav-Protokoll wurde ebenfalls entfernt. Früher war
+                    es da 🌐🕊️
                   </li>
                   <li>
-                    Die Version 4.0 von Disk wurde auf ein neues,
-                    komplizierteres Windows 11 API für die Dateisynchronisierung
-                    umgestellt, das mir gar nicht gefällt, da die
-                    Synchronisierung dort selektiv ist. Daher bleibe ich bei
-                    Version 3.0.
+                    🪟 Die Disk-Version 4.0 ist auf eine neue, fehlerhafte
+                    Windows 11 API für die Dateisynchronisation umgestiegen, die
+                    mir überhaupt nicht zusagt, da die Synchronзация dort nicht
+                    einfach, sondern eher selektiv abläuft. Deshalb bleibe ich
+                    bei Version 3.0
                   </li>
                 </ol>
+
                 <p>
-                  Früher oder später werden die kostenlosen Gigabyte wegfallen
-                  und Disk 3.0 vom API abgeschnitten sein. Dann muss ich nach
-                  einer neuen Cloud-Speicherlösung suchen, aber das ist für die
-                  Zukunft. Für den Moment nutze ich weiterhin Yandex Disk.
+                  Ich denke, irgendwann werden die kostenlosen Gigabytes
+                  weggenommen und Disk 3.0 vom API abgeschnitten. Dann werde ich
+                  mir ein neues Cloud-Speicherangebot suchen müssen. Aber das
+                  ist erst mal Zukunftsmusik; vorerst nutze ich weiterhin Yandex
+                  Disk.
                 </p>
               </div>
               <div style="display: flex; flex-wrap: wrap; gap: 10px">

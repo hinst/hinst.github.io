@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/static/css/index.css" />
     <meta
       name="description"
-      content="Weekly Coding - 2026-05-12 - Meine Cloud- und Backup-Strategie: Von Yandex.Disk zu Syncthing und hi-backup"
+      content="Weekly Coding - 2026-05-12 - Wie ich meine Cloud-Strategie ändere und meine eigenen Backup-Tools optimiere."
     />
     <meta http-equiv="content-language" content="de" />
     <title>Weekly Coding • 2026-05-12</title>
@@ -263,80 +263,99 @@
             >
               <div class="goalPostViewText">
                 <h3>Verbesserungsplan für meine persönliche Website 📜🧐</h3>
+
                 <p>
-                  Letzte Woche habe ich eine To-Do-Liste für meine persönliche
-                  Website erstellt. Beim nächsten Zeitfenster kann ich dann
-                  direkt loslegen, anstatt mich mühsam an alle geplanten
-                  Aufgaben zu erinnern.
+                  Letzte Woche habe ich mir eine To-do-Liste erstellt, was ich
+                  mit meiner persönlichen Website vorhabe. Wenn ich das nächste
+                  Mal Zeit finde, kann ich direkt mit der Arbeit beginnen,
+                  anstatt mich mühsam und gequält daran erinnern zu müssen, was
+                  eigentlich geplant war.
                 </p>
+
                 <h3>Yandex.Disk wird kostenpflichtig 🛸💸</h3>
+
                 <p>
-                  In meinem letzten Blogbeitrag habe ich darüber geschrieben,
-                  wie ich langsam meine persönlichen Cloud-Dateien aus
-                  Yandex.Disk sortiere. Die Situation hat sich nun jedoch etwas
-                  verändert. Während das Sortieren der Dateien weiterhin
-                  erforderlich ist, drängt eine dringendere Aufgabe: Ich muss
-                  herausfinden, wo ich all diese Dateien unterbringen soll. Die
-                  kostenlose Synchronisierung von Yandex.Disk wird Anfang des
-                  nächsten Monats deaktiviert 🫨.
+                  In meinem letzten Beitrag habe ich darüber geschrieben, wie
+                  ich Schritt für Schritt meine persönlichen Cloud-Dateien auf
+                  Yandex.Disk sortiere. Doch nun hat sich die Situation
+                  plötzlich geändert. Das Sortieren der Dateien ist zwar immer
+                  noch nötig, aber es gibt eine dringendere Aufgabe: Ich muss
+                  einen Speicherort für all diese Daten finden. Die kostenlose
+                  Synchronisation bei Yandex.Disk wird bereits Anfang nächsten
+                  Monats abgeschaltet 🫨 Ohne Synchronisation bleibt die Nutzung
+                  des Cloud-Speichers zwar weiterhin möglich, aber der Sinn
+                  darin ist gering, da die Dateigröße auf maximal 1 GB begrenzt
+                  ist. Daher lässt sich kein großes Backup in die Cloud
+                  hochladen.
                 </p>
-                <h3>Konfiguriere Syncthing 🔁</h3>
+
+                <h3>Ich richte Syncthing ein 🔁</h3>
+
                 <p>
-                  Ich habe mich entschieden, mit der Software Syncthing zu
-                  lernen. Meine Eindrücke sind gemischt:
+                  Ich habe beschlossen, mich mit der Anwendung Syncthing
+                  beschäftigen zu lernen. Bisher sind meine Eindrücke gemischt:
                 </p>
+
                 <ul>
+                  <li>Vorteile: Das Programm ist mächtig und kostenlos</li>
                   <li>
-                    Vorteile: Das Programm ist leistungsstark und kostenlos.
+                    Nachteile: Das Programm ist kompliziert und etwas launisch
                   </li>
-                  <li>Nachteile: Das Programm ist kompliziert und launisch.</li>
                 </ul>
+
                 <p>
-                  Während der Einrichtung musste ich etwa zehn oder zwanzig Mal
-                  Ordner neu erstellen und das Programm neu starten, bevor die
-                  Synchronisierung funktionierte. Bisher habe ich nur zwei
-                  Ordner konfiguriert: Musik und Passwörter. Es stehen noch
-                  viele weitere Ordner aus, aber ist für jeden Ordner eine
-                  Echtzeit-Synchronisierung notwendig? Ich denke, für die
-                  meisten meiner Ordner reicht wöchentliche Sicherung aus.
+                  Während der Einrichtung musste ich die Ordner etwa zehn oder
+                  zwanzig Mal neu erstellen und das Programm neustarten, bevor
+                  die Synchronisation endlich funktionierte. Bisher habe ich
+                  erst zwei meiner Ordner eingerichtet: Musik und Passwörter. Es
+                  folgen noch viele weitere Ordner, aber ist eine
+                  Echtzeit-Synchronisierung für jeden einzelnen Ordner wirklich
+                  notwendig? Ich denke, für die meisten meiner Ordner reicht ein
+                  wöchentliches Backup völlig aus.
                 </p>
-                <h3>Verbesserungen an hi-backup 📂</h3>
+
+                <h3>Verbesserungen für hi-backup 📂</h3>
+
                 <p>
-                  Ich habe in mein Backup-Programm, das intelligente Backups
-                  erstellt, einen neuen Modus hinzugefügt:
-                  <a
-                    href="http://smartprogress.do/site/redirect/?url=https%3A%2F%2Fgithub.com%2Fhinst%2Fhi-backup"
-                    target="_blank"
+                  Ich habe einen neuen Modus zu meinem kleinen Programm für
+                  intelligente Backups hinzugefügt:
+                  <a href="https://github.com/hinst/hi-backup" target="_blank"
                     >https://github.com/hinst/hi-backup</a
                   >
                 </p>
+
                 <ul>
                   <li>
-                    Jetzt kann man ein Backup ohne Verschlüsselung erstellen 🆕
+                    Ab jetzt ist es möglich, ein Backup ohne Verschlüsselung zu
+                    erstellen 🆕
+
                     <ul>
                       <li>
-                        Format: Jeder Datei wird in einem separaten .gz Archiv
-                        gespeichert, wobei die Ordnerstruktur vollständig
-                        widerspiegelt wird.
+                        Format: Jede Datei wird in eine eigene .gz-Datei gelegt,
+                        wobei die Verzeichnisstruktur vollständig gespiegelt
+                        wird.
                       </li>
                     </ul>
                   </li>
                 </ul>
+
                 <p>
-                  Früher gab es nur den verschlüsselten Modus mit eigenem
-                  Format, das normale Archiver nicht verstehen konnten. Jetzt
-                  kann man die Dateien aber auch ohne hi-backup extrahieren,
-                  falls nötig 🤔.
+                  Früher gab es nur den Modus mit Verschlüsselung in einem
+                  eigenen Format, das von normalen Archivprogrammen nicht
+                  gelesen werden konnte. Jetzt lassen sich Dateien bei Bedarf
+                  ohne Hilfe von hi-backup extrahieren 🤔
                 </p>
+
                 <p>
-                  Ob ich diese Software weiterentwickeln soll, ist ungewiss.
-                  Ursprünglich war die Idee, den intelligenten Modus zu nutzen,
-                  um NAND-Ressourcen zu sparen und nur geänderte Dateien neu zu
-                  schreiben. Aber jetzt bin ich mir nicht mehr so sicher: Da man
-                  sagt, dass das Schreiben auf solche Speichergeräte extrem
-                  ressourcenintensiv ist, würde die Nutzung von hi-backup für
-                  meine 50 GB pro Woche wahrscheinlich so langsam sein, dass
-                  meine Flash-Speicherkarte länger hält als ich selbst 🤯🪦
+                  Ob es Sinn macht, diese Software weiterzuentwickeln, weiß ich
+                  nicht genau. Ursprünglich war die Idee, den intelligenten
+                  Modus zur Schonung des NAND-Speichers zu nutzen und nur
+                  geänderte Dateien neu aufzuzeichnen. Aber momentan bin ich mir
+                  unsicher, ob das den Aufwand wert ist: Es heißt, dass die
+                  Schreibkapazität solcher Speicherträger ziemlich enorm ist.
+                  Wenn ich etwa 50 GB pro Woche speichere, wird diese Ressource
+                  so langsam verbraucht, dass mein Flash-Laufwerk länger halten
+                  wird als ich selbst 🤯🪦
                 </p>
               </div>
               <div style="display: flex; flex-wrap: wrap; gap: 10px">

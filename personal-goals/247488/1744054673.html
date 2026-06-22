@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/static/css/index.css" />
     <meta
       name="description"
-      content="Weekly Coding - 2025-04-07 - Website Updates and Navigating K3s Certificate Rotation on Orange Pi"
+      content="Weekly Coding - 2025-04-07 - Web Design Tweaks and Lessons Learned from Expired K3S Certificates."
     />
     <meta http-equiv="content-language" content="en" />
     <title>Weekly Coding • 2025-04-07</title>
@@ -263,40 +263,46 @@
             >
               <div class="goalPostViewText">
                 <p>
-                  Hello everyone. It's time to write a little report on my goal.
+                  Hello everyone. It is time to write a small progress report on
+                  my goals.
                 </p>
 
                 <ul>
                   <li>
-                    <strong>Personal Website 🌐</strong> 1 hour 44 minutes
+                    Personal website 🌐 1 hour 44 minutes
+
                     <ul>
                       <li>
-                        Updated the website's appearance. Now diagonal stripes
-                        disappear if they become too narrow.
+                        Updated the appearance. Now diagonal stripes disappear
+                        if they become too narrow.
                       </li>
                     </ul>
                   </li>
                   <li>
-                    <strong>Orange Pi 🍊</strong> 1 hour 37 minutes
+                    Orange Pi 🍊 1 hour 37 minutes
+
                     <ul>
                       <li>
-                        Worked on k3s configuration. It turned out that the
-                        access keys for k3s have a default validity period of 1
-                        year, and this year has just passed...
+                        Worked on k3s configuration. It turns out that k3s
+                        access keys have an expiration date: 1 year by default,
+                        and that year just happened to expire&hellip;
                       </li>
                       <li>
-                        Need to run this command:
+                        You need to run the following command:
+
                         <ul>
                           <li><strong>sudo k3s certificate rotate</strong></li>
                         </ul>
                       </li>
                       <li>
-                        Then copy the new keys to <strong>kube/config</strong>.
+                        And then copy the new keys into
+                        <strong>kube/config</strong>
                       </li>
                       <li>
-                        It took me over an hour to understand this. There was no
-                        clear error message, and it just said "unable to
-                        connect", so I had to guess and look for advice online.
+                        It took me over an hour to figure this out 😴 There was
+                        no clear error message, just something like
+                        &ldquo;unable to connect,&rdquo; so I had to guess why
+                        and search for advice online.
                       </li>
                     </ul>
                   </li>

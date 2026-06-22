@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/static/css/index.css" />
     <meta
       name="description"
-      content="Weekly Coding - 2026-04-11 - Optimizing Development Environment: From Terminal Trials to VSCode Victory"
+      content="Weekly Coding - 2026-04-11 - Navigating Major Version Updates and the Quest for an Efficient Windows Terminal"
     />
     <meta http-equiv="content-language" content="en" />
     <title>Weekly Coding • 2026-04-11</title>
@@ -262,43 +262,117 @@
               "
             >
               <div class="goalPostViewText">
-                ## Previous Week Report 🗓️ 2026.03.30 - 2026.04.05 ### Personal
-                Website * **Fixed blog translation issues using LLM:** I made a
-                novice mistake: I wrote `var text` twice within an `if`
-                statement, resulting in the text not escaping it. Screenshot
-                shown. * **Updated JS bundler Parcel:** I had to change the
-                image import format: [Parcel Issue
-                10249](https://github.com/parcel-bundler/parcel/issues/10249#issuecomment-3818003774)
-                * **Updated Node.js from v22 to v24:** No issues encountered. *
-                **Updated TypeScript from v5.9 to v6.0:** It required rewriting
-                my `tsconfig.json` file, but ultimately the changes were
-                relatively minor (7 lines). However, it took a significant
-                amount of time and frustration to figure out which exact
-                modifications were necessary for TypeScript 6.0 to correctly
-                compile my code. Note that my personal website is a simple and
-                small project. I shudder to think what difficulties larger
-                projects would face with this transition. ### Windows Terminal I
-                attempted to reproduce an issue with the Windows Terminal
-                application from Microsoft Store and discovered that the problem
-                originates from the **WARP** mode, which renders text without
-                GPU assistance. In addition to the lag, there's a constant
-                processor load even when the terminal window is hidden or
-                minimized. I've decided to abandon Windows Terminal in favor of
-                exploring other options. Here are my findings: * **Windows
-                Terminal:** Laggy in background, WARP mode issues * **Wezterm:**
-                Requires 500 MB VRAM * **Tabby:** Also requires 500 MB VRAM *
-                **Terminus:** Requires online account registration during
-                installation * **Alacritty:** 200 MB VRAM, no tabs * **ConEmu:**
-                0 MB VRAM (good), but has text rendering bugs * **VSCode:** 0 MB
-                VRAM (good), occasionally has session restore issues Ultimately,
-                I've chosen to use **VSCode**. While it's a heavier application
-                running on Electron, its pros outweigh the cons for my needs.
-                I'm prioritizing low VRAM usage for AI workloads. It's
-                interesting to note that while ConEmu offers minimal VRAM
-                consumption, it has text rendering issues. As they say, "bugs
-                are everywhere". There's no perfect solution, and the question
-                becomes which bugs are acceptable and which can be worked
-                around.
+                <p>
+                  Report for the previous week 🗓️ 2026.03.30 &hellip; 2026.04.05
+                </p>
+
+                <h3>Personal Website</h3>
+
+                <p>
+                  <a href="https://hinst.github.io/" target="_blank"
+                    >https://hinst.github.io/</a
+                  >
+                </p>
+
+                <ul>
+                  <li>
+                    Fixed blog translations into another language using an LLM
+
+                    <ul>
+                      <li>
+                        It turns out I made a beginner&rsquo;s mistake: I wrote
+                        <strong>var text</strong>, and then
+                        <strong>var text</strong> again, so the text
+                        couldn&rsquo;t exit the <strong>if</strong> block. Shown
+                        in the screenshot.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    Updated the JS bundler <strong>Parcel</strong> to the latest
+                    version
+
+                    <ul>
+                      <li>
+                        Had to change the image import format:
+                        <a
+                          href="https://github.com/parcel-bundler/parcel/issues/10249#issuecomment-3818003774"
+                          target="_blank"
+                          >https://github.com/parcel-bundler/parcel/issues/10&hellip;</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    Updated <strong>Node.js</strong> version from 22 to 24
+
+                    <ul>
+                      <li>No issues occurred.</li>
+                    </ul>
+                  </li>
+                  <li>
+                    Updated <strong>TypeScript</strong> version from 5.9 to 6.0
+
+                    <ul>
+                      <li>
+                        Had to rework the <strong>tsconfig.json</strong> file.
+                        In the end, the changes were quite small: only 7 lines.
+                        However, it took a lot of time and effort to figure out
+                        exactly which changes were needed for the TypeScript 6.0
+                        compiler to finally understand how to build my code. I
+                        should note that my personal website is a simple and
+                        small project. It&rsquo;s scary to imagine what kind of
+                        difficulties large projects will face during this
+                        transition 🥵
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+
+                <h3>Terminal for Windows</h3>
+
+                <p>
+                  I tried to reproduce an issue with the
+                  <strong>Windows Terminal</strong> app from the Microsoft Store
+                  and discovered that the lag comes from
+                  <strong>WARP</strong> mode, which renders text without GPU
+                  acceleration. In addition to the lag, there is another
+                  unpleasant feature: CPU load remains constant even if the
+                  terminal window is hidden or minimized. I decided to give up
+                  on Windows Terminal and tried several other apps. Here are the
+                  results:
+                </p>
+
+                <ul>
+                  <li>Windows Terminal ⛔ Lag in the background</li>
+                  <li>Wezterm ⛔ 500 MB VRAM</li>
+                  <li>Tabby ⛔ 500 MB VRAM</li>
+                  <li>
+                    Terminus ⛔ Requires online account registration during
+                    installation
+                  </li>
+                  <li>Alacritty ⛔ 200 MB VRAM, no tabs</li>
+                  <li>
+                    ConEmu ⛔ <em>0</em> MB VRAM, that&rsquo;s good 🐞 But there
+                    are text rendering bugs
+                  </li>
+                  <li>
+                    VSCode ✅ 0 MB VRAM 🐞 There are rare but wild bugs with
+                    restoring the previous session
+                  </li>
+                </ul>
+
+                <p>
+                  In the end, I decided to use <strong>VSCode🖥️</strong>. It
+                  seems convenient enough. Apps that use a lot of VRAM are
+                  immediately ruled out because I am trying to save as much VRAM
+                  as possible for AI. It&rsquo;s interesting that I had to
+                  choose VSCode—a fairly heavy app running on ⚛️ Electron. But
+                  other terminals don&rsquo;t offer a normal non-GPU mode. As
+                  they say, bugs are everywhere. Bug-free software doesn&rsquo;t
+                  exist. The question is where there are fewer of them and which
+                  bugs can be lived with comfortably. 🪲🤔💭
+                </p>
               </div>
               <div style="display: flex; flex-wrap: wrap; gap: 10px">
                 <a href="/personal-goals/image/247488/1775906331/0.jpg">

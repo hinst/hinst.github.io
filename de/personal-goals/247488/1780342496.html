@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/static/css/index.css" />
     <meta
       name="description"
-      content="Weekly Coding - 2026-06-01 - Mein wöchentlicher Fortschritt: Verbesserungen bei Passwortverwaltung, Docker-Registry und mehr"
+      content="Weekly Coding - 2026-06-01 - Von verbesserten Sicherheitsrutinen bis zur eigenen Docker-Registry: Ein ehrlicher Rückblick auf die jüngsten Fortschritte im Programmieren."
     />
     <meta http-equiv="content-language" content="de" />
     <title>Weekly Coding • 2026-06-01</title>
@@ -263,80 +263,82 @@
             >
               <div class="goalPostViewText">
                 <p>
-                  Es ist Zeit für meinen wöchentlichen
-                  Programmier-Tagebucheintrag. Letzte Woche war ich im Urlaub
-                  und habe in meiner Freizeit etwa 18 Stunden mit Codieren
-                  verbracht.
+                  Es ist Zeit für das wöchentliche Programmier-Tagebuch. Letzte
+                  Woche war ich im Urlaub und habe in meiner Freizeit etwa 18
+                  Stunden mit Coding verbracht.
                 </p>
+
                 <h3>Hi-Backup 📂</h3>
-                <p>
-                  Ich habe meine Herangehensweise an die Passwortverwaltung
-                  geändert.
-                </p>
+
+                <p>Ansatz zur Passwortbehandlung geändert 🔑</p>
+
                 <ul>
                   <li>
                     📄 Früher wurde das Passwort in einer
-                    JSON-Konfigurationsdatei gespeichert.
+                    JSON-Konfigurationsdatei gespeichert
                   </li>
                   <li>
-                    ⌨️ Jetzt muss das Passwort zweimal bei jedem Backup-Vorgang
-                    per Tastatur eingegeben werden.
+                    ⌨️ Jetzt muss das Passwort bei jedem Backup-Lauf zweimal
+                    über die Tastatur eingegeben werden
                   </li>
                 </ul>
-                <p>
-                  Ich habe eine Passwortüberprüfung bei erneuten Backups
-                  hinzugefügt.
-                </p>
+
+                <p>Passwortprüfung bei wiederholten Backups hinzugefügt</p>
+
                 <ul>
                   <li>
                     ⏩ Früher wurden alle vorherigen Dateien überschrieben, wenn
-                    das Passwort geändert wurde.
+                    sich das Passwort änderte
                   </li>
                   <li>
-                    ⛔ Jetzt warnt das Skript den Benutzer vor einem
-                    Backup-Update mit einem ungleichen Passwort und lehnt eine
-                    Fortsetzung ab.
+                    ⛔ Jetzt warnt das Skript den Benutzer bei dem Versuch, ein
+                    Backup mit einem nicht passenden Passwort zu aktualisieren,
+                    und bricht ab
                   </li>
                 </ul>
-                <h3>Meine persönliche Webseite 🌐</h3>
-                <p>Ich habe meinen Docker-Registry 🐋 eingerichtet.</p>
+
+                <h3>Persönliche Website 🌐</h3>
+
+                <p>Eigene Docker Registry eingerichtet 🐋</p>
+
                 <ul>
                   <li>
-                    ☁️ Früher wurden Image-Dateien in dem kostenlosen docker.io
-                    Cloud gespeichert.
+                    ☁️ Früher wurden die Image-Dateien in der kostenlosen Cloud
+                    von docker.io gespeichert
                   </li>
                   <li>
-                    🍊 Jetzt werden die Image-Dateien direkt auf der Orange Pi
-                    hochgeladen.
+                    🍊 Jetzt werden die Image-Dateien direkt auf den Orange Pi
+                    hochgeladen
                   </li>
                 </ul>
-                <p>
-                  Ich habe die Synchronisierung mit SmartProgress 🔃 verbessert.
-                </p>
+
+                <p>Synchronisation mit SmartProgress verbessert 🔃</p>
+
                 <ul>
                   <li>
-                    📜 Früher waren das Zielbild (Cover) und Übersetzungen der
-                    Titel direkt in meinem Code gespeichert.
+                    📜 Früher wurden das Zielbild (Cover) und die Überschriften
+                    mit den Übersetzungen in meinem Code gespeichert
                   </li>
                   <li>
-                    🖼️ Jetzt werden das Zielbild und die Übersetzungen
-                    synchronisiert und in einer Datenbank gespeichert.
+                    🖼️ Jetzt werden das Zielbild und die Überschriften
+                    synchronisiert und in der Datenbank gespeichert
                   </li>
                 </ul>
+
                 <p>
-                  Insgesamt habe ich mehrere Punkte aus der Liste TODO.md
-                  abgeschlossen und nebenbei eine Reihe kleiner Fehlerbehebungen
-                  und Codeverbesserungen vorgenommen.
+                  Insgesamt habe ich einige Punkte auf der TODO.md-Liste
+                  abgeschlossen und dabei eine Menge kleiner Fehlerbehebungen
+                  und Verbesserungen am Code vorgenommen.
                 </p>
+
                 <p>
-                  Trotz des Fortschritts fühlt sich das Projekt wie ein
-                  Stagnationspunkt an. Ursprünglich hatte ich das Projekt als
-                  einfaches Spiegelbild meiner Blogs aus SmartProgress
-                  konzipiert, und dieses "Erbe" zieht sich durch die gesamte
-                  lange und seltsame Entwicklung des Projekts hin 🥴 Ich denke,
-                  weiterhin kleine Verbesserungen und Fehlerbehebungen
-                  vorzunehmen, aber im Moment plane ich keine "durchbrechenden"
-                  Funktionen.
+                  Trotz des Fortschritts fühlt sich das Projekt wie eine
+                  Sackgasse an. Ursprünglich hatte ich das Projekt als einfaches
+                  Spiegelbild meiner SmartProgress-Blogs geplant, und dieses
+                  „Erbe“ begleitet das Projekt durch sein ganzes langes und
+                  eigentümliches Dasein 🥴 Ich denke darüber nach, weiterhin
+                  kleine Verbesserungen und Korrekturen vorzunehmen, plane aber
+                  derzeit keine „bahnbrechenden“ Funktionen.
                 </p>
               </div>
               <div style="display: flex; flex-wrap: wrap; gap: 10px">

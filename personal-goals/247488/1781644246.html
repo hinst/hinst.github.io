@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/static/css/index.css" />
     <meta
       name="description"
-      content="Weekly Coding - 2026-06-16 - Organizing My Website Code: Packages, Performance, and Local LLM Experiments"
+      content="Weekly Coding - 2026-06-16 - Refactoring Project Architecture and Exploring Local LLM Context Switching Trade-offs"
     />
     <meta http-equiv="content-language" content="en" />
     <title>Weekly Coding • 2026-06-16</title>
@@ -262,34 +262,119 @@
               "
             >
               <div class="goalPostViewText">
-                ## hinst-website 🌐 I organized the code of my personal website.
-                I identified these packages: ### Server - **base**: Everything
-                that's needed in all other packages. - **db_objects**: For
-                interacting with SQL databases. - **page_data**: For HTML
-                templates. - **rest_objects**: For objects handled by the REST
-                API. ### gophers - Functions for Go for every scenario. I placed
-                this package in a separate Git repository
-                (https://github.com/hinst/go-gophers) and generated a cover
-                image, as shown on the screenshot. Last week, I had little free
-                time for coding, so I only logged 2 hours and 30 minutes in my
-                tracker. I've been thinking about whether to add ORM
-                (Object-Relational Mapping) and REST frameworks to my project. I
-                haven't found a clear answer yet. Here's an idea: 1. Run a load
-                test to see how many requests per second my website can handle.
-                2. Implement a REST framework and repeat the test. Then compare:
-                did it get faster or slower? The idea is intriguing, but finding
-                time for it is a challenge. Currently, I only have time for
-                small tasks, and refactoring the project under a new framework
-                is a lengthy process. ## Experiments with Local LLMs I found two
-                approaches to settings: - **100% Offload**: Ideal for long
-                conversations. Generation is fast, but context switching is very
-                slow. You can't jump between chats or change prompts on the fly.
-                - **50% Offload**: Better for context switching. Generation is
-                slower, but context switching is faster. You can easily jump
-                between chats and modify prompts in real time. It's interesting;
-                it seems like human thinking: you can switch between tasks, but
-                work will be slow. Or you can focus on one task and work quickly
-                without distractions (I struggle with that 🙃).
+                <h3>hinst-website 🌐</h3>
+
+                <p>
+                  I&rsquo;ve cleaned up the code for my
+                  <a href="https://hinst.github.io/" target="_blank"
+                    >personal website</a
+                  >. I structured it into the following packages:
+                </p>
+
+                <ul>
+                  <li>
+                    <strong>server</strong> - root package
+
+                    <ul>
+                      <li>
+                        <strong>base</strong> - shared utilities needed by all
+                        other packages
+                      </li>
+                      <li>
+                        <strong>db_objects</strong> - for interacting with the
+                        SQL database
+                      </li>
+                      <li><strong>page_data</strong> - for HTML templates</li>
+                      <li>
+                        <strong>rest_objects</strong> - for objects handled
+                        (received and returned) by the REST API
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <strong>gophers</strong> - general-purpose functions for Go
+
+                    <ul>
+                      <li>
+                        I moved this package into a separate Git
+                        <a
+                          href="https://github.com/hinst/go-gophers"
+                          target="_blank"
+                          >repository</a
+                        >
+                        and generated a cover image for it, which is shown in
+                        the screenshot.
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+
+                <p>
+                  I didn&rsquo;t have much free time to code last week, so I
+                  only logged 2 hours and 30 minutes in my tracker.
+                </p>
+
+                <p>
+                  I&rsquo;ve been thinking about whether there is any point in
+                  adding an ORM and REST frameworks to my project. I
+                  haven&rsquo;t found a definitive answer yet. However, I have
+                  this idea:
+                </p>
+
+                <ul>
+                  <li>
+                    Run a load test to see how many requests per second my
+                    website can handle.
+                  </li>
+                  <li>
+                    Implement a REST framework and repeat the test. Then, out of
+                    curiosity, compare the results: did it get faster or slower?
+                  </li>
+                </ul>
+
+                <p>
+                  It&rsquo;s an interesting idea, but whether I&rsquo;ll find
+                  the time for it is another matter. Right now, I only have time
+                  for small tasks, while rewriting the project for a new
+                  framework is a long-term undertaking.
+                </p>
+
+                <h3>Experiments with local LLMs</h3>
+
+                <p>I found two different approaches to configuration:</p>
+
+                <ul>
+                  <li>
+                    <strong>Offload 100%</strong>
+
+                    <ul>
+                      <li>
+                        Mode for long chats. Generation is fast, but context
+                        switching is very slow. It&rsquo;s impossible to jump
+                        between chats or change the prompt on the fly.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <strong>Offload 50%</strong>
+
+                    <ul>
+                      <li>
+                        Mode for switching contexts. Generation is slow, but
+                        context switching is fast. You can jump between chats
+                        and change prompts on the fly.
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+
+                <p>
+                  It&rsquo;s interesting; it&rsquo;s like human thinking: you
+                  can constantly switch between tasks, but work will proceed
+                  slowly. Or, you can focus on a single task and work quickly
+                  without distractions (I don&rsquo;t know how to do the latter)
+                  🙃
+                </p>
               </div>
               <div style="display: flex; flex-wrap: wrap; gap: 10px">
                 <a href="/personal-goals/image/247488/1781644246/0.jpg">

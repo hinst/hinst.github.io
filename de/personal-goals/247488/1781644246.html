@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/static/css/index.css" />
     <meta
       name="description"
-      content="Weekly Coding - 2026-06-16 - Website-Überarbeitung und Experimente mit Large Language Models (LLMs)"
+      content="Weekly Coding - 2026-06-16 - Vom Code-Cleanup bis zum menschlichen Denken: Meine aktuellen Entwicklererfahrungen."
     />
     <meta http-equiv="content-language" content="de" />
     <title>Weekly Coding • 2026-06-16</title>
@@ -262,106 +262,125 @@
               "
             >
               <div class="goalPostViewText">
-                <h3>hinst-Website 🌐</h3>
+                <h3>hinst-website 🌐</h3>
+
                 <p>
-                  Ich habe die Codebasis meiner
-                  <a
-                    href="http://smartprogress.do/site/redirect/?url=https%3A%2F%2Fhinst.github.io%"
-                    target="_blank"
+                  Ich habe den Code meiner
+                  <a href="https://hinst.github.io/" target="_blank"
                     >persönlichen Website</a
                   >
-                  überarbeitet. Hier sind die wichtigsten Pakete:
-                </p>
-                <ul>
-                  <li>
-                    <strong>server</strong> - Hauptpaket mit Unterpaketen:
-                    <ul>
-                      <li>
-                        <strong>base</strong> - Kernfunktionalitäten für alle
-                        anderen Pakete
-                      </li>
-                      <li>
-                        <strong>db_objects</strong> - Interaktion mit einer
-                        SQL-Datenbank
-                      </li>
-                      <li><strong>page_data</strong> - HTML-Vorlagen</li>
-                      <li>
-                        <strong>rest_objects</strong> - Objekte für die REST API
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <strong>gophers</strong> - Go-Funktionen für alle
-                    Anwendungsfälle. Ich habe diesen Paket-Repository in einem
-                    separaten Git-Repository aufbewahrt (
-                    <a
-                      href="http://smartprogress.do/site/redirect/?url=https%3A%2F%2Fgithub.com%2Fhinst%2Fgo-gophers"
-                      target="_blank"
-                      >Link</a
-                    >) und ihm ein ansprechendes Cover hinzugefügt.
-                  </li>
-                </ul>
-                <p>
-                  Letzte Woche hatte ich nicht viel Zeit für Programmierung,
-                  daher habe ich nur 2 Stunden und 30 Minuten in meinen Tracker
-                  eingetragen.
-                </p>
-                <p>
-                  Ich überlege, ob es sinnvoll wäre, in mein Projekt ORM
-                  (Object-Relational Mapping) und REST Frameworks zu
-                  integrieren. Eine klare Antwort darauf habe ich noch nicht
-                  gefunden. Eine Idee wäre:
-                </p>
-                <ul>
-                  <li>
-                    Durchführung eines Belastungstests, um die Anzahl der
-                    Anfragen pro Sekunde an meine Website zu ermitteln
-                  </li>
-                  <li>
-                    Implementierung eines REST Frameworks und Wiederholung des
-                    Tests. Anschließend könnte man vergleichen, ob es eine
-                    Verbesserung gibt (schneller oder langsamer).
-                  </li>
-                </ul>
-                <p>
-                  Die Idee ist interessant, aber wann ich dafür Zeit finde, ist
-                  ungewiss. Da meine Aufgaben meistens klein sind, würde die
-                  Umstellung des Projekts unter einem neuen Framework viel Zeit
-                  in Anspruch nehmen.
+                  aufgeräumt und folgende Pakete definiert:
                 </p>
 
-                <h3>Lokale Experimente mit LLM (Large Language Models)</h3>
-                <p>Ich habe zwei Ansätze für die Konfiguration gefunden:</p>
                 <ul>
                   <li>
-                    <strong>100% Offload</strong>
+                    <strong>server</strong> - das Root-Paket
+
                     <ul>
                       <li>
-                        Ideal für lange Chats. Die Generierung ist schnell, aber
-                        der Kontextwechsel sehr langsam. Ein Wechsel zwischen
-                        Chat-Themen oder eine Änderung des Prompts auf die
-                        Schnelle ist nicht möglich.
+                        <strong>base</strong> - die Basis, die in allen anderen
+                        Paketen benötigt wird
+                      </li>
+                      <li>
+                        <strong>db_objects</strong> - für die Interaktion mit
+                        der SQL-Datenbank
+                      </li>
+                      <li><strong>page_data</strong> - für HTML-Templates</li>
+                      <li>
+                        <strong>rest_objects</strong> - für Objekte, die von der
+                        REST-API empfangen oder ausgegeben werden
                       </li>
                     </ul>
                   </li>
                   <li>
-                    <strong>50% Offload</strong>
+                    <strong>gophers</strong> - Hilfsfunktionen für Go für alle
+                    Lebenslagen
+
                     <ul>
                       <li>
-                        Gut für Kontextwechsel. Die Generierung ist langsamer,
-                        aber der Wechsel zwischen Themen schnell. Ein Wechsel
-                        zwischen Chat-Themen oder eine Änderung des Prompts auf
-                        die Schnelle ist möglich.
+                        Ich habe das Paket in ein separates Git-<a
+                          href="https://github.com/hinst/go-gophers"
+                          target="_blank"
+                          >Repository</a
+                        >
+                        ausgelagert und dafür ein Cover-Bild generiert, das auf
+                        dem Screenshot zu sehen ist.
                       </li>
                     </ul>
                   </li>
                 </ul>
+
                 <p>
-                  Faszinierend, das erinnert an menschliches Denken: Man kann
-                  sich zwischen verschiedenen Aufgaben hin und her schalten,
-                  aber die Arbeit wird langsamer. Im Gegensatz dazu kann man
-                  sich auf eine Aufgabe konzentrieren und schnell arbeiten, ohne
-                  abgelenkt zu werden (das schaffe ich nicht 🙃).
+                  Letzte Woche hatte ich wenig Zeit zum Programmieren, daher
+                  habe ich nur 2 Stunden und 30 Minuten im Tracker erfasst.
+                </p>
+
+                <p>
+                  Ich habe darüber nachgedacht, ob es sinnvoll ist, ein ORM und
+                  REST-Frameworks in mein Projekt zu integrieren. Eine
+                  eindeutige Antwort auf diese Frage habe ich bisher noch nicht
+                  gefunden. Ich habe folgende Idee:
+                </p>
+
+                <ul>
+                  <li>
+                    Einen Lasttest durchführen und prüfen, wie viele Anfragen
+                    pro Sekunde meine Website verarbeiten kann
+                  </li>
+                  <li>
+                    Ein REST-Framework implementieren und den Test wiederholen.
+                    Dann aus Interesse vergleichen: Wurde es schneller oder
+                    langsamer?
+                  </li>
+                </ul>
+
+                <p>
+                  Die Idee ist interessant, aber die Frage ist, wann ich dazu
+                  komme. Momentan habe ich nur Zeit für kleine Aufgaben, während
+                  das Umschreiben des Projekts auf ein neues Framework eine
+                  langwierige Aufgabe ist.
+                </p>
+
+                <h3>Experimente mit lokalen LLMs</h3>
+
+                <p>
+                  Ich habe zwei verschiedene Ansätze für die Einstellungen
+                  gefunden:
+                </p>
+
+                <ul>
+                  <li>
+                    Offload 100 %
+
+                    <ul>
+                      <li>
+                        Modus für lange Chats. Die Generierung ist schnell, aber
+                        der Kontextwechsel ist sehr langsam. Zwischen
+                        verschiedenen Chats zu springen oder den Prompt
+                        &ldquo;on the fly&rdquo; zu ändern, ist unmöglich.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    Offload 50 %
+
+                    <ul>
+                      <li>
+                        Modus für Kontextwechsel. Die Generierung ist langsam,
+                        aber der Kontextwechsel ist schnell. Man kann zwischen
+                        verschiedenen Chats springen und den Prompt &ldquo;on
+                        the fly&rdquo; ändern.
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+
+                <p>
+                  Interessant, das ähnelt dem menschlichen Denken: Man kann
+                  ständig zwischen Aufgaben wechseln, aber die Arbeit wird dann
+                  langsam vorangehen. Oder man kann sich auf eine Aufgabe
+                  konzentrieren und ohne Ablenkungen schnell arbeiten (das kann
+                  ich nicht) 🙃
                 </p>
               </div>
               <div style="display: flex; flex-wrap: wrap; gap: 10px">

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/static/css/index.css" />
     <meta
       name="description"
-      content="Weekly Coding - 2026-02-15 - Webentwicklung, UI-Verbesserungen und ein emotionales Abenteuer: Meine Woche mit Persönlicher Webseite und Star Rail"
+      content="Weekly Coding - 2026-02-15 - Von PostgreSQL-Bugs bis zu digitalen Erinnerungsbüchern – mein persönlicher Wochenrückblick."
     />
     <meta http-equiv="content-language" content="de" />
     <title>Weekly Coding • 2026-02-15</title>
@@ -262,63 +262,69 @@
               "
             >
               <div class="goalPostViewText">
-                <p>Zeit für den wöchentlichen Blogbeitrag</p>
-                <p><strong>-= Persönliche Website =- 🌐</strong></p>
+                <p>Es ist Zeit für den wöchentlichen Blog</p>
+
+                <p><strong>-= Persönliche Webseite =- 🌐</strong></p>
+
                 <p>
-                  Letzte Woche habe ich meine Website auf PostgreSQL migriert
-                  und diese Woche einen interessanten Bug 🐞 entdeckt. Es
-                  scheint, dass der Go-Treiber für PostgreSQL keine
-                  Verbindungstimeout hat. Wenn mein Programm versucht, eine neue
-                  Verbindung zur Datenbank herzustellen, während die
-                  Verbindungsgrenze erreicht ist, kommt es zu einer
-                  Endloswartung. Warum das so ist, weiß nur der Autor der
-                  <a
-                    href="http://smartprogress.do/site/redirect/?url=https%3A%2F%2Fgithub.com%2Fjackc%2Fpgx"
-                    target="_blank"
+                  Letzte Woche habe ich meine Webseite auf PostgreSQL
+                  umgestellt, und diese Woche habe ich einen interessanten Bug
+                  gefunden 🐞 Es stellte sich heraus, dass der Go-Treiber für
+                  PostgreSQL keine Timeouts für Verbindungen hat. Wenn das
+                  Programm versucht, eine neue Datenbankverbindung zu öffnen und
+                  das Verbindungslimit bereits erreicht ist, beginnt ein Warten,
+                  das ewig dauern kann. Warum das so ist – nur der Autor der
+                  <a href="https://github.com/jackc/pgx" target="_blank"
                     >Bibliothek</a
-                  >. Es ist unmöglich, einfach einen Timeout festzulegen. Man
-                  muss komplexen Code mit Kontexten schreiben, wie auf dem
-                  Screenshot zu sehen. Ich denke, dass context.Context eine
-                  ziemlich frustrierende Funktion in der Programmiersprache Go
-                  🤔⚙️ ist.
-                </p>
-                <p>
-                  Aktuell mache ich verschiedene UI-Anpassungen und plane, diese
-                  nächste Woche fortzusetzen. Ich verbessere das Hamburger-Menü
-                  und möchte dort einen Sprachschalter hinzufügen, um die
-                  Sprache ändern zu können, ohne in die Einstellungen gehen zu
-                  müssen.
-                </p>
-                <p>
-                  Außerdem habe ich festgestellt, dass der Paketverwalter
-                  Parcel, den ich für das Projekt verwende,
-                  <a
-                    href="http://smartprogress.do/site/redirect/?url=https%3A%2F%2Fgithub.com%2Fparcel-bundler%2Fparcel%2Fissues%2F10249"
-                    target="_blank"
-                    >die Bildkompilierung zerschossen</a
                   >
-                  hat 🤨. Mir scheint, dass die letzten Updates eher Probleme
-                  als Verbesserungen mit sich bringen.
+                  weiß die Antwort. Man kann nicht einfach einen Timeout
+                  angeben. Stattdessen muss man cleveren Code mit Contexten
+                  schreiben, wie er auf dem Screenshot zu sehen ist. Ich glaube,
+                  dass <code>context.Context</code> ein ziemlich nerviges
+                  Feature in der Programmiersprache Go ist 🤔⚙️
                 </p>
-                <p><strong>-= Star Rail =- </strong>🌠</p>
+
                 <p>
-                  Ich habe den Hauptplot der vierten Welt in Star Rail bis zum
-                  Ende durchgespielt und fühle mich nun ein wenig melancholisch.
-                  Ich glaube, dass mein persönlicher Blog, der aus meinen
-                  Beiträgen auf Smart-Progress besteht, zu meinem Erlebnis-Buch
-                  werden wird, in dem meine Lebensgeschichte aufgezeichnet ist
-                  📖✒️. Smart-Progress hatte wieder einige Probleme (auf dem
-                  Screenshot zu sehen), sodass es gut ist, eine eigene
-                  Archivierung zu haben.
+                  Momentan mache ich verschiedene kleine UI-Updates und plane,
+                  diese nächste Woche fortzusetzen. Ich verbessere das
+                  Hamburger-Menü und möchte dort einen Sprachumschalter
+                  hinzufügen, damit man die Sprache wechseln kann, ohne in die
+                  Einstellungen zu gehen.
                 </p>
+
                 <p>
-                  In diesem vierten Planeten-Kapitel sind meine Siege und
-                  Niederlagen im Kampf gegen das Böse festgehalten, während in
-                  meinem persönlichen Blog die Funktionen, an denen ich
-                  gearbeitet habe, und die Bugs, mit denen ich kämpfe 🪲😤,
-                  dokumentiert sind. Eines Tages, nach tausend Jahren, könnte
-                  jemand meinen persönlichen Blog entdecken und mein Tagebuch
-                  lesen. Aber das ist nicht sicher.
+                  Außerdem habe ich bemerkt, dass der Parcel-Builder, den ich
+                  für das Projekt verwende,
+                  <a
+                    href="https://github.com/parcel-bundler/parcel/issues/10249"
+                    target="_blank"
+                    >die Bilderkompilierung kaputtgemacht</a
+                  >
+                  🤨 Tja, habe ich mir nur eingebildet, oder machen die Updates
+                  in letzter Zeit ständig etwas kaputt und verbessern selten
+                  etwas?
+                </p>
+
+                <p><strong>-= Star Rail =-</strong> 🌠</p>
+
+                <p>
+                  Ich habe die Hauptstory des vierten Planeten in Star Rail
+                  abgeschlossen und bin etwas traurig geworden. Ich denke, dass
+                  meine persönliche Webseite, die aus meinen
+                  Smart-Progress-Beiträgen besteht, zu meinem Erinnerungsbuch
+                  wird, in dem mein Leben festgehalten ist. 📖✒️ Bei
+                  Smart-Progress gab es wieder einige Ausfälle (auf dem
+                  Screenshot zu sehen), daher ist es gut, ein eigenes Archiv zu
+                  haben.
+                </p>
+
+                <p>
+                  Im Buch des vierten Planeten sind Siege und Niederlagen im
+                  Kampf gegen das Böse verewigt, während auf meiner persönlichen
+                  Webseite die Features stehen, die ich gebaut habe, und die
+                  Bugs, mit denen ich gekämpft habe 🪲😤 Eines Tages in 1000
+                  Jahren wird jemand meine persönliche Webseite finden und mein
+                  Tagebuch lesen. Aber das ist nicht sicher.
                 </p>
               </div>
               <div style="display: flex; flex-wrap: wrap; gap: 10px">

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/static/css/index.css" />
     <meta
       name="description"
-      content="Weekly Coding - 2026-01-26 - Overcoming SQLite&#39;s Unicode Challenge: Search Optimization on a Microcomputer"
+      content="Weekly Coding - 2026-01-26 - The Unexpected Journey of Building a Unicode-Aware Text Search Functionality"
     />
     <meta http-equiv="content-language" content="en" />
     <title>Weekly Coding • 2026-01-26</title>
@@ -262,67 +262,61 @@
               "
             >
               <div class="goalPostViewText">
-                <p><strong>-= Searching Through My Posts =-</strong></p>
+                <p><strong>-= Search by my posts =-</strong></p>
+
                 <p>
-                  Last week, I started performing text searches on my personal
-                  website and encountered an interesting peculiarity of SQLite.
-                  Apparently, SQLite doesn't have Unicode support out of the box
-                  in 2026 🙄. While it's possible to enable Unicode support with
-                  a plug-in module, I'm still figuring out how. The Go driver
-                  author for SQLite mentions using `<strong
-                    >go build -tags "icu"</strong
-                  >`, but this command fails due to some missing C header file.
-                  Surprisingly, using SQLite in Go requires a C compiler... In
-                  short, there are many hurdles, but not much convenience.
-                  Search is possible, but the `UpperCase` function for text only
-                  works with English. I've identified three paths forward:
+                  Last week, I started building a text search for my personal
+                  website and ran into an interesting SQLite quirk. It turns out
+                  that even in 2026, SQLite doesn&rsquo;t support Unicode out of
+                  the box 🤦 There is a way to enable Unicode support using some
+                  sort of extension, but how to do it—that’s another question.
+                  The author of the SQLite driver for Golang says I need to
+                  specify <strong>go build -tags &ldquo;icu&rdquo;</strong>, but
+                  this command fails because of a missing
+                  <strong>C</strong> header file. Yes, to run SQLite in Golang,
+                  you need a <strong>C</strong> compiler&hellip; In short, there
+                  are many complications and very little convenience&hellip; The
+                  search can be made to work, but the UpperCase function for
+                  text will only work with English. I identified three paths for
+                  myself:
                 </p>
 
                 <ol>
                   <li>
-                    Keep trying to integrate the Unicode module into SQLite and
-                    delve into C
+                    Continue trying to connect the Unicode module in SQLite,
+                    digging into <strong>C</strong>.
                   </li>
                   <li>
-                    Perform searches with three variations of each word:
-                    <ol>
-                      <li>word</li>
-                      <li>Word</li>
-                      <li>WORD</li>
-                    </ol>
+                    Make a search with three variants of each word: 1. word, 2.
+                    Word, 3. WORD.
                   </li>
                   <li>
-                    Implement search entirely in Go.
-                    <ol>
-                      <li>
-                        In this case, SQLite will stream all data from the
-                        database into my program without its built-in filter.
-                      </li>
-                    </ol>
+                    Do the search entirely in Go: 1. In this case, SQLite will
+                    stream all data from the database to my program without its
+                    own built-in filter.
                   </li>
                 </ol>
 
                 <p>
-                  I've chosen path <strong>3</strong>. Not because it's the most
-                  correct, but because it's the most interesting to me.
-                  Currently, I have about 1000 posts (if we count translations
-                  into English and German). Let's see how fast search will work
-                  on 1000 texts on a weak Orange Pi Zero hardware.
+                  I chose path <strong>3</strong>. Not because it’s the
+                  &ldquo;correct&rdquo; one, but because it’s the most
+                  interesting of the three for me. Right now, I have about 1000
+                  texts in my posts (counting together with translations into
+                  English and German). Let&rsquo;s see how fast searching
+                  through 1000 texts will work on the low-end hardware of an
+                  Orange Pi Zero.
                 </p>
 
-                <p><strong>-= January Goals =-</strong></p>
+                <p><strong>-= January goals =-</strong></p>
 
                 <ol>
+                  <li>Reach task number 200 on LeetCode, at least ✅ done</li>
                   <li>
-                    <del>Reach LeetCode task number 200, at minimum</del> ✅
-                    Completed
+                    Write a new feature for my personal website: 🔎 Text search
+                    across all posts ▶️ started&hellip;
                   </li>
                   <li>
-                    Implement text search functionality for all posts on my
-                    personal website ▶️ started...
-                  </li>
-                  <li>
-                    Organize all of my cloud files and their backups ⌛ to do
+                    Sort out all my cloud files and their backups ⌛ to be done
                   </li>
                 </ol>
               </div>

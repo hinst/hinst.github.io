@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/static/css/index.css" />
     <meta
       name="description"
-      content="Weekly Coding - 2025-05-01 - Optimizing Backups: Creating a Customized, Efficient Program for USB Flash Drives"
+      content="Weekly Coding - 2025-05-01 - From Mastering React Hooks to Developing My Own Custom Incremental Backup System."
     />
     <meta http-equiv="content-language" content="en" />
     <title>Weekly Coding • 2025-05-01</title>
@@ -263,69 +263,76 @@
             >
               <div class="goalPostViewText">
                 <p>
-                  It's time to write my weekly report. Last week, I dedicated 3
-                  hours and 47 minutes of my free time to my projects. I made
-                  various fixes for the hinst-website:
-                  <a
-                    href="http://smartprogress.do/site/redirect/?url=https%3A%2F%2Fhinst.github.io%2F"
-                    target="_blank"
+                  It is time to write my weekly report. Last week, I spent 3
+                  hours and 47 minutes on my projects during my free time. I
+                  worked on various fixes for the hinst_website
+                  <a href="https://hinst.github.io/" target="_blank"
                     >https://hinst.github.io/</a
-                  >
+                  >.
                 </p>
 
                 <ol>
                   <li>
-                    Fixed a screen width update bug. It turned out I got caught
-                    in a complex React Hooks peculiarity. The
-                    <strong>useState</strong> variable only updates at the root
-                    of the function, while nested functions always see the
-                    initial value of the variable. It took me several hours to
-                    realize and understand this.
+                    Fixed a bug with screen width updates. It turned out that I
+                    got tripped up by an intricate feature of React Hooks: the
+                    <strong>useState</strong> variable is only updated at the
+                    &ldquo;root&rdquo; of the function, while in nested
+                    functions, only the initial value of the variable will
+                    always be visible. It took me several hours just to notice
+                    and understand this.
                   </li>
                   <li>
-                    Removed SmartProgress redirects: now instead of `<a
-                      href="http://smartprogress.do/site/redirect/?url=http%3A%2F%2Fsmartprogress%2Fredirect%3Furl%3Dmy_url%2F"
-                      target="_blank"
-                      >...</a
-                    >` I have direct links `<a href="my_url/">...</a>`.
+                    Removed SmartProgress redirects: now, instead of
+                    <code
+                      >&lt;a
+                      href=[http://smartprogress/redirect?url=my_url/](http://smartprogress/redirect?url=my_url/)&gt;</code
+                    >, I have direct links <code>&lt;a href=my_url/&gt;</code>.
                   </li>
-                  <li>Fixed the time zone for saved images and comments.</li>
+                  <li>Fixed the timezone for saved images and comments.</li>
                   <li>
-                    Adjusted the translator's schedule: the English and German
-                    language translators now start at 00:15, while the
-                    downloader starts at 00:00. Before, both were set to 00:00,
-                    causing delays in translating new posts as the translators
-                    didn't see them on time.
+                    Fixed the translator&rsquo;s schedule: now the English and
+                    German translators launch at 00:15, while the downloader
+                    launches at 00:00. Previously, both were set to 00:00, so
+                    new posts were translated late because the translator
+                    didn&rsquo;t see them in time.
                   </li>
                 </ol>
 
                 <p>
-                  That was last week. This week, I plan to develop a new backup
-                  program. In one of my previous posts, I wrote about searching
-                  and testing existing backup programs, but they disappointed
-                  me, so I've decided to create my own. The requirements are as
-                  follows:
+                  That was last week; this week, I plan to create a new program
+                  for creating backups. In one of my previous posts, I wrote
+                  about how I searched for and tested existing backup programs,
+                  but those programs disappointed me, so I decided to create my
+                  own. The requirements are as follows:
                 </p>
 
                 <ol>
                   <li>Backups go to a USB flash drive.</li>
-                  <li>Create a mirror without keeping a history of changes.</li>
-                  <li>File name encryption is available.</li>
-                  <li>Compression is optional.</li>
+                  <li>It creates a mirror, without change history.</li>
+                  <li>Includes file name encryption.</li>
+                  <li>Includes optional compression.</li>
                   <li>
-                    If a file hasn't changed, it's not duplicated again. This is
-                    one of the main requirements as it saves storage space. If I
-                    only modified one file in my 80GB document folder, then only
-                    that single file should be copied, not the entire 80GB.
-                    That's why 7-zip and similar archivers are out of the
-                    question as they don't handle this.
+                    If a file has not changed, it is
+                    <strong>not</strong> recopied.
+
+                    <ol>
+                      <li>
+                        This is one of the main requirements because storage
+                        resources are consumed by writing data. If I change only
+                        one file in my documents folder (which is 80 GB), then
+                        only that single file should be copied, not all 80 GB.
+                        Therefore, 7-Zip and other similar archivers are
+                        immediately ruled out because they cannot do this.
+                      </li>
+                    </ol>
                   </li>
                 </ol>
 
                 <p>
-                  Let's see how long it will take to create and test my
-                  program... I plan to use TypeScript as the programming
-                  language. Once ready, I'll start using it for my backups.
+                  We will see how much time it takes to create and test my
+                  program&hellip; I plan to use TypeScript as the programming
+                  language. Once the program is ready, I will start using it for
+                  my backups.
                 </p>
               </div>
               <div style="display: flex; flex-wrap: wrap; gap: 10px">

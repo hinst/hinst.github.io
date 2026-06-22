@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/static/css/index.css" />
     <meta
       name="description"
-      content="Weekly Coding - 2025-08-11 - Optimierung von Stable Diffusion unter Windows: So maximieren Sie die Leistung Ihrer GPU"
+      content="Weekly Coding - 2025-08-11 - So optimierst du deinen VRAM und erzielst bestmögliche Performance für Stable Diffusion auf Windows."
     />
     <meta http-equiv="content-language" content="de" />
     <title>Weekly Coding • 2025-08-11</title>
@@ -266,54 +266,68 @@
                   Hallo zusammen. Es ist Zeit für meinen wöchentlichen Bericht.
                 </p>
 
-                <h2>::Meine Projekte::</h2>
+                <p><strong>::Meine Projekte::</strong></p>
+
                 <ul>
                   <li>
-                    <strong>LeetCode</strong> 🖥️ 1 Stunde
+                    LeetCode 🖥️ 1 Stunde
+
                     <ul>
                       <li>
-                        Ich habe zwei Aufgaben gelöst und bin nun bei Aufgabe
-                        130 angelangt.
+                        Habe zwei Aufgaben abgeschlossen und bin zur Aufgabe
+                        Nummer 130 in der Reihenfolge gelangt.
                       </li>
                     </ul>
                   </li>
                   <li>
-                    <strong>Zeichnen</strong> 🖼️ 7 Stunden
+                    Zeichnen 🖼️ 7 Stunden
+
                     <ul>
                       <li>
-                        Ich habe mit einem großen digitalen Bild begonnen, das
-                        ich diese Woche fortsetzen muss.
+                        Ich habe angefangen, ein großes digitales Bild zu
+                        erstellen. Diese Woche muss ich noch weiter daran
+                        arbeiten.
                       </li>
                     </ul>
                   </li>
                 </ul>
 
-                <h2>::Optimierung von Stable Diffusion unter Windows::</h2>
+                <p>
+                  <strong
+                    >::Stable-Diffusion-Optimierungen unter Windows::</strong
+                  >
+                </p>
 
-                Ich möchte euch erzählen, wie ich Stable Diffusion für die
-                bestmögliche Leistung auf einem Windows 11-System optimiere. Der
-                Schlüssel für diese Bildgenerierung liegt in der Videopampe.
-                Hier ist ein interessantes Detail: Viele Windows 11-Programme
-                verbrauchen riesige Mengen an Videomemory – ohne klare
-                Erklärung, warum. Während man im Internet viele Beschwerden dazu
-                findet, bleibt eine zufriedenstellende Antwort aus. Um zu sehen,
-                welche Programme viel Videopampe verbrauchen, muss man die
-                Spalte „Dedizierte GPU-Speicher“ im Aufgabenmanager aktivieren.
-                Diese ist standardmäßig versteckt. Hier sind meine spezifischen
-                Einstellungen:
+                <p>
+                  Ich werde euch erklären, welche Optimierungen ich für die
+                  bestmögliche Leistung des Bildgenerators Stable Diffusion
+                  unter Windows 11 nutze. Das Wichtigste für den Bildgenerator
+                  ist der Videospeicher (VRAM). Hier fällt eine Besonderheit
+                  auf: Viele Programme unter Windows 11 fressen den
+                  Videospeicher in Schüben 🥵 Dabei kann kaum jemand die Frage
+                  „warum ist das so?“ beantworten. Eine Internetsuche zeigt
+                  viele Beschwerden über die hohe VRAM-Auslastung, aber eine
+                  klare Erklärung ist nicht zu finden, und auch Versuche, die
+                  Entwickler direkt anzuschreiben, bringen nichts: Niemand hat
+                  Lust, sich mit den Details zum Videospeicher
+                  auseinanderzusetzen. Um zu sehen, welche Programme den Videos
+                  Speicher verbrauchen, muss man die Spalte „Dedicated GPU
+                  Memory“ im Task-Manager aktivieren. Standardmäßig ist diese
+                  Spalte ausgeblendet. Hier ist die eigentliche Liste der
+                  Einstellungen:
+                </p>
 
                 <ul>
                   <li>
-                    <strong>ComfyUI-Kommandzeilenargumente hinzufügen:</strong>
+                    Argumente für die Kommandozeile für ComfyUI hinzufügen:
+
                     <ul>
-                      <li>--use-split-cross-attention --novram</li>
+                      <li>--use-split-cross-attention &ndash;novram</li>
                     </ul>
                   </li>
                   <li>
-                    <strong
-                      >Hardwarebeschleunigung für bestimmte Programme
-                      deaktivieren:</strong
-                    >
+                    Hardwarebeschleunigung für folgende Programme deaktivieren:
+
                     <ul>
                       <li>Browser</li>
                       <li>VS Code</li>
@@ -322,26 +336,35 @@
                     </ul>
                   </li>
                   <li>
-                    <strong>Modelle Flux und SD 3.5</strong>:
+                    Modelle Flux und SD 3.5:
+
                     <ul>
                       <li>
-                        Download der fp8-Versionen, fp16-Versionen ignorieren.
+                        Wir laden die fp8-Versionen herunter und ignorieren die
+                        fp16-Versionen.
                       </li>
                     </ul>
                   </li>
                 </ul>
 
-                Für den Browser gibt es noch einige zusätzliche Anpassungen:
-                Erstens, die glatte Scrollfunktion deaktivieren, da diese ohne
-                Hardwarebeschleunigung auf vielen Seiten sehr langsam sein kann.
-                Zweitens, einen separaten Browser für das Abspielen von Videos
-                installieren und diesen nur zum Abspielen von Videos mit
-                Hardwarebeschleunigung verwenden. Eine separate Installation ist
-                hier erforderlich, nicht einfach ein „Profil“, da alle Profile
-                gemeinsame Systemvoreinstellungen haben, einschließlich der
-                Hardwarebeschleunigung. So lässt sich jede Art von Modell ohne
-                Ruckeln oder Hänge auf einer Grafikkarte mit 16 GB VRAM
-                betreiben.
+                <p>
+                  Für den Browser müssen noch ein paar „feine“ Einstellungen
+                  vorgenommen werden: Erstens schalten wir Smooth Scrolling aus,
+                  da das Scrollen ohne Hardwarebeschleunigung auf vielen Seiten
+                  extrem ruckeln wird. Zweitens muss eine separate
+                  Browser-Instanz zum Anschauen von Videos installiert werden
+                  und Dieser zweite Browser nur für das Video-Streaming mit
+                  Hardwarebeschleunigung genutzt werden – und sonst zu nichts
+                  sonst. Es wird eine eigenständige Installation benötigt und
+                  nicht nur ein „Profil“, da alle Profile die gleichen
+                  Systemeinstellungen teilen, einschließlich der
+                  Hardwarebeschleunigung.
+                </p>
+
+                <p>
+                  Das Ergebnis: Wir können mit allen Modellen ohne Ruckler oder
+                  Lags auf einer Grafikkarte mit 16 GB VRAM arbeiten.
+                </p>
               </div>
               <div style="display: flex; flex-wrap: wrap; gap: 10px">
                 <a href="/personal-goals/image/247488/1754914604/0.jpg">

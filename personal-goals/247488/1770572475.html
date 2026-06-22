@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/static/css/index.css" />
     <meta
       name="description"
-      content="Weekly Coding - 2026-02-08 - Transforming My Website: From SQLite to PostgreSQL for Faster Search and Desk Comfort"
+      content="Weekly Coding - 2026-02-08 - Switching My Website to PostgreSQL: Surprising Speed Results and a New Workspace Setup"
     />
     <meta http-equiv="content-language" content="en" />
     <title>Weekly Coding • 2026-02-08</title>
@@ -262,15 +262,15 @@
               "
             >
               <div class="goalPostViewText">
-                <p>Good evening 🌙 It's time for my weekly diary 📖</p>
+                <p>Good evening 🌙 It&rsquo;s time for my weekly diary 📖</p>
 
                 <p>
-                  This week I migrated my personal website to a new database.
-                  From: SQLite, to: PostgreSQL. The task took approximately
-                  <strong>16 hours</strong>.
+                  This week, I migrated my personal website to a different
+                  database. It used to be: SQLite; now it&rsquo;s: PostgreSQL.
+                  The task took approximately <strong>16 hours</strong>.
                 </p>
 
-                <p>I compared the speed of text search in my blog posts:</p>
+                <p>I compared the text search speed for my blog posts:</p>
 
                 <ul>
                   <li><strong>SQLite</strong>: 60 milliseconds</li>
@@ -278,62 +278,59 @@
                 </ul>
 
                 <p>
-                  The result surprised me. I expected SQLite to be faster. I
-                  wondered why this might be and concluded that the main reason
-                  was the connection pool.
+                  The result was surprising. I expected SQLite to be faster. I
+                  thought about why this might have happened and concluded that
+                  the main reason is connection pooling:
                 </p>
 
                 <ul>
                   <li>
-                    My SQLite version of the program opened and closed a
-                    connection to the database for each HTTP request from the
-                    client.
+                    My program&rsquo;s SQLite version opened and closed a
+                    database connection with every HTTP request from the client.
                   </li>
                   <li>
-                    In contrast, the PostgreSQL version initially enabled
-                    connection pooling through the Go library
+                    In the PostgreSQL version, however, I initially enabled
+                    connection pooling via the Go library
                     <em>jackc/pgx/v5/pgxpool</em>.
                   </li>
                 </ul>
 
                 <p>
-                  I won't delve deeper into this topic for now. It's enough to
-                  know that the search is working quickly.
+                  Anyway, I won&rsquo;t dig deeper into this topic for now.
+                  It&rsquo;s enough that the search works quickly.
                 </p>
 
                 <p>
-                  The search feature is available on the page
+                  The search is available on the page
                   <a
-                    href="http://smartprogress.do/site/redirect/?url=https%3A%2F%2Fhinst.github.io%2Fdynamic%2F%23%2Fpersonal-goals-search"
+                    href="https://hinst.github.io/dynamic/#/personal-goals-search"
                     target="_blank"
-                    >https://hinst.github.io/dynamic/#/personal-goals-s...</a
-                  >. For example, typing in the word "Pascal" will find all my
-                  public posts mentioning Pascal. The response time for queries
-                  might be slightly longer due to a 100-millisecond lag added by
-                  TailScale 🐌
+                    >https://hinst.github.io/dynamic/#/personal-goals-search</a
+                  >. For example, you can enter the word &ldquo;Pascal&rdquo;
+                  and find all my public posts mentioning &ldquo;Pascal.&rdquo;
+                  The response time there will be a bit longer because TailScale
+                  adds a lag of about 100 milliseconds 🐌.
                 </p>
 
                 <p>
-                  I've already set up weekly database backups using the
-                  <strong>pg_dump</strong> command, and I've removed all old
-                  remnants of the SQLite integration. According to my
-                  calculations, PostgreSQL should require around 300 MB of RAM,
-                  which is well within the 4 GB available on my Orange Pi.
+                  I&rsquo;ve already set up weekly database backups using the
+                  <strong>pg_dump</strong> command and removed all old remnants
+                  of the SQLite integration. According to my calculations,
+                  PostgreSQL should only need about 300 MB of RAM, and my Orange
+                  Pi micro-computer has 4 GB. So, for now, I have plenty of
+                  memory to spare.
                 </p>
 
                 <p>
-                  I rearranged my computer desk for better comfort. The photo
-                  shows both configurations: old and new. The worst part of the
-                  old setup was that my elbow hung in the air without support,
-                  causing a sore hand after 8 hours of work. However, the old
-                  desk's advantage was that it blocked out daylight from the
-                  monitor.
-                </p>
-
-                <p>
-                  In the new setup, sunlight from the window is a problem.
-                  During sunset, I have to increase screen brightness, and
-                  afterward, I need to decrease it ☀️🫡
+                  I rearranged my computer desk to make it more comfortable to
+                  sit at. In the photo: before and after. The worst thing about
+                  the old setup was that my elbow would hang off the table in
+                  mid-air without support, which caused my arm to ache after 8
+                  hours of work. However, the advantage of the old version was
+                  that daylight was shielded from the monitor. In the new
+                  version, light from the window is a distraction. At sunset, I
+                  have to turn up the brightness, and after sunset, I have to
+                  turn it down ☀️🫡
                 </p>
               </div>
               <div style="display: flex; flex-wrap: wrap; gap: 10px">

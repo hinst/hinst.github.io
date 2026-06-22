@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/static/css/index.css" />
     <meta
       name="description"
-      content="Weekly Coding - 2025-11-17 - Meine Woche: Spring Boot, KI-Videos und Blog-Automatisierung"
+      content="Weekly Coding - 2025-11-17 - Vom Spring Boot Einstieg bis zur KI-Videogenerierung: Ein Update aus meinem wöchentlichen Coding-Tagebuch."
     />
     <meta http-equiv="content-language" content="de" />
     <title>Weekly Coding • 2025-11-17</title>
@@ -263,87 +263,94 @@
             >
               <div class="goalPostViewText">
                 <p>
-                  Es ist Zeit für eine Eintragung in meinem wöchentlichen
-                  Codierungs-Tagebuch
+                  Es ist Zeit für einen Eintrag in meinem wöchentlichen
+                  Coding-Tagebuch.
                 </p>
 
                 <p><strong>-= Spring Boot =-</strong></p>
+
                 <p>
-                  Ich habe ein Video gesehen, Tutorials gelesen und bin nun
-                  dabei, eine Anwendung mit Spring Boot zu erstellen. Ich plane,
-                  eine Seite zum Verfolgen von Seitenaufrufen für meine
-                  persönliche Website zu entwickeln. Die Anzahl der Aufrufe für
-                  jede URL soll in einer SQLite-Datenbank gespeichert werden.
-                  Für den Zugriff auf die Datenbank nutze ich das Java
-                  Persistence API aus dem Paket
-                  <em>spring-boot-starter-data-jpa</em>
+                  Ich habe mir Videos angesehen, Lernmaterial gelesen und damit
+                  begonnen, eine Anwendung mit Spring Boot zu erstellen. Mein
+                  Plan ist es, eine Art Besuchszähler für meine persönliche
+                  Website zu bauen. Dabei soll die Anzahl der Besuche für jede
+                  URL in einer SQLite-Datenbank gespeichert werden. Für den
+                  Zugriff auf die Datenbank nutze ich die Java Persistence API
+                  aus dem Paket <em>spring-boot-starter-data-jpa</em>.
                 </p>
+
                 <p>
-                  Ich habe Docker und Kubernetes bereits für meine neue
-                  Anwendung in meinem Cluster eingerichtet. Die Spring
-                  Boot-Anwendung verbraucht etwa 100...200 Megabyte
-                  Arbeitsspeicher, daher habe ich ihr einen Speicherkontingent
-                  von 300 Megabyte zugewiesen.
+                  Ich habe bereits Docker und Kubernetes für die neue Anwendung
+                  in meinem Cluster eingerichtet. Die Spring Boot App verbraucht
+                  etwa 100–200 MB Arbeitsspeicher, daher habe ich ihr ein Limit
+                  von 300 MB zugewiesen.
                 </p>
+
                 <p>
-                  Letzte Woche habe ich 9 Stunden damit verbracht, Spring Boot
-                  zu lernen. Anfangs war ich nicht begeistert, aber mit der Zeit
-                  bin ich immer besser reingekommen.
+                  Letzte Woche habe ich 9 Stunden damit verbracht, mich in
+                  Spring Boot einzuarbeiten. Anfangs fiel es mir schwer, aber
+                  nach und nach bin ich hineingekommen.
                 </p>
 
                 <p><strong>-= SmartProgress =-</strong></p>
+
                 <p>
-                  In einem meiner früheren Beiträge erwähnte ich, dass
-                  SmartProgress die Cloudflare-Bot-Schutzfunktion aktiviert
-                  hatte und dadurch meine Automatisierung für Blogbeiträge
-                  blockierte. Nun, nach ein paar Wochen ist diese Schutzfunktion
-                  verschwunden 🥴 Meine Automatisierung läuft wieder. Ich habe
-                  immer noch vor, meinen persönlichen Blog als primäre Quelle
-                  für meine Beiträge zu nutzen, aber ich werde diesen Schritt zu
-                  einem späteren Zeitpunkt unternehmen, wenn sich die
-                  Gelegenheit bietet.
+                  In einem meiner früheren Posts habe ich geschrieben, dass
+                  SmartProgress den Cloudflare-Bot-Schutz aktiviert hat und
+                  dadurch meine Automatisierung für Blogposts blockiert wurde.
+                  Nun ist diese Schutzmaßnahme aber seit zwei Wochen weg 🥴
+                  Meine Automatisierung ist wieder am Start. Ich plane immer
+                  noch, meine persönliche Website als primäre Quelle für meine
+                  Posts zu nutzen, werde das aber erst irgendwann später tun,
+                  wenn sich der passende Moment dafür ergibt.
                 </p>
 
-                <p><strong>-= KI-Video-Generator =-</strong></p>
+                <p><strong>-= KI-Videogenerator =-</strong></p>
+
                 <p>
-                  Ich habe einen KI-Video-Generator auf meinem Heimcomputer
-                  eingerichtet. Zuvor hatte ich bereits Stable Diffusion für
-                  statische Bilder und ein Text-LLM-Modell. Jetzt habe ich die
-                  WAN 2.2 Modellversion 14B konfiguriert. Es war etwas
-                  frickelig...
+                  Ich habe einen KI-Videogenerator auf meinem Heimrechner
+                  eingerichtet. Zuvor hatte ich bereits den Stable Diffusion
+                  Generator für statische Bilder und ein LLM für Texte. Jetzt
+                  habe ich das WAN 2.2 Modell (14B) konfiguriert. Das war ein
+                  ziemliches Projekt&hellip; Es gibt gute Nachrichten und
+                  schlechte Nachrichten.
                 </p>
+
                 <ul>
                   <li>
-                    <em>Gute Nachricht</em>: Der Generator funktioniert und ist
-                    einer der leistungsstärksten Video-Generatoren heutzutage...
-                    zumindest für diejenigen, die über einen einfachen
-                    Heimcomputer verfügen. Natürlich gibt es noch
-                    fortschrittlichere Modelle, aber für diese sind
-                    Server-Hardware erforderlich.
+                    Die gute Nachricht 🚀 Der Generator funktioniert, und er ist
+                    einer der leistungsfähigsten Videogeneratoren von
+                    heute&hellip; zumindest unter denen, die für normale
+                    Sterbliche auf persönlichen PCs zugänglich sind. Natürlich
+                    gibt es noch weitaus fortschrittlichere Modelle, aber dafür
+                    braucht man Hardware auf Server-Niveau.
                   </li>
                   <li>
-                    <em>Schlechte Nachricht</em>: Der Generator ist extrem
-                    langsam. Auf meinem Computer dauert die Erstellung eines
-                    6-sekündigen Videos etwa 6 Stunden 🥴 Es wäre unmöglich,
-                    darauf zu warten, also mache ich es so: Ich starte den
-                    Generator und gehe schlafen, und am nächsten Morgen ist das
-                    Video fertig.
+                    Die schlechte Nachricht 🐌 Der Generator ist extrem langsam.
+                    Auf meinem PC dauert das Erstellen eines Videos von 6
+                    Sekunden etwa 6 Stunden 🥴 Das Warten ist unrealistisch,
+                    also mache ich es so: Ich starte den Generator und gehe
+                    schlafen, und am Morgen ist das Video fertig.
                   </li>
                 </ul>
+
                 <p>
-                  Das Modell benötigt etwa 21 GB Videomemory, aber mein Computer
-                  hat nur 20 GB, daher "verbraucht" der letzte Gigabyte alle
-                  Geschwindigkeit, da die Daten ständig zwischen DDR4 und VRAM
-                  über den PCI-Bus geschleust werden.
+                  Das Modell benötigt etwa 21 GB Grafikspeicher (VRAM), ich habe
+                  aber nur 20 GB zur Verfügung. Dieser „letzte Gigabyte“
+                  vernichtet die Geschwindigkeit komplett, da der Speicher nicht
+                  ausreicht und es zu einem unendlichen 🔄 Datenkreislauf
+                  zwischen DDR4 und VRAM über den PCI-Bus kommt.
                 </p>
+
                 <p>
-                  Ich passe nun langsam die Parameter cfg, shift und steps an.
-                  Ich denke darüber nach, dumme KI-Meme auf eine soziale
-                  Netzwerkplattform hochzuladen, um zu sehen, wie es läuft...
-                  Sobald ich alle notwendigen Parameter gefunden habe, wird es
-                  schnell gehen: Man kann dann täglich ein kleines Video
-                  erstellen, aber dazu muss ich die Einstellungen noch
-                  feinabstimmen ⚙️
+                  Momentan passe ich noch schrittweise die passenden CFG-,
+                  Shift- und Steps-Parameter an. Ich denke darüber nach, mit dem
+                  Posten von dummen KI-Memes in sozialen Netzwerken anzufangen –
+                  mal sehen, wie das läuft&hellip; Sobald alle Parameter richtig
+                  eingestellt sind, wird der Prozess schnell gehen: Man kann
+                  dann täglich ein Mikro-Video „ausspucken“, aber dazu bin ich
+                  noch nicht ganz gekommen; ich richte den Ablauf gerade erst
+                  schrittweise ein ⚙️
                 </p>
               </div>
               <div style="display: flex; flex-wrap: wrap; gap: 10px">

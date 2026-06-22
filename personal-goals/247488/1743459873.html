@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/static/css/index.css" />
     <meta
       name="description"
-      content="Weekly Coding - 2025-03-31 - Unveiling My Multilingual, Responsive Personal Website: A Journey of 50 Hours"
+      content="Weekly Coding - 2025-03-31 - From Security Fixes to Automated Translations: Introducing My New Multilingual Personal Website"
     />
     <meta http-equiv="content-language" content="en" />
     <title>Weekly Coding • 2025-03-31</title>
@@ -263,77 +263,84 @@
             >
               <div class="goalPostViewText">
                 <p>
-                  Hello everyone. It's time to showcase my new personal website:
-                  <a
-                    href="http://smartprogress.do/site/redirect/?url=https%3A%2F%2Fhinst.github.io"
-                    target="_blank"
+                  Hello everyone. It&rsquo;s time to show my new personal
+                  website:
+                  <a href="https://hinst.github.io" target="_blank"
                     >https://hinst.github.io</a
-                  >. Last week, I spent 8 hours building the site, and in total,
-                  I've devoted 50 hours to it.
+                  >
+                  Last week, I spent 8 hours on the website, and in total, I
+                  have already spent 50 hours on it.
                 </p>
 
-                <p>Here's what you'll find on my site:</p>
+                <p>Here is what&rsquo;s on my site:</p>
 
                 <ul>
                   <li>
                     My blog posts in three languages: Russian (original),
-                    German, and English (translated using LLM) 🇷🇺 🇩🇪 🇬🇧
+                    German, and English — translated using an LLM 🇷🇺 🇩🇪 🇬🇧
+
                     <ul>
                       <li>
-                        The translations are automated using the LM Studio
-                        program and the Aya Expanse 8B model.
+                        Translations are done automatically using a script with
+                        <strong>LM Studio</strong> and the
+                        <strong>Aya Expanse 8B</strong> model.
                       </li>
                       <li>
-                        Every midnight, my Orange Pi sends a request to my
-                        desktop computer asking for text translation. I had to
-                        set this up because Orange Pi has too little memory
-                        (4GB) to run an LLM. It requires 8GB. If my desktop was
-                        off at the right moment, the translation would be
-                        delayed until the next day.
+                        Every night at midnight, my Orange Pi sends a request to
+                        my desktop computer asking it to translate the text. I
+                        had to do this because the Orange Pi doesn&rsquo;t have
+                        enough memory to run an LLM. It requires 8 GB, but the
+                        Orange Pi only has 4 GB. If my desktop is turned off at
+                        that moment, the translation is postponed until the next
+                        day according to the schedule.
                       </li>
                       <li>
-                        Initially, I planned to use Google Translate for text
-                        translation, but it turned out their API is paid, and
-                        there's no official free version... I could've attempted
-                        to get requests to go through the same protocol as the
-                        browser-based translator, but in the end, I decided not
-                        to bother.
+                        Initially, I planned to use Google Translate for the
+                        translations, but it turned out that their API is paid
+                        and there&rsquo;s no official free version&hellip; I
+                        probably could have tried to make the requests go
+                        through the same protocol as the browser-based web
+                        translator, but in the end, I decided not to bother with
+                        it.
                       </li>
                     </ul>
                   </li>
                   <li>
-                    Two blog display options with a calendar: for wide screens
-                    and narrow smartphones 💻 📱
+                    Two display modes for the blog with a calendar: one for wide
+                    screens and one for narrow smartphones 💻📱
                   </li>
                 </ul>
 
-                <p>Upcoming features:</p>
+                <p>Here is what&rsquo;s planned for the future:</p>
 
                 <ul>
                   <li>Comments</li>
                   <li>
-                    Full transition to SQLite
+                    Full migration to SQLite
+
                     <ul>
                       <li>
-                        Currently, most information is stored in text files,
-                        while some data resides in SQLite.
+                        Currently, most of the information is stored in text
+                        files, while only some information is kept in SQLite.
                       </li>
                     </ul>
                   </li>
                 </ul>
 
                 <p>
-                  While working on the new site, I noticed a security flaw in my
-                  old one 🤔. You could enter ../ in the URL parameters, and I
-                  didn't have any checks for that... In theory, you could access
-                  any folder on the server outside of the blog posts directory.
-                  However, since the site was running in Docker, nothing
-                  particularly interesting could be found there 😴. Or could it?
-                  The vulnerability has already been patched
+                  While I was working on the new site, I noticed a security flaw
+                  in my old website 🤔. It was possible to enter
+                  <strong>../</strong> into the URL parameters because I
+                  hadn&rsquo;t implemented any checks for it&hellip; So, in
+                  theory, one could navigate out of the blog posts folder into
+                  any other folder on the server. However, since the site ran in
+                  Docker, there wasn&rsquo;t much interesting to find there
+                  anyway 😴. Or was there? Anyway, I&rsquo;ve already fixed the
+                  flaw
                   <a
-                    href="http://smartprogress.do/site/redirect/?url=https%3A%2F%2Fgithub.com%2Fhinst%2FSmartProgress-or%2Fcommit%2Fbf199ff49425419829aa353aa5358ebd2742321b"
+                    href="https://github.com/hinst/SmartProgress-or/commit/bf199ff49425419829aa353aa5358ebd2742321b"
                     target="_blank"
-                    >here</a
+                    >https://github.com/hinst/SmartProgress-or/commit/bf199ff49425419829aa353aa5358ebd2742321b</a
                   >
                   👌.
                 </p>

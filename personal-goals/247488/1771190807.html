@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/static/css/index.css" />
     <meta
       name="description"
-      content="Weekly Coding - 2026-02-15 - Database Delays, UI Updates, and Star Rail Reflections: My Weekly Development Diary"
+      content="Weekly Coding - 2026-02-15 - 从调试Go驱动到构建数字记忆：本周开发日志"
     />
     <meta http-equiv="content-language" content="en" />
     <title>Weekly Coding • 2026-02-15</title>
@@ -262,54 +262,61 @@
               "
             >
               <div class="goalPostViewText">
-                <p>Time for my weekly diary</p>
+                <p>Time for the weekly diary</p>
+
                 <p><strong>-= Personal Website =- 🌐</strong></p>
+
                 <p>
-                  Last week I migrated my website to PostgreSQL, and this week I
-                  found an interesting bug 🐞 It turns out that the Go driver
-                  for PostgreSQL doesn't have a connection timeout. When my
-                  program tries to open a new connection to the database and the
-                  connection limit is already reached, it goes into an infinite
-                  wait. Why - only the author of
-                  <a
-                    href="http://smartprogress.do/site/redirect/?url=https%3A%2F%2Fgithub.com%2Fjackc%2Fpgx"
-                    target="_blank"
-                    >the library</a
+                  Last week I moved my website to PostgreSQL, and this week I
+                  found an interesting bug 🐞. It turns out that the Go driver
+                  for PostgreSQL doesn&rsquo;t have a connection timeout. When
+                  the program tries to open a new database connection and the
+                  connection limit has already been reached, it starts waiting
+                  forever. Only the author of the
+                  <a href="https://github.com/jackc/pgx" target="_blank"
+                    >library</a
                   >
-                  knows. You can't just set a timeout; you have to write clever
-                  code with contexts, as shown in the screenshot.
+                  knows why—you can&rsquo;t just go ahead and specify a timeout.
+                  You have to write some clever code using contexts, as shown in
+                  the screenshot. I think <code>context.Context</code> is a
+                  pretty annoying feature in the Go programming language 🤔⚙️
                 </p>
+
                 <p>
-                  I'm currently making various UI updates and plan to continue
-                  next week. I'm improving the Hamburger Menu and want to add a
-                  language switcher so users can change languages without going
-                  to settings.
+                  Right now I’m making various small UI updates and plan to
+                  continue them next week. I&rsquo;m improving the Hamburger
+                  Menu and want to add a language switcher there so you can
+                  change the language without going into the settings.
                 </p>
+
                 <p>
-                  I also noticed that the Parcel builder I use in the project
+                  I also noticed that the Parcel bundler I use in my project
                   <a
-                    href="http://smartprogress.do/site/redirect/?url=https%3A%2F%2Fgithub.com%2Fparcel-bundler%2Fparcel%2Fissues%2F10249"
+                    href="https://github.com/parcel-bundler/parcel/issues/10249"
                     target="_blank"
                     >broke</a
                   >
-                  image compilation 🤨 Ugh, it seems like updates these days
-                  often break something rather than improve things?
+                  image compilation 🤨 Man, is it just me, or do recent updates
+                  constantly break things and rarely improve anything?
                 </p>
-                <p><strong>-= Star Rail =- 🌠</strong></p>
+
+                <p><strong>-= Star Rail =-</strong> 🌠</p>
+
                 <p>
-                  I've reached the end of the main story on the fourth planet in
-                  Star Rail and felt a bit down. I think my personal website,
-                  created from my posts on smart-progress, will become my memory
-                  book where my life is recorded. 📖✒️ Smart-progress had some
-                  issues this week (shown in the screenshot), so it's good to
-                  have my own archive.
+                  I finished the main story of the fourth planet in Star Rail
+                  and felt a bit sentimental. I think that my personal website,
+                  created from my smart-progress posts, will become my book of
+                  memories where my life is recorded. 📖✒️ Smart-progress had
+                  some interruptions again (shown in the screenshot), so
+                  it&rsquo;s useful to have your own archive.
                 </p>
+
                 <p>
-                  The fourth planet's book records my victories and defeats in
-                  fighting evil, while my personal website documents the
-                  features I've built and the bugs I've fought 🪲😤 One day, a
-                  thousand years from now, someone might find my personal
-                  website and read my diary. But that's not certain.
+                  In the book of the fourth planet, victories and defeats in the
+                  fight against evil are recorded, while on my personal website,
+                  the features I built and the bugs I fought are recorded 🪲😤
+                  Someday in 1000 years, someone will find my personal website
+                  and read my diary. But that&rsquo;s not for sure.
                 </p>
               </div>
               <div style="display: flex; flex-wrap: wrap; gap: 10px">

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/static/css/index.css" />
     <meta
       name="description"
-      content="Weekly Coding - 2025-08-04 - Wöchentlicher Bericht: LeetCode-Herausforderungen und Linux-Optimierungen"
+      content="Weekly Coding - 2025-08-04 - Von komplexen Algorithmen bis zu massiven Speicherersparnissen: Mein wöchentliches Technik-Update."
     />
     <meta http-equiv="content-language" content="de" />
     <title>Weekly Coding • 2025-08-04</title>
@@ -262,94 +262,107 @@
               "
             >
               <div class="goalPostViewText">
-                <p>Hallo alle zusammen. Zeit für den wöchentlichen Bericht.</p>
+                <p>
+                  Hallo zusammen. Es ist Zeit für den wöchentlichen Bericht.
+                </p>
 
                 <h3>LeetCode</h3>
 
                 <p>
-                  Letzte Woche habe ich 8 Stunden auf LeetCode verbracht und
-                  sechs Aufgaben gelöst:
+                  Letzte Woche habe ich 8 Stunden bei LeetCode verbracht. Ich
+                  habe sechs Aufgaben gelöst:
                 </p>
 
                 <ul>
                   <li>
                     122 Best Time to Buy and Sell Stock II
+
                     <ul>
-                      <li>Mittelgradig schwierig.</li>
+                      <li>mittlere Aufgabe</li>
                     </ul>
                   </li>
                   <li>
-                    123. Best Time to Buy and Sell Stock III
-                    <br />
+                    123. Best Time to Buy and Sell Stock III<br />
+
                     <ul>
                       <li>
-                        Schwer. Ich versuchte es selbst, aber ohne Erfolg. Ich
-                        musste ein Lernvideo zu dieser Aufgabe anschauen.
+                        Schwer. Ich habe versucht, sie eigenständig zu lösen,
+                        aber es ist nicht gelungen. Ich musste mir ein
+                        Tutorial-Video zu dieser Aufgabe ansehen.
                       </li>
                     </ul>
                   </li>
                   <li>
                     124. Binary Tree Maximum Path Sum
+
                     <ul>
                       <li>
-                        Schwer. Ich habe die Aufgabe ohne Hinweise gelöst,
-                        obwohl die vorherige Aufgabe als Hinweis dienen könnte.
+                        Schwer.Ohne Hinweise gelöst, obwohl man die vorherige
+                        Aufgabe in diesem Fall als Hinweis betrachten kann: Die
+                        Aufgaben werden auf ähnliche Weise gelöst.
                       </li>
                     </ul>
                   </li>
                   <li>
-                    126. Word Ladder II
-                    <br />
+                    126. Word Ladder II<br />
+
                     <ul>
-                      <li>Schwer. Gelöst ohne Hinweise.</li>
+                      <li>Schwer. Ohne Hinweise gelöst.</li>
                     </ul>
                   </li>
                   <li>
-                    126. Word Ladder
-                    <br />
+                    126. Word Ladder<br />
+
                     <ul>
                       <li>
-                        Verwirrend: Warum steht Word Ladder II vor Word Ladder
-                        I? Ich habe den Code aus der vorherigen Aufgabe kopiert.
+                        🤯 Warum steht Word Ladder 2 in der Liste vor Word
+                        Ladder 1??? Ich habe den Code aus der vorherigen Aufgabe
+                        kopiert.
                       </li>
                     </ul>
                   </li>
                   <li>
                     128. Longest Consecutive Sequence
+
                     <ul>
                       <li>
-                        Eine seltsame Aufgabe mit einer künstlichen
-                        Einschränkung: Der Algorithmus muss O(n) sein, daher
-                        kann man die Liste nicht sortieren. Ich sah mir ein
-                        Lernvideo an, aber es war veraltet. Die Tester von
-                        LeetCode haben die Tests für die Aufgabe aktualisiert,
-                        und das aus dem Video abgeleitete Lösungsschema führt
-                        nun zu Time Limit Exceeded.
+                        Eine eigenartige Aufgabe mit einer künstlichen
+                        Einschränkung: Man muss einen O(n)-Algorithmus
+                        schreiben, daher darf das Array nicht sortiert werden.
+                        Ich habe mir ein Tutorial-Video zu dieser Aufgabe
+                        angesehen, aber das Video war veraltet: Die
+                        LeetCode-Autoren haben die Tests für die Aufgabe
+                        aktualisiert, und die Lösung aus dem Video erhält nun
+                        &ldquo;Time Limit Exceeded&rdquo;.
                       </li>
                     </ul>
                   </li>
                 </ul>
 
-                <h3>Optimierungen in Linux</h3>
+                <h3>Linux-Optimierungen</h3>
 
                 <p>
-                  In einem meiner früheren Beiträge habe ich über Optimierungen
-                  für Linux auf meinem Laptop geschrieben, aber keine konkreten
-                  Zahlen zur Effizienz angegeben. Hier sind sie:
+                  In einem meiner vorherigen Beiträge habe ich über die
+                  Linux-Optimierungen geschrieben, die ich auf meinem Laptop
+                  verwende, aber ich habe keine konkreten Zahlen dazu angegeben,
+                  wie viel Profit bestimmte Optimierungen bringen. Hier sind
+                  sie:
                 </p>
 
                 <ul>
-                  <li><strong>Btrfs </strong> -46% Speicherplatz</li>
-                  <li><strong>ZSWAP</strong> -50% Speicherplatz</li>
-                  <li><strong>KSM </strong> -2,5% RAM</li>
+                  <li><strong>Btrfs</strong> -46 % Speicherplatz</li>
+                  <li><strong>ZSWAP</strong> -50 % Speicherplatz</li>
+                  <li><strong>KSM</strong> -2,5 % Arbeitsspeicher</li>
                 </ul>
 
                 <p>
-                  Erstaunlicherweise sparen Btrfs und ZSWAP fast die Hälfte des
-                  Speicherplatzes – 🤯 während KSM nur knapp 2,5 % RAM einspart.
-                  Dabei verbraucht KSM etwa 2,9 % CPU. Ich habe den Einfluss von
-                  Btrfs und ZSWAP auf die CPU nicht gemessen, da ich keinen
-                  einfachen Weg dazu gefunden habe.
+                  Es stellt sich heraus, dass die Komprimierung von Btrfs und
+                  ZSWAP fast die Hälfte des Speicherplatzes auf der Festplatte
+                  spart 🤯 KSM hingegen spart nur ein bisschen Arbeitsspeicher:
+                  etwa 2,5 % 🤔 Dabei verbraucht KSM etwa 2,9 % der CPU. Die
+                  Auswirkungen von Btrfs und ZSWAP auf die CPU habe ich jedoch
+                  nicht gemessen, da ich keinen einfachen Weg dafür gefunden
+                  habe.
                 </p>
               </div>
               <div style="display: flex; flex-wrap: wrap; gap: 10px">

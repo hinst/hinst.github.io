@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/static/css/index.css" />
     <meta
       name="description"
-      content="Weekly Coding - 2025-02-28 - SQLite vs MongoDB: Eine Vergleichsanalyse für Mikroprojekte auf Orange Pi"
+      content="Weekly Coding - 2025-02-28 - SQLite vs. MongoDB: Warum SQLite für Mikroprojekte auf dem Orange Pi oft die beste Wahl ist."
     />
     <meta http-equiv="content-language" content="de" />
     <title>Weekly Coding • 2025-02-28</title>
@@ -264,61 +264,69 @@
               <div class="goalPostViewText">
                 <p>
                   Hallo zusammen. Diese Woche habe ich in meiner Freizeit 10
-                  Stunden mit Programmieren verbracht und meine Software zur
-                  Vergleichung von SQLite und MongoDB abgeschlossen.
+                  Stunden damit verbracht zu programmieren und mein Programm zum
+                  Vergleich von SQLite und MongoDB fertiggestellt.
                 </p>
 
                 <p>
                   <strong>SQLite</strong> vs <strong>MongoDB</strong> ⚔️
                   <a
-                    href="http://smartprogress.do/site/redirect/?url=https%3A%2F%2Fgithub.com%2Fhinst%2Fmongodb-sqlite-versus"
+                    href="https://github.com/hinst/mongodb-sqlite-versus"
                     target="_blank"
                     >https://github.com/hinst/mongodb-sqlite-versus</a
                   >
                 </p>
 
                 <ul>
-                  <li>SQLite ist etwa siebenmal schneller als MongoDB.</li>
-                  <ul>
-                    <li>
-                      SQLite arbeitet direkt mit der Datei, ohne HTTP, während
-                      MongoDB Client und Server miteinander kommunizieren
-                      müssen.
-                    </li>
-                  </ul>
                   <li>
-                    MongoDB-Dateien nehmen etwa die Hälfte des Speichers im
-                    Vergleich zu SQLite ein.
+                    SQLite ist etwa siebenmal schneller als MongoDB
+
+                    <ul>
+                      <li>
+                        SQLite arbeitet direkt mit der Datei ohne HTTP, während
+                        bei MongoDB Client und Server miteinander kommunizieren
+                        müssen.
+                      </li>
+                    </ul>
                   </li>
-                  <ul>
-                    <li>
-                      MongoDB unterstützt integriertes zstd-Komprimierung.
-                    </li>
-                  </ul>
+                  <li>
+                    Die Dateien von MongoDB benötigen etwa halb so viel
+                    Speicherplatz auf der Festplatte wie SQLite
+
+                    <ul>
+                      <li>
+                        MongoDB unterstützt die integrierte zstd-Komprimierung.
+                      </li>
+                    </ul>
+                  </li>
                 </ul>
 
                 <p>
-                  Die Komprimierung kann in MongoDB deaktiviert werden, was aber
-                  keine signifikante Auswirkung auf die Geschwindigkeit hat.
+                  Die Komprimierung kann in MongoDB manuell deaktiviert werden,
+                  aber das hat fast keinen Einfluss auf die Geschwindigkeit.
                 </p>
 
                 <p>
-                  Ich denke, SQLite eignet sich besser für Mikroprojekte auf
-                  Orange Pi. Ich habe eine 256-GB-Speicherkarte, die theoretisch
-                  auch größere Datenbanken bewältigen sollte. Allerdings haben
-                  Debian, Docker und Kubernetes bereits 40 GB verbraucht.
-                  Außerdem hat MongoDB auf Orange Pi Probleme: Die offizielle
-                  Version startet nicht aufgrund von Kompatibilitätsproblemen.
-                  Ich konnte MongoDB nur mit viel Aufwand auf Orange Pi zum
-                  Laufen bringen. Im Gegensatz dazu startet SQLite direkt aus
-                  der Box.
+                  Ich denke, dass SQLite besser für Mikroprojekte auf dem Orange
+                  Pi geeignet ist. Ich habe eine Speicherkarte mit 256 Gigabyte,
+                  die theoretisch eigentlich sogar für ziemlich große
+                  Datenbanken ausreichen sollte. Allerdings haben Debian, Docker
+                  und Kubernetes bereits 40 Gigabyte verschlungen 😤. Zudem
+                  bereitet MongoDB auf dem Orange Pi Probleme: Die offizielle
+                  Version lässt sich aufgrund von Kompatibilitätsproblemen
+                  überhaupt nicht starten. Mir ist es nur durch einiges Tüfteln
+                  und Rumprobieren gelungen, MongoDB auf dem Orange Pi zum
+                  Laufen zu bringen. SQLite hingegen läuft direkt „out of the
+                  box“.
                 </p>
 
                 <p>
-                  Ich habe auch libSQL von Turso getestet, aber sofort Bugs und
-                  unvollendete Funktionen entdeckt, sodass die Lust schnell
-                  verflog. Ich möchte bald ein Mini-Projekt für eine Website auf
-                  Orange Pi starten, aber zuerst muss ich mich ausruhen 😴.
+                  Ich habe auch versucht, libSQL von Turso zu testen, aber dort
+                  traten sofort Bugs und Unzulänglichkeiten auf, sodass die
+                  Motivation das Weitermachen schnell schwand. Ich denke, ich
+                  werde bald mit einem kleinen Miniprojekt (einer kleinen
+                  Website) auf dem Orange Pi anfangen, aber zuerst muss ich erst
+                  mal ordentlich schlafen 😴
                 </p>
               </div>
               <div style="display: flex; flex-wrap: wrap; gap: 10px">

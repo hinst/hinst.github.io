@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/static/css/index.css" />
     <meta
       name="description"
-      content="Weekly Coding - 2025-07-28 - Website Updates, Docker Troubles, and AI Art Adventures: A Mini Report"
+      content="Weekly Coding - 2025-07-28 - From Coding Website Optimizations to Testing New AI Models: A Weekly Tech Update"
     />
     <meta http-equiv="content-language" content="en" />
     <title>Weekly Coding • 2025-07-28</title>
@@ -262,59 +262,63 @@
               "
             >
               <div class="goalPostViewText">
-                <p>Hello everyone. Time for a mini report.</p>
+                <p>Hello everyone. It&rsquo;s time for a mini-report.</p>
 
                 <p>
-                  Last week, I spent roughly <strong>three hours</strong> coding
-                  my personal website
+                  Last week, I spent about
+                  <strong>three hours coding</strong> my personal website
                   <a href="https://hinst.github.io/" target="_blank"
                     >https://hinst.github.io/</a
                   >
-                  and made a small optimization: image loading is now direct.
-                  Previously, images were packed in <strong>Base64</strong> and
-                  <strong>JSON</strong>, which was a "legacy" from an older
-                  version. After the optimization, images load faster and are
-                  less prone to errors. The issues arose because some browsers
-                  struggled to properly handle links in format
-                  <strong>data:image/png;base64</strong>.
+                  and made a small optimization: images are now loaded directly.
+                  Previously, the images were packed into
+                  <strong>Base64</strong> and <strong>JSON</strong>. This was a
+                  &ldquo;legacy&rdquo; from the old version. After the
+                  optimization, images load faster and are less buggy. The bugs
+                  were caused by some browsers being unable to correctly open
+                  links in the <strong>data:image/png;base64</strong> format.
                 </p>
 
                 <p>
-                  Two hours were dedicated to code changes, and another hour was
-                  spent figuring out why my Docker builds broke. It seems a
-                  recent Docker update required specifying
-                  <strong>--platform</strong> at the command-line level, whereas
-                  previously setting it in a Dockerfile's FROM instruction was
-                  sufficient.
+                  Two hours went into the code changes, and another hour was
+                  required just to figure out why my Docker builds broke. It
+                  seems that in one of the Docker updates, they made it so that
+                  <strong>&ndash;platform</strong> now needs to be specified at
+                  the command line level, and specifying
+                  <strong>&ndash;platform</strong> in the Dockerfile FROM is no
+                  longer sufficient.
                 </p>
 
                 <p>
-                  I installed and tested the new Stable Diffusion model called
-                  <strong>Flux Kontext</strong>, which allows you to alter an
-                  image using text. The model works remarkably well... but there
-                  are still kinks: sometimes the colors turn out too bright. For
-                  instance, if I input "change shirt color to yellow," the
-                  output is as if the shirt had been splashed with printer ink.
-                  Another issue is that the model sometimes doesn't understand
-                  the request and leaves the image unchanged. However, it can't
-                  notify you of this immediately; you have to wait for the
-                  entire process to complete to see the identical image.
+                  I installed and tried out a new Stable Diffusion model. The
+                  model is called <strong>Flux Kontext</strong>, and it allows
+                  you to request changes to an image using text prompts. The
+                  model works surprisingly well&hellip; but there are plenty of
+                  flaws as well: sometimes the color turns out way too bright.
+                  For example, I write &ldquo;change the sweater color to
+                  yellow,&rdquo; and the resulting yellow looks as if the
+                  sweater was doused in glowing paint from a printer.
+                  There&rsquo;s also an issue where the model completely fails
+                  to understand what is being asked and leaves the image
+                  unchanged. But the model cannot notify you of this
+                  immediately: you have to wait for the entire cycle just to see
+                  an identical image at the end.
                 </p>
 
                 <p>
-                  Interestingly, while the article on Flux Kontext states a
-                  minimum requirement of <strong>20 GB</strong> of video memory,
-                  in practice, only around <strong>10-12 GB</strong> is needed.
+                  Interestingly, the article on Flux Kontext claims a minimum of
+                  <strong>20 GB</strong> of VRAM, but in reality, only
+                  <strong>10-12 GB</strong> is enough.
                 </p>
 
                 <p>
-                  I'd like to start working on a new hand-drawn illustration but
-                  when I'll find the time for it remains to be seen 😤
+                  I want to start a new manual drawing, but when I&rsquo;ll find
+                  the right time for it—that&rsquo;s another question 😤
                 </p>
 
                 <p>
-                  P.S. SmartProgress unexpectedly removed my old profile icon🗑️
-                  I had to reinstall a new one.
+                  P.S. <strong>SmartProgress</strong> unexpectedly deleted my
+                  old profile icon on its own🗑️ I had to set a new one.
                 </p>
               </div>
               <div style="display: flex; flex-wrap: wrap; gap: 10px">

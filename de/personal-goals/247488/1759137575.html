@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/static/css/index.css" />
     <meta
       name="description"
-      content="Weekly Coding - 2025-09-29 - Meine Woche: Website-Automatisierung, KI-Aufrüstung mit Herausforderungen"
+      content="Weekly Coding - 2025-09-29 - Website-Automatisierung, Kubernetes-Debugging und warum zwei GPUs nicht automatisch das perfekte KI-Setup bedeuten."
     />
     <meta http-equiv="content-language" content="de" />
     <title>Weekly Coding • 2025-09-29</title>
@@ -264,54 +264,57 @@
               <div class="goalPostViewText">
                 <p>Guten Tag. Es ist Zeit für meinen wöchentlichen Bericht.</p>
 
-                <h2>Persönliche Website</h2>
+                <p><strong>Persönliche Webseite</strong></p>
+
                 <p>
-                  Letzte Woche hatte ich zwei Aufgaben für meine Seite geplant:
-                  Automatisierung der Updates und eine XML-Sitemap. Von diesen
-                  beiden habe ich nur die erste umgesetzt: die Automatisierung
-                  der Updates. Das System läuft jetzt, neue Blogbeiträge werden
-                  täglich um Mitternacht hinzugefügt. Es gab einige
-                  Debugging-Probleme mit dem Programm in Kubernetes. Ich
-                  bemerkte ein seltsames Verhalten: Wenn das Programm im
-                  Go-Sprach seine Speicherressourcen erschöpft, gibt es kein
-                  Fehlermeldung, sondern nur die Nachricht "Fehler" ohne weitere
-                  Hinweise. Die Ursache ist unklar.
+                  Letzte Woche hatte ich geplant, zwei Dinge für meine Website
+                  zu erledigen: die Automatisierung von Updates und die
+                  sitemap.xml. Von diesen beiden Dingen habe ich nur das erste
+                  geschafft: die Automatisierung der Updates. Die
+                  Automatisierung funktioniert jetzt – neue Blogposts werden
+                  täglich um Mitternacht hinzugefügt. Ich musste mich mit dem
+                  Debugging des Programms in Kubernetes herumschlagen. Dabei ist
+                  mir eine Besonderheit aufgefallen: Wenn der Speicher für das
+                  Go-Programm zur Neige geht, erscheint keine Fehlermeldung 🤔
+                  Stattdessen steht dort nur „Fehler“, ohne den geringsten
+                  Hinweis auf die Ursache. Warum das so ist, weiß ich nicht.
                   <a
-                    href="http://smartprogress.do/site/redirect/?url=https%3A%2F%2Fgithub.com%2Fhinst%2Fhinst-website%2Fblob%2Fmaster%2Fbackend%2Fserver%2FstaticFilesUpdate.go"
+                    href="https://github.com/hinst/hinst-website/blob/master/backend/server/staticFilesUpdate.go"
                     target="_blank"
-                    >Link zum GitHub-Code</a
+                    >https://github.com/hinst/hinst-website/blob/master&hellip;</a
                   >
-                  (10 Stunden Arbeitsaufwand, zusätzlich zur Automatisierung
-                  habe ich auch verschiedene Kleinigkeiten behoben und
-                  verbessert).
+                  Ich habe 10 Stunden investiert und zusätzlich zur
+                  Automatisierung noch verschiedene Kleinigkeiten korrigiert und
+                  verbessert.
                 </p>
 
-                <h2>PC-Aufrüstung für KI</h2>
+                <p><strong>PC-Upgrade für KI</strong></p>
+
                 <p>
-                  Ich überlege schon lange, meinen Computer für KI-Aufgaben
-                  aufzurüsten. Mehr Videomemory ist erforderlich: aktuell habe
-                  ich 16 GB, aber 20 GB wären besser. Eine solche Grafikkarte
-                  ist jedoch sehr teuer. Deshalb entschied ich mich für einen
-                  kostengünstigeren Ansatz und kaufte eine zusätzliche,
-                  günstigere Grafikkarte mit 4 GB. Jetzt habe ich insgesamt 20
-                  GB (16 GB + 4 GB). Der Plan war, alle speicherintensiven
-                  Programme auf die zweite Grafikkarte zu verschieben und die
-                  Hauptgrafikkarte für KI und Spiele freizugeben. Der Plan
-                  funktionierte größtenteils, aber mit einigen Einschränkungen:
-                  Der zweite PCI-E-Anschluss meiner Hauptplatine hat eine sehr
-                  geringe Geschwindigkeit (nur 1 GB/s). Daher laggen Programme,
-                  die auf die zweite Grafikkarte zugreifen. 🥴 Außerdem ist der
-                  Einrichtungsprozess unhandlich: Jede Anwendung muss in den
-                  Windows-Einstellungen separat zugewiesen werden. Schade, hätte
-                  ich besser eine einzelne, leistungsstärkere Grafikkarte mit 20
-                  GB gekauft, dann gäbe es diese Probleme nicht. Aber das ist
-                  ein Projekt für ein anderes Leben.
+                  Ich habe schon länger darüber nachgedacht, meinen PC für KI
+                  aufzurüsten. Ich brauche mehr Grafikspeicher: Aktuell habe ich
+                  16 GB, aber ich hätte gerne 20 GB &hellip; Aber so eine
+                  Grafikkarte ist sehr teuer. Deshalb habe ich mich für ein
+                  Budget-Upgrade entschieden und die günstigste zusätzliche
+                  Grafikkarte mit 4 GB gekauft. Jetzt habe ich 16 GB + 4 GB = 20
+                  GB 🧐 Der Plan war folgender: Alle Programme, die viel
+                  Speicher verbrauchen, auf die zweite Grafikkarte zuzuordnen
+                  und die Hauptgrafikkarte für KI und Spiele freizuhalten. Der
+                  Plan hat funktioniert, aber nur teilweise: Der zweite
+                  PCI-E-Slot auf meinem Mainboard ist sehr langsam – nur 1 GB
+                  pro Sekunde. Deshalb ruckeln die Programme, die der zweiten
+                  Grafikkarte zugewiesen sind. 🥴 Außerdem ist der
+                  Einrichtungsprozess mühsam: Jedes Programm muss einzeln in den
+                  Windows-Einstellungen zugewiesen werden. Ach, ich hätte viel
+                  lieber eine große Grafikkarte mit 20 GB gekauft, dann gäbe es
+                  all diese Probleme nicht. Aber das ist erst einmal für ein
+                  anderes Leben.
                 </p>
 
                 <p>
-                  Fazit zur Aufrüstung: Eine zweite Grafikkarte macht nur Sinn,
-                  wenn die Hauptplatine über einen schnellen zweiten
-                  PCI-E-Anschluss verfügt.
+                  Fazit zum Upgrade: Eine zweite Grafikkarte macht nur dann
+                  Sinn, wenn das Mainboard einen schnellen zweiten PCI-E-Slot
+                  hat.
                 </p>
               </div>
               <div style="display: flex; flex-wrap: wrap; gap: 10px">

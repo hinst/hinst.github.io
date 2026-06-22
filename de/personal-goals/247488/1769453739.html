@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/static/css/index.css" />
     <meta
       name="description"
-      content="Weekly Coding - 2026-01-26 - Textsuchfunktionen mit Herausforderungen: SQLite, Unicode und die Suche nach der besten Lösung"
+      content="Weekly Coding - 2026-01-26 - Wie ich die Suche auf meiner Website trotz SQLite-Hürden mit reinem Go löse."
     />
     <meta http-equiv="content-language" content="de" />
     <title>Weekly Coding • 2026-01-26</title>
@@ -263,65 +263,78 @@
             >
               <div class="goalPostViewText">
                 <p><strong>-= Suche in meinen Beiträgen =-</strong></p>
+
                 <p>
-                  Letzte Woche habe ich damit begonnen, auf meiner persönlichen
-                  Website Textsuchfunktionen zu implementieren und dabei eine
-                  interessante Eigenschaft von SQLite entdeckt. Demnach
-                  unterstützt SQLite im Jahr 2026 nicht standardmäßig Unicode
-                  🤦. Es ist zwar möglich, die Unterstützung für Unicode mit
-                  einem modularen Plugin zu aktivieren, aber wie das geht, ist
-                  unklar. Der Autor des SQLite-Drivers für Golang empfiehlt, den
-                  Befehl <strong>go build -tags "icu"</strong> auszuführen, was
-                  jedoch aufgrund eines fehlenden C-Header-Files scheitert. Um
-                  SQLite in Golang zu verwenden, ist ein C-Compiler
-                  erforderlich... Kurzum, es gibt viele Hürden, aber die
-                  Vorteile sind gering. Die Suche ist zwar machbar, aber die
-                  Funktion UpperCase funktioniert nur für englische Texte.
+                  Letzte Woche habe ich begonnen, eine Textsuche auf meiner
+                  persönlichen Website zu implementieren, und bin dabei auf eine
+                  interessante Besonderheit von SQLite gestoßen. Es stellt sich
+                  heraus, dass SQLite im Jahr 2026 standardmäßig keine
+                  Unicode-Unterstützung bietet 🤦 Es gibt zwar die Möglichkeit,
+                  die Unicode-Unterstützung über ein Plugin zu aktivieren, aber
+                  wie man das macht, ist noch völlig offen. Der Autor des
+                  SQLite-Treibers für Golang schreibt zwar, dass man
+                  <strong>go build -tags &ldquo;icu&rdquo;</strong> angeben
+                  muss, aber dieser Befehl schlägt bei mir fehl, weil eine
+                  bestimmte C-Header-Datei fehlt. Ja, genau – für die Verwendung
+                  von SQLite in Golang wird ein C-Compiler benötigt&hellip; Kurz
+                  gesagt: Viele Schwierigkeiten, wenig Komfort&hellip; Eine
+                  Suche lässt sich zwar realisieren, aber die UpperCase-Funktion
+                  für Texte würde nur mit der englischen Sprache funktionieren.
+                  Ich habe für mich drei Wege festgelegt:
                 </p>
 
-                <p>Ich habe mir drei Optionen gesetzt:</p>
                 <ol>
                   <li>
-                    Weiter am Modul für Unicode in SQLite arbeiten und mich mit
-                    C auseinandersetzen.
+                    Weiter versuchen, das Unicode-Modul in SQLite zu verbinden
+                    und mich tief in <strong>C</strong> zu graben.
                   </li>
                   <li>
-                    Die Suche für jedes Wort mit drei Varianten (groß, klein,
-                    Großbuchstaben) durchführen.
+                    Eine Suche erstellen, die drei Varianten jeder
+                    Wortschreibweise bietet:
+
+                    <ol>
+                      <li>wort</li>
+                      <li>Wort</li>
+                      <li>WORT</li>
+                    </ol>
                   </li>
                   <li>
-                    Eine vollständige Suche in Go implementieren. Dabei würde
-                    SQLite alle Daten aus der Datenbank direkt an mein Programm
-                    streamen, ohne seinen integrierten Filter.
+                    Die Suche komplett in Go umsetzen.
+
+                    <ol>
+                      <li>
+                        Dabei würde SQLite alle Daten aus der Datenbank in mein
+                        Programm streamen, ohne einen eigenen eingebauten Filter
+                        zu nutzen.
+                      </li>
+                    </ol>
                   </li>
                 </ol>
 
                 <p>
-                  Ich habe mich für Option 3 entschieden, nicht weil es das
-                  Beste ist, sondern weil es am interessantesten für mich ist.
-                  In meinen Beiträgen befinden sich derzeit etwa 1000 Texte
-                  (einschließlich Übersetzungen ins Englische und Deutsche). Mal
-                  sehen, wie schnell die Suche mit 1000 Texten auf einem
-                  schwächeren Gerät wie dem Orange Pi Zero funktioniert.
+                  Ich habe mich für <strong>Weg 3</strong> entschieden. Nicht,
+                  weil es der „richtigste“ Weg ist, sondern weil er von den
+                  dreien für mich als am interessantesten erscheint. Aktuell
+                  habe ich in meinen Beiträgen etwa 1000 Texte (wenn man die
+                  Übersetzungen ins Englische und Deutsche mitzählt). Mal sehen,
+                  wie schnell die Suche über 1000 Texte auf der schwachen
+                  Hardware eines Orange Pi Zero funktionieren wird.
                 </p>
 
-                <p><strong>-= Ziele für Januar -</strong></p>
+                <p><strong>-= Ziele für Januar =-</strong></p>
+
                 <ol>
                   <li>
-                    <del
-                      >Leistungsziel: Aufgabe Nr. 200 auf LeetCode
-                      erreichen</del
-                    >
-                    ✅ Erreicht
+                    Aufgabe Nummer 200 auf LeetCode erreichen – mindestens ✅
+                    erledigt
                   </li>
                   <li>
-                    Implementierung einer neuen Funktion auf meiner persönlichen
-                    Website: 🔎 Textsuchfunktion in allen Beiträgen ▶️ im
-                    Gange...
+                    Eine neue Funktion für meine persönliche Website schreiben:
+                    🔎 Textsuche über alle Beiträge ▶️ begonnen&hellip;
                   </li>
                   <li>
-                    Alle Cloud-Dateien und deren Backups sortieren ⌛ noch
-                    ausstehend
+                    Alle meine Cloud-Dateien und deren Backups sortieren ⌛ noch
+                    zu tun
                   </li>
                 </ol>
               </div>

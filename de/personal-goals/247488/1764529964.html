@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/static/css/index.css" />
     <meta
       name="description"
-      content="Weekly Coding - 2025-11-30 - Web-Zähler und Sicherheitsmaßnahmen: Persönliche Website mit Spring Boot und Kubernetes-Optimierung"
+      content="Weekly Coding - 2025-11-30 - Von der Entwicklung eines Web-Counters mit Spring Boot bis zur Fehlerbehebung in Kubernetes: Mein aktueller technischer Wochenrückblick."
     />
     <meta http-equiv="content-language" content="de" />
     <title>Weekly Coding • 2025-11-30</title>
@@ -263,61 +263,66 @@
             >
               <div class="goalPostViewText">
                 <h3>Persönliche Website und Spring Boot 🍃☕</h3>
+
                 <p>
-                  Diese Woche habe ich mein Web-Zähler-Projekt auf Vordermann
-                  gebracht. Nun zählt es die Seitenaufrufe auf meiner
-                  persönlichen Website:
-                  <a
-                    href="http://smartprogress.do/site/redirect/?url=https%3A%2F%2Fhinst.github.io%"
-                    target="_blank"
+                  Diese Woche habe ich mein Projekt „web-counter“ zum Laufenden
+                  gebracht. Jetzt zählt es die Anzahl der Seitenaufrufe auf
+                  meiner persönlichen Website
+                  <a href="https://hinst.github.io/" target="_blank"
                     >https://hinst.github.io/</a
-                  >. Damit der Zähler funktioniert, muss JavaScript im Browser
-                  aktiviert sein. Besuche durch Bots, die lediglich die
-                  HTML-Seite herunterladen, werden nicht gezählt. Die Daten
-                  werden in einer SQLite-Datenbank gespeichert. Ich habe auch
-                  eine Spam-Prävention implementiert:
+                  >. Damit der Zähler funktioniert, muss der Benutzer JavaScript
+                  im Browser aktiviert haben. Besuche von Bots, die lediglich
+                  die HTML-Seite herunterladen – werden nicht mitgezählt. Die
+                  Daten werden in einer SQLite-Datenbank gespeichert. Außerdem
+                  habe ich folgenden Schutz gegen Spam eingebaut:
                 </p>
+
                 <ul>
-                  <li>Der Server multipliziert zwei einfache Zahlen.</li>
+                  <li>Der Server multipliziert zwei Primzahlen</li>
                   <li>
-                    JavaScript auf der Client-Seite muss herausfinden, welche
-                    beiden Zahlen das waren.
+                    Das JavaScript auf der Clientseite muss herausfinden, welche
+                    zwei Zahlen dies waren
                   </li>
                 </ul>
+
                 <p>
-                  So kann ein API-Missbrauch nicht unbegrenzt fortgesetzt
-                  werden. Um die Antwort auf den Server-Rätsel zu entschlüsseln,
-                  muss man sich ins Zeug legen. Die Schutzmaßnahme ist
-                  anpassbar: Wenn man die Anzahl der Faktoren geringfügig
-                  erhöht, wird das Entschlüsseln des Rätsels auf der
-                  Client-Seite eine ganze Ewigkeit dauern. Ob ein solcher Schutz
-                  für mein kleines Projekt nötig ist, ist allerdings fraglich
-                  🤔💭 Auf alle Fälle habe ich durch diese Funktion weitere
-                  Erfahrungen mit Spring Boot gesammelt.
+                  Auf diese Weise ist es nicht möglich, die API unendlich oft
+                  anzufragen. Um die Antwort auf das Rätsel des Servers zu
+                  berechnen, muss man sich bemühen. Der Schutz kann flexibel
+                  konfiguriert werden: Wenn man die Anzahl der Faktoren etwas
+                  erhöht, nimmt die Entschlüsselung des Rätsels auf der
+                  Clientseite eine ganze Menge Zeit in Anspruch. Ob ein solcher
+                  Schutz für mein kleines Projekt wirklich notwendig ist – das
+                  ist natürlich eine Frage 🤔💭 Zumindest habe ich während der
+                  Entwicklung dieses Features zusätzliche Erfahrung mit Spring
+                  Boot gesammelt.
+                  <a href="https://github.com/hinst/web-counter" target="_blank"
+                    >https://github.com/hinst/web-counter</a
+                  >
                 </p>
-                <a
-                  href="http://smartprogress.do/site/redirect/?url=https%3A%2F%2Fgithub.com%2Fhinst%2Fweb-counter"
-                  target="_blank"
-                  >https://github.com/hinst/web-counter</a
-                >
 
                 <h3>Kubernetes und Orange Pi 🐋🍊</h3>
-                <p>Hier habe ich zwei Probleme behoben.</p>
+
+                <p>hier habe ich zwei Probleme behoben.</p>
+
                 <p>
-                  Erstens war bei meiner Orange Pi der RAM-Log aktiviert. Diese
-                  Funktion ist standardmäßig aktiviert und hat dazu geführt,
-                  dass die Logs in Kubernetes verschwanden. Ich musste sie
-                  deaktivieren. Die Logs werden nun nicht mehr verlorengehen,
-                  aber der Speicherbelastung wird zunehmen.
+                  Erstens war bei mir das RAM-Logging auf dem Orange Pi
+                  aktiviert. Diese Funktion ist standardmäßig eingeschaltet, und
+                  deshalb gingen meine Logs in Kubernetes verloren. Ich musste
+                  sie deaktivieren. Die Logs werden jetzt nicht mehr
+                  verschwinden, aber die Belastung der Speicherkarte wird
+                  steigen.
                 </p>
+
                 <p>
-                  Außerdem habe ich entdeckt, dass meine Persistent Volume
-                  Claims (PVCs) falsch konfiguriert waren. Es scheint, dass jede
-                  Paarung aus PV und PVC über einen übereinstimmenden
-                  storageClassName verbunden sein muss. Bisher hatte ich das
-                  nicht bemerkt, da meine PV aufgrund eines "glücklichen
-                  Zufalls" auf die richtigen PVCs verteilt wurden 🤔🚿 Eine
-                  etwas verwirrende Funktion, finde ich.
+                  Außerdem habe ich herausgefunden, dass meine Persistent Volume
+                  Claims falsch konfiguriert waren. Es stellt sich heraus, dass
+                  jedes Paar aus PV &amp; PVC über eine identische
+                  <code>storageClassName</code> verbunden sein muss. Früher war
+                  mir das nicht aufgefallen, da ich weniger PVs hatte und sie
+                  sich „aus glücklicher Zufälligkeit“ auf die richtigen PVCs
+                  verteilen ließen 🤔🚿 Eine etwas verwirrende Funktion, meiner
+                  Meinung nach.
                 </p>
               </div>
               <div style="display: flex; flex-wrap: wrap; gap: 10px">

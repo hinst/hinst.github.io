@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/static/css/index.css" />
     <meta
       name="description"
-      content="Кодить каждую неделю 8 часов - 2025-02-28 - Сравнение SQLite и MongoDB: Почему SQLite лучше для микро-проектов на Orange Pi"
+      content="Кодить каждую неделю 8 часов - 2025-02-28 - Сравнение SQLite и MongoDB: результаты тестов и выбор лучшей базы данных для микропроектов на Orange Pi"
     />
     <meta http-equiv="content-language" content="ru" />
     <title>Кодить каждую неделю 8 часов • 2025-02-28</title>
@@ -267,17 +267,20 @@
                   кодинг в свободное время, и доделал мою программу для
                   сравнения SQLite и MongoDB
                 </p>
+
                 <p>
                   <strong>SQLite</strong> vs <strong>MongoDB</strong> ⚔️
                   <a
-                    href="http://smartprogress.do/site/redirect/?url=https%3A%2F%2Fgithub.com%2Fhinst%2Fmongodb-sqlite-versus"
+                    href="https://github.com/hinst/mongodb-sqlite-versus"
                     target="_blank"
                     >https://github.com/hinst/mongodb-sqlite-versus</a
                   >
                 </p>
+
                 <ul>
                   <li>
                     SQLite примерно в семь раз быстрее, чем MongoDB
+
                     <ul>
                       <li>
                         SQLite работает с файлом напрямую, без HTTP, а в MongoDB
@@ -288,15 +291,18 @@
                   <li>
                     MongoDB файлы занимают примерно в два раза меньше места на
                     диске, чем SQLite
+
                     <ul>
                       <li>MongoDB поддерживает встроенное сжатие zstd</li>
                     </ul>
                   </li>
                 </ul>
+
                 <p>
                   Сжатие можно принудительно отключить в MongoDB, но по скорости
                   это почти никак не влияет.
                 </p>
+
                 <p>
                   Думаю, SQLite лучше подходит для микро-проектов на Orange Pi.
                   У меня карта памяти на 256 гигабайт, и её должно по-идее
@@ -307,6 +313,7 @@
                   MongoDB на Orange только с помощью танцев с бубном. А вот
                   SQLite запускается сразу из коробки.
                 </p>
+
                 <p>
                   Ещё пробовал тестировать libSQL от Turso, но там сразу полезли
                   баги и недоделки, поэтому желание продолжать быстро пропало.

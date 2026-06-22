@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/static/css/index.css" />
     <meta
       name="description"
-      content="Weekly Coding - 2026-05-12 - Organizing Digital Life: Backup, Cloud, and Syncing Strategies"
+      content="Weekly Coding - 2026-05-12 - Moving Beyond Yandex Disk: Navigating Storage Challenges and Refining My Backup Tools"
     />
     <meta http-equiv="content-language" content="en" />
     <title>Weekly Coding • 2026-05-12</title>
@@ -262,72 +262,91 @@
               "
             >
               <div class="goalPostViewText">
-                <h3>Improvement Plan for My Personal Website 📜🧐</h3>
+                <h3>Improvement Plan for Personal Website 📜🧐</h3>
+
                 <p>
-                  Last week, I wrote down a to-do list for my personal website.
-                  The next time I have some free time, I can dive right into the
-                  tasks instead of slowly remembering what I wanted to achieve.
+                  Last week, I put together a to-do list of things I plan to do
+                  for my personal website. Next time I find some free time,
+                  I&rsquo;ll be able to dive straight into the work instead of
+                  slowly and stressfully trying to recall what was on my agenda.
                 </p>
 
-                <h3>Yandex.Disk Becomes Paid 🛸💸</h3>
+                <h3>Yandex Disk will become paid 🛸💸</h3>
+
                 <p>
-                  In a previous post, I discussed how I was organizing my
-                  personal cloud files stored on Yandex.Disk. Now, the situation
-                  has slightly changed. While I still need to organize my files,
-                  there's a more urgent matter: deciding where to store all
-                  these files. Free synchronization in Yandex.Disk will be
-                  disabled at the beginning of next month 🫨.
+                  In my last post, I wrote about how I am gradually sorting my
+                  personal cloud files on Yandex Disk. Now, the situation has
+                  suddenly changed. Sorting the files is still necessary, but a
+                  more urgent task has emerged: finding where to store all these
+                  files. Free synchronization on Yandex Disk will be disabled as
+                  early as next month 🫨 While it will still be possible to use
+                  the cloud drive without synchronization, there&rsquo;s little
+                  point in doing so because the file size is limited to 1 GB
+                  maximum. Therefore, I won&rsquo;t be able to upload a large
+                  backup to the cloud.
                 </p>
 
-                <h3>Setting Up Syncthing 🔁</h3>
+                <h3>Setting up Syncthing 🔁</h3>
+
                 <p>
-                  I decided to learn how to use the Syncthing program. My
-                  initial impression was mixed:
+                  I decided to learn how to use the Syncthing app. My
+                  impressions have been mixed:
                 </p>
+
                 <ul>
-                  <li><b>Pros:</b> The program is powerful and free.</li>
-                  <li><b>Cons:</b> The program is complex and finicky.</li>
+                  <li>Pros: The program is powerful and free</li>
+                  <li>Cons: The program is complex and finicky</li>
                 </ul>
+
                 <p>
-                  During setup, I had to recreate folders and restart the
-                  software approximately ten or twenty times before
-                  synchronization worked. For now, I've only set up two folders:
-                  Music and Passwords. There are many more folders ahead, but do
-                  I need real-time synchronization for each? I think for most of
-                  my folders, a weekly backup will suffice.
+                  During the setup process, I had to recreate folders about ten
+                  or twenty times and restart the app before synchronization
+                  finally worked. So far, I&rsquo;ve only set up two of my
+                  folders: music and passwords. There are many more folders
+                  ahead, but does every folder need real-time synchronization? I
+                  think for most of my folders, a weekly backup will be enough.
                 </p>
 
-                <h3>Improvements to hi-backup 📂</h3>
+                <h3>Improvements for hi-backup 📂</h3>
+
                 <p>
-                  I've added a new mode to my smart backup program:
+                  I added a new mode to my program for creating
+                  &ldquo;smart&rdquo; backups:
                   <a href="https://github.com/hinst/hi-backup" target="_blank"
                     >https://github.com/hinst/hi-backup</a
                   >
                 </p>
+
                 <ul>
                   <li>
-                    <b>New Unencrypted Backup Option 🆕:</b>
+                    It is now possible to create a backup without encryption 🆕
+
                     <ul>
                       <li>
-                        Format: Each file is placed in a separate .gz archive,
-                        while maintaining the folder structure exactly.
+                        Format: each file is placed in an individual .gz
+                        archive, while the directory structure is completely
+                        mirrored
                       </li>
                     </ul>
                   </li>
                 </ul>
+
                 <p>
-                  Previously, there was only the encrypted mode, with its own
-                  format that regular archivers couldn't understand. Now, if
-                  needed, files can be extracted without hi-backup.
+                  Previously, there was only a mode with encryption in its own
+                  format, which a standard archiver couldn&rsquo;t understand.
+                  Now, it will be possible to extract files without the help of
+                  hi-backup if needed 🤔
                 </p>
+
                 <p>
-                  I'm not sure if continuing to develop this program is worth
-                  it. Initially, the idea was to use the smart mode to save NAND
-                  resources and only rewrite changed files. However, now I'm
-                  questioning its value: It's said that the write resource of
-                  such flash drives is quite significant, and with a weekly
-                  backup of around 50 GB, the resource would be used so slowly
-                  that my flash drive would outlast me 🤯🪦
+                  I’m not sure if there&rsquo;s any sense in continuing to
+                  develop this program. The original idea was to use
+                  &ldquo;smart mode&rdquo; to save NAND resources by rewriting
+                  only changed files. But now I&rsquo;m not sure if it&rsquo;s
+                  worth it: they say that the write endurance of such drives is
+                  quite enormous. By writing about 50 GB a week, this resource
+                  will be consumed so slowly that my flash drive will outlive me
+                  🤯🪦
                 </p>
               </div>
               <div style="display: flex; flex-wrap: wrap; gap: 10px">

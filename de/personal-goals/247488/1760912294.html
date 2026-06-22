@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/static/css/index.css" />
     <meta
       name="description"
-      content="Weekly Coding - 2025-10-19 - Meine Wochen-Updates: Von Website-Indexierung bis Duolingo-Abschluss"
+      content="Weekly Coding - 2025-10-19 - Zwischenuellem Indexieren bei Google und neuen Erfolgen auf Duolingo."
     />
     <meta http-equiv="content-language" content="de" />
     <title>Weekly Coding • 2025-10-19</title>
@@ -263,87 +263,91 @@
             >
               <div class="goalPostViewText">
                 <p>
-                  Guten Tag. Es ist Zeit, meinen wöchentlichen Blog-Eintrag zu
-                  schreiben.
+                  Guten Tag. Es ist Zeit für einen Eintrag in meinem
+                  wöchentlichen Tagebuch.
                 </p>
 
-                <h3>:: Google Search Console ::</h3>
-
                 <p>
-                  Ich setze die Indexierung meiner persönlichen Website
+                  <strong>:: Google Search Console ::</strong><br />
+                  Ich arbeite weiterhin an der Suchmaschinenindexierung (Search
+                  Engine Indexing) für meine persönliche Webseite
                   <a href="https://hinst.github.io/" target="_blank"
                     >https://hinst.github.io/</a
                   >
-                  mit dem Suchmaschinen-Indexierung fort. In der vergangenen
-                  Woche erwähnte ich Probleme mit der Google Search Notification
-                  API. Diese Woche habe ich einen alternativen Ansatz gewählt:
-                  Statt der API füge ich meine Seiten nun manuell hinzu. Um
-                  diesen Prozess zu vereinfachen, habe ich eine spezielle Seite
-                  erstellt, auf der ich verfolgen kann, welche Seiten aus meiner
-                  Liste bereits verarbeitet wurden. Diese Funktion nennt sich
-                  <em>Manueller Ping-Tracker</em>.
+                  🌐<br />
+                  Letzte Woche schrieb ich, dass ich Probleme mit der Google
+                  Search Notification API hatte. Diese Woche habe ich mich
+                  jedoch für einen anderen Ansatz entschieden: Anstatt der API
+                  füge ich meine Seiten nun im „manuellen“ Modus hinzu. Um das
+                  einfacher zu gestalten, habe ich eine spezielle Seite
+                  erstellt, auf der ich verfolgen kann, welche Seiten aus einer
+                  Liste ich bereits bearbeitet habe. Die Funktion heißt
+                  <em>Manual Ping Tracker</em>. So funktioniert es:
                 </p>
 
                 <ol>
-                  <li>Ich kopiere die URL.</li>
-                  <li>Öffne die Google Search Console.</li>
-                  <li>Füge die URL mit Ctrl+V ein und drücke Enter.</li>
-                  <li>Klicke auf <em>[Indexierung anfordern]</em>.</li>
-                  <li>Warte.</li>
+                  <li>Ich klicke auf <em>[Copy URL]</em></li>
+                  <li>Gehe zum Tab der Google Search Console</li>
+                  <li>Füge mit Strg+V ein und drücke Enter</li>
+                  <li>Klicke auf <em>[Request Indexing]</em></li>
+                  <li>Warte</li>
                   <li>
-                    Wenn das Ergebnis grün ist, gehe ich zurück zu meiner
-                    Admin-Seite und klicke auf <em>[Bestätige Ping]</em>.
+                    Wenn das Ergebnis grün ist, kehre ich zu meiner Admin-Seite
+                    zurück und klicke auf <em>[Confirm pinged]</em>
                   </li>
                   <li>
-                    Falls das Ergebnis rot mit "<em>Quotenlimit erreicht</em>"
-                    angezeigt wird, warte ich bis zum nächsten Tag und beginne
-                    von Schritt 1 aus neu.
+                    Wenn das Ergebnis rot („Quota limit reached“) ist, warte ich
+                    bis zum nächsten Tag und fange wieder bei Punkt 1 an
                   </li>
                 </ol>
 
                 <p>
-                  Logischerweise würde es sinnvoll sein, diesen gesamten Prozess
-                  zu automatisieren, aber es gibt ein Problem: Die Entwickler
-                  der Google Search Console haben den programmatischen Zugriff
-                  erschwert. Ich habe mir die HTTP-Anfrage angeschaut und
-                  festgestellt, dass es dort nicht einfach ist, die Daten zu
-                  entschlüsseln. Letztendlich habe ich mich für diesen
-                  halbautomatischen Ansatz entschieden. Außerdem kann man pro
-                  Tag nur <strong>12</strong> URLs senden. Ehrlich gesagt hatte
-                  ich mit mehr gerechnet. Aber was soll's - Googles Server
-                  können wohl nur 12 Seiten am Tag verarbeiten 🥴. Es wird also
-                  etwa einen Monat dauern, bis alle Seiten hinzugefügt sind.
+                  Hier wäre es logisch, den gesamten Prozess von Anfang bis Ende
+                  zu automatisieren, anstatt URLs zu kopieren und einzufügen.
+                  Aber es gibt ein Problem: Die Entwickler der Google Search
+                  Console haben versucht, denך Programmzugriff zu erschweren.
+                  Ich habe über die Browserkonsole geschaut, welche Daten im
+                  HTTP-Request gesendet werden, und es lässt sich nicht einfach
+                  entschlüsseln. Schließlich habe ich mich für diesen
+                  halbautomatischen Ansatz entschieden. Außerdem können nur
+                  <strong>12</strong> URLs pro Tag gesendet werden. Ehrlich
+                  gesagt habe ich mehr erwartet. Aber was soll man machen – die
+                  Server von Google können wahrscheinlich nur 12 Seiten pro Tag
+                  verarbeiten 🥴 Auf diese Weise wird es etwa einen Monat
+                  dauern, bis alle Seiten hinzugefügt sind.
                 </p>
 
-                <h3>:: Duolingo ::</h3>
+                <p><strong>:: Duolingo ::</strong></p>
 
                 <p>
-                  Endlich habe ich den Kurs "Englisch-Deutsch" auf Duolingo
-                  abgeschlossen - mein zweiter Kurs auf dieser Plattform. Jetzt
-                  habe ich zwei Kurse erfolgreich beendet:
+                  Endlich habe ich den Duolingo-Kurs Englisch-Deutsch
+                  abgeschlossen. Dies ist mein zweiter Kurs bei Duolingo.
+                  Insgesamt habe ich jetzt zwei Kurse vollständig abgeschlossen:
                 </p>
 
                 <ol>
-                  <li>Russisch-Deutsch</li>
-                  <li>Englisch-Deutsch</li>
+                  <li>Russisch -&gt; Deutsch</li>
+                  <li>Englisch -&gt; Deutsch</li>
                 </ol>
 
                 <p>
-                  Ob ich weitere Duolingo-Kurse machen werde, ist noch unklar.
-                  Mögliche Kandidaten wären:
+                  Ob ich noch weitere Duolingo-Kurse absolvieren werde, habe ich
+                  noch nicht entschieden. Es gibt folgende potenzielle Kurse:
                 </p>
 
                 <ol>
                   <li>Mathematik 🧮</li>
                   <li>Musik 🎵</li>
                   <li>Schach ♟️</li>
-                  <li>Deutsch weiter wiederholen 🔄️</li>
+                  <li>
+                    Fortfahren mit dem Deutschkurs im „Wiederholung“-Modus 🔄️
+                  </li>
                 </ol>
 
                 <p>
-                  Ich habe bereits versucht, Mathematik zu lernen, und fand es
-                  etwas seltsam. Es ging darum, die Anzahl kleiner grüner Punkte
-                  zu zählen 🤔💭.
+                  Ich habe bereits versucht, Mathematik zu lernen, und es kam
+                  mir seltsam vor. Man muss dort die Anzahl kleiner grüner
+                  Kreise zählen 🤔💭
                 </p>
               </div>
               <div style="display: flex; flex-wrap: wrap; gap: 10px">

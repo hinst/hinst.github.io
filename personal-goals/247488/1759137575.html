@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/static/css/index.css" />
     <meta
       name="description"
-      content="Weekly Coding - 2025-09-29 - Automating Updates and GPU Upgrades: A Week of Technical Progress and Lessons Learned"
+      content="Weekly Coding - 2025-09-29 - Lessons from Website Automation Debugging and a Hard Truth About Multi-GPU Hardware Upgrades"
     />
     <meta http-equiv="content-language" content="en" />
     <title>Weekly Coding • 2025-09-29</title>
@@ -262,47 +262,54 @@
               "
             >
               <div class="goalPostViewText">
-                <p>Good day. It's time for my weekly report.</p>
+                <p>Good day. It’s time for my weekly report.</p>
 
                 <p><strong>Personal Website</strong></p>
+
                 <p>
-                  Last week, I planned to do two things for my site: automate
-                  updates and create a sitemap.xml. Out of these two tasks, I
-                  only accomplished the first one - automating updates. The
-                  automation is up and running; new blog posts are now added
-                  daily at midnight. I had to troubleshoot the program in
-                  Kubernetes. I noticed an interesting quirk: if the program in
-                  Go runs out of memory, there will be no error message.
-                  Instead, it simply states "error" without any clue as to the
-                  cause. I don't know why this happens.
+                  Last week, I planned to do two things for my site: automation
+                  of updates and a sitemap.xml. Out of those two things, I only
+                  did the first one—update automation. The automation is now
+                  working; new blog posts are added daily at midnight. It took
+                  some effort to debug the program in Kubernetes. I noticed a
+                  specific quirk: if the memory for the Go program runs out,
+                  there isn&rsquo;t any error message at all 🤔 It just says
+                  &ldquo;error&rdquo; without the slightest hint as to why. I
+                  don&rsquo;t know why it’s like that.
                   <a
-                    href="http://smartprogress.do/site/redirect/?url=https%3A%2F%2Fgithub.com%2Fhinst%2Fhinst-website%2Fblob%2Fmaster%2Fbackend%2Fserver%2FstaticFilesUpdate.go"
+                    href="https://github.com/hinst/hinst-website/blob/master/backend/server/staticFilesUpdate.go"
                     target="_blank"
-                    >https://github.com/hinst/hinst-website/blob/master...</a
+                    >https://github.com/hinst/hinst-website/blob/master&hellip;</a
                   >
-                  I spent 10 hours, and besides automating, I also fixed and
-                  improved various minor issues.
+                  I spent 10 hours on this, and besides the automation, I also
+                  fixed and improved various other small things.
                 </p>
 
-                <p><strong>Computer Upgrade for AI</strong></p>
+                <p><strong>AI Computer Upgrade</strong></p>
+
                 <p>
-                  I've been contemplating upgrading my computer for AI for a
-                  while now. I need more video memory; currently, I have 16 GB,
-                  but I'd like to have 20 GB... However, a graphics card that
-                  capable of this costs a fortune. So, I decided on a frugal
-                  upgrade: I bought the cheapest additional graphics card with 4
-                  GB of RAM. Now, I have 16 GB + 4 GB = 20 GB 💡 My plan was to
-                  assign all memory-hungry programs to the secondary graphics
-                  card and free up the main card for AI and gaming. The plan
-                  worked, but only partially: my motherboard's second PCI-e slot
-                  has very low speed - only 1 GB per second. So, programs
-                  assigned to the secondary card lag. 😢 Plus, the setup process
-                  is cumbersome; each program needs to be manually configured in
-                  Windows settings.
+                  I’ve been thinking about upgrading my computer for AI for a
+                  long time. I need more video memory: right now I have 16 GB,
+                  but I&rsquo;d like to have 20 GB&hellip; But a graphics card
+                  with that much is very expensive. Therefore, I decided to go
+                  for a budget upgrade: I bought the cheapest additional 4 GB
+                  graphics card. Now I have 16 GB + 4 GB = 20 GB 🧐 The plan was
+                  this: assign all memory-hungry programs to the second video
+                  card and free up the main graphics card for AI and gaming. The
+                  plan worked, but only partially: the second PCI-e slot on my
+                  motherboard has a very low speed—only 1 GB per second.
+                  Consequently, the programs assigned to the second video card
+                  lag. 🥴 Plus, the setup process itself is inconvenient: you
+                  have to assign each program individually in the Windows
+                  settings. Man, I should have just bought one large 20 GB
+                  graphics card; then these problems wouldn&rsquo;t exist. But
+                  that’s for some other time, in another life.
                 </p>
+
                 <p>
-                  Upgrade conclusion: assigning a secondary graphics card makes
-                  sense only if your motherboard has a FAST PCI-e slot for it.
+                  Conclusion on the upgrade: getting a second video card only
+                  makes sense if you have a FAST second PCI-E slot on your
+                  motherboard.
                 </p>
               </div>
               <div style="display: flex; flex-wrap: wrap; gap: 10px">

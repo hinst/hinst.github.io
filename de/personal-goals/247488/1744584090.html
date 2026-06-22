@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/static/css/index.css" />
     <meta
       name="description"
-      content="Weekly Coding - 2025-04-13 - Umstellung auf SQLite: Eine Woche voller Code-Optimierungen und Herausforderungen"
+      content="Weekly Coding - 2025-04-13 - Von JSON zu SQLite: Wie ich die technische Basis und Struktur meiner persönlichen Website optimiert habe."
     />
     <meta http-equiv="content-language" content="de" />
     <title>Weekly Coding • 2025-04-13</title>
@@ -265,55 +265,58 @@
                 <p>Guten Abend 🌙</p>
 
                 <p>
-                  In dieser Woche habe ich hart an meiner persönlichen Webseite
-                  gearbeitet und insgesamt 15 Stunden dafür aufgewendet.
+                  Diese Woche habe ich fleißig an meiner persönlichen Website
+                  gearbeitet und dafür 15 Stunden investiert.
                 </p>
 
                 <ul>
                   <li>
+                    Code:
                     <a
-                      href="http://smartprogress.do/site/redirect/?url=https%3A%2F%2Fgithub.com%2Fhinst%2Fhinst-website"
+                      href="https://github.com/hinst/hinst-website"
                       target="_blank"
-                      >Code: https://github.com/hinst/hinst-website</a
+                      >https://github.com/hinst/hinst-website</a
                     >
                   </li>
                   <li>
-                    <a
-                      href="http://smartprogress.do/site/redirect/?url=https%3A%2F%2Fhinst.github.io"
-                      target="_blank"
-                      >Webseite: https://hinst.github.io</a
+                    Website:
+                    <a href="https://hinst.github.io" target="_blank"
+                      >https://hinst.github.io</a
                     >
                   </li>
                 </ul>
 
-                <p>Hier sind einige der Dinge, die ich erreicht habe:</p>
+                <p>Hier sind die Dinge, die ich geschafft habe:</p>
 
                 <ul>
                   <li>
-                    Ich habe das Datenbankspeicher von JSON-Dateien auf SQLite
-                    umgestellt:
+                    Ich habe das Speichersystem von JSON-Dateien auf SQLite
+                    umgestellt.
+
                     <ul>
                       <li>
-                        Dadurch hat sich die Ladezeit meiner Webseite
-                        verbessert: von 52 auf 32 Millisekunden (lokale
-                        Netzwerke). Durch TailScale kommen jedoch zusätzlich 200
-                        Millisekunden hinzu, sodass man den tatsächlichen
-                        Unterschied nicht merkt ⌚🤔💭
+                        Das Ergebnis ist eine verbesserte Ladezeit meiner
+                        Website: Sie lag zuvor bei 52 Millisekunden und beträgt
+                        nun 32 Millisekunden&hellip; Das ist im lokalen
+                        Netzwerk; der Zugriff über TailScale fügt jedoch weitere
+                        200 Millisekunden hinzu, sodass man die Verbesserung in
+                        der Praxis wahrscheinlich nicht „spüren“ wird. ⌚🤔💭
                       </li>
                       <li>
-                        Insgesamt ist der Code nach dem Umstieg auf SQLite
-                        ordentlicher geworden.
+                        Im Großen und Ganzen hat sich der Code nach dem Umstieg
+                        auf SQLite etwas geordneter angefühlt.
                       </li>
                     </ul>
                   </li>
-                  <li>Monatsnamen sind nun immer in englischer Sprache 📅</li>
+                  <li>Monatsnamen sind jetzt immer auf Englisch 📅</li>
                   <li>
-                    Der Titelzieltext hat jetzt weniger Wahrscheinlichkeit, in
-                    einer anderen (ungeeigneten) Sprache zu sein 🇬🇧
+                    Der Titel des Ziels wird nun seltener in einer anderen
+                    (unpassenden) Sprache angezeigt 🇬🇧
                   </li>
                   <li>
-                    Die Projektordner mit dem Code sind klarer strukturiert in
-                    vier Unterverzeichnisse unterteilt:
+                    Die Quelldateien im Projekt sind jetzt klarer in vier Ordner
+                    unterteilt 📂
+
                     <ul>
                       <li><strong>src/typescript</strong></li>
                       <li><strong>src/tsx</strong></li>
@@ -322,32 +325,34 @@
                     </ul>
                   </li>
                   <li>
-                    Ich habe automatische Code-Formatierung im Frontend mit
-                    Prettier aktiviert.
+                    Ich habe die automatische Codeformatierung im Frontend mit
+                    <strong>Prettier</strong> aktiviert.
                   </li>
                   <li>
-                    Und noch einige andere kleine Verbesserungen und
+                    Außerdem gab es verschiedene kleine Verbesserungen und
                     Fehlerbehebungen.
                   </li>
                 </ul>
 
                 <p>
-                  Die größte und komplexeste Änderung war der vollständige
-                  Umstieg auf SQLite. Dafür brauchte ich viel Zeit, da nicht nur
-                  die hinst-website, sondern auch der alte
-                  Smart-Progress-or-Downloader aktualisiert werden musste, da
-                  dieser für das Kopieren von Informationen von SmartProgress in
-                  meine Datenbank zuständig ist. Ich wollte unbedingt den
-                  Übergang bis zum Ende der Woche schaffen, daher habe ich am
-                  Sonntag fast den ganzen Tag bis Mitternacht programmiert 🥵.
-                  Letztendlich konnte ich den Umstieg auf SQLite abschließen,
-                  aber später werden sicher noch weitere kleine Fehler
-                  auftauchen, von denen ich vielleicht noch nicht weiß. Einen
-                  Fehler habe ich bereits gefunden: Die Zeitzonen stimmen nicht
-                  überein. Auf meiner Webseite wird das Blog-Beitragsdatum um 3
-                  Stunden zu früh angezeigt. Ich werde mir das irgendwann
-                  genauer ansehen. Ich muss mich mit der Zeitangabenbibliothek
-                  Luxon auseinandersetzen.
+                  Die größte und schwierigste Änderung war der vollständige
+                  Umstieg auf SQLite; das hat eine ganze Menge Zeit in Anspruch
+                  genommen. Dabei musste nicht nur hinst-website, sondern auch
+                  das alte Projekt «Smart-Progress-downloader» aktualisiert
+                  werden, da dieses für das Kopieren der Informationen von
+                  SmartProgress in meine Datenbank zuständig ist. Ich wollte den
+                  Umstieg auf SQLite unbedingt bis zum Ende der Woche
+                  abschließen und habe deshalb am Sonntag fast den ganzen Tag
+                  bis Mitternacht programmiert 🥵. Das Ergebnis ist, dass der
+                  Umstieg auf SQLite zwar erfolgreich abgeschlossen wurde, aber
+                  später sicherlich noch verschiedene kleine Bugs auftauchen
+                  werden, die mir bisher noch nicht bekannt sind. Einen Bug habe
+                  ich bereits gefunden: Da stimmt etwas mit den Zeitzonen nicht.
+                  Auf meiner kleinen Website wird das Veröffentlichungsdatum um
+                  3 Stunden früher angezeigt als nötig. Warum das so ist, werde
+                  ich irgendwann später herausfinden. Ich werde versuchen
+                  müssen, mich mit den Zeitzonen in der Bibliothek
+                  <strong>luxon</strong> auseinanderzusetzen.
                 </p>
               </div>
               <div style="display: flex; flex-wrap: wrap; gap: 10px">

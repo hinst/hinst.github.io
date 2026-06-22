@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/static/css/index.css" />
     <meta
       name="description"
-      content="Weekly Coding - 2025-02-28 - SQLite vs MongoDB: Speed, Space, and Compatibility for Micro-Projects on Orange Pi"
+      content="Weekly Coding - 2025-02-28 - Comparing SQLite and MongoDB: Performance, Storage, and Compatibility Lessons from an Orange Pi Project"
     />
     <meta http-equiv="content-language" content="en" />
     <title>Weekly Coding • 2025-02-28</title>
@@ -263,14 +263,15 @@
             >
               <div class="goalPostViewText">
                 <p>
-                  Hello everyone. This week I spent 10 hours coding in my free
-                  time and completed my program to compare SQLite and MongoDB.
+                  Hello everyone! This week, I spent 10 hours coding in my spare
+                  time and finished my comparison program for SQLite vs.
+                  MongoDB.
                 </p>
 
                 <p>
-                  <strong>SQLite vs MongoDB</strong> ⚔️
+                  <strong>SQLite</strong> vs <strong>MongoDB</strong> ⚔️
                   <a
-                    href="http://smartprogress.do/site/redirect/?url=https%3A%2F%2Fgithub.com%2Fhinst%2Fmongodb-sqlite-versus"
+                    href="https://github.com/hinst/mongodb-sqlite-versus"
                     target="_blank"
                     >https://github.com/hinst/mongodb-sqlite-versus</a
                   >
@@ -278,17 +279,20 @@
 
                 <ul>
                   <li>
-                    SQLite is roughly seven times faster than MongoDB:
+                    SQLite is approximately seven times faster than MongoDB.
+
                     <ul>
                       <li>
-                        SQLite operates directly on a file without HTTP, whereas
-                        MongoDB requires client-server communication.
+                        SQLite works directly with the file without HTTP,
+                        whereas in MongoDB, the client and server must
+                        communicate with each other.
                       </li>
                     </ul>
                   </li>
                   <li>
-                    MongoDB files take up approximately half the disk space
-                    compared to SQLite:
+                    MongoDB files take up about half as much disk space as
+                    SQLite.
+
                     <ul>
                       <li>MongoDB supports built-in zstd compression.</li>
                     </ul>
@@ -296,25 +300,29 @@
                 </ul>
 
                 <p>
-                  Compression can be disabled in MongoDB, but it hardly affects
-                  performance.
+                  Compression can be manually disabled in MongoDB, but doing so
+                  has almost no impact on speed.
                 </p>
 
                 <p>
-                  I believe SQLite is better suited for micro-projects on Orange
-                  Pi. I have a 256GB memory card, which should be enough even
-                  for larger databases. However, Debian, Docker, and Kubernetes
-                  already consume 40GB. Additionally, MongoDB has compatibility
-                  issues on Orange Pi: the official version fails to launch due
-                  to these problems. I managed to run MongoDB on Orange Pi using
-                  some juggling, but SQLite boots right out of the box.
+                  I think SQLite is better suited for micro-projects on an
+                  Orange Pi. I have a 256GB memory card, and it should
+                  theoretically be enough even for fairly large databases.
+                  However, Debian, Docker, and Kubernetes have already sucked up
+                  40 GB 😤. Additionally, MongoDB has issues on the Orange Pi:
+                  the official version doesn&rsquo;t run at all due to
+                  compatibility problems. I only managed to get MongoDB running
+                  on Orange Pi through a series of complex workarounds
+                  (literally &ldquo;dancing with a tambourine&rdquo;). On the
+                  other hand, SQLite works right out of the box.
                 </p>
 
                 <p>
                   I also tried testing libSQL from Turso, but bugs and
-                  unfinished features quickly killed my enthusiasm. I think I'll
-                  start working on a mini website project for Orange Pi soon,
-                  but first, I need to catch up on sleep 😴.
+                  unfinished features cropped up immediately, so my motivation
+                  to continue vanished quickly. I think I&rsquo;ll start working
+                  on a mini website project on the Orange Pi soon, but first, I
+                  need to get some proper sleep 😴
                 </p>
               </div>
               <div style="display: flex; flex-wrap: wrap; gap: 10px">

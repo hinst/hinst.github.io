@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/static/css/index.css" />
     <meta
       name="description"
-      content="Weekly Coding - 2025-03-24 - Sicherheitslücke in Next.js: Warum ein Update dringend erforderlich ist und meine neuesten Software-Abenteuer"
+      content="Weekly Coding - 2025-03-24 - Vom Next.js-Alarm bis zum Dateisystem-Chaos: Meine aktuellen Abenteuer im Code."
     />
     <meta http-equiv="content-language" content="de" />
     <title>Weekly Coding • 2025-03-24</title>
@@ -263,73 +263,72 @@
             >
               <div class="goalPostViewText">
                 <p>
-                  Hallo alle zusammen. Es ist Zeit für einen Bericht über meine
+                  Hallo zusammen. Es ist Zeit für einen Bericht über meine
                   Abenteuer im Code.
                 </p>
 
                 <p>
                   ⚠️ Aber zuerst: In <strong>Next.js</strong> wurde eine große
                   Sicherheitslücke entdeckt. Im Gegensatz zu den meisten Lücken,
-                  von denen ich lese, aber nicht verstehe, wie man sie überhaupt
-                  nutzen kann 🤔💭... ist diese Lücke einfach und verständlich:
-                  Wenn wir im Header „Autorisierung überspringen“ eingeben, wird
-                  diese Übersprungen 🫡👌. Next.js ist eine beliebte Bibliothek,
-                  die viele Nutzer verwenden. Die Statistiken sind auf dem
-                  Screenshot zu sehen. Wer Next.js verwendet, sollte dringend
-                  ein Update installieren.
+                  über die ich lese, aber nicht verstehe, wie man sie überhaupt
+                  nutzt 🤔💭 &hellip;ist diese Lücke einfach und verständlich:
+                  Man schreibt „Autorisierung umgehen“ in den Header, und sie
+                  wird umgangen 🫡👌. Die Next.js-Bibliothek ist beliebt, und
+                  viele nutzen sie. Die Statistik auf dem Screenshot zeigt es.
+                  Wer Next.js verwendet, sollte dringend das Update
+                  installieren.
                 </p>
 
                 <p>
-                  Letzte Woche habe ich 18 Stunden in verschiedene
-                  Softwareprojekte während meiner Freizeit investiert.
+                  Letzte Woche habe ich in meiner Freizeit 18 Stunden in
+                  verschiedene Softwareprojekte investiert:
                 </p>
 
                 <ul>
                   <li>
-                    14 Stunden 🌐 Persönliche Website, über die ich in meinem
-                    vorherigen Post geschrieben habe. Die Entwicklung dauerte
-                    länger als ursprünglich angenommen. Ich versuche, es ohne
-                    Hast zu erledigen.
+                    14 Stunden 🌐 für meine persönliche Website, über die ich im
+                    vorherigen Post geschrieben habe. Die Entwicklung hat länger
+                    gedauert als ursprünglich geplant. Ich versuche es ohne
+                    Zeitdruck zu machen.
+
+                    <ul>
+                      <li>
+                        Auf der persönlichen Website richte ich gerade SQLite
+                        zur Datenspeicherung ein. Es geht langsam voran. Und
+                        ehrlich gesagt bin ich mir nicht sicher, ob SQLite dort
+                        wirklich nötig ist. Aber da ich es mir so fest
+                        vorgenommen habe, muss ich es fertigmachen 🐞
+                      </li>
+                    </ul>
                   </li>
-
-                  <ul>
-                    <li>
-                      Auf meiner persönlichen Website arbeite ich derzeit daran,
-                      SQLite zur Datenspeicherung einzurichten. Der Fortschritt
-                      ist langsam. Ehrlich gesagt bin ich mir nicht sicher, ob
-                      SQLite wirklich benötigt wird. Aber da ich mich dafür
-                      entschieden habe, es zu tun, muss ich es fertigstellen 🐞.
-                    </li>
-                  </ul>
-
                   <li>
-                    2 Stunden 🍊 Einrichtung von Orange Pi. Wiederum fiel die
-                    ext4-Dateisystem nach einem Stromausfall in meiner Wohnung
-                    aus.
+                    2 Stunden 🍊 für die Konfiguration des Orange Pi. Hier ist
+                    das ext4-Dateisystem nach einem Stromausfall in meiner
+                    Wohnung wieder beschädigt worden.
+
+                    <ul>
+                      <li>
+                        Hier muss das System die Dateien nach dem Defekt
+                        selbstständig reparieren, aber wie das geht, ist die
+                        Frage. Meine vorherigen Versuche, eine automatische
+                        Korrektur einzurichten, blieben erfolglos. Dieses Mal
+                        habe ich einen anderen Ansatz gewählt. Ich hoffe, es
+                        funktioniert jetzt – werden wir beim nächsten
+                        Stromausfall sehen 💭
+                      </li>
+                    </ul>
                   </li>
-
-                  <ul>
-                    <li>
-                      Hier muss das System dazu gebracht werden, die Dateien
-                      nach einer Fehlfunktion selbst zu reparieren, aber wie man
-                      das macht, ist eine Frage. Meine vorherigen Versuche,
-                      Auto-Korrekturen einzurichten, waren nicht erfolgreich.
-                      Diesmal habe ich einen anderen Ansatz gewählt. Ich hoffe,
-                      es funktioniert jetzt – wir werden sehen, nachdem der
-                      nächste Stromausfall passiert ist 💭
-                    </li>
-                  </ul>
-
                   <li>
-                    2 Stunden 🔙 Zeit für das Studium von Backup-Programmen. Die
+                    2 Stunden 🔙 für die Recherche von Backup-Programmen. Die
                     Programme heißen <strong>rclone</strong> und
                     <strong>rustic</strong>. Beide sind in Go geschrieben und
-                    sowohl rclone als auch rustic wirkten auf mich kompliziert
-                    und seltsam. Rclone kann die Synchronisierung zwischen NTFS
-                    und exFAT nicht ordnungsgemäß durchführen, während rustik
-                    den vollständigen Dateipfad bei jeder Speicherung speichert.
-                    Was ist, wenn ich meine Dateien in einen anderen Ordner
-                    verschiebe? 🤔💭😔 Unklar.
+                    haben sich beide als kompliziert und eigenartig erwiesen.
+                    <strong>Rclone</strong> kann nicht ordnungsgemäß zwischen
+                    NTFS und exFAT synchronisieren, und
+                    <strong>rustic</strong> speichert jedes Mal den
+                    vollständigen Pfad zur Datei. Aber was ist, wenn ich meine
+                    Dateien in einen anderen Ordner verschiebe? 🤔💭😔 Unklar
+                    bleibt es.
                   </li>
                 </ul>
               </div>

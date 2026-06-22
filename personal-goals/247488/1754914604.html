@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/static/css/index.css" />
     <meta
       name="description"
-      content="Weekly Coding - 2025-08-11 - Optimizing Stable Diffusion on Windows: Mastering Image Generation Performance"
+      content="Weekly Coding - 2025-08-11 - How to Optimize Stable Diffusion for Maximum VRAM Efficiency on Windows 11"
     />
     <meta http-equiv="content-language" content="en" />
     <title>Weekly Coding • 2025-08-11</title>
@@ -262,24 +262,27 @@
               "
             >
               <div class="goalPostViewText">
-                <p>Hello everyone. It's time for my weekly report.</p>
+                <p>Hello everyone. It&rsquo;s time for my weekly report.</p>
 
                 <p><strong>::My Projects::</strong></p>
+
                 <ul>
                   <li>
                     LeetCode 🖥️ 1 hour
+
                     <ul>
                       <li>
-                        Completed two problems and reached problem number 130 in
-                        order.
+                        Completed two tasks and reached task number 130 in the
+                        sequence.
                       </li>
                     </ul>
                   </li>
                   <li>
                     Drawing 🖼️ 7 hours
+
                     <ul>
                       <li>
-                        Started working on a large digital drawing. Need to
+                        Started working on a large digital drawing. I need to
                         continue this week.
                       </li>
                     </ul>
@@ -287,29 +290,36 @@
                 </ul>
 
                 <p>
-                  <strong>::Optimizing Stable Diffusion on Windows::</strong>
+                  <strong>::Stable Diffusion Optimizations on Windows::</strong>
                 </p>
+
                 <p>
-                  I will share my optimizations for running the image generation
-                  model, Stable Diffusion, on Windows 11 to achieve the best
-                  performance. The key factor for an image generator is video
-                  memory. We've noticed a peculiarity: many programs on Windows
-                  11 consume video memory excessively. Despite numerous
-                  complaints online about high memory usage, there is no clear
-                  explanation. To identify memory-hungry applications, you need
-                  to enable the "Dedicated GPU Memory" column in Task Manager,
-                  which is hidden by default. Here's the list of optimizations:
+                  I&rsquo;m going to talk about what optimizations I use for the
+                  best performance of the Stable Diffusion image generator on
+                  Windows 11. The most important thing for an image generator is
+                  video memory (VRAM). Here’s the catch: many programs on
+                  Windows 11 gobble up VRAM by the bucketful 🥵. Yet, no one can
+                  really answer the question &ldquo;why?&rdquo; Searching the
+                  internet will show plenty of complaints about high VRAM usage,
+                  but you won&rsquo;t find a clear explanation—and trying to
+                  contact developers directly yields nothing; no one wants to
+                  deal with video memory issues. To see which programs are
+                  consuming VRAM, you need to enable the &ldquo;Dedicated GPU
+                  Memory&rdquo; column in the Task Manager. By default, this
+                  column is hidden. Here is the list of settings:
                 </p>
 
                 <ul>
                   <li>
-                    Add command-line arguments for ComfyUI
+                    Add command-line arguments for ComfyUI:
+
                     <ul>
-                      <li>--use-split-cross-attention --novram</li>
+                      <li>--use-split-cross-attention &ndash;novram</li>
                     </ul>
                   </li>
                   <li>
-                    Disable Hardware Acceleration for specific programs:
+                    Turn off Hardware Acceleration for these programs:
+
                     <ul>
                       <li>Browser</li>
                       <li>VS Code</li>
@@ -318,25 +328,31 @@
                     </ul>
                   </li>
                   <li>
-                    Use Flux and SD 3.5 models
+                    Flux and SD 3.5 models:
+
                     <ul>
-                      <li>Download fp8 versions, ignore fp16 versions.</li>
+                      <li>
+                        Download the fp8 versions and ignore the fp16 versions.
+                      </li>
                     </ul>
                   </li>
                 </ul>
 
                 <p>
-                  For the browser, further adjustments are required: first,
-                  disable Smooth Scrolling as it will cause severe lag without
-                  hardware acceleration on many pages. Additionally, set up a
-                  separate instance of the browser for video playback and use
-                  this dedicated browser only for videos, avoiding any other
-                  tasks.
+                  For the browser, a few more &ldquo;fine-tuning&rdquo; settings
+                  are needed: first, disable Smooth Scrolling, as without HW
+                  acceleration, scrolling will be terribly laggy on many pages.
+                  Secondly, you need to install a separate browser clone for
+                  watching videos and use this second browser <em>only</em> for
+                  watching video with HW enabled, and nothing else. You need a
+                  completely separate installation, not just a
+                  &ldquo;profile,&rdquo; because all profiles share the same set
+                  of system settings, including hardware acceleration.
                 </p>
 
                 <p>
-                  As a result, you can work with any models seamlessly and
-                  without lags on a graphics card with 16 GB VRAM.
+                  As a result, you can work with any models without stutters or
+                  lags on a graphics card with 16 GB of VRAM.
                 </p>
               </div>
               <div style="display: flex; flex-wrap: wrap; gap: 10px">

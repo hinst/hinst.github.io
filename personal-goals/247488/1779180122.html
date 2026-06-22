@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/static/css/index.css" />
     <meta
       name="description"
-      content="Weekly Coding - 2026-05-19 - Transforming Backups: Improving hi-backup for Efficient File Storage and Security"
+      content="Weekly Coding - 2026-05-19 - Building a Better Way to Back Up: Refactoring my hi-backup Tool with TypeScript."
     />
     <meta http-equiv="content-language" content="en" />
     <title>Weekly Coding • 2026-05-19</title>
@@ -263,41 +263,46 @@
             >
               <div class="goalPostViewText">
                 <p>
-                  Last week I spent more time on coding than usual, as I had two
-                  days off. I tracked 17 hours in my timer.
+                  Last week I spent more time coding than usual because I had
+                  two days off. I logged 17 hours in my time tracker.
                 </p>
+
                 <p>
-                  I perseveringly improved my program <strong>hi-backup </strong
-                  ><a
-                    href="http://smartprogress.do/site/redirect/?url=https%3A%2F%2Fgithub.com%2Fhinst%2Fhi-backup"
-                    target="_blank"
+                  I worked hard on improving my program
+                  <strong>hi-backup</strong> 📂
+                  <a href="https://github.com/hinst/hi-backup" target="_blank"
                     >https://github.com/hinst/hi-backup</a
                   >
                 </p>
+
                 <ol>
                   <li>
-                    Hash control: After each backup, a
+                    Hash control: after each backup, a
                     <strong>.hashes.json</strong> file is created in the target
-                    directory.
+                    directory
+
                     <ol>
                       <li>
                         During subsequent backups, the hash is checked to verify
-                        the integrity of the files.
+                        file integrity
                       </li>
                     </ol>
                   </li>
                   <li>
-                    Progress indicator: During backup, the number of processed
-                    files is displayed: <strong>[processed/remaining]</strong>.
+                    Progress indicator: the number of files
+                    <strong>[processed/remaining]</strong> is displayed during
+                    the backup
                   </li>
                   <li>
-                    New architecture. I created separate TypeScript classes:
-                    Directory Synchronizer and Replaceable Transformer.
+                    New architecture. Created separate classes in TypeScript:
+                    Directory Synchronizer and a swappable Transformer
+
                     <ol>
                       <li>
-                        Currently, there are three types of transformers:
+                        There are currently three types of transformers:
+
                         <ol>
-                          <li>Simple copy</li>
+                          <li>Simple copying</li>
                           <li>Compression</li>
                           <li>Compression + Encryption</li>
                         </ol>
@@ -305,28 +310,32 @@
                     </ol>
                   </li>
                 </ol>
+
                 <p>
-                  The benefit of compression is minimal for me since most files
-                  in my library are already compressed: images, music, archives.
-                  The backup size is reduced by approximately 3%.
+                  The benefit from compression is minimal: most files in my
+                  library are already compressed—images, music, and archives.
+                  The backup size shrinks by about 3%.
                 </p>
+
                 <p>
-                  I plan to implement a few more improvements in hi-backup and
-                  continue using it for personal file backups. I think I will
-                  enhance unit test coverage. After hi-backup, I'll be working
-                  on a personal website and LeetCode problems.
+                  I plan to make a few more improvements to the Hi-Backup
+                  program and continue using it for my personal file backups.
+                  I&rsquo;m thinking about improving unit test coverage. After
+                  Hi-Backup, I&rsquo;ll move on to my personal website and
+                  LeetCode.
                 </p>
+
                 <p>
-                  I have already deleted Yandex.Disk. Initially, I wanted to see
-                  what would happen on the day free synchronization is disabled:
-                  would there be any messages or errors? But later, I realized
-                  that I was getting confused: out of habit, I continued to
-                  upload personal files to Yandex.Disk instead of moving them to
-                  my new storage location. So, I decided to delete Yandex.Disk
-                  as soon as possible. Also, lately, Russian software publishers
-                  have been aggressively integrating additional metrics like VPN
-                  checks. Therefore, the less unnecessary software on my
-                  computer - the better ♻️
+                  I have already deleted Yandex Disk. Initially, I wanted to see
+                  what would happen on the day free synchronization was
+                  disabled: whether any messages or errors would appear. But
+                  later I noticed that I was getting confused: out of habit, I
+                  kept putting personal files into Yandex Disk instead of the
+                  new storage location. Therefore, I decided to remove Yandex
+                  Disk as soon as possible. Besides, Russian software publishers
+                  have recently been aggressively integrating additional metrics
+                  like VPN checks. So, the less extra software on my computer,
+                  the better ♻️
                 </p>
               </div>
               <div style="display: flex; flex-wrap: wrap; gap: 10px">

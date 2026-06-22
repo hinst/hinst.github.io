@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/static/css/index.css" />
     <meta
       name="description"
-      content="Weekly Coding - 2026-02-08 - Meine Datenbank-Migration und Schreibtisch-Umgestaltung"
+      content="Weekly Coding - 2026-02-08 - Mehr Geschwindigkeit durch den Wechsel auf PostgreSQL und ein ergonomischeres Schreibtisch-Setup."
     />
     <meta http-equiv="content-language" content="de" />
     <title>Weekly Coding • 2026-02-08</title>
@@ -268,13 +268,13 @@
 
                 <p>
                   Diese Woche habe ich meine persönliche Website auf eine andere
-                  Datenbank migriert. Von SQLite zu PostgreSQL. Die Aufgabe
-                  dauerte ungefähr <strong>16 Stunden</strong>.
+                  Datenbank umgestellt. Vorher: SQLite, jetzt: PostgreSQL. Die
+                  Aufgabe hat etwa <strong>16 Stunden</strong> gedauert.
                 </p>
 
                 <p>
-                  Ich verglich die Geschwindigkeit der Textsuche in meinen
-                  Blog-Beiträgen:
+                  Ich habe die Geschwindigkeit der Volltextsuche in meinen
+                  Blogposts verglichen:
                 </p>
 
                 <ul>
@@ -284,61 +284,63 @@
 
                 <p>
                   Das Ergebnis überraschte mich. Ich hatte erwartet, dass SQLite
-                  schneller sein würde. Ich fragte mich, warum das so ist, und
-                  kam zu dem Schluss, dass die Hauptursache der Verbindungspool
-                  liegt.
+                  schneller wäre. Ich habe darüber nachgedacht, warum das so
+                  sein könnte, und bin zu dem Schluss gekommen, dass der
+                  Hauptgrund das Connection Pooling ist:
                 </p>
 
                 <ul>
                   <li>
                     Meine SQLite-Version der Anwendung öffnete und schloss die
-                    Verbindung zur Datenbank bei jedem HTTP-Anfrage des Clients.
+                    Datenbankverbindung bei jedem HTTP-Antrag des Clients.
                   </li>
                   <li>
-                    Im PostgreSQL-Modus habe ich hingegen zunächst den
+                    Bei der PostgreSQL-Version habe ich hingegen von Anfang an
                     Connection Pooling über die Go-Bibliothek
                     <em>jackc/pgx/v5/pgxpool</em> aktiviert.
                   </li>
                 </ul>
 
                 <p>
-                  Ich werde mich nicht tiefer in dieses Thema vertiefen. Es
-                  genügt, dass die Suche jetzt schnell funktioniert.
+                  Ich werde mich jedoch vorerst nicht tiefer in dieses Thema
+                  einarbeiten. Es reicht aus, dass die Suche schnell
+                  funktioniert.
                 </p>
 
                 <p>
                   Die Suche ist auf der Seite
                   <a
-                    href="http://smartprogress.do/site/redirect/?url=https%3A%2F%2Fhinst.github.io%2Fdynamic%2F%23%2Fpersonal-goals-search"
+                    href="https://hinst.github.io/dynamic/#/personal-goals-search"
                     target="_blank"
-                    >https://hinst.github.io/dynamic/#/personal-goals-s...</a
+                    >https://hinst.github.io/dynamic/#/personal-goals-s&hellip;</a
                   >
-                  verfügbar. Man kann zum Beispiel das Wort "Pascal" eingeben
-                  und alle meinen öffentlichen Beiträge mit Erwähnungen von
-                  Pascal finden. Die Antwortzeit für Anfragen wird allerdings
-                  etwas länger sein, da TailScale etwa 100 Millisekunden Latenz
-                  hinzufügt 🐌
+                  verfügbar. Man kann zum Beispiel das Wort Pascal eingeben und
+                  alle meine öffentlichen Beiträge finden, in denen Pascal
+                  erwähnt wird. Die Antwortzeit für die Anfrage wird dort etwas
+                  länger sein, da TailScale eine Verzögerung von etwa 100
+                  Millisekunden verursacht 🐌
                 </p>
 
                 <p>
-                  Ich habe bereits wöchentliche Sicherungskopien der Datenbank
-                  über das Kommando <strong>pg_dump</strong> eingerichtet und
-                  alle alten Reste der SQLite-Integration entfernt. Laut meinen
-                  Berechnungen sollte PostgreSQL mit etwa 300 MB Arbeitsspeicher
-                  auskommen, während mein Orange Pi Mikrocomputer über 4 GB
-                  verfügt. Der Speicher ist also ausreichend.
+                  Ich habe bereits wöchentliche Datenbank-Backups über den
+                  Befehl <strong>pg_dump</strong> eingerichtet und alle alten
+                  Reste der SQLite-Integration entfernt. Meinen Berechnungen
+                  nach sollten etwa 300 MB Arbeitsspeicher für PostgreSQL
+                  ausreichen, und auf meinem Micro-Computer Orange Pi stehen 4
+                  GB zur Verfügung. Der Speicher reicht also vorerst im
+                  Überfluss aus.
                 </p>
 
                 <p>
-                  Ich habe meinen Schreibtisch neu angeordnet, um bequemer
-                  sitzen zu können. Hier sind die Bilder von vorher und nachher.
-                  Beim alten Design war das Schlimmste, dass mein Ellbogen in
-                  der Luft hing, ohne Unterstützung, und nach 8 Stunden Arbeit
-                  hatte ich schmerende Hände. Aber ein Pluspunkt des alten
-                  Designs war, dass das Tageslicht vom Monitor abgeschirmt war.
-                  Im neuen Design hindert das Fensterlicht allerdings am
-                  Arbeiten. Bei Sonnenuntergang muss ich die Helligkeit erhöhen,
-                  und nach dem Sonnenuntergang wieder verringern ☀️🫡
+                  Ich habe meinen Schreibtisch umgestellt, damit ich bequemer
+                  sitzen kann. Auf dem Foto sieht man: vorher, nachher. Das
+                  Schlechteste an der alten Variante war, dass mein Ellbogen
+                  ohne Stütze in der Luft über dem Tisch hing, weshalb mir nach
+                  8 Stunden Arbeit der Arm weh tat. Der Vorteil der alten
+                  Variante war hingegen, dass das Tageslicht vom Monitor
+                  abgeschirmt war. In der neuen Variante stört das Licht aus dem
+                  Fenster. Bei Sonnenuntergang muss ich die Helligkeit erhöhen
+                  und nach Sonnenuntergang wieder dimmen ☀️🫡
                 </p>
               </div>
               <div style="display: flex; flex-wrap: wrap; gap: 10px">

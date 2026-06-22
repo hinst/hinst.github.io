@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/static/css/index.css" />
     <meta
       name="description"
-      content="Weekly Coding - 2025-07-28 - Wochenrückblick: Website-Optimierung, Docker-Fehler und Stable Diffusion-Experimentiereinheiten"
+      content="Weekly Coding - 2025-07-28 - Von Website-Optimierungen bis zu KI-Experimenten: Mein aktueller Tech-Update."
     />
     <meta http-equiv="content-language" content="de" />
     <title>Weekly Coding • 2025-07-28</title>
@@ -262,66 +262,63 @@
               "
             >
               <div class="goalPostViewText">
-                <p>Hallo zusammen. Es ist Zeit für einen Mini-Bericht.</p>
+                <p>Hallo zusammen, es ist Zeit für ein Mini-Update.</p>
 
                 <p>
-                  Letzte Woche habe ich etwa <strong>drei Stunden</strong> an
-                  meiner persönlichen Website
-                  <a
-                    href="http://smartprogress.do/site/redirect/?url=https%3A%2F%2Fhinst.github.io%"
-                    target="_blank"
+                  Letzte Woche habe ich etwa drei Stunden lang an meiner
+                  persönlichen Website
+                  <a href="https://hinst.github.io/" target="_blank"
                     >https://hinst.github.io/</a
                   >
-                  gearbeitet und eine kleine Optimierung vorgenommen: Das Laden
-                  von Bildern erfolgt nun direkt, ohne vorherige Umwandlung in
-                  Base64 und JSON. Diese Methode war ein Überbleibsel aus einer
-                  älteren Version meiner Website. Nach der Optimierung laden
-                  sich die Bilder schneller und es treten weniger Fehler auf.
-                  Die Probleme waren auf einige Browser zurückzuführen, die
-                  Links im Format <strong>data:image/png;base64</strong> nicht
-                  korrekt verarbeiten konnten.
+                  codiert und eine kleine Optimierung vorgenommen: Die Bilder
+                  werden jetzt direkt geladen. Früher wurden die Bilder in
+                  Base64 und JSON verpackt – das war ein „Vermächtnis“ aus der
+                  alten Version. Nach der Optimierung laden die Bilder schneller
+                  und es gibt weniger Bugs. Die Fehler entstanden dadurch, dass
+                  einige Browser Links im Format data:image/png;base64 nicht
+                  korrekt öffnen konnten.
                 </p>
 
                 <p>
-                  Zwei Stunden habe ich für Codeänderungen aufgewendet und noch
-                  einmal eine Stunde damit verbracht, herauszufinden, warum
-                  meine Docker-Bilder fehlerhaft waren. Offenbar hat ein Update
-                  bei Docker dazu geführt, dass der Parameter
-                  <strong>--platform</strong> nun über die Kommandozeile
-                  angegeben werden muss, anstatt ihn im Dockerfile mit FROM zu
-                  spezifizieren.
+                  Zwei Stunden sind für die Code-Änderungen draufgegangen, und
+                  noch eine Stunde habe ich benötigt, um zu verstehen, warum
+                  meine Docker-Builds kaputt gegangen sind. Es scheint, dass in
+                  einem der Updates so eingestellt wurde, dass &ndash;platform
+                  nun auf Kommandozeilenebene angegeben werden muss, während die
+                  Angabe von &ndash;platform im Dockerfile bei FROM nicht mehr
+                  ausreicht.
                 </p>
 
                 <p>
-                  Ich habe die neue Stable Diffusion-Modellversion getestet,
-                  nämlich das Modell <strong>Flux Kontext</strong>. Es
-                  ermöglicht es, durch Textanweisungen Änderungen am Bild zu
-                  fordern. Die Funktionalität ist beeindruckend, aber es gibt
-                  auch einige Fehler: Manchmal sind die Farben zu intensiv. Wenn
-                  ich beispielsweise schreibe "die Farbe der Jacke auf Gelb
-                  ändern", wird das Ergebnis eher wie eine mit einem Leuchtstift
-                  bemalte Jacke aussehen. Ein weiterer Fehler besteht darin,
-                  dass das Modell manchmal den Auftrag nicht versteht und das
-                  Bild unverändert lässt. Leider kann es keine Fehlermeldung
-                  während des Prozesses abgeben, sodass man erst am Ende
-                  feststellt, dass das Bild gleichgeblieben ist.
+                  Ich habe ein neues Stable Diffusion Modell installiert und
+                  ausprobiert. Das Modell heißt Flux Kontext und ermöglicht es,
+                  Änderungen an einem Bild mittels Textanfrage zu verlangen. Das
+                  Modell funktioniert überraschend gut&hellip; Aber es gibt auch
+                  Fehler: Manchmal wird die Farbe viel zu grell. Zum Beispiel
+                  schreibe ich „ändere die Farbe der Jacke in Gelb“, und das
+                  Ergebnis sieht so aus, als wäre die Jacke mit leuchtender
+                  Druckerfarbe übergossen worden. Es kommt auch vor, dass das
+                  Modell überhaupt nicht versteht, was es tun soll, und das Bild
+                  einfach unverändert lässt. Aber das Modell kann dies nicht
+                  sofort melden: Man muss den gesamten Zyklus abwarten, um am
+                  Ende ein identisches Bild zu sehen.
                 </p>
 
                 <p>
-                  Interessanterweise wird in der Beschreibung von Flux Kontext
-                  eine Mindestmenge an Videopramm (20 GB) angegeben, tatsächlich
-                  reichen aber nur etwa <strong>10-12 GB</strong>.
+                  Interessanterweise wird in dem Artikel zu Flux Kontext
+                  mindestens 20 GB Videospeicher angegeben, aber in der Praxis
+                  reichen gerade mal 10–12 GB aus.
                 </p>
 
                 <p>
-                  Ich möchte gerne ein neues manuelles Bild erstellen, aber wann
-                  ich dafür Zeit finde, ist noch ungewiss 😤.
+                  Ich möchte anfangen, eine neue Zeichnung von Hand zu
+                  erstellen, aber wann ich dafür die passende Zeit finde, ist
+                  noch offen 😤
                 </p>
 
                 <p>
-                  Zusätzliche Anmerkung: Aus heiterem Himmel hat
-                  <strong>SmartProgress</strong> meine alte Profil-Ikone
-                  gelöscht. Ich musste eine neue installieren.
+                  P.S. SmartProgress hat irgendwie ganz unerwartet mein altes
+                  Profilicon gelöscht 🗑️ Ich musste ein neues setzen.
                 </p>
               </div>
               <div style="display: flex; flex-wrap: wrap; gap: 10px">

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/static/css/index.css" />
     <meta
       name="description"
-      content="Weekly Coding - 2025-07-21 - Optimierungstipps für Ihren Laptop: So maximieren Sie den Arbeitsspeicher"
+      content="Weekly Coding - 2025-07-21 - So optimierst du effektiv den Speicher deines Linux-Systems für maximale Performance."
     />
     <meta http-equiv="content-language" content="de" />
     <title>Weekly Coding • 2025-07-21</title>
@@ -264,94 +264,103 @@
               <div class="goalPostViewText">
                 <p>
                   Hallo zusammen. Letzte Woche habe ich in meiner Freizeit nicht
-                  viel codiert, aber ich habe verschiedene Optimierungen an
-                  meinen Computern vorgenommen, daher möchte ich über diese
-                  berichten.
+                  gecodet, sondern verschiedene Optimierungen an meinen
+                  Computern durchgeführt, daher werde ich euch davon erzählen.
                 </p>
 
                 <p>
-                  Mein Arbeits-Laptop verfügt derzeit über 16 GB
-                  Arbeitsspeicher. Wie sich herausgestellt hat, sind 16 GB im
-                  Jahr 2025 schon wenig. Docker, Electron und Intellij
-                  verbrauchen den gesamten Speicher. Daher habe ich mir
-                  überlegt, wie man den Speicher auf Linux optimal nutzen kann.
+                  Mein Arbeitslaptop hat derzeit 16 GB Arbeitsspeicher verbaut.
+                  Wie sich herausstellte, sind 16 GB im Jahr 2025 schon wenig.
+                  Docker, Electron und IntelliJ haben den gesamten Speicher
+                  gefressen. Daher habe ich mir überlegt, wie man den Speicher
+                  unter Linux so weit wie möglich optimieren kann.
                 </p>
 
-                <h3>ZSWAP</h3>
+                <p><strong>ZSWAP</strong></p>
+
                 <p>
-                  Ich halte diese Optimierung für die nützlichste und habe sie
-                  ständig aktiviert. Die Idee ist, dass der Swap-Dateien
-                  komprimiert auf der Festplatte gespeichert wird. Es wäre
-                  praktisch, wenn Linux diese Optimierung standardmäßig auf
-                  allen Computern mit erfüllten Mindestsystemanforderungen
-                  aktivieren würde, aber das tut es nicht.
+                  Ich halte diese Optimierung für extrem nützlich und lasse sie
+                  ständig aktiviert. Der Kern dieser Optimierung besteht darin,
+                  dass die Swap-Datei auf der Festplatte in komprimierter Form
+                  gespeichert wird. Es wäre praktisch, wenn Linux diese
+                  Optimierung standardmäßig auf allen Rechnern aktivieren würde,
+                  die die Mindestanforderungen erfüllen, aber das ist nicht der
+                  Fall.
                 </p>
 
-                <h3>ZRAM</h3>
+                <p><strong>ZRAM</strong></p>
+
                 <p>
-                  Ich bin skeptisch gegenüber dieser Optimierung. Es gibt zwei
-                  Gründe:
+                  Eine fragwürdige Optimierung, sie hat mir nicht gefallen.
+                  Dafür gibt es zwei Gründe:
                 </p>
+
                 <ul>
                   <li>
-                    Erstens muss man einen festen Speicheranteil für ZRAM
-                    reservieren. Wie viel? Niemand weiß es genau. Man könnte 30
-                    %, 50 % oder 70 % nehmen. Aber wie viel ist das im
-                    Verhältnis zum Gesamtspeicher?
+                    Erstens muss ein fixer Speicherbereich für ZRAM reserviert
+                    werden. Wie viel? Das weiß niemand. Es können 30 %, 50 %
+                    oder 70 % sein. Das bedeutet, dass ZSWAP effektiv mein
+                    gesamtes verfügbares Arbeitsspeichervolumen leicht
+                    reduziert.
                   </li>
                   <li>
-                    Zweitens, wenn ZSWAP bereits aktiviert ist, warum dann noch
-                    ZRAM hinzufügen? Außerdem stehen sie sich gegenseitig im Weg
-                    und die Statistiken sind ungenau, wenn beide gleichzeitig
-                    aktiviert sind.
+                    Zweitens: Wenn man bereits ZSWAP hat, wozu braucht man dann
+                    noch ZRAM zusätzlich? Zudem widersprechen sie sich und
+                    zeigen falsche Statistiken an, wenn beide aktiviert sind.
                   </li>
                 </ul>
 
-                <h3>Kernel Same Page Merging (KSM)</h3>
+                <p><strong>Kernel Same Page Merging, KSM</strong></p>
+
                 <p>
-                  Eine sehr raffinierte Optimierung, deren Einstellung ziemlich
-                  kompliziert ist. Seiten im Speicher mit identischem Inhalt
-                  werden zu einer zusammengefasst. Ich dachte, diese Optimierung
-                  wäre sehr nützlich, weil Programme in Electron und
-                  Browser-Tabs alle auf Webkit laufen... Aber in der Praxis sind
-                  es nur 500 MB Kompression bei 20 GB Speicher, also etwa 2,5 %.
-                  Einerseits wenig, andererseits wird ungenutzter Speicher
-                  freigegeben – super! Ich habe diese Optimierung aktiviert,
-                  aber wenn mein Laptop von der Batterie betrieben wird, hat sie
-                  keinen Sinn, da sie die CPU im Hintergrund belastet.
+                  Eine sehr raffinierte Optimierung, die ziemlich schwierig
+                  einzurichten ist. Speicherseiten mit identischem Inhalt werden
+                  zu einer Zusammenfassung kombiniert. Ich dachte, dass diese
+                  Optimierung sehr nützlich sein müsste, da viele Electron-Apps
+                  und Browser-Tabs auf Webkit basieren – man könnte sie also
+                  alle zusammenführen&hellip; In der Praxis erhalten wir jedoch
+                  eine Kompression von 500 MB bei 20 GB Speicher. Das sind etwa
+                  2,5 %. Einerseits ist das wenig. Andererseits kommt der freie
+                  Speicher aus dem Nichts – was cool ist. Ich lasse diese
+                  Optimierung vorerst aktiviert. Aber wenn der Laptop mit Akku
+                  betrieben wird, macht diese Optimierung keinen Sinn, da sie im
+                  Hintergrund die CPU belastet.
                 </p>
 
-                <h3>BTRFS</h3>
+                <p><strong>BTRFS</strong></p>
+
                 <p>
-                  Es gibt automatische Kompression für das Dateisystem. Leider
-                  gibt es keinen einfachen Weg, sie über die
-                  Grafikbenutzeroberfläche zu aktivieren; man muss in der
-                  Terminal-Konsole herumfummeln (in Windows kann man es mit
-                  einem Klick in den Laufwerkseigenschaften aktivieren). Ich
-                  habe die Kompression für meine gesamte Festplatte aktiviert
-                  und es gibt einen angemessenen Gewinn.
+                  Es gibt eine automatische Kompression für das Dateisystem.
+                  Leider gibt es keinen einfachen Weg, sie über die grafische
+                  Benutzeroberfläche (GUI) zu aktivieren; man muss sich im
+                  Terminal herumschlagen. (Unter Windows geht das mit einem
+                  Klick in den Festplatteneigenschaften). Ich habe die
+                  Kompression für meine gesamte Festplatte aktiviert und der
+                  Gewinn ist sehr ordentlich.
                 </p>
 
-                <h3>Fazit:</h3>
+                <p><strong>Fazit:</strong></p>
+
                 <ul>
                   <li>
-                    ZSWAP: Immer aktivieren, außer bei sehr alten schwächeren
+                    ZSWAP 🟢 immer aktivieren, außer auf sehr alten, schwachen
                     Computern
                   </li>
-                  <li>ZRAM: Kann man machen, aber ist es nötig?</li>
+                  <li>ZRAM 🟡 kann man machen, aber ist es notwendig?</li>
                   <li>
-                    KSM: Kann man aktivieren, aber nicht auf einem Laptop, der
-                    von der Batterie betrieben wird
+                    KSM 🟡 kann man machen, aber nicht im mobilen Einsatz
+                    (Akkubetrieb)
                   </li>
                   <li>
-                    BTRFS: Immer komprimieren aktivieren, außer bei sehr alten
-                    schwächeren Computern
+                    BTRFS 🟢 immer die Kompression aktivieren, außer natürlich
+                    auf sehr alten, schwachen Computern
                   </li>
                 </ul>
 
                 <p>
-                  Das war's für diese Woche. Ich plane, mich in LeetCode
-                  reinzuhängen und die Aufgabe Nummer 200 zu knacken.
+                  Das ist es erst einmal vorerst. Diese Woche plane ich, mich
+                  durch LeetCode zu kämpfen 🥵💻 und Aufgabe Nummer 200 zu
+                  erreichen.
                 </p>
               </div>
               <div style="display: flex; flex-wrap: wrap; gap: 10px">

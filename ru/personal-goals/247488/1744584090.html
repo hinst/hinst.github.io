@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/static/css/index.css" />
     <meta
       name="description"
-      content="Кодить каждую неделю 8 часов - 2025-04-13 - Перенесение хранилища на SQLite: улучшение производительности и организация кода на персональном веб-сайте"
+      content="Кодить каждую неделю 8 часов - 2025-04-13 - Как я потратил 15 часов на рефакторинг своего проекта и сложный переход с JSON на SQLite."
     />
     <meta http-equiv="content-language" content="ru" />
     <title>Кодить каждую неделю 8 часов • 2025-04-13</title>
@@ -263,39 +263,43 @@
             >
               <div class="goalPostViewText">
                 <p>Добрый вечер 🌙</p>
+
                 <p>
                   В эту неделю я усердно делал мой персональный веб-сайт, и
                   потратил на это 15 часов
                 </p>
+
                 <ul>
                   <li>
                     Код:
                     <a
-                      href="http://smartprogress.do/site/redirect/?url=https%3A%2F%2Fgithub.com%2Fhinst%2Fhinst-website"
+                      href="https://github.com/hinst/hinst-website"
                       target="_blank"
                       >https://github.com/hinst/hinst-website</a
                     >
                   </li>
                   <li>
                     Сайт:
-                    <a
-                      href="http://smartprogress.do/site/redirect/?url=https%3A%2F%2Fhinst.github.io"
-                      target="_blank"
+                    <a href="https://hinst.github.io" target="_blank"
                       >https://hinst.github.io</a
                     >
                   </li>
                 </ul>
+
                 <p>Вот какие штуки удалось сделать:</p>
+
                 <ul>
                   <li>
                     Я перевёл хранилище с JSON-файлов на SQLite
+
                     <ul>
                       <li>
                         В результате, скорость загрузки моего веб-сайта
                         улучшилась: было 52 миллисекунды, а стало 32
-                        миллисекунды... Это в локальной сети, а вот доступ через
-                        TailScale добавляет ещё 200 миллисекунд, так что
-                        "почувствовать" улучшение на практике не удастся ⌚🤔💭
+                        миллисекунды&hellip; Это в локальной сети, а вот доступ
+                        через TailScale добавляет ещё 200 миллисекунд, так что
+                        &ldquo;почувствовать&rdquo; улучшение на практике не
+                        удастся ⌚🤔💭
                       </li>
                       <li>
                         В целом есть ощущение, что в коде стало чуть больше
@@ -311,6 +315,7 @@
                   <li>
                     Файлы в проекте с кодом теперь разложены более чётко по
                     четырём папкам 📂
+
                     <ul>
                       <li><strong>src/typescript</strong></li>
                       <li><strong>src/tsx</strong></li>
@@ -324,6 +329,7 @@
                   </li>
                   <li>Ещё разные маленькие улучшения и исправления</li>
                 </ul>
+
                 <p>
                   Самое большое и сложное изменение было: перевести хранилище
                   полностью в SQLite, на это ушла куча времени. Обновлять

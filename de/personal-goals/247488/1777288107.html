@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/static/css/index.css" />
     <meta
       name="description"
-      content="Weekly Coding - 2026-04-27 - Linux-Reise: Von Problemen zu einer neuen Umgebung"
+      content="Weekly Coding - 2026-04-27 - Zwischen VPN-Bugs und OS-Wechseln: Mein aktuelles Update im Programmiertagebuch."
     />
     <meta http-equiv="content-language" content="de" />
     <title>Weekly Coding • 2026-04-27</title>
@@ -263,52 +263,59 @@
             >
               <div class="goalPostViewText">
                 <h3>Linux-Einrichtung</h3>
+
                 <p>
-                  Hallo zusammen. Es ist wieder Zeit für meinen wöchentlichen
-                  Eintrag in meinem Programmierer-Tagebuch.
+                  Hallo zusammen. Es ist Zeit für den wöchentlichen Eintrag in
+                  meinem Programmier-Tagebuch.
                 </p>
+
                 <p>
-                  Am Wochenende habe ich hart daran gearbeitet, Linux auf meinem
-                  ThinkPad-Laptop einzurichten. Ich habe ein Problem mit dem VPN
-                  gelöst. Es stellte sich heraus, dass der Fehler auf
-                  fehlerhaften Einstellungen auf der Seite des VPN-Servers lag:
-                  Er schickte seine eigene IP-Adresse in den VPN-Tunnel, wodurch
-                  eine unendliche Rekursion entstand: Tunnel innerhalb von
-                  Tunneln innerhalb von Tunneln... Ich habe einen seltsamen Pfad
-                  in die pull-ignore-Datei hinzugefügt.
+                  Am Wochenende habe ich fleißig mein Linux auf meinem ThinkPad
+                  Laptop eingerichtet. Ich habe einen VPN-Bug besiegt. Es
+                  stellte sich heraus, dass der Fehler durch fehlerhafte
+                  Einstellungen auf Seiten des VPN-Servers verursacht wurde: Er
+                  leitete seine eigene IP in den VPN-Tunnel weiter, wodurch eine
+                  endlose Rekursion entstand – Tunnel im Tunnel im
+                  Tunnel&hellip; Ich habe den fehlerhaften Pfad zu pull-ignore
+                  hinzugefügt.
                 </p>
-                <p>Ich habe ein neues Betriebssystem installiert: Ubuntu 26.</p>
+
+                <p>Ich habe ein neues Betriebssystem installiert: Ubuntu 26</p>
+
                 <ul>
-                  <li>Ehemals: Kubuntu 25, KDE 6, Xorg</li>
-                  <li>Neu: Ubuntu 26, GNOME 50, Wayland</li>
+                  <li>Vorher: Kubuntu 25, KDE 6, Xorg</li>
+                  <li>Nachher: Ubuntu 26, Gnome 50, Wayland</li>
                 </ul>
+
                 <p>
-                  Ich habe einige unangenehme Momente mit GNOME bemerkt, aber
-                  sie sind ertragbar – nichts Kritisches.
+                  Ich habe einige unpraktische Details in Gnome bemerkt, aber
+                  die kann man hinnehmen; nichts Kritisches.
                 </p>
+
                 <ul>
                   <li>
-                    Intellij IDEA friert im Wayland-Modus stark ein. Ich musste
-                    auf Kompatibilitätsmodus X11 umschalten.
+                    IntelliJ IDEA ruckelt massiv im Wayland-Modus. Ich musste
+                    auf den X11-Kompatibilitätsmodus umstellen.
                   </li>
                 </ul>
+
                 <p>
-                  Ursprünglich hatte ich geplant, das Betriebssystem zu
-                  wechseln, weil es Probleme mit dem VPN gab, und ich dachte,
-                  der Fehler läge bei Linux... Aber letztendlich stellte sich
-                  heraus, dass der Fehler woanders lag und ich weiterhin die
-                  alte Version verwenden konnte. Schade... Zwei ganze
-                  Wochenenden für die Einrichtung meiner Umgebung draufgegangen.
+                  Ursprünglich hatte ich geplant, das Betriebssystem wegen des
+                  VPN-Bugs zu wechseln, da ich dachte, der Fehler läge am Linux
+                  selbst&hellip; Aber letztendlich stellte sich heraus, dass der
+                  Bug woanders lag und ich eigentlich auf der alten Version
+                  hätte bleiben können. Tja&hellip; Am Ende haben die
+                  Einrichtung der Umgebung beide Wochenendtage gekostet: Samstag
+                  und Sonntag.
                 </p>
+
                 <p>
-                  Ich habe mir ein Repository erstellt: eine Wissensbasis. Darin
-                  werde ich verschiedene Notizen und Einstellungen festhalten.
-                  Früher habe ich Notizen in Google Keep und GitHub Gist
-                  gemacht, aber der Ansatz mit dem Repository gefällt mir
-                  besser.
-                  <a
-                    href="http://smartprogress.do/site/redirect/?url=https%3A%2F%2Fgithub.com%2Fhinst%2FKnowledge"
-                    target="_blank"
+                  Ich habe mir ein eigenes Repository erstellt: eine
+                  Wissensdatenbank. Dort werde ich verschiedene Notizen und
+                  Einstellungen festhalten. Früher habe ich meine Notizen in
+                  Google Keep und GitHub Gists gespeichert, aber der Ansatz mit
+                  dem Repository gefällt mir besser.
+                  <a href="https://github.com/hinst/Knowledge" target="_blank"
                     >https://github.com/hinst/Knowledge</a
                   >
                 </p>

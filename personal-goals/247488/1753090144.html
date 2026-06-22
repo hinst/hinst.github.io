@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/static/css/index.css" />
     <meta
       name="description"
-      content="Weekly Coding - 2025-07-21 - Maximizing Memory Optimization on Linux: A Comprehensive Guide"
+      content="Weekly Coding - 2025-07-21 - How I Optimized My Linux System&#39;s Memory Performance Using ZSWAP, KSM, and BTRFS"
     />
     <meta http-equiv="content-language" content="en" />
     <title>Weekly Coding • 2025-07-21</title>
@@ -263,99 +263,96 @@
             >
               <div class="goalPostViewText">
                 <p>
-                  Hello everyone. Last week I didn't code during my free time,
-                  but I tinkered with various optimizations on my computers, so
-                  let's talk about those.
+                  Hello everyone. Last week I didn&rsquo;t do any coding in my
+                  free time, but I was messing around with various optimizations
+                  on my computers, so I’m going to tell you about them.
                 </p>
 
                 <p>
-                  My work laptop currently has 16GB of RAM onboard. As it turns
-                  out, 16GB in 2025 is already considered low. Docker, Electron,
-                  and IntelliJ ate up all the memory. So I thought about how to
-                  maximize memory optimization on Linux.
+                  My work laptop currently has 16 GB of RAM onboard. As it turns
+                  out, 16 GB is already quite little in 2025. Docker, Electron,
+                  and IntelliJ were eating up all the memory. Therefore, I
+                  started thinking about how to maximize memory optimization on
+                  Linux.
                 </p>
 
                 <p><strong>ZSWAP</strong></p>
 
                 <p>
-                  I believe this is the most useful optimization, and I keep it
-                  enabled all the time. The idea behind it is that the swap file
-                  is stored on the disk in compressed format. It would be
-                  convenient if Linux automatically enabled this optimization
-                  for all computers meeting minimum system requirements, but
-                  that's not the case.
+                  I consider this optimization extremely useful and keep it
+                  permanently enabled. The essence of the optimization is that
+                  the swap file is stored on the disk in a compressed state. It
+                  would be convenient if Linux turned this optimization on by
+                  default for all computers meeting minimum system requirements,
+                  but unfortunately, it doesn&rsquo;t.
                 </p>
 
                 <p><strong>ZRAM</strong></p>
 
                 <p>
-                  I found this optimization questionable and didn't like it.
-                  There are two reasons:
+                  A questionable optimization; I didn&rsquo;t like it. There are
+                  two reasons:
                 </p>
 
                 <ul>
                   <li>
-                    First, you have to allocate a fixed amount of memory for
-                    ZRAM. How much? No one knows. It could be 30%, 50%, or 70%.
-                    But giving up some of my total RAM reduces the effectiveness
-                    of ZSWAP.
+                    First, you have to allocate a certain fixed amount of memory
+                    for ZRAM. How much? No one knows. You can do 30%, 50%, or
+                    70%. But how much [exactly]? It turns out ZRAM ends up
+                    reducing my overall available memory slightly.
                   </li>
                   <li>
-                    Second, if ZSWAP is already enabled, then why use ZRAM as
-                    well? They conflict, and the statistics show incorrect
-                    values when both are active.
+                    Second, if you already have ZSWAP, why add ZRAM on top of
+                    it? Besides, they conflict with each other, and incorrect
+                    statistics are shown when both are enabled.
                   </li>
                 </ul>
 
                 <p><strong>Kernel Same Page Merging (KSM)</strong></p>
 
                 <p>
-                  A very clever optimization that's hard to configure. Pages of
-                  memory with identical content are merged into one. I thought
-                  this should be incredibly useful since programs on Electron
-                  and browser tabs all run on Webkit, so combining them would
-                  make sense... But in practice, I only get about 500MB
-                  compression out of 20GB of RAM, which is only 2.5%. While
-                  that's not much, it's nice to have extra free memory.
-                </p>
-
-                <p>
-                  I'm keeping this optimization enabled for now but if my laptop
-                  runs on battery power, it doesn't make sense as it loads the
-                  CPU in the background.
+                  A very subtle optimization that is quite difficult to
+                  configure. Memory pages with identical content are merged into
+                  one. It occurred to me that this optimization should be very
+                  useful because Electron apps and browser tabs all run on
+                  WebKit, so they could all be merged&hellip; But in practice,
+                  we get 500 MB of compression on 20 GB of memory. That&rsquo;s
+                  about 2.5%. On one hand, it&rsquo;s small. On the other hand,
+                  free memory comes from nowhere—pretty cool, right? I’m keeping
+                  this optimization enabled for now. However, when the laptop is
+                  running on battery, this optimization makes no sense because
+                  it loads the CPU in the background.
                 </p>
 
                 <p><strong>BTRFS</strong></p>
 
                 <p>
-                  There's automatic compression for the file system.
-                  Unfortunately, there's no simple way to enable it through the
-                  GUI; you have to use the terminal (which is easy in Windows
-                  where you can do this with a single click in disk properties).
-                  I enabled compression on my entire disk and saw a significant
-                  gain.
+                  There is automatic compression for the filesystem.
+                  Unfortunately, there is no simple way to enable it via a GUI;
+                  you have to dig into the terminal. (In Windows, it can be done
+                  with one click in disk properties). I enabled compression for
+                  my entire drive, and the profit is quite decent.
                 </p>
 
-                <p><strong>Conclusion:</strong></p>
+                <p><strong>Summary:</strong></p>
 
                 <ul>
                   <li>
-                    ZSWAP ✅ Always enable, except for very old and underpowered
-                    computers
+                    ZSWAP 🟢 always enable, except for very old, weak computers.
                   </li>
-                  <li>ZRAM 🚫 Maybe, but is it really needed?</li>
+                  <li>ZRAM 🟡 optional, but is it necessary?</li>
                   <li>
-                    KSM 🚫 Only if you're not using a laptop on battery power
+                    KSM 🟡 optional, but only not on laptops [on battery].
                   </li>
                   <li>
-                    BTRFS ✅ Always enable compression, again except for very
-                    old and underpowered computers
+                    BTRFS 🟢 always enable compression, except for very old,
+                    weak computers, of course.
                   </li>
                 </ul>
 
                 <p>
-                  That's all for now. This week I plan to focus on LeetCode 🥵💻
-                  and aim to reach problem number 200.
+                  That’s all for now. This week I plan to push myself on
+                  LeetCode 🥵💻 and reach problem number 200.
                 </p>
               </div>
               <div style="display: flex; flex-wrap: wrap; gap: 10px">

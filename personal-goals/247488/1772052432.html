@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/static/css/index.css" />
     <meta
       name="description"
-      content="Weekly Coding - 2026-02-25 - Website Updates, Cloud Storage Woes, and February Goals: A Weekly Diary Report"
+      content="Weekly Coding - 2026-02-25 - Polishing the Final Details and Navigating New Cloud Storage Frustrations"
     />
     <meta http-equiv="content-language" content="en" />
     <title>Weekly Coding • 2026-02-25</title>
@@ -262,91 +262,123 @@
               "
             >
               <div class="goalPostViewText">
-                <p>It's time to write a weekly diary report 📅</p>
+                <p>
+                  It&rsquo;s time to write the progress report/diary for last
+                  week 🗓️
+                </p>
 
                 <p><strong>-= Personal Website =-</strong></p>
+
                 <p>
-                  Improved HTML page formatting for my static website generation
-                  program using <strong>Prettier</strong> instead of
-                  <strong>yosssi/gohtml</strong>. The latter struggled with
-                  mixing spaces and tabs.
+                  I improved the formatting of my HTML pages, which my program
+                  generates for the static version of the website.
                 </p>
+
                 <ul>
-                  <li>Old: <strong>yosssi/gohtml</strong></li>
                   <li>
-                    New: <strong>Prettier</strong> (in a separate Docker
-                    container with 16MB RAM)
+                    Was: formatting using the
+                    <strong>yosssi/gohtml</strong> package
+
+                    <ul>
+                      <li>Performed poorly with a mix of spaces and tabs</li>
+                    </ul>
+                  </li>
+                  <li>
+                    Now: formatting using the <strong>Prettier</strong> package
+
+                    <ul>
+                      <li>
+                        Prettier lives in a separate Docker container. It
+                        consumes very little memory—only 16 MB of RAM at idle.
+                      </li>
+                    </ul>
                   </li>
                 </ul>
 
                 <p>
-                  Planning to make minor updates to my personal website. For
-                  now, I feel the project is complete and won't be doing any
-                  major changes. I've already experimented with various
-                  interesting aspects:
+                  I plan to keep making various small updates for my personal
+                  website. Overall, the project feels finished to me at the
+                  moment, and I don&rsquo;t intend to make any major updates.
+                  I’ve already tried all the interesting things on this project:
                 </p>
+
                 <ul>
                   <li>
                     LLM API for automatic translations into other languages
                   </li>
-                  <li>Dynamic React.js vs Server-side HTML rendering</li>
+                  <li>Dynamic React.js vs HTML server-side rendering</li>
                   <li>SQLite vs PostgreSQL</li>
                   <li>Search Engine Indexing</li>
                 </ul>
+
                 <p>
-                  While there's room to delve deeper and develop new features,
-                  finding motivation will be challenging as the project's
-                  novelty has worn off 😔. Future updates will likely be lazy.
+                  I could continue to delve deeper into different topics and
+                  develop features, but it will be hard to find the motivation
+                  since the sense of novelty has worn off 😔🚿 Future updates
+                  promise to be lazy ones.
                 </p>
 
                 <p><strong>-= Goals for February =-</strong></p>
+
                 <ol>
                   <li>
-                    Migrate personal website to PostgreSQL -
-                    <span style="font-weight: bold">Completed</span>
+                    Personal website moves to PostgreSQL
+
+                    <ol>
+                      <li>✅ Done</li>
+                    </ol>
                   </li>
                   <li>
-                    Compare post search speed: SQLite vs PostgreSQL -
-                    <span style="font-weight: bold">Completed</span>
+                    Compare search speed by posts: SQLite vs PostgreSQL
+
+                    <ol>
+                      <li>✅ Done</li>
+                    </ol>
                   </li>
                   <li>
-                    Sort personal files in the cloud: organize useful, delete
-                    useless -
+                    Sorting personal files in the cloud: organize what&rsquo;s
+                    needed, delete useless stuff
+
                     <ol>
                       <li>
-                        Made some progress. Deleted several large files and a
-                        lot of extra photos from Yandex Disk.
+                        ⏯️ There is some progress. I deleted several large files
+                        and a bunch of extra photos from Yandex Disk.
                       </li>
                     </ol>
                   </li>
                 </ol>
 
-                <p><strong>-= Issues with Yandex Disk =-</strong></p>
+                <p><strong>-= Problems with Yandex Disk =-</strong></p>
+
                 <p>
-                  Currently, I have 40 out of 53GB used on Yandex Disk. Overall,
-                  Yandex Disk is a convenient storage solution. For today's
-                  standards, 50GB free storage is amazing. However, there are
-                  some drawbacks:
+                  Currently, I have 40 out of 53 GB occupied in the Yandex Disk
+                  cloud. Overall, Yandex Disk is a convenient storage solution.
+                  By today&rsquo;s standards, a free 50 GB storage space is a
+                  beauty. But there are also some problems:
                 </p>
+
                 <ol>
                   <li>
-                    They removed unlimited photo storage. It existed before 🤔💭
+                    🚫 The &ldquo;unlimited for photos&rdquo; was removed. It
+                    used to be there 🤔💭
                   </li>
                   <li>
-                    They also removed WebDav protocol support. It was available
-                    before 🌐🕊️
+                    🚫 The WebDav protocol was removed. It used to be there 🌐🕊️
                   </li>
                   <li>
-                    Yandex Disk 4.0 moved to a new, messy Windows 11 API for
-                    file synchronization that I don't like, as synchronization
-                    is not straightforward. So, I'm staying with version 3.0.
+                    🪟 Disk version 4.0 moved to a new, buggy Windows 11 API for
+                    file synchronization, which I don&rsquo;t like at all
+                    because the sync is not consistent—it’s somewhat selective.
+                    Therefore, I am staying on version 3.0.
                   </li>
                 </ol>
+
                 <p>
-                  Eventually, free gigabytes will be limited, and they'll cut
-                  off Disk 3.0 from the API. Then I'll need to find a new cloud
-                  storage provider. But that's for the future; for now, I'm
-                  sticking with Yandex Disk.
+                  I think that sooner or later they will take away the free
+                  gigabytes, and Disk 3.0 will be cut off from the API. At that
+                  point, I&rsquo;ll need to look for a new cloud storage
+                  provider. But that’s for the future; for now, I continue to
+                  use Yandex Disk.
                 </p>
               </div>
               <div style="display: flex; flex-wrap: wrap; gap: 10px">

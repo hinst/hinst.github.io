@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/static/css/index.css" />
     <meta
       name="description"
-      content="Weekly Coding - 2025-08-04 - Optimizing Linux: Disk Space Savings and Memory Management"
+      content="Weekly Coding - 2025-08-04 - Weekly Progress Report: Conquering Hard LeetCode Challenges and Measuring Linux Optimizations"
     />
     <meta http-equiv="content-language" content="en" />
     <title>Weekly Coding • 2025-08-04</title>
@@ -262,64 +262,98 @@
               "
             >
               <div class="goalPostViewText">
-                <p>Hello everyone. It's time for my weekly report.</p>
+                <p>Hello everyone. It&rsquo;s time for the weekly report.</p>
 
                 <h3>LeetCode</h3>
+
                 <p>
                   Last week, I spent 8 hours on LeetCode. I solved six problems:
                 </p>
+
                 <ul>
                   <li>
-                    <strong>122. Best Time to Buy and Sell Stock II</strong> -
-                    Medium difficulty.
+                    122 Best Time to Buy and Sell Stock II
+
+                    <ul>
+                      <li>Medium problem</li>
+                    </ul>
                   </li>
                   <li>
-                    <strong>123. Best Time to Buy and Sell Stock III</strong> -
-                    Challenging. I tried to solve it on my own but failed, so I
-                    watched a tutorial video for this problem.
+                    123. Best Time to Buy and Sell Stock III<br />
+
+                    <ul>
+                      <li>
+                        Hard. I tried to solve it on my own but failed. I had to
+                        watch a tutorial video for this problem.
+                      </li>
+                    </ul>
                   </li>
                   <li>
-                    <strong>124. Binary Tree Maximum Path Sum</strong> -
-                    Challenging. I solved it without hints, although the
-                    previous problem could be considered a hint as they are
-                    similar in approach.
+                    124. Binary Tree Maximum Path Sum
+
+                    <ul>
+                      <li>
+                        Hard. Solved without hints, although the previous
+                        problem could be considered a hint in this case: the
+                        problems are solved in similar ways.
+                      </li>
+                    </ul>
                   </li>
                   <li>
-                    <strong>126. Word Ladder II</strong> - Challenging. I solved
-                    it without hints.
+                    126. Word Ladder II<br />
+
+                    <ul>
+                      <li>Hard. Solved without hints</li>
+                    </ul>
                   </li>
                   <li>
-                    <strong>126. Word Ladder</strong> - Surprisingly, Word
-                    Ladder 2 appears before Word Ladder 1 in the list? I copied
-                    the code from the previous problem.
+                    126. Word Ladder<br />
+
+                    <ul>
+                      <li>
+                        🤯 Why is Word Ladder 2 listed before Word Ladder 1??? I
+                        copied the code from the previous task.
+                      </li>
+                    </ul>
                   </li>
                   <li>
-                    <strong>128. Longest Consecutive Sequence</strong> - This is
-                    a strange problem with an artificial constraint: it must be
-                    an O(n) algorithm, so sorting isn't allowed. I watched a
-                    tutorial video for this problem but it was outdated;
-                    LeetCode has updated the tests for this task, and the
-                    solution from the video now gets a Time Limit Exceeded.
+                    128. Longest Consecutive Sequence
+
+                    <ul>
+                      <li>
+                        A strange problem with an artificial constraint: you
+                        need to write an O(n) algorithm, so you cannot sort the
+                        array. I watched a tutorial video for this task, but it
+                        turned out to be outdated: LeetCode authors updated the
+                        tests, and the solution from the video now gets
+                        &ldquo;Time Limit Exceeded.&rdquo;
+                      </li>
+                    </ul>
                   </li>
                 </ul>
 
                 <h3>Linux Optimizations</h3>
+
                 <p>
-                  In a previous post, I discussed Linux optimizations that I use
-                  on my laptop but didn't provide specific numbers on how much
-                  each optimization helps. Here they are:
+                  In one of my previous posts, I wrote about the Linux
+                  optimizations I use on my laptop but didn&rsquo;t provide
+                  specific numbers regarding how much benefit some of these
+                  optimizations actually provide. Here they are:
                 </p>
+
                 <ul>
-                  <li><strong>Btrfs</strong> - 46% disk space saved</li>
-                  <li><strong>ZSWAP</strong> - 50% disk space saved</li>
-                  <li><strong>KSM </strong> - 2.5% memory savings</li>
+                  <li><strong>Btrfs</strong> -46% disk</li>
+                  <li><strong>ZSWAP</strong> -50% disk</li>
+                  <li><strong>KSM</strong> -2.5% memory</li>
                 </ul>
+
                 <p>
                   It turns out that Btrfs and ZSWAP compression save almost half
-                  of the disk space 🤯 While KSM only saves memory a little bit:
-                  about 2.5%. It consumes approximately 2.9% CPU, though. I
-                  didn't measure the impact of Btrfs and ZSWAP on CPU since I
-                  couldn't find an easy way to do that.
+                  of the disk space 🤯 However, KSM only saves a tiny bit of
+                  memory: about 2.5% 🤔 At the same time, KSM consumes about
+                  2.9% CPU. As for the impact of Btrfs and ZSWAP on the CPU, I
+                  haven&rsquo;t measured it because I couldn&rsquo;t find an
+                  easy way to do so.
                 </p>
               </div>
               <div style="display: flex; flex-wrap: wrap; gap: 10px">

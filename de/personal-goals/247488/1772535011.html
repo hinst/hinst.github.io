@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/static/css/index.css" />
     <meta
       name="description"
-      content="Weekly Coding - 2026-03-03 - Optimierung und Herausforderungen: Vergleich von Prettier vs LLM, Suchmaschinenindizierung und Ziele für eine verbesserte persönliche Website im März"
+      content="Weekly Coding - 2026-03-03 - Wenn KI auf Code trifft: Meine technischen Hürden sowie die Roadmap für März."
     />
     <meta http-equiv="content-language" content="de" />
     <title>Weekly Coding • 2026-03-03</title>
@@ -262,88 +262,98 @@
               "
             >
               <div class="goalPostViewText">
-                <p>Es ist Zeit für einen neuen wöchentlichen Bericht 📖✒️</p>
+                <p>Es ist Zeit für den neuen Wochenbericht 📖✒️</p>
 
                 <h3>Prettier vs LLM 🌐</h3>
+
                 <p>
-                  Letzte Woche habe ich geschrieben, dass ich Prettier
-                  eingerichtet habe, um statische Webseiten auf meiner
-                  persönlichen Website zu formatieren. Damals dachte ich, die
-                  Funktion wäre fertig. Aber ich irrte mich. Später stellte ich
-                  fest, dass Prettier HTML-Dateien nicht formatiert, wenn sie
-                  Fehler enthalten - geschlossene Tags fehlen. Es scheint, als
-                  hätte LLM Schwierigkeiten bei der korrekten Verarbeitung von
-                  HTML-Tags. Ich verwende das Modell **aya-expanse-8b** mit
-                  folgendem Befehl:
-                </p>
-                <ul>
-                  <li>
-                    Du bist ein professioneller Russisch-zu-{Zielsprache}
-                    Übersetzer, spezialisiert auf Tagebucheinträge. Deine
-                    Aufgabe ist es, genaue und kontextbezogene Übersetzungen
-                    bereitzustellen und dabei alle HTML-Code-Tags zu bewahren.
-                    Keine Erklärungen oder Kommentare - nur die direkte
-                    Übersetzung
-                  </li>
-                </ul>
-                <p>
-                  Im Originaltext ist das HTML korrekt, aber nach der
-                  Verarbeitung durch LLM verschwinden einige Tags. Ich habe das
-                  Problem so gelöst: Ich zwinge LLM, die Verarbeitung zu
-                  wiederholen, bis Prettier "OK" sagt, mit einer Begrenzung von
-                  30 Versuchen.
-                </p>
-                <p>
-                  Ich machte auch weitere kleinere Korrekturen und
-                  Refactoring-Arbeiten.
+                  Letzte Woche habe ich geschrieben, dass ich
+                  <strong>Prettier</strong> für die Formatierung statischer
+                  Webseiten auf meiner persönlichen Website eingerichtet habe.
+                  In jenem Moment dachte ich, dass das Feature bereits fertig
+                  sei. Aber da habe ich mich geirrt. Kurz darauf stellte ich
+                  fest, dass Prettier die Formatierung einer HTML-Datei
+                  verweigert, wenn diese Fehler enthält – zum Beispiel falsch
+                  geschlossene Tags. Es hat sich herausgestellt, dass LLMs
+                  einige Probleme damit haben, HTML-Tags korrekt zu verarbeiten.
+                  Ich nutze das Modell <strong>aya-expanse-8b</strong> mit
+                  folgendem Prompt:
                 </p>
 
-                <h3>Suchmaschinenindizierung: 🕵️‍♂️</h3>
+                <ul>
+                  <li>
+                    You are a professional Russian-to-{something} translator
+                    specializing in diary blog posts. Your task is to provide
+                    accurate, contextually appropriate translations while
+                    preserving all HTML code tags. Do not provide any
+                    explanations or commentary - just the direct translation
+                  </li>
+                </ul>
+
                 <p>
-                  Aus unerklärlichen Gründen ist die Anzahl der indizierten
-                  Seiten auf meiner Website zurückgegangen. 📉🥴
+                  Im Ausgangstext habe ich korrektes HTML, aber nach der
+                  Verarbeitung durch die LLM verschwinden einige Tags. Ich habe
+                  das Problem wie folgt gelöst: Ich zwinge die LLM, die
+                  Verarbeitung zu wiederholen, bis Prettier „OK“ sagt, mit einem
+                  Limit von 30 Versuchen.
+                </p>
+
+                <p>
+                  Außerdem habe ich verschiedene kleine Korrekturen und
+                  Refactorings vorgenommen.
+                </p>
+
+                <p>
+                  Search Engine Indexing: Hier ist die Anzahl der indexierten
+                  Seiten aus irgendeinem Grund gesunken. Der Grund dafür ist mir
+                  unbekannt. 📉🥴
                 </p>
 
                 <h3>Ziele für März 🌼</h3>
 
-                <p>Verbesserungen für meine Website:</p>
+                <p>Verbesserungen für die persönliche Webseite:</p>
+
                 <ol>
                   <li>
-                    Umstellung meiner Blogbeiträge von HTML auf Markdown
+                    Das Format meiner Blogposts von HTML auf Markdown umstellen
+
                     <ol>
                       <li>
-                        Alle Beiträge - alten und neuen - müssen umgestellt
-                        werden.
+                        Alle müssen migriert werden: sowohl alte als auch neue
+                        Posts
                       </li>
                     </ol>
                   </li>
                   <li>
-                    Verlegung der Texte in eine separate Tabelle für
-                    mehrsprachige Inhalte
+                    Blogtexte in anderen Sprachen müssen in eine separate
+                    Tabelle verschoben werden
+
                     <ol>
                       <li>
-                        Derzeit sind die Texte in einer großen Tabelle mit drei
-                        Spalten: text, textEnglish, textGerman enthalten.
+                        Derzeit befinden sich die Texte in einer großen Tabelle
+                        mit drei Feldern: text, textEnglish, textGerman
                       </li>
                     </ol>
                   </li>
                   <li>
-                    Nutzung von SQL-Funktionen
+                    SQL-Funktionen nutzen
+
                     <ol>
-                      <li>Fremdschlüssel</li>
-                      <li>EXPLAIN</li>
+                      <li>Foreign key</li>
+                      <li>Explain</li>
                     </ol>
                   </li>
                   <li>
                     Kommentare
+
                     <ol>
                       <li>
-                        Anzeige der Kommentare zu meinen Beiträgen mit Smart
-                        Progress.
+                        Anzeige von Kommentaren zu meinen Posts mit Smart
+                        Progress
                       </li>
                       <li>
-                        Möglichkeit, neue Kommentare über meine Website zu
-                        posten.
+                        Möglichkeit, neue Kommentare über meine persönliche
+                        Webseite zu posten
                       </li>
                     </ol>
                   </li>

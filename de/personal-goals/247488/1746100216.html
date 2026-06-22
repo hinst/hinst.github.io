@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/static/css/index.css" />
     <meta
       name="description"
-      content="Weekly Coding - 2025-05-01 - Wöchentlicher Fortschrittsbericht: Website-Optimierung und die Entwicklung einer neuen Backup-Software"
+      content="Weekly Coding - 2025-05-01 - Bugfixing und neue Projekte: Wie ich meine Website optimiere undmein eigenes Backup-Tool entwickle."
     />
     <meta http-equiv="content-language" content="de" />
     <title>Weekly Coding • 2025-05-01</title>
@@ -266,84 +266,91 @@
                   Es ist Zeit für meinen wöchentlichen Bericht. Letzte Woche
                   habe ich in meiner Freizeit 3 Stunden und 47 Minuten an meinen
                   Projekten gearbeitet. Ich habe verschiedene Korrekturen für
-                  die Website hinst-website vorgenommen:
-                  <a
-                    href="http://smartprogress.do/site/redirect/?url=https%3A%2F%2Fhinst.github.io%2F"
-                    target="_blank"
+                  die hinst-Website
+                  <a href="https://hinst.github.io/" target="_blank"
                     >https://hinst.github.io/</a
                   >
+                  vorgenommen.
                 </p>
 
                 <ol>
                   <li>
-                    Behebung eines Bugs mit der Bildschirmbreitenaktualisierung.
-                    Hier stellte sich heraus, dass ich in die komplexe
-                    Besonderheit von React Hooks geraten war. Die Variable
-                    <strong>useState</strong> wird nur im "Root" der Funktion
-                    aktualisiert, während sie in verschachtelten Funktionen
-                    immer noch das anfängliche Wert enthält. Es dauerte mehrere
-                    Stunden, bis ich das bemerkte und verstand.
+                    Ich habe einen Bug bei der Aktualisierung der
+                    Bildschirmbreite behoben. Dabei bin ich in eine knifflige
+                    Besonderheit von React Hooks geraten. Die Variable
+                    <strong>useState</strong> wird nur im „Root“ der Funktion
+                    aktualisiert, während in verschachtelten Funktionen immer
+                    nur der ursprüngliche Wert der Variablen sichtbar ist. Es
+                    hat mich mehrere Stunden gekostet, das zu bemerken und zu
+                    verstehen.
                   </li>
                   <li>
-                    Entfernung von SmartProgress-Redirekten: Statt
+                    Ich habe die SmartProgress-Weiterleitungen entfernt: Statt
                     <strong
-                      ><a
-                        href="http://smartprogress.do/site/redirect/?url=http%3A%2F%2Fsmartprogress%2Fredirect%3Furl%3Dmy_url%2F"
+                      >&lt;a href=<a
+                        href="http://smartprogress/redirect?url=my_url/"
                         target="_blank"
                         >http://smartprogress/redirect?url=my_url/</a
-                      ></strong
+                      >\&gt;</strong
                     >
-                    habe ich jetzt direkte Links
-                    <strong><a href="my_url/">my_url/</a></strong
-                    >.
+                    verwende ich nun direkte Links
+                    <strong>&lt;a href=my_url/&gt;</strong>.
                   </li>
                   <li>
-                    Korrektur der Zeitzone für gespeicherte Bilder und
-                    Kommentare.
+                    Ich habe die Zeitzone für gespeicherte Bilder und Kommentare
+                    korrigiert.
                   </li>
                   <li>
-                    Korrektur des Übersetzerschemas: Der englische und deutsche
-                    Übersetzer startet nun um 00:15, während der Downloader um
-                    00:00 läuft. Früher wurden beide um 00:00 gestartet, sodass
-                    neue Beiträge zu spät übersetzt wurden, da der Übersetzer
-                    sie nicht zur richtigen Zeit sah.
+                    Ich habe den Zeitplan des Übersetzers angepasst: Jetzt
+                    starten der Übersetzer für Englisch und Deutsch um 00:15
+                    Uhr, während der Downloader um 00:00 Uhr startet. Zuvor
+                    waren beide auf 00:00 Uhr eingestellt, weshalb neue Posts
+                    verzögert übersetzt wurden, da der Übersetzer sie zum
+                    gewünschten Zeitpunkt nicht sah.
                   </li>
                 </ol>
 
                 <p>
-                  Das war letzte Woche. Diese Woche plane ich jedoch eine neue
-                  Backup-Software zu entwickeln. In einem meiner früheren
-                  Beiträge erwähnte ich, wie ich nach bestehenden
-                  Backup-Programmen gesucht und getestet hatte, aber diese
-                  enttäuschten mich, daher habe ich beschlossen, meine eigene zu
-                  erstellen. Die Anforderungen sind folgende:
+                  Das war letzte Woche, aber diese Woche plane ich eine neue
+                  Anwendung zur Erstellung von Backups zu programmieren. In
+                  einem meiner vorherigen Beiträge habe ich darüber geschrieben,
+                  wie ich bestehende Backup-Programme gesucht und getestet habe,
+                  aber diese haben mich enttäuscht, weshalb ich mich entschieden
+                  habe, mein eigenes zu erstellen. Die Anforderungen sind:
                 </p>
 
                 <ol>
-                  <li>Backups werden auf eine USB-Festplatte kopiert.</li>
-                  <li>Es wird ein Spiegel ohne Versionsverlauf erstellt.</li>
-                  <li>Es gibt Dateinamenverschlüsselung.</li>
-                  <li>Komprimierung ist optional.</li>
+                  <li>Backups werden auf einen USB-Stick gespeichert.</li>
                   <li>
+                    Es wird ein Spiegelbild erstellt, ohne Änderungshistorie.
+                  </li>
+                  <li>Es gibt eine Verschlüsselung der Dateinamen.</li>
+                  <li>Es gibt eine optionale Kompression.</li>
+                  <li>
+                    Wurde eine Datei nicht geändert, wird sie
+                    <strong>nicht</strong> erneut kopiert.
+
                     <ol>
                       <li>
-                        Dies ist eines der Hauptanforderungen, da die
-                        Speicherkapazität des Laufwerks bei der Datenspeicherung
-                        verbraucht wird. Wenn ich nur einen Datei in meinem 80
-                        GB großen Dokumentenordner ändere, sollte nur diese eine
-                        Datei kopiert werden und nicht das gesamte 80 GB große
-                        Archiv. Daher fallen 7-Zip und ähnliche Archivierer hier
-                        aus, da sie dies nicht können.
+                        Dies ist eine der Hauptanforderungen, da die Ressourcen
+                        des Speichermediums für das Schreiben von Daten
+                        verbraucht werden. Wenn ich nur eine einzige Datei in
+                        meinem Dokumentenordner mit einem Volumen von 80 GB
+                        ändere, sollte nur diese eine Datei kopiert werden und
+                        nicht die gesamten 80 GB. Daher fallen 7-Zip und
+                        ähnliche Archivierungsprogramme hier sofort weg, da sie
+                        das nicht können.
                       </li>
                     </ol>
                   </li>
                 </ol>
 
                 <p>
-                  Mal sehen, wie viel Zeit die Entwicklung und das Testen meines
-                  Programms in Anspruch nehmen wird. Ich plane, TypeScript als
-                  Programmiersprache zu verwenden. Sobald es fertig ist, werde
-                  ich es für meine Backups nutzen.
+                  Mal sehen, wie viel Zeit die Erstellung und das Testen meines
+                  Programms in Anspruch nehmen wird&hellip; Als
+                  Programmiersprache plane ich TypeScript zu verwenden. Sobald
+                  das Programm fertig ist, werde ich es für meine eigenen
+                  Backups nutzen.
                 </p>
               </div>
               <div style="display: flex; flex-wrap: wrap; gap: 10px">

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/static/css/index.css" />
     <meta
       name="description"
-      content="Weekly Coding - 2026-05-19 - Intensives Backup-Wochenende: Fortschritte bei hi-backup und Reflexionen über Datenspeicherung"
+      content="Weekly Coding - 2026-05-19 - Updates zu meinem Tool hi-backup und wichtige Schritte für mehr digitale Hygiene."
     />
     <meta http-equiv="content-language" content="de" />
     <title>Weekly Coding • 2026-05-19</title>
@@ -263,46 +263,47 @@
             >
               <div class="goalPostViewText">
                 <p>
-                  Letzte Woche habe ich länger als gewöhnlich mit dem Code
-                  gearbeitet, da ich zwei Urlaubstage hatte. Ich habe 17 Stunden
-                  in meinem Zeiterfassungstool aufgezeichnet.
+                  Letzte Woche habe ich länger als gewöhnlich am Code
+                  gearbeitet, da ich zwei freie Tage hatte. Ich habe im
+                  Zeit-Tracker 17 Stunden gesammelt.
                 </p>
+
                 <p>
-                  Ich habe unermüdlich an meinem Programm
-                  <strong>hi-backup</strong> 📂
-                  <a
-                    href="http://smartprogress.do/site/redirect/?url=https%3A%2F%2Fgithub.com%2Fhinst%2Fhi-backup"
+                  Ich habe hart daran gearbeitet, mein Programm
+                  <strong>hi-backup</strong> zu verbessern 📂 [<a
+                    href="https://github.com/hinst/hi-backup"
                     target="_blank"
                     >https://github.com/hinst/hi-backup</a
-                  >
-                  gearbeitet:
+                  >]
                 </p>
+
                 <ol>
                   <li>
-                    Hash-Überprüfung: Nach jedem Backup wird im Zielverzeichnis
-                    eine Datei mit dem Namen
-                    <strong>.hashes.json</strong> erstellt.
+                    Hash-Kontrolle: Nach jedem Backup wird im Zielverzeichnis
+                    eine Datei Aufgabe <strong>.hashes.json</strong> erstellt.
+
                     <ol>
                       <li>
-                        Bei späteren Backups wird der Hash überprüft, um die
-                        Integrität der Dateien sicherzustellen.
+                        Bei nachfolgenden Backups wird der Hash überprüft, um
+                        die Integrität der Dateien zu verifizieren.
                       </li>
                     </ol>
                   </li>
                   <li>
                     Fortschrittsanzeige: Während des Backups wird die Anzahl der
-                    verarbeiteten Dateien angezeigt:
-                    <strong>[Verarbeitet/Übrig]</strong>.
+                    Dateien angezeigt: <strong>[bearbeitet/restlich]</strong>.
                   </li>
                   <li>
-                    Neue Architektur: Ich habe in TypeScript separate Klassen
-                    erstellt: Verzeichnis-Synchronisierer und ein austauschbarer
-                    Transformer.
+                    Neue Architektur. Ich habe separate Klassen in TypeScript
+                    erstellt: einen Verzeichnis-Synchronisierer und einen
+                    austauschbaren Konverter.
+
                     <ol>
                       <li>
-                        Es gibt derzeit drei Arten von Transformern:
+                        Bisher gibt es drei Arten von Datenverarbeitungen:
+
                         <ol>
-                          <li>Einfache Kopie</li>
+                          <li>Einfaches Kopieren</li>
                           <li>Komprimierung</li>
                           <li>Komprimierung + Verschlüsselung</li>
                         </ol>
@@ -310,30 +311,34 @@
                     </ol>
                   </li>
                 </ol>
+
                 <p>
-                  Der Vorteil der Komprimierung ist bei mir minimal, da die
-                  meisten meiner Bibliothekendateien bereits komprimiert sind
-                  (Bilder, Musik, Archive). Der Backup-Größe wird um etwa 3%
-                  reduziert.
+                  Der Nutzen der Komprimierung ist minimal, da die meisten
+                  Dateien in meiner Bibliothek bereits komprimiert sind –
+                  Bilder, Musik, Archive. Die Backup-Größe reduziert sich um
+                  etwa 3 %.
                 </p>
+
                 <p>
-                  Ich plane noch einige Verbesserungen an dem Programm Hi-Backup
-                  vorzunehmen und es weiterhin für meine persönlichen Backups zu
-                  verwenden. Ich möchte die Unit-Testabdeckung verbessern. Nach
-                  Hi-Backup werden ein persönlicher Website und LeetCode folgen.
+                  Ich werde noch ein paar Verbesserungen am Programm Hi-Backup
+                  vornehmen und es weiterhin für meine persönlichen Backups
+                  nutzen. Ich plane, die Abdeckung durch Unit-Tests zu
+                  verbessern. Nach Hi-Backup folgen meine persönliche Website
+                  und LeetCode.
                 </p>
+
                 <p>
-                  Ich habe meinen Yandex.Disk bereits gelöscht. Anfänglich
-                  wollte ich testen, was passiert am Tag nach dem Ende der
-                  kostenlosen Synchronisierung: Wird eine Nachricht oder
-                  Fehlermeldung angezeigt? Aber später bemerkte ich, dass ich
-                  mich verwirrte: Aus Gewohnheit legte ich weiterhin persönliche
-                  Dateien in den Yandex.Disk anstatt an den neuen Speicherort.
-                  Daher beschloss ich, den Yandex.Disk schneller zu löschen.
-                  Außerdem integrieren russische Softwareverlage in letzter Zeit
-                  immer häufiger zusätzliche Metriken wie VPN-Prüfungen. Daher
-                  ist es besser, je weniger unnötige Software auf dem Computer
-                  läuft ♻️.
+                  Yandex.Disk habe ich bereits gelöscht. Ursprünglich wollte ich
+                  prüfen, was am Tag der Abschaltung der kostenlosen
+                  Synchronisation passieren würde: ob eine Nachricht oder
+                  Fehlermeldung erscheint. Aber später bemerkte ich, dass ich
+                  mich vertape: Aus Gewohnheit lege ich weiterhin private
+                  Dateien auf Yandex.Disk statt auf den neuen Speicherort. Daher
+                  habe ich mich entschieden, Yandex.Disk schnellstmöglich zu
+                  löschen. Zudem werden in der Software russischer Anbieter in
+                  letzter Zeit verstärkt zusätzliche Metriken wie VPN-Checks
+                  eingebaut. Also gilt: Je weniger unnötige Software auf dem
+                  Computer – desto besser ♻️
                 </p>
               </div>
               <div style="display: flex; flex-wrap: wrap; gap: 10px">
