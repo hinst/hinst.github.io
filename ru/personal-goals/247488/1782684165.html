@@ -1,0 +1,445 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/static/images/favicon.png" />
+    <link rel="stylesheet" href="/static/css/minstyle.css" />
+    <link rel="stylesheet" href="/static/css/index.css" />
+    <meta
+      name="description"
+      content="Кодить каждую неделю 8 часов - 2026-06-28 - Сможет ли бюджетный ARM-компьютер заменить облачный хостинг: результаты нагрузочного теста моего сайта."
+    />
+    <meta http-equiv="content-language" content="ru" />
+    <title>Кодить каждую неделю 8 часов • 2026-06-28</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        max-height: 100%;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .content {
+        flex-grow: 1;
+        min-height: 0;
+        max-width: 100%;
+      }
+
+      #app {
+        display: flex;
+        height: 100%;
+        max-width: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <script src="/static/js/dist/initialize.js"></script>
+    <div class="content">
+      <div id="app">
+        <div
+          style="
+            padding: 10px;
+            padding-bottom: 0;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 100%;
+            max-height: 100%;
+          "
+        >
+          <div style="padding-bottom: 10px">
+            <div style="display: flex; align-items: center; max-width: 100%">
+              <div
+                id="hamburger-menu-popup"
+                class="ms-bg-light ms-border-main"
+                style="
+                  opacity: 0;
+                  position: absolute;
+                  z-index: 1;
+                  top: 10px;
+                  left: 10px;
+                  overflow-y: auto;
+                  max-height: 100%;
+                  height: 100%;
+                  margin: -10px;
+                  padding-left: 9px;
+                  padding-top: 12px;
+                  padding-right: 9px;
+                  padding-bottom: 12px;
+                  border-width: 1px;
+                  border-style: solid;
+                  transform: translate(-100%, 0);
+                  transition:
+                    transform 0.3s,
+                    opacity 0.3s;
+                "
+              >
+                <div>
+                  <div style="display: flex; align-items: center">
+                    <button
+                      id="hamburger-menu-button-inner"
+                      type="button"
+                      class="ms-btn ms-rounded ms-primary ms-outline hover-outline"
+                      style="width: 40px; height: 40px"
+                    >
+                      <div
+                        style="
+                          width: 24px;
+                          height: 24px;
+                          border-radius: 50%;
+                          transform: translate(-10px, 0px);
+                        "
+                        alt="settings"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="feather feather-menu"
+                        >
+                          <line x1="3" y1="12" x2="21" y2="12"></line>
+                          <line x1="3" y1="6" x2="21" y2="6"></line>
+                          <line x1="3" y1="18" x2="21" y2="18"></line>
+                        </svg>
+                      </div>
+                    </button>
+
+                    <a href="/ru">
+                      <img
+                        src="/static/images/favicon.png"
+                        width="42"
+                        height="42"
+                        style="
+                          width: 42px;
+                          height: 42px;
+                          border-radius: 50%;
+                          margin-left: 5px;
+                        "
+                        alt="icon"
+                        class="hover-outline"
+                      />
+                    </a>
+                  </div>
+                  <div
+                    style="
+                      margin-top: 10px;
+                      display: flex;
+                      flex-direction: column;
+                      gap: 5px;
+                      width: 160px;
+                    "
+                  >
+                    <a class="ms-btn ms-outline" href="/"> English </a>
+                    <a class="ms-btn ms-outline" href="/de"> German </a>
+                    <a class="ms-btn ms-outline" href="/ru"> Russian </a>
+                  </div>
+                </div>
+              </div>
+
+              <button
+                id="hamburger-menu-button"
+                type="button"
+                class="ms-btn ms-rounded ms-primary ms-outline hover-outline"
+                style="width: 40px; height: 40px"
+              >
+                <div
+                  style="
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 50%;
+                    transform: translate(-10px, 0px);
+                  "
+                  alt="settings"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-menu"
+                  >
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                  </svg>
+                </div>
+              </button>
+
+              <a href="/ru">
+                <img
+                  src="/static/images/favicon.png"
+                  width="42"
+                  height="42"
+                  style="
+                    width: 42px;
+                    height: 42px;
+                    border-radius: 50%;
+                    margin-left: 5px;
+                  "
+                  alt="icon"
+                  class="hover-outline"
+                />
+              </a>
+
+              <div
+                style="
+                  margin-left: 10px;
+                  display: flex;
+                  flex-direction: column;
+                  overflow-y: clip;
+                  gap: 4px;
+                  flex-shrink: 0;
+                  flex-basis: 0;
+                  min-width: 0;
+                "
+              >
+                <b
+                  style="
+                    text-wrap: nowrap;
+                    text-overflow: ellipsis;
+                    overflow-y: clip;
+                  "
+                >
+                  Personal Website
+                </b>
+                <h1
+                  style="
+                    text-wrap: nowrap;
+                    text-overflow: ellipsis;
+                    overflow-y: clip;
+                    font-size: 1rem;
+                    margin: 0;
+                    font-weight: normal;
+                  "
+                >
+                  Кодить каждую неделю 8 часов • 2026-06-28
+                </h1>
+              </div>
+            </div>
+          </div>
+          <div
+            class="goal-post-outer"
+            style="
+              flex-grow: 1;
+              justify-content: center;
+              display: flex;
+              min-height: 0px;
+              max-height: 100%;
+              background: repeating-linear-gradient(
+                45deg,
+                rgba(var(--main-bg), 1),
+                rgba(var(--main-bg), 1) 10px,
+                rgba(var(--light-bg-color), 1) 10px,
+                rgba(var(--light-bg-color), 1) 20px
+              );
+            "
+          >
+            <div
+              class="goal-post-inner ms-bg-main"
+              style="
+                flex-grow: 1;
+                padding-left: 20px;
+                padding-right: 20px;
+                max-width: 1000px;
+                background-attachment: fixed;
+                overflow-y: auto;
+              "
+            >
+              <div class="goalPostViewText">
+                <p>
+                  Всем здравствуйте. Настало время моего еженедельного отчёта.
+                  На прошлой неделе я активно улучшал мой персональный веб-сайт,
+                  а на этой неделе я решил провести нагрузочный тест для моего
+                  персонального веб-сайта. Предыстория такая: я частенько
+                  удивляюсь ценам на облачные сервисы 🌧️💸, и мысленно спрашиваю
+                  сам себя: почему нужно столько платить за хостинг для сайтика,
+                  который уберётся на одном ARM-компьютере размером со спичечный
+                  коробок? И вот в воскресенье я решил проверить, а реально ли
+                  мой ARM-компьютер что-то может, или это самообман?
+                </p>
+
+                <h3>Нагрузочный тест веб-сервера Orange Pi 🍊📊</h3>
+
+                <p>
+                  Провёл такой
+                  <a
+                    href="https://github.com/hinst/hinst-website/blob/master/performance-test/main.mjs"
+                    target="_blank"
+                    >тест</a
+                  >:
+                </p>
+
+                <ul>
+                  <li>
+                    Сценарий: пользователь заходит своим бразуером в мой блог и
+                    по очереди читает каждый пост
+
+                    <ul>
+                      <li>
+                        Всего 61 постов, в каждом посте по несколько картинок
+                      </li>
+                    </ul>
+                  </li>
+                  <li>HTTP-кэш отключен</li>
+                  <li>
+                    Изначально загружаем всё: HTML, CSS, JavaScript, иконки
+                  </li>
+                  <li>
+                    После этого загружаем текст каждого блога и картинки к нему
+
+                    <ul>
+                      <li>
+                        Это соответствует реальности, ибо SPA не будет загружать
+                        CSS и JS повторно, когда переходим между постами
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+
+                <p>Результаты получились такие:</p>
+
+                <ul>
+                  <li>
+                    Блоги: <strong>97</strong> просмотров в секунду
+
+                    <ul>
+                      <li>
+                        Запросы: <strong>310</strong> HTTP-запросов в секунду
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    Нагрузка на Orange Pi
+
+                    <ul>
+                      <li>
+                        Процессор: 90%
+
+                        <ul>
+                          <li>Caddy: 30% (прокси веб сервер)</li>
+                          <li>hinst-website: 30% (моя прога на Go)</li>
+                          <li>PostgreSQL: 10% (база данных)</li>
+                          <li>
+                            Остальное: 20% (системные процессы и Kubernetes)
+                          </li>
+                        </ul>
+                      </li>
+                      <li>Память: 50% (из 4 ГБ)</li>
+                      <li>Температура: 75 градусов</li>
+                    </ul>
+                  </li>
+                </ul>
+
+                <p>Выводы:</p>
+
+                <ul>
+                  <li>
+                    Сайт может выдержать примерно
+                    <strong>90</strong> пользователей которые будут одновременно
+                    активно кликать на посты каждую секунду
+
+                    <ul>
+                      <li>
+                        Нагрузка зависит от поведения пользователей. Они могут
+                        отдыхать: ничего не кликать, а могут напрячься и кликать
+                        ещё чаще.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    Настройки сжатия в Caddy отчасти влияют на
+                    производительность
+
+                    <ul>
+                      <li>
+                        Если поднять уровень сжатия c
+                        <strong>fastest</strong> до <strong>default</strong>, то
+                        получим вместо <strong>310</strong> всего лишь
+                        <strong>290</strong> запросов в секунду
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+
+                <p>
+                  Такой получился тест. Если буду делать какое-нибудь
+                  значительное обновление для моего персонального веб-сайта, то
+                  можно будет повторить нагрузочный тест и сравнить: до и после.
+                </p>
+              </div>
+              <div style="display: flex; flex-wrap: wrap; gap: 10px">
+                <a href="/personal-goals/image/247488/1782684165/0.jpg">
+                  <img
+                    width="240"
+                    height="240"
+                    class="ms-card ms-border"
+                    style="
+                      width: 240px;
+                      height: 240px;
+                      object-fit: cover;
+                      margin: 0;
+                      padding: 0;
+                    "
+                    src="/personal-goals/image/247488/1782684165/0.jpg"
+                    alt="Image 0"
+                  />
+                </a>
+
+                <a href="/personal-goals/image/247488/1782684165/1.jpg">
+                  <img
+                    width="240"
+                    height="240"
+                    class="ms-card ms-border"
+                    style="
+                      width: 240px;
+                      height: 240px;
+                      object-fit: cover;
+                      margin: 0;
+                      padding: 0;
+                    "
+                    src="/personal-goals/image/247488/1782684165/1.jpg"
+                    alt="Image 1"
+                  />
+                </a>
+
+                <a href="/personal-goals/image/247488/1782684165/2.jpg">
+                  <img
+                    width="240"
+                    height="240"
+                    class="ms-card ms-border"
+                    style="
+                      width: 240px;
+                      height: 240px;
+                      object-fit: cover;
+                      margin: 0;
+                      padding: 0;
+                    "
+                    src="/personal-goals/image/247488/1782684165/2.jpg"
+                    alt="Image 2"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/static/js/dist/main.js"></script>
+  </body>
+</html>

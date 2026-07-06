@@ -1,0 +1,446 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/static/images/favicon.png" />
+    <link rel="stylesheet" href="/static/css/minstyle.css" />
+    <link rel="stylesheet" href="/static/css/index.css" />
+    <meta
+      name="description"
+      content="Weekly Coding - 2026-06-28 - Testing the Limits of My Personal Website: Can a Small ARM Computer Actually Handle the Load?"
+    />
+    <meta http-equiv="content-language" content="en" />
+    <title>Weekly Coding • 2026-06-28</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        max-height: 100%;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .content {
+        flex-grow: 1;
+        min-height: 0;
+        max-width: 100%;
+      }
+
+      #app {
+        display: flex;
+        height: 100%;
+        max-width: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <script src="/static/js/dist/initialize.js"></script>
+    <div class="content">
+      <div id="app">
+        <div
+          style="
+            padding: 10px;
+            padding-bottom: 0;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 100%;
+            max-height: 100%;
+          "
+        >
+          <div style="padding-bottom: 10px">
+            <div style="display: flex; align-items: center; max-width: 100%">
+              <div
+                id="hamburger-menu-popup"
+                class="ms-bg-light ms-border-main"
+                style="
+                  opacity: 0;
+                  position: absolute;
+                  z-index: 1;
+                  top: 10px;
+                  left: 10px;
+                  overflow-y: auto;
+                  max-height: 100%;
+                  height: 100%;
+                  margin: -10px;
+                  padding-left: 9px;
+                  padding-top: 12px;
+                  padding-right: 9px;
+                  padding-bottom: 12px;
+                  border-width: 1px;
+                  border-style: solid;
+                  transform: translate(-100%, 0);
+                  transition:
+                    transform 0.3s,
+                    opacity 0.3s;
+                "
+              >
+                <div>
+                  <div style="display: flex; align-items: center">
+                    <button
+                      id="hamburger-menu-button-inner"
+                      type="button"
+                      class="ms-btn ms-rounded ms-primary ms-outline hover-outline"
+                      style="width: 40px; height: 40px"
+                    >
+                      <div
+                        style="
+                          width: 24px;
+                          height: 24px;
+                          border-radius: 50%;
+                          transform: translate(-10px, 0px);
+                        "
+                        alt="settings"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="feather feather-menu"
+                        >
+                          <line x1="3" y1="12" x2="21" y2="12"></line>
+                          <line x1="3" y1="6" x2="21" y2="6"></line>
+                          <line x1="3" y1="18" x2="21" y2="18"></line>
+                        </svg>
+                      </div>
+                    </button>
+
+                    <a href="/">
+                      <img
+                        src="/static/images/favicon.png"
+                        width="42"
+                        height="42"
+                        style="
+                          width: 42px;
+                          height: 42px;
+                          border-radius: 50%;
+                          margin-left: 5px;
+                        "
+                        alt="icon"
+                        class="hover-outline"
+                      />
+                    </a>
+                  </div>
+                  <div
+                    style="
+                      margin-top: 10px;
+                      display: flex;
+                      flex-direction: column;
+                      gap: 5px;
+                      width: 160px;
+                    "
+                  >
+                    <a class="ms-btn ms-outline" href="/"> English </a>
+                    <a class="ms-btn ms-outline" href="/de"> German </a>
+                    <a class="ms-btn ms-outline" href="/ru"> Russian </a>
+                  </div>
+                </div>
+              </div>
+
+              <button
+                id="hamburger-menu-button"
+                type="button"
+                class="ms-btn ms-rounded ms-primary ms-outline hover-outline"
+                style="width: 40px; height: 40px"
+              >
+                <div
+                  style="
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 50%;
+                    transform: translate(-10px, 0px);
+                  "
+                  alt="settings"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-menu"
+                  >
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                  </svg>
+                </div>
+              </button>
+
+              <a href="/">
+                <img
+                  src="/static/images/favicon.png"
+                  width="42"
+                  height="42"
+                  style="
+                    width: 42px;
+                    height: 42px;
+                    border-radius: 50%;
+                    margin-left: 5px;
+                  "
+                  alt="icon"
+                  class="hover-outline"
+                />
+              </a>
+
+              <div
+                style="
+                  margin-left: 10px;
+                  display: flex;
+                  flex-direction: column;
+                  overflow-y: clip;
+                  gap: 4px;
+                  flex-shrink: 0;
+                  flex-basis: 0;
+                  min-width: 0;
+                "
+              >
+                <b
+                  style="
+                    text-wrap: nowrap;
+                    text-overflow: ellipsis;
+                    overflow-y: clip;
+                  "
+                >
+                  Personal Website
+                </b>
+                <h1
+                  style="
+                    text-wrap: nowrap;
+                    text-overflow: ellipsis;
+                    overflow-y: clip;
+                    font-size: 1rem;
+                    margin: 0;
+                    font-weight: normal;
+                  "
+                >
+                  Weekly Coding • 2026-06-28
+                </h1>
+              </div>
+            </div>
+          </div>
+          <div
+            class="goal-post-outer"
+            style="
+              flex-grow: 1;
+              justify-content: center;
+              display: flex;
+              min-height: 0px;
+              max-height: 100%;
+              background: repeating-linear-gradient(
+                45deg,
+                rgba(var(--main-bg), 1),
+                rgba(var(--main-bg), 1) 10px,
+                rgba(var(--light-bg-color), 1) 10px,
+                rgba(var(--light-bg-color), 1) 20px
+              );
+            "
+          >
+            <div
+              class="goal-post-inner ms-bg-main"
+              style="
+                flex-grow: 1;
+                padding-left: 20px;
+                padding-right: 20px;
+                max-width: 1000px;
+                background-attachment: fixed;
+                overflow-y: auto;
+              "
+            >
+              <div class="goalPostViewText">
+                <p>
+                  Hello everyone. It&rsquo;s time for my weekly report. Last
+                  week, I was actively improving my personal website, and this
+                  week I decided to conduct a load test on it. Here’s the
+                  backstory: I often marvel at cloud service prices 🌧️💸 and
+                  find myself mentally asking: why do we have to pay so much for
+                  hosting a tiny site that could fit on an ARM computer the size
+                  of a matchbox? So, on Sunday, I decided to check whether my
+                  ARM computer is actually capable of anything or if it’s just
+                  self-deception.
+                </p>
+
+                <h3>Orange Pi Web Server Load Test 🍊📊</h3>
+
+                <p>
+                  I ran the following
+                  <a
+                    href="https://github.com/hinst/hinst-website/blob/master/performance-test/main.mjs"
+                    target="_blank"
+                    >test</a
+                  >:
+                </p>
+
+                <ul>
+                  <li>
+                    <strong>Scenario:</strong> A user visits my blog in their
+                    browser and reads every post one by one.
+
+                    <ul>
+                      <li>
+                        There are 61 posts in total, with several images in
+                        each.
+                      </li>
+                    </ul>
+                  </li>
+                  <li><strong>Cache disabled.</strong></li>
+                  <li>
+                    <strong>Initial load:</strong> Everything is loaded at once:
+                    HTML, CSS, JavaScript, and icons.
+                  </li>
+                  <li>
+                    <strong>Subsequent load:</strong> The text of each blog and
+                    its corresponding images are loaded.
+
+                    <ul>
+                      <li>
+                        This reflects reality because an SPA (Single Page
+                        Application) won&rsquo;t reload CSS and JS when moving
+                        between posts.
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+
+                <p>The results were as follows:</p>
+
+                <ul>
+                  <li>
+                    <strong>Blogs:</strong> <strong>97</strong> views per second
+
+                    <ul>
+                      <li>
+                        <strong>Requests:</strong> <strong>310</strong> HTTP
+                        requests per second
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <strong>Orange Pi Load:</strong>
+
+                    <ul>
+                      <li>
+                        <strong>CPU:</strong> 90%
+
+                        <ul>
+                          <li>Caddy: 30% (web proxy server)</li>
+                          <li>hinst-website: 30% (my program written in Go)</li>
+                          <li>PostgreSQL: 10% (database)</li>
+                          <li>Other: 20% (system processes and Kubernetes)</li>
+                        </ul>
+                      </li>
+                      <li><strong>Memory:</strong> 50% (out of 4 GB)</li>
+                      <li><strong>Temperature:</strong> 75 degrees Celsius</li>
+                    </ul>
+                  </li>
+                </ul>
+
+                <p>Conclusions:</p>
+
+                <ul>
+                  <li>
+                    The site can handle approximately <strong>90</strong> users
+                    who are simultaneously clicking on posts every second.
+
+                    <ul>
+                      <li>
+                        The load depends on user behavior; they might be resting
+                        and not clicking anything, or they might get intense and
+                        click even more frequently.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    Caddy compression settings partially affect performance.
+
+                    <ul>
+                      <li>
+                        If we increase the compression level from
+                        <strong>fastest</strong> to <strong>default</strong>, we
+                        get only <strong>290</strong> requests per second
+                        instead of <strong>310</strong>.
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+
+                <p>
+                  That was the test. If I make any significant updates to my
+                  personal website, I can repeat the load test and compare the
+                  results before and after.
+                </p>
+              </div>
+              <div style="display: flex; flex-wrap: wrap; gap: 10px">
+                <a href="/personal-goals/image/247488/1782684165/0.jpg">
+                  <img
+                    width="240"
+                    height="240"
+                    class="ms-card ms-border"
+                    style="
+                      width: 240px;
+                      height: 240px;
+                      object-fit: cover;
+                      margin: 0;
+                      padding: 0;
+                    "
+                    src="/personal-goals/image/247488/1782684165/0.jpg"
+                    alt="Image 0"
+                  />
+                </a>
+
+                <a href="/personal-goals/image/247488/1782684165/1.jpg">
+                  <img
+                    width="240"
+                    height="240"
+                    class="ms-card ms-border"
+                    style="
+                      width: 240px;
+                      height: 240px;
+                      object-fit: cover;
+                      margin: 0;
+                      padding: 0;
+                    "
+                    src="/personal-goals/image/247488/1782684165/1.jpg"
+                    alt="Image 1"
+                  />
+                </a>
+
+                <a href="/personal-goals/image/247488/1782684165/2.jpg">
+                  <img
+                    width="240"
+                    height="240"
+                    class="ms-card ms-border"
+                    style="
+                      width: 240px;
+                      height: 240px;
+                      object-fit: cover;
+                      margin: 0;
+                      padding: 0;
+                    "
+                    src="/personal-goals/image/247488/1782684165/2.jpg"
+                    alt="Image 2"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/static/js/dist/main.js"></script>
+  </body>
+</html>
