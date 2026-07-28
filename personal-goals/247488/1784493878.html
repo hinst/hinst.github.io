@@ -1,0 +1,494 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/static/images/favicon.png" />
+    <link rel="stylesheet" href="/static/css/minstyle.css" />
+    <link rel="stylesheet" href="/static/css/index.css" />
+    <meta
+      name="description"
+      content="Weekly Coding - 2026-07-19 - Testing the Limits of LLMs: Lessons Learned from an AI-Driven Code Review Experiment"
+    />
+    <meta http-equiv="content-language" content="en" />
+    <title>Weekly Coding • 2026-07-19</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        max-height: 100%;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .content {
+        flex-grow: 1;
+        min-height: 0;
+        max-width: 100%;
+      }
+
+      #app {
+        display: flex;
+        height: 100%;
+        max-width: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <script src="/static/js/dist/initialize.js"></script>
+    <div class="content">
+      <div id="app">
+        <div
+          style="
+            padding: 10px;
+            padding-bottom: 0;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 100%;
+            max-height: 100%;
+          "
+        >
+          <div style="padding-bottom: 10px">
+            <div style="display: flex; align-items: center; max-width: 100%">
+              <div
+                id="hamburger-menu-popup"
+                class="ms-bg-light ms-border-main"
+                style="
+                  opacity: 0;
+                  position: absolute;
+                  z-index: 1;
+                  top: 10px;
+                  left: 10px;
+                  overflow-y: auto;
+                  max-height: 100%;
+                  height: 100%;
+                  margin: -10px;
+                  padding-left: 9px;
+                  padding-top: 12px;
+                  padding-right: 9px;
+                  padding-bottom: 12px;
+                  border-width: 1px;
+                  border-style: solid;
+                  transform: translate(-100%, 0);
+                  transition:
+                    transform 0.3s,
+                    opacity 0.3s;
+                "
+              >
+                <div>
+                  <div style="display: flex; align-items: center">
+                    <button
+                      id="hamburger-menu-button-inner"
+                      type="button"
+                      class="ms-btn ms-rounded ms-primary ms-outline hover-outline"
+                      style="width: 40px; height: 40px"
+                    >
+                      <div
+                        style="
+                          width: 24px;
+                          height: 24px;
+                          border-radius: 50%;
+                          transform: translate(-10px, 0px);
+                        "
+                        alt="settings"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="feather feather-menu"
+                        >
+                          <line x1="3" y1="12" x2="21" y2="12"></line>
+                          <line x1="3" y1="6" x2="21" y2="6"></line>
+                          <line x1="3" y1="18" x2="21" y2="18"></line>
+                        </svg>
+                      </div>
+                    </button>
+
+                    <a href="/">
+                      <img
+                        src="/static/images/favicon.png"
+                        width="42"
+                        height="42"
+                        style="
+                          width: 42px;
+                          height: 42px;
+                          border-radius: 50%;
+                          margin-left: 5px;
+                        "
+                        alt="icon"
+                        class="hover-outline"
+                      />
+                    </a>
+                  </div>
+                  <div
+                    style="
+                      margin-top: 10px;
+                      display: flex;
+                      flex-direction: column;
+                      gap: 5px;
+                      width: 160px;
+                    "
+                  >
+                    <a class="ms-btn ms-outline" href="/"> English </a>
+                    <a class="ms-btn ms-outline" href="/de"> German </a>
+                    <a class="ms-btn ms-outline" href="/ru"> Russian </a>
+                  </div>
+                </div>
+              </div>
+
+              <button
+                id="hamburger-menu-button"
+                type="button"
+                class="ms-btn ms-rounded ms-primary ms-outline hover-outline"
+                style="width: 40px; height: 40px"
+              >
+                <div
+                  style="
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 50%;
+                    transform: translate(-10px, 0px);
+                  "
+                  alt="settings"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-menu"
+                  >
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                  </svg>
+                </div>
+              </button>
+
+              <a href="/">
+                <img
+                  src="/static/images/favicon.png"
+                  width="42"
+                  height="42"
+                  style="
+                    width: 42px;
+                    height: 42px;
+                    border-radius: 50%;
+                    margin-left: 5px;
+                  "
+                  alt="icon"
+                  class="hover-outline"
+                />
+              </a>
+
+              <div
+                style="
+                  margin-left: 10px;
+                  display: flex;
+                  flex-direction: column;
+                  overflow-y: clip;
+                  gap: 4px;
+                  flex-shrink: 0;
+                  flex-basis: 0;
+                  min-width: 0;
+                "
+              >
+                <b
+                  style="
+                    text-wrap: nowrap;
+                    text-overflow: ellipsis;
+                    overflow-y: clip;
+                  "
+                >
+                  Personal Website
+                </b>
+                <h1
+                  style="
+                    text-wrap: nowrap;
+                    text-overflow: ellipsis;
+                    overflow-y: clip;
+                    font-size: 1rem;
+                    margin: 0;
+                    font-weight: normal;
+                  "
+                >
+                  Weekly Coding • 2026-07-19
+                </h1>
+              </div>
+            </div>
+          </div>
+          <div
+            class="goal-post-outer"
+            style="
+              flex-grow: 1;
+              justify-content: center;
+              display: flex;
+              min-height: 0px;
+              max-height: 100%;
+              background: repeating-linear-gradient(
+                45deg,
+                rgba(var(--main-bg), 1),
+                rgba(var(--main-bg), 1) 10px,
+                rgba(var(--light-bg-color), 1) 10px,
+                rgba(var(--light-bg-color), 1) 20px
+              );
+            "
+          >
+            <div
+              class="goal-post-inner ms-bg-main"
+              style="
+                flex-grow: 1;
+                padding-left: 20px;
+                padding-right: 20px;
+                max-width: 1000px;
+                background-attachment: fixed;
+                overflow-y: auto;
+              "
+            >
+              <div
+                class="ms-alert ms-light"
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 8px;
+                  margin-bottom: 16px;
+                "
+              >
+                <span
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-info"
+                  >
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                    <line x1="12" y1="8" x2="12.01" y2="8"></line></svg
+                ></span>
+                <span
+                  >This text was automatically translated to English language by
+                  LLM tool.</span
+                >
+              </div>
+
+              <div class="goalPostViewText">
+                <h3>Comparing AI Models in a Specific Scenario</h3>
+
+                <p>
+                  I decided to conduct a <em>code review</em> for my project
+                  using LLMs. This time, the experiment involved a project I
+                  wrote as part of my paid work. The task for the LLM was to
+                  check every file—and if necessary, read related files to
+                  better understand the context. A separate agent was launched
+                  for each file because, in this local setup, there’s no need to
+                  save tokens 👌 I wasn&rsquo;t sure what to expect at first,
+                  but after completing the process, one specific piece of code
+                  caught my attention: shown 🖼️ in the attached screenshot.
+                </p>
+
+                <p>
+                  The code is generally correct: we try to perform an action,
+                  and if it fails, we throw the last Exception. We only call
+                  <code>onSuccess()</code> for successful operations. However,
+                  some AI models stumbled over this:
+                </p>
+
+                <ul>
+                  <li>
+                    <strong>Qwen 3.6 27B</strong> 🔴
+
+                    <ul>
+                      <li>
+                        Immediately issued a critical remark without even
+                        reading the code of the
+                        <code>retryWithCatch()</code> function.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <strong
+                      >Qwen 3.5 27b Claude Opus 4.6 reasoning distilled</strong
+                    >
+                    🔴
+
+                    <ul>
+                      <li>
+                        Read the <code>retryWithCatch()</code> code but still
+                        issued a critical remark. Did it read it and just not
+                        understand? Hmm&hellip;
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <strong>Gemma 4 31B QAT</strong> 🟢
+
+                    <ul>
+                      <li>
+                        Read the <code>retryWithCatch()</code> code; everything
+                        is OK. It works slowly but thoroughly.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <strong>Qwen 3.6 35B A3B</strong> 🟢
+
+                    <ul>
+                      <li>
+                        Read the <code>retryWithCatch()</code> code; everything
+                        is OK. It works fast, and it makes mistakes just as
+                        fast&hellip;
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+
+                <p>
+                  As we can see, Qwen 27B has some issues understanding
+                  code&hellip; I think a human in this situation could easily
+                  make the same mistake due to inattention: glancing at the code
+                  and assuming that <code>onSuccess()</code> after
+                  <code>retryWithCatch()</code> marks all operations as
+                  &ldquo;successful&rdquo; without looking closely 🥴.
+                </p>
+
+                <p>
+                  At the same time, Qwen 27B has a high score in the Artificial
+                  Analysis Intelligence Index 🤔💭 But in my opinion, the logic
+                  of the other two models on this list is better. Though
+                  it&rsquo;s nothing surprising—after all, they have more
+                  parameters: 27B &lt; 31B &lt; 35B.
+                </p>
+
+                <h3>Other Coding in Spare Time</h3>
+
+                <p>
+                  Besides testing LLMs, I did a few other things for my projects
+                  last week during my free time:
+                </p>
+
+                <ol>
+                  <li>
+                    <strong>New refactoring of the personal website:</strong> I
+                    removed the intermediate web server used for generating
+                    static HTML content. There will be less redundant code—which
+                    is good&hellip;
+                  </li>
+                  <li>
+                    <strong>Setting up a sandbox for pi.dev:</strong> Running
+                    without internet access. Access to the local file system is
+                    also restricted: only one project folder is allowed. The
+                    agent can no longer reach other files, even if it wanted
+                    to&hellip;
+                  </li>
+                </ol>
+
+                <p>
+                  P.S.: The lead developer in the client&rsquo;s team said that
+                  AI code review is now a mandatory development stage for every
+                  feature. Moreover, this must be done immediately, even before
+                  opening the PR: you write the code yourself, you run the LLM
+                  yourself, and you read and fix the remarks yourself 💻🧐 Only
+                  after that do you open the PR; the human reading your code
+                  only has to check if the &ldquo;passed LLM review&rdquo;
+                  checkbox is ticked ☑️🛫
+                </p>
+              </div>
+              <div style="display: flex; flex-wrap: wrap; gap: 10px">
+                <a href="/personal-goals/image/247488/1784493878/0.jpg">
+                  <img
+                    width="240"
+                    height="240"
+                    class="ms-card ms-border"
+                    style="
+                      width: 240px;
+                      height: 240px;
+                      object-fit: cover;
+                      margin: 0;
+                      padding: 0;
+                    "
+                    src="/personal-goals/image/247488/1784493878/0.jpg"
+                    alt="Image 0"
+                  />
+                </a>
+
+                <a href="/personal-goals/image/247488/1784493878/1.jpg">
+                  <img
+                    width="240"
+                    height="240"
+                    class="ms-card ms-border"
+                    style="
+                      width: 240px;
+                      height: 240px;
+                      object-fit: cover;
+                      margin: 0;
+                      padding: 0;
+                    "
+                    src="/personal-goals/image/247488/1784493878/1.jpg"
+                    alt="Image 1"
+                  />
+                </a>
+
+                <a href="/personal-goals/image/247488/1784493878/2.jpg">
+                  <img
+                    width="240"
+                    height="240"
+                    class="ms-card ms-border"
+                    style="
+                      width: 240px;
+                      height: 240px;
+                      object-fit: cover;
+                      margin: 0;
+                      padding: 0;
+                    "
+                    src="/personal-goals/image/247488/1784493878/2.jpg"
+                    alt="Image 2"
+                  />
+                </a>
+
+                <a href="/personal-goals/image/247488/1784493878/3.jpg">
+                  <img
+                    width="240"
+                    height="240"
+                    class="ms-card ms-border"
+                    style="
+                      width: 240px;
+                      height: 240px;
+                      object-fit: cover;
+                      margin: 0;
+                      padding: 0;
+                    "
+                    src="/personal-goals/image/247488/1784493878/3.jpg"
+                    alt="Image 3"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/static/js/dist/main.js"></script>
+  </body>
+</html>
